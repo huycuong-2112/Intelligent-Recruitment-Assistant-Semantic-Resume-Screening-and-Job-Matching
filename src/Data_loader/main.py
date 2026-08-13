@@ -2,12 +2,10 @@ from __future__ import annotations
 
 import argparse
 import json
-import os
 import sys
 from pathlib import Path
 from typing import Any, Dict, List
 
-# Import DocumentParser from local module or package context
 try:
     from document_parser import get_document_parser, SUPPORTED_EXTENSIONS
 except ImportError:
@@ -23,24 +21,9 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Extract text from CV documents and generate audit report + cleaned dataset."
     )
-    parser.add_argument(
-        "--input-dir",
-        type=str,
-        default=str(DEFAULT_INPUT_DIR),
-        help="Path to raw resume directory.",
-    )
-    parser.add_argument(
-        "--output-dir",
-        type=str,
-        default=str(DEFAULT_OUTPUT_DIR),
-        help="Directory to save output JSON files.",
-    )
-    parser.add_argument(
-        "--file",
-        type=str,
-        default=None,
-        help="Optionally process a single file instead of the whole directory.",
-    )
+    parser.add_argument("--input-dir", type=str, default=str(DEFAULT_INPUT_DIR))
+    parser.add_argument("--output-dir", type=str, default=str(DEFAULT_OUTPUT_DIR))
+    parser.add_argument("--file", type=str, default=None)
     return parser.parse_args()
 
 
@@ -48,10 +31,7 @@ def collect_files(input_dir: Path) -> List[Path]:
     if not input_dir.exists():
         return []
     return sorted(
-        [
-            p for p in input_dir.rglob("*")
-            if p.is_file() and p.suffix.lower() in SUPPORTED_EXTENSIONS
-        ],
+        [p for p in input_dir.rglob("*") if p.is_file() and p.suffix.lower() in SUPPORTED_EXTENSIONS],
         key=lambda p: p.name.lower(),
     )
 
@@ -72,10 +52,8 @@ def main() -> int:
     print(f"Output Directory: {output_dir}")
     print("=" * 80)
 
-    # Initialize Parser
     doc_parser = get_document_parser()
 
-    # Determine files to process
     if args.file:
         single_file = Path(args.file)
         if not single_file.is_absolute():
@@ -97,30 +75,30 @@ def main() -> int:
     failure_count = 0
 
     for idx, file_path in enumerate(files, start=1):
-        rel_path = file_path.name
-        print(f"[{idx}/{len(files)}] Processing: {rel_path}...")
+        print(f"[{idx}/{len(files)}] Processing: {file_path.name}...")
 
-        # Execute extraction pipeline
-        final_text, record = doc_parser.parse_to_chunks(str(file_path))
+        chunks, record = doc_parser.parse_to_chunks(str(file_path))
         report_items.append(record)
 
         status = record.get("final_status")
 
         if status in ("ACCEPTED_BY_DOCLING", "RECOVERED_BY_OCR", "LOW_QUALITY"):
             success_count += 1
+            full_text = "\n\n".join(chunk["text"] for chunk in chunks)
             cleaned_texts.append({
                 "filename": file_path.name,
                 "relative_path": str(file_path),
                 "status": status,
-                "text_length": len(final_text),
-                "content": final_text,
+                "total_chunks": len(chunks),
+                "text_length": len(full_text),
+                "chunks": chunks,
+                "content": full_text,
             })
-            print(f"   └─ Status: {status} | Chars: {len(final_text)}")
+            print(f"   └─ Status: {status} | Chunks: {len(chunks)} | Chars: {len(full_text)}")
         else:
             failure_count += 1
             print(f"   └─ Status: {status} | Error: {record.get('error')}")
 
-    # Build final audit report
     report_summary = {
         "total_files": len(files),
         "successful_extractions": success_count,
@@ -136,11 +114,9 @@ def main() -> int:
         "details": report_items,
     }
 
-    # Write document_extraction_report.json
     with open(report_path, "w", encoding="utf-8") as f:
         json.dump(report_output, f, ensure_ascii=False, indent=2)
 
-    # Write cleaned_text.json
     with open(cleaned_text_path, "w", encoding="utf-8") as f:
         json.dump(cleaned_texts, f, ensure_ascii=False, indent=2)
 

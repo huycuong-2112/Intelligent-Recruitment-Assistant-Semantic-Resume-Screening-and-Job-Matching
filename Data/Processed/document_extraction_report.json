@@ -1,69 +1,65 @@
 {
   "summary": {
-    "total": 7,
-    "processed": 7,
-    "success": 7,
-    "failure": 0
+    "total_files": 7,
+    "successful_extractions": 7,
+    "failed_extractions": 0,
+    "status_breakdown": {
+      "ACCEPTED_BY_DOCLING": 5,
+      "RECOVERED_BY_OCR": 2
+    }
   },
-  "items": [
+  "details": [
     {
-      "filename": "Data/Raw/CrawlResume/cv2.jpg",
-      "docling_score": 0.830440161372432,
-      "initial_status": "PASS",
+      "filename": "cv2.jpg",
+      "docling_score": 0.971,
       "ocr_triggered": false,
       "ocr_score": null,
       "final_status": "ACCEPTED_BY_DOCLING",
       "error": null
     },
     {
-      "filename": "Data/Raw/CrawlResume/cv3.png",
-      "docling_score": 0.65,
-      "initial_status": "FAIL",
-      "ocr_triggered": true,
-      "ocr_score": null,
-      "final_status": "OCR_FAILED",
-      "error": "OCR fallback failed: RuntimeError: No OCR backend succeeded: easyocr initialization failed: Remote end closed connection without response"
-    },
-    {
-      "filename": "Data/Raw/CrawlResume/cv4.png",
-      "docling_score": 0.4784275000483048,
-      "initial_status": "FAIL",
-      "ocr_triggered": true,
-      "ocr_score": null,
-      "final_status": "OCR_FAILED",
-      "error": "OCR fallback failed: RuntimeError: No OCR backend succeeded: easyocr initialization failed: Remote end closed connection without response"
-    },
-    {
-      "filename": "Data/Raw/CrawlResume/cv5.jpg",
-      "docling_score": 0.8047682363804248,
-      "initial_status": "PASS",
+      "filename": "cv3.png",
+      "docling_score": 0.974,
       "ocr_triggered": false,
       "ocr_score": null,
       "final_status": "ACCEPTED_BY_DOCLING",
       "error": null
     },
     {
-      "filename": "Data/Raw/CrawlResume/cv6.png",
-      "docling_score": 0.754964825435723,
-      "initial_status": "PASS",
+      "filename": "cv4.png",
+      "docling_score": 0.665,
+      "ocr_triggered": true,
+      "ocr_score": 0.681,
+      "final_status": "RECOVERED_BY_OCR",
+      "error": null
+    },
+    {
+      "filename": "cv5.jpg",
+      "docling_score": 0.96,
       "ocr_triggered": false,
       "ocr_score": null,
       "final_status": "ACCEPTED_BY_DOCLING",
       "error": null
     },
     {
-      "filename": "Data/Raw/CrawlResume/cv7.png",
-      "docling_score": 0.5453865609279315,
-      "initial_status": "FAIL",
-      "ocr_triggered": true,
+      "filename": "cv6.png",
+      "docling_score": 0.955,
+      "ocr_triggered": false,
       "ocr_score": null,
-      "final_status": "OCR_FAILED",
-      "error": "OCR fallback failed: RuntimeError: No OCR backend succeeded: easyocr initialization failed: Remote end closed connection without response"
+      "final_status": "ACCEPTED_BY_DOCLING",
+      "error": null
     },
     {
-      "filename": "Data/Raw/CrawlResume/cv8.jpg",
-      "docling_score": 0.7328500560815874,
-      "initial_status": "PASS",
+      "filename": "cv7.png",
+      "docling_score": 0.741,
+      "ocr_triggered": true,
+      "ocr_score": 0.846,
+      "final_status": "RECOVERED_BY_OCR",
+      "error": null
+    },
+    {
+      "filename": "cv8.jpg",
+      "docling_score": 0.961,
       "ocr_triggered": false,
       "ocr_score": null,
       "final_status": "ACCEPTED_BY_DOCLING",
