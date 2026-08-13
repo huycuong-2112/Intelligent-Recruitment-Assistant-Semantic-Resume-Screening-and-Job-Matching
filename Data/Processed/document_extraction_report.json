@@ -1,0 +1,73 @@
+{
+  "summary": {
+    "total": 7,
+    "processed": 7,
+    "success": 7,
+    "failure": 0
+  },
+  "items": [
+    {
+      "filename": "Data/Raw/CrawlResume/cv2.jpg",
+      "docling_score": 0.830440161372432,
+      "initial_status": "PASS",
+      "ocr_triggered": false,
+      "ocr_score": null,
+      "final_status": "ACCEPTED_BY_DOCLING",
+      "error": null
+    },
+    {
+      "filename": "Data/Raw/CrawlResume/cv3.png",
+      "docling_score": 0.65,
+      "initial_status": "FAIL",
+      "ocr_triggered": true,
+      "ocr_score": null,
+      "final_status": "OCR_FAILED",
+      "error": "OCR fallback failed: RuntimeError: No OCR backend succeeded: easyocr initialization failed: Remote end closed connection without response"
+    },
+    {
+      "filename": "Data/Raw/CrawlResume/cv4.png",
+      "docling_score": 0.4784275000483048,
+      "initial_status": "FAIL",
+      "ocr_triggered": true,
+      "ocr_score": null,
+      "final_status": "OCR_FAILED",
+      "error": "OCR fallback failed: RuntimeError: No OCR backend succeeded: easyocr initialization failed: Remote end closed connection without response"
+    },
+    {
+      "filename": "Data/Raw/CrawlResume/cv5.jpg",
+      "docling_score": 0.8047682363804248,
+      "initial_status": "PASS",
+      "ocr_triggered": false,
+      "ocr_score": null,
+      "final_status": "ACCEPTED_BY_DOCLING",
+      "error": null
+    },
+    {
+      "filename": "Data/Raw/CrawlResume/cv6.png",
+      "docling_score": 0.754964825435723,
+      "initial_status": "PASS",
+      "ocr_triggered": false,
+      "ocr_score": null,
+      "final_status": "ACCEPTED_BY_DOCLING",
+      "error": null
+    },
+    {
+      "filename": "Data/Raw/CrawlResume/cv7.png",
+      "docling_score": 0.5453865609279315,
+      "initial_status": "FAIL",
+      "ocr_triggered": true,
+      "ocr_score": null,
+      "final_status": "OCR_FAILED",
+      "error": "OCR fallback failed: RuntimeError: No OCR backend succeeded: easyocr initialization failed: Remote end closed connection without response"
+    },
+    {
+      "filename": "Data/Raw/CrawlResume/cv8.jpg",
+      "docling_score": 0.7328500560815874,
+      "initial_status": "PASS",
+      "ocr_triggered": false,
+      "ocr_score": null,
+      "final_status": "ACCEPTED_BY_DOCLING",
+      "error": null
+    }
+  ]
+}

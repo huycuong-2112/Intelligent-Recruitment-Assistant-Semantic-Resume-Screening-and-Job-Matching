@@ -1,12 +1,14 @@
 from __future__ import annotations
 
 import argparse
+import json
 import os
 import subprocess
 import sys
 from shutil import which
 from pathlib import Path
 from traceback import print_exception
+from typing import Any, Dict, List
 
 import docling
 import torch
@@ -22,16 +24,28 @@ from docling.document_converter import (
     PdfFormatOption,
 )
 
+try:
+    from .document_quality import evaluate as evaluate_quality, is_pass as quality_is_pass, QUALITY_THRESHOLD
+    from .ocr_fallback import OCRFallback
+    from .image_preprocessor import enhance_image, cleanup_temp
+except Exception:
+    # When running the script directly (python src/Data_loader/document_parser.py)
+    # the package-relative imports may fail. Fall back to importing local modules
+    # by name (they are in the same directory as this script).
+    from document_quality import evaluate as evaluate_quality, is_pass as quality_is_pass, QUALITY_THRESHOLD  # type: ignore
+    from ocr_fallback import OCRFallback  # type: ignore
+    from image_preprocessor import enhance_image, cleanup_temp  # type: ignore
 
 SUPPORTED_EXTENSIONS = {".pdf", ".png", ".jpg", ".jpeg"}
 DEFAULT_RESUME_DIR = Path("Data") / "Raw" / "CrawlResume"
 _DEFAULT_PARSER: DocumentParser | None = None
 
+REPORT_PATH = Path("Data") / "Processed" / "document_extraction_report.json"
+
 
 def _select_accelerator_device() -> AcceleratorDevice:
     if torch.cuda.is_available():
         return AcceleratorDevice.CUDA
-
     return AcceleratorDevice.AUTO
 
 
@@ -64,18 +78,15 @@ def _build_converter() -> DocumentConverter:
 def _get_triton_version() -> str:
     try:
         import triton
-
         return triton.__version__
-    except Exception as exc:  # pragma: no cover - diagnostic path
+    except Exception as exc:
         return f"unavailable ({type(exc).__name__}: {exc})"
 
 
 def _format_root_cause(exc: BaseException) -> BaseException:
     root_cause = exc
-
     while getattr(root_cause, "__cause__", None) is not None:
         root_cause = root_cause.__cause__  # type: ignore[assignment]
-
     return root_cause
 
 
@@ -88,11 +99,9 @@ def _get_vs_dev_cmd_path() -> Path | None:
         Path(os.environ.get("ProgramFiles(x86)", "")) / "Microsoft Visual Studio" / "Installer" / "vswhere.exe",
         Path(os.environ.get("ProgramFiles", "")) / "Microsoft Visual Studio" / "Installer" / "vswhere.exe",
     ]
-
     vswhere = next((candidate for candidate in candidates if candidate.is_file()), None)
     if vswhere is None:
         return None
-
     try:
         installation_path = subprocess.check_output(
             [str(vswhere), "-latest", "-products", "*", "-property", "installationPath"],
@@ -100,14 +109,11 @@ def _get_vs_dev_cmd_path() -> Path | None:
         ).strip()
     except Exception:
         return None
-
     if not installation_path:
         return None
-
     vs_dev_cmd = Path(installation_path) / "Common7" / "Tools" / "VsDevCmd.bat"
     if vs_dev_cmd.is_file():
         return vs_dev_cmd
-
     return None
 
 
@@ -115,11 +121,9 @@ def _import_batch_environment(batch_file: Path, arguments: list[str]) -> None:
     argument_text = " ".join(arguments)
     command_text = f'call "{batch_file}" {argument_text} >nul && set'
     batch_output = subprocess.check_output(command_text, shell=True, text=True)
-
     for line in batch_output.splitlines():
         if "=" not in line:
             continue
-
         name, value = line.split("=", 1)
         os.environ[name] = value
 
@@ -131,46 +135,34 @@ def _find_cuda_root() -> Path | None:
         str(Path(os.environ.get("ProgramFiles", "")) / "NVIDIA GPU Computing Toolkit" / "CUDA"),
         str(Path(os.environ.get("ProgramFiles(x86)", "")) / "NVIDIA GPU Computing Toolkit" / "CUDA"),
     ]
-
     for candidate_text in candidate_texts:
         if not candidate_text:
             continue
-
         candidate_path = Path(candidate_text)
         if candidate_path.is_file():
             candidate_path = candidate_path.parent
-
         if candidate_path.name.lower().startswith("v") and candidate_path.is_dir():
             return candidate_path
-
         if candidate_path.is_dir():
             versioned_candidates = sorted(
-                (
-                    child
-                    for child in candidate_path.iterdir()
-                    if child.is_dir() and child.name.lower().startswith("v")
-                ),
+                (child for child in candidate_path.iterdir() if child.is_dir() and child.name.lower().startswith("v")),
                 reverse=True,
             )
             if versioned_candidates:
                 return versioned_candidates[0]
-
     return None
 
 
 def _bootstrap_windows_build_environment() -> None:
     if os.name != "nt":
         return
-
     current_cc = os.environ.get("CC")
     current_cxx = os.environ.get("CXX")
     current_cuda_path = os.environ.get("CUDA_PATH")
-
     if not current_cc or not current_cxx:
         vs_dev_cmd = _get_vs_dev_cmd_path()
         if vs_dev_cmd is not None:
             _import_batch_environment(vs_dev_cmd, ["-arch=amd64", "-host_arch=amd64"])
-
     cuda_root = _find_cuda_root()
     if cuda_root is not None:
         os.environ["CUDA_PATH"] = str(cuda_root)
@@ -180,13 +172,11 @@ def _bootstrap_windows_build_environment() -> None:
             cuda_bin_text = str(cuda_bin)
             if cuda_bin_text.lower() not in path_value.lower():
                 os.environ["Path"] = f"{cuda_bin_text};{path_value}" if path_value else cuda_bin_text
-
     cl_path = which("cl.exe")
     if cl_path is not None:
         os.environ["CC"] = cl_path
         os.environ["CXX"] = cl_path
     elif current_cc is None or current_cxx is None:
-        # Keep the original environment if we could not improve it.
         if current_cuda_path and "CUDA_PATH" not in os.environ:
             os.environ["CUDA_PATH"] = current_cuda_path
 
@@ -196,7 +186,6 @@ def _configure_console_encoding() -> None:
         stream = getattr(sys, stream_name, None)
         if stream is None:
             continue
-
         reconfigure = getattr(stream, "reconfigure", None)
         if callable(reconfigure):
             reconfigure(encoding="utf-8", errors="replace")
@@ -204,14 +193,11 @@ def _configure_console_encoding() -> None:
 
 def _resolve_path(path_text: str, project_root: Path) -> Path:
     candidate = Path(path_text)
-
     if candidate.is_absolute():
         return candidate
-
     resolved_candidate = project_root / candidate
     if resolved_candidate.exists():
         return resolved_candidate
-
     return candidate
 
 
@@ -227,53 +213,55 @@ def _collect_resume_files(resume_dir: Path) -> list[Path]:
         (
             file_path
             for file_path in resume_dir.rglob("*")
-            if file_path.is_file()
-            and file_path.suffix.lower() in SUPPORTED_EXTENSIONS
+            if file_path.is_file() and file_path.suffix.lower() in SUPPORTED_EXTENSIONS
         ),
         key=lambda file_path: file_path.relative_to(resume_dir).as_posix().lower(),
     )
 
 
-def _print_runtime_diagnostics(parser: DocumentParser) -> None:
+def _print_runtime_diagnostics(parser: DocumentParser | Any) -> None:
     print(f"PyTorch: {torch.__version__}")
     print(f"PyTorch CUDA: {torch.version.cuda}")
     print(f"CUDA available: {torch.cuda.is_available()}")
-
     if torch.cuda.is_available():
-        print(f"GPU: {torch.cuda.get_device_name(0)}")
+        try:
+            print(f"GPU: {torch.cuda.get_device_name(0)}")
+        except Exception:
+            print("GPU: (cannot query name)")
     else:
         print("GPU: unavailable")
-
     print(f"Docling: {docling.__version__}")
     print(f"Triton: {_get_triton_version()}")
-
-    converter = parser.converter
-    pdf_options = converter.format_to_options[InputFormat.PDF].pipeline_options
-    print(f"Docling accelerator: {pdf_options.accelerator_options.device}")
+    try:
+        converter = parser.converter
+        pdf_options = converter.format_to_options[InputFormat.PDF].pipeline_options
+        print(f"Docling accelerator: {pdf_options.accelerator_options.device}")
+    except Exception:
+        pass
 
 
 class DocumentParser:
-    """Parse resume documents using Docling."""
+    """Parse resume documents using Docling with quality gating and OCR fallback."""
 
     def __init__(self) -> None:
         self.converter = _build_converter()
+        self.ocr = OCRFallback(use_gpu=torch.cuda.is_available())
+
+    def _convert_with_docling(self, path: str):
+        # keep wrapper to isolate Docling errors
+        return self.converter.convert(path)
 
     def parse(self, file_path: str) -> str:
         path = Path(file_path)
-
         if not path.is_file():
             raise FileNotFoundError(f"File not found: {path}")
-
         if path.suffix.lower() not in SUPPORTED_EXTENSIONS:
             raise ValueError(f"Unsupported file format: {path.suffix}")
-
         try:
-            result = self.converter.convert(str(path))
+            result = self._convert_with_docling(str(path))
             document = result.document
-
             if document is None:
                 raise RuntimeError(f"Docling did not return a document for '{path}'")
-
             markdown = document.export_to_markdown()
             return markdown.strip()
         except Exception as exc:
@@ -282,10 +270,8 @@ class DocumentParser:
 
 def get_document_parser() -> DocumentParser:
     global _DEFAULT_PARSER
-
     if _DEFAULT_PARSER is None:
         _DEFAULT_PARSER = DocumentParser()
-
     return _DEFAULT_PARSER
 
 
@@ -293,41 +279,101 @@ def parse_document(file_path: str) -> str:
     return get_document_parser().parse(file_path)
 
 
-def _process_file(parser: DocumentParser, file_path: Path, project_root: Path) -> bool:
+def _process_file(parser: DocumentParser, file_path: Path, project_root: Path, report_list: List[Dict[str, Any]]) -> bool:
     print("\n" + "=" * 80)
     print(f"Processing: {_display_path(file_path, project_root)}")
     print("=" * 80)
-
+    record: Dict[str, Any] = {
+        "filename": _display_path(file_path, project_root),
+        "docling_score": None,
+        "initial_status": None,
+        "ocr_triggered": False,
+        "ocr_score": None,
+        "final_status": None,
+        "error": None,
+    }
     try:
-        text = parser.parse(str(file_path))
-        print(text)
+        # Docling primary pass
+        docling_text = parser.parse(str(file_path))
+        docling_score, metrics = evaluate_quality(docling_text)
+        record["docling_score"] = docling_score
+        record["initial_status"] = "PASS" if quality_is_pass(docling_score) else "FAIL"
+        print(f"Docling score: {docling_score:.3f} | metrics: {metrics}")
+
+        final_text = docling_text
+        used_ocr = False
+        ocr_text = None
+        ocr_score = None
+
+        if not quality_is_pass(docling_score):
+            # Trigger OCR fallback only for image files
+            if file_path.suffix.lower() in (".png", ".jpg", ".jpeg"):
+                record["ocr_triggered"] = True
+                print("Quality gate failed — running OCR fallback...")
+                used_ocr = True
+                try:
+                    tmp_path = None
+                    try:
+                        tmp_path = enhance_image(str(file_path), scale=1.0)
+                        ocr_text = parser.ocr.extract(tmp_path)
+                    finally:
+                        if tmp_path:
+                            cleanup_temp(tmp_path)
+                    ocr_score, _metrics2 = evaluate_quality(ocr_text)
+                    record["ocr_score"] = ocr_score
+                    print(f"OCR score: {ocr_score:.3f}")
+                    if quality_is_pass(ocr_score):
+                        final_text = ocr_text
+                        record["final_status"] = "RECOVERED_BY_OCR"
+                    else:
+                        if ocr_score and ocr_score > docling_score:
+                            final_text = ocr_text
+                            record["final_status"] = "ACCEPT_WITH_LOW_CONFIDENCE"
+                        else:
+                            record["final_status"] = "LOW_QUALITY"
+                except Exception as exc_ocr:
+                    record["error"] = f"OCR fallback failed: {type(exc_ocr).__name__}: {exc_ocr}"
+                    record["final_status"] = "OCR_FAILED"
+                    print(f"OCR fallback exception: {exc_ocr}")
+            else:
+                # file is PDF or other text-based: do not run OCR fallback automatically
+                print("Quality gate failed but file is not an image — skipping OCR fallback for PDF/text.")
+                record["final_status"] = "LOW_QUALITY"
+
+        else:
+            record["final_status"] = "ACCEPTED_BY_DOCLING"
+
+        report_list.append(record)
+        print("\n--- Extracted text excerpt ---")
+        print("\n".join(final_text.splitlines()[:30]))
         return True
     except Exception as exc:
         print(f"CV: {file_path.name}")
         print(f"Exception type: {type(exc).__name__}")
         print(f"Message: {exc}")
-
         root_cause = _format_root_cause(exc)
         if root_cause is not exc:
             print(f"Root cause: {type(root_cause).__name__}: {root_cause}")
-
         print("Traceback:")
         print_exception(type(exc), exc, exc.__traceback__)
+        record["error"] = f"{type(exc).__name__}: {exc}"
+        record["final_status"] = "FAILED"
+        report_list.append(record)
         return False
+
+
+def _ensure_processed_dir():
+    rpt_dir = REPORT_PATH.parent
+    if not rpt_dir.exists():
+        rpt_dir.mkdir(parents=True, exist_ok=True)
 
 
 def main(argv: list[str] | None = None) -> int:
     _configure_console_encoding()
 
-    parser = argparse.ArgumentParser(
-        description="Parse CV documents in Data/Raw/CrawlResume using Docling."
-    )
-    parser.add_argument(
-        "--file",
-        type=str,
-        help="Parse a single document instead of the full CrawlResume directory.",
-    )
-    args = parser.parse_args(argv)
+    argp = argparse.ArgumentParser(description="Parse CV documents in Data/Raw/CrawlResume using Docling.")
+    argp.add_argument("--file", type=str, help="Parse a single document instead of the full CrawlResume directory.")
+    args = argp.parse_args(argv)
 
     project_root = _project_root()
     resume_dir = project_root / DEFAULT_RESUME_DIR
@@ -358,16 +404,39 @@ def main(argv: list[str] | None = None) -> int:
     success_count = 0
     failure_count = 0
 
+    report_list: List[Dict[str, Any]] = []
+
     for resume_file in resume_files:
-        if _process_file(document_parser, resume_file, project_root):
+        ok = _process_file(document_parser, resume_file, project_root, report_list)
+        if ok:
             success_count += 1
         else:
             failure_count += 1
+
+    _ensure_processed_dir()
+    summary = {
+        "total": len(resume_files),
+        "processed": success_count + failure_count,
+        "success": success_count,
+        "failure": failure_count,
+    }
+    out = {"summary": summary, "items": report_list}
+    try:
+        with open(REPORT_PATH, "w", encoding="utf-8") as fh:
+            json.dump(out, fh, ensure_ascii=False, indent=2)
+        print(f"Report written to: {REPORT_PATH}")
+    except Exception as exc:
+        print(f"Failed to write report: {exc}")
 
     print("\n" + "=" * 80)
     print(f"Tổng số CV: {len(resume_files)}")
     print(f"Thành công: {success_count}")
     print(f"Thất bại: {failure_count}")
+
+    from collections import Counter
+    statuses = Counter(item.get("final_status") for item in report_list)
+    for status, cnt in statuses.items():
+        print(f"{status}: {cnt}")
 
     return 0
 
