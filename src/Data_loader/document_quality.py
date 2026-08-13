@@ -1,69 +1,73 @@
 from __future__ import annotations
 
-import math
 import re
 from collections import Counter
 from typing import Dict, Tuple
 
-# Configuration / weights: dễ chỉnh ở một nơi.
-QUALITY_THRESHOLD = 0.70
+QUALITY_THRESHOLD = 0.80
 
 WEIGHTS = {
-    "text_length": 0.25,
-    "section_presence": 0.20,
+    "text_length": 0.20,
+    "section_presence": 0.25,
     "abnormal_char": 0.20,
     "word_quality": 0.20,
     "repetition": 0.15,
 }
 
+# Supported Multilingual Headings (English + Vietnamese)
 COMMON_SECTION_HEADINGS = [
+    # English
     "education", "experience", "work experience", "professional experience",
     "skills", "projects", "summary", "profile", "certifications",
-    "achievements", "languages", "contact"
+    "achievements", "languages", "contact",
+    # Vietnamese
+    "học vấn", "kinh nghiệm", "kinh nghiệm làm việc", "kỹ năng", 
+    "dự án", "tóm tắt", "chứng chỉ", "thành tích", "ngôn ngữ", "liên hệ"
 ]
 
-ABNORMAL_CHARS = set("|&<>^~@#$%*_=+`")
-ABNORMAL_SEQUENCES = [r"(&gt;|&lt;|&amp;)", r"\|{2,}", r"[^\x00-\x7F]{6,}"]
+# Characters that indicate genuine OCR noise, excluding standard Markdown/Resume formatting
+NOISY_CHARS = set("<>^~#$%`\\")
 
 def _normalize_text(text: str) -> str:
     t = text.replace("\r\n", "\n").strip()
-    t = re.sub(r"\s+", " ", t)
+    t = re.sub(r"[ \t]+", " ", t)
     return t
 
 def text_length_score(text: str) -> float:
     length = len(text)
-    # ramp: small penalty for very short; saturate after 1500 chars
-    if length <= 100:
+    if length <= 50:
         return 0.0
-    if length >= 1500:
+    if length >= 800:
         return 1.0
-    # scale between 100..1500
-    return (length - 100) / (1500 - 100)
+    return (length - 50) / (800 - 50)
 
 def section_presence_score(text: str) -> float:
     low = text.lower()
     found = sum(1 for h in COMMON_SECTION_HEADINGS if h in low)
-    # presence / expectation
-    return min(1.0, found / 4.0)
+    return min(1.0, found / 3.0)
 
 def abnormal_char_score(text: str) -> float:
     if not text:
         return 0.0
-    total = len(text)
-    abnormal_count = sum(1 for ch in text if ch in ABNORMAL_CHARS)
-    seq_penalty = 0
-    for seq in ABNORMAL_SEQUENCES:
-        seq_penalty += len(re.findall(seq, text))
-    score = 1.0 - min(1.0, (abnormal_count / max(1, total)) + 0.1 * seq_penalty)
-    return max(0.0, score)
+    
+    # Strip markdown syntax before evaluating noise
+    stripped = re.sub(r"\||#|\*|_", "", text)
+    total = len(stripped)
+    if total == 0:
+        return 1.0
+
+    noisy_count = sum(1 for ch in stripped if ch in NOISY_CHARS)
+    ratio = noisy_count / total
+    return max(0.0, 1.0 - (ratio * 5.0))
 
 def word_quality_score(text: str) -> float:
-    tokens = re.findall(r"[A-Za-z]{2,}", text)
-    if not tokens:
-        return 0.0
+    # Unicode-aware word tokenization (supports Vietnamese and international alphabets)
+    tokens = re.findall(r"[\w]{2,}", text, flags=re.UNICODE)
     total_tokens = len(re.findall(r"\S+", text))
-    alpha_tokens = len(tokens)
-    ratio = alpha_tokens / max(1, total_tokens)
+    if not total_tokens:
+        return 0.0
+    
+    ratio = len(tokens) / total_tokens
     return min(1.0, ratio)
 
 def repetition_score(text: str) -> float:
@@ -72,22 +76,19 @@ def repetition_score(text: str) -> float:
         return 0.0
     counts = Counter(lines)
     most_common_ratio = counts.most_common(1)[0][1] / len(lines)
-    # penalize if >30% of lines identical
     return max(0.0, 1.0 - most_common_ratio)
 
 def evaluate(text: str) -> Tuple[float, Dict[str, float]]:
     t = _normalize_text(text)
-    metrics = {}
-    metrics["text_length"] = text_length_score(t)
-    metrics["section_presence"] = section_presence_score(t)
-    metrics["abnormal_char"] = abnormal_char_score(t)
-    metrics["word_quality"] = word_quality_score(t)
-    metrics["repetition"] = repetition_score(t)
+    metrics = {
+        "text_length": text_length_score(t),
+        "section_presence": section_presence_score(t),
+        "abnormal_char": abnormal_char_score(t),
+        "word_quality": word_quality_score(t),
+        "repetition": repetition_score(t),
+    }
 
-    total = 0.0
-    for k, w in WEIGHTS.items():
-        total += metrics.get(k, 0.0) * w
-
+    total = sum(metrics[k] * w for k, w in WEIGHTS.items())
     score = float(max(0.0, min(1.0, total)))
     return score, metrics
 

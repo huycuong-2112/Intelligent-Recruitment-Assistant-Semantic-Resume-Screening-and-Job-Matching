@@ -1,12 +1,11 @@
 from __future__ import annotations
+
 import os
 import tempfile
 from pathlib import Path
-from typing import Optional
 
 import torch
 
-# optional imports; functions degrade gracefully
 try:
     import easyocr
 except Exception:
@@ -22,30 +21,50 @@ try:
 except Exception:
     pytesseract = None
 
-# rapidocr may be present in environment (Docling/rapidocr). Use if available.
 try:
-    import rapidocr
+    import rapidocr_onnxruntime as rapidocr_module
 except Exception:
-    rapidocr = None
+    try:
+        import rapidocr as rapidocr_module
+    except Exception:
+        rapidocr_module = None
+
 
 class OCRFallback:
     def __init__(self, languages: list[str] | None = None, use_gpu: bool | None = None) -> None:
-        self.languages = languages or ["en"]
+        self.languages = languages or ["en", "vi"]
         if use_gpu is None:
             use_gpu = torch.cuda.is_available()
         self.use_gpu = use_gpu
         self._easy_reader = None
-        # Defer heavy/eager easyocr initialization; try lazy init on first use.
+        self._rapid_engine = None
+
+    def _get_rapidocr_engine(self):
+        if self._rapid_engine is None and rapidocr_module is not None:
+            if hasattr(rapidocr_module, "RapidOCR"):
+                self._rapid_engine = rapidocr_module.RapidOCR()
+            elif callable(rapidocr_module):
+                self._rapid_engine = rapidocr_module()
+        return self._rapid_engine
+
+    def _rapidocr_image(self, img_path: str) -> str:
+        engine = self._get_rapidocr_engine()
+        if engine is None:
+            raise RuntimeError("RapidOCR engine not available")
+        result, _ = engine(img_path)
+        if not result:
+            return ""
+        # Extract text strings from RapidOCR tuple structure [[box, text, score], ...]
+        return "\n".join(item[1] for item in result if len(item) > 1 and item[1])
 
     def _easyocr_image(self, img_path: str) -> str:
-        # attempt lazy init
         if self._easy_reader is None and easyocr is not None:
             try:
                 self._easy_reader = easyocr.Reader(self.languages, gpu=self.use_gpu)
             except Exception as e:
-                raise RuntimeError(f"easyocr initialization failed: {e}")
+                raise RuntimeError(f"EasyOCR init failed: {e}")
         if self._easy_reader is None:
-            raise RuntimeError("easyocr reader not available")
+            raise RuntimeError("EasyOCR reader not available")
         results = self._easy_reader.readtext(img_path, detail=0)
         return "\n".join(results)
 
@@ -53,65 +72,44 @@ class OCRFallback:
         if pytesseract is None or Image is None:
             raise RuntimeError("pytesseract or PIL not available")
         img = Image.open(img_path)
-        text = pytesseract.image_to_string(img)
+        # Add support for English + Vietnamese and Preserve Layout (PSM 6/11)
+        text = pytesseract.image_to_string(img, lang="eng+vie", config="--psm 11")
         return text
 
     def extract_from_image(self, img_path: str) -> str:
         last_exc = None
-        # Try rapidocr (already present in environment used by Docling)
-        if rapidocr is not None:
+
+        if rapidocr_module is not None:
             try:
-                # Try several common entrypoints dynamically
-                for candidate in ("ocr", "read", "readtext", "main", "RapidOCR", "recognize", "run"):
-                    if hasattr(rapidocr, candidate):
-                        func = getattr(rapidocr, candidate)
-                        if callable(func):
-                            try:
-                                # try simple call
-                                out = func(img_path)
-                                if isinstance(out, (list, tuple)):
-                                    return "\n".join(str(x) for x in out)
-                                return str(out)
-                            except TypeError:
-                                # try passing as keyword or different form
-                                try:
-                                    out = func([img_path])
-                                    if isinstance(out, (list, tuple)):
-                                        return "\n".join(str(x) for x in out)
-                                    return str(out)
-                                except Exception:
-                                    raise
-                # fallback: if rapidocr has a high-level runner
-                if hasattr(rapidocr, "main") and callable(rapidocr.main):
-                    try:
-                        out = rapidocr.main(img_path)
-                        return str(out)
-                    except Exception:
-                        pass
+                return self._rapidocr_image(img_path)
             except Exception as exc:
                 last_exc = exc
-        
+
         if easyocr is not None:
             try:
                 return self._easyocr_image(img_path)
             except Exception as exc:
                 last_exc = exc
+
         if pytesseract is not None and Image is not None:
             try:
                 return self._pytesseract_image(img_path)
             except Exception as exc:
                 last_exc = exc
-        raise RuntimeError(f"No OCR backend succeeded: {last_exc}")
+
+        raise RuntimeError(f"No OCR engine succeeded. Last error: {last_exc}")
 
     def extract(self, path: str) -> str:
         p = Path(path)
         suffix = p.suffix.lower()
         if suffix in (".png", ".jpg", ".jpeg", ".tiff", ".bmp"):
             return self.extract_from_image(path)
+
         try:
-            from pdf2image import convert_from_path  # type: ignore
+            from pdf2image import convert_from_path
         except Exception:
-            raise RuntimeError("PDF OCR requested but pdf2image is not installed; install pdf2image+poppler")
+            raise RuntimeError("PDF OCR requires pdf2image and poppler installed.")
+
         pages = convert_from_path(path, dpi=300)
         texts = []
         for page in pages:
@@ -120,8 +118,6 @@ class OCRFallback:
                 try:
                     texts.append(self.extract_from_image(tmp.name))
                 finally:
-                    try:
+                    if os.path.exists(tmp.name):
                         os.remove(tmp.name)
-                    except Exception:
-                        pass
         return "\n\n".join(texts)
