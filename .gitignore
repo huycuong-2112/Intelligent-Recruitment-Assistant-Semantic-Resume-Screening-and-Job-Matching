@@ -18,3 +18,9 @@ data/embeddings/
 Thumbs.db
 
 .streamlit/
+
+/Data/Raw/JD/
+/Data/Raw/Resumes_PDF/
+/Data/Resume.csv
+/Data/Processed/jd_dataset.csv
+__pycache__/
