@@ -6,14 +6,28 @@ import sys
 from pathlib import Path
 from typing import Any, Dict, List
 
+# Tự động tìm thư mục gốc Project chứa folder "Data"
+current_file = Path(__file__).resolve()
+project_root = current_file.parent
+while project_root != project_root.parent:
+    if (project_root / "Data").exists():
+        break
+    project_root = project_root.parent
+
+# Thêm đường dẫn project_root vào sys.path để tránh lỗi ImportError
+if str(project_root) not in sys.path:
+    sys.path.insert(0, str(project_root))
+
 try:
     from document_parser import get_document_parser, SUPPORTED_EXTENSIONS
 except ImportError:
-    from src.Data_loader.document_parser import get_document_parser, SUPPORTED_EXTENSIONS  # type: ignore
+    try:
+        from src.Data_loader.document_parser import get_document_parser, SUPPORTED_EXTENSIONS
+    except ImportError:
+        from .document_parser import get_document_parser, SUPPORTED_EXTENSIONS  # type: ignore
 
-current_dir = Path(__file__).resolve()
-project_root = current_dir.parent.parent.parent
-DEFAULT_INPUT_DIR = project_root / "Data" / "Raw" / "CrawlResume"
+# Trỏ trực tiếp vào thư mục Data/Raw/Resumes (chứa 3 folder IT, Engineer, Economics)
+DEFAULT_INPUT_DIR = project_root / "Data" / "Raw" / "Resumes"
 DEFAULT_OUTPUT_DIR = project_root / "Data" / "Processed"
 
 
@@ -48,6 +62,7 @@ def main() -> int:
 
     print("=" * 80)
     print("DOCUMENT EXTRACTION PIPELINE")
+    print(f"Project Root    : {project_root}")
     print(f"Input Directory : {input_dir}")
     print(f"Output Directory: {output_dir}")
     print("=" * 80)
@@ -63,10 +78,10 @@ def main() -> int:
         files = collect_files(input_dir)
 
     if not files:
-        print(f"Error: No supported resume files found in {input_dir}")
+        print(f"❌ Error: No supported resume files found in {input_dir}")
         return 1
 
-    print(f"Found {len(files)} file(s) to process.\n")
+    print(f"📂 Found {len(files)} file(s) to process.\n")
 
     report_items: List[Dict[str, Any]] = []
     cleaned_texts: List[Dict[str, Any]] = []
@@ -85,9 +100,15 @@ def main() -> int:
         if status in ("ACCEPTED_BY_DOCLING", "RECOVERED_BY_OCR", "LOW_QUALITY"):
             success_count += 1
             full_text = "\n\n".join(chunk["text"] for chunk in chunks)
+            
+            try:
+                rel_path = str(file_path.relative_to(project_root))
+            except ValueError:
+                rel_path = str(file_path)
+
             cleaned_texts.append({
                 "filename": file_path.name,
-                "relative_path": str(file_path),
+                "relative_path": rel_path,
                 "status": status,
                 "total_chunks": len(chunks),
                 "text_length": len(full_text),

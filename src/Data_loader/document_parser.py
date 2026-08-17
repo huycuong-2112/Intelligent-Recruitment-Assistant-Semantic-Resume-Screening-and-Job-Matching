@@ -60,7 +60,14 @@ class DocumentParser:
         if not path.is_file():
             raise FileNotFoundError(f"File not found: {path}")
 
-        record = {
+        if path.suffix.lower() not in SUPPORTED_EXTENSIONS:
+            return [], {
+                "filename": path.name,
+                "final_status": "UNSUPPORTED_FORMAT",
+                "error": f"Unsupported extension: {path.suffix}",
+            }
+
+        record: Dict[str, Any] = {
             "filename": path.name,
             "docling_score": None,
             "ocr_triggered": False,
@@ -69,40 +76,65 @@ class DocumentParser:
             "error": None,
         }
 
+        docling_succeeded = False
+        doc = None
+        cleaned_text = ""
+        docling_score = None
+
+        # 1. Thử phân tích tài liệu bằng Docling
         try:
             result = self.converter.convert(str(path))
             doc = result.document
+            if doc:
+                raw_text = doc.export_to_markdown().strip()
+                cleaned_text = fix_glued_text(raw_text)
+                docling_score, _ = evaluate_quality(cleaned_text)
+                record["docling_score"] = round(docling_score, 3)
+                docling_succeeded = quality_is_pass(docling_score)
+        except Exception as exc:
+            # Ghi nhận lỗi nhưng không return để tiếp tục nhảy sang OCR Fallback
+            record["docling_error"] = str(exc)
 
-            if not doc:
-                raise RuntimeError("Docling failed to produce a valid document object.")
-
-            raw_text = doc.export_to_markdown().strip()
-            cleaned_text = fix_glued_text(raw_text)
-
-            docling_score, _ = evaluate_quality(cleaned_text)
-            record["docling_score"] = round(docling_score, 3)
-
+        # 2. Nếu Docling đạt chất lượng, tiến hành Chunking
+        if docling_succeeded and doc:
+            record["final_status"] = "ACCEPTED_BY_DOCLING"
             chunks_output: List[Dict[str, Any]] = []
+            raw_chunks = list(self.chunker.chunk(doc))
+            
+            for idx, chunk in enumerate(raw_chunks):
+                headings = getattr(chunk.meta, "headings", []) if hasattr(chunk, "meta") else []
+                chunks_output.append({
+                    "chunk_id": idx,
+                    "headings": headings,
+                    "text": fix_glued_text(chunk.text),
+                })
+            return chunks_output, record
 
-            if quality_is_pass(docling_score):
-                record["final_status"] = "ACCEPTED_BY_DOCLING"
-                raw_chunks = list(self.chunker.chunk(doc))
-                
-                for idx, chunk in enumerate(raw_chunks):
-                    headings = getattr(chunk.meta, "headings", []) if hasattr(chunk, "meta") else []
-                    chunks_output.append({
-                        "chunk_id": idx,
-                        "headings": headings,
-                        "text": fix_glued_text(chunk.text),
-                    })
-                return chunks_output, record
-
-            # OCR Fallback
+        # 3. Kích hoạt OCR Fallback nếu Docling thất bại hoặc chất lượng kém
+        try:
             record["ocr_triggered"] = True
-            raw_ocr = self.ocr.extract(str(path))
+            
+            # Tiền xử lý ảnh nếu là file ảnh để tăng độ chính xác
+            target_path = str(path)
+            enhanced_path = None
+            if path.suffix.lower() in {".png", ".jpg", ".jpeg"}:
+                try:
+                    enhanced_path = enhance_image(target_path)
+                    target_path = enhanced_path
+                except Exception:
+                    pass
+
+            raw_ocr = self.ocr.extract(target_path)
             ocr_text = fix_glued_text(raw_ocr)
             ocr_score, _ = evaluate_quality(ocr_text)
             record["ocr_score"] = round(ocr_score, 3)
+
+            # Dọn dẹp file ảnh tạm nếu có
+            if enhanced_path:
+                try:
+                    cleanup_temp(enhanced_path)
+                except Exception:
+                    pass
 
             if quality_is_pass(ocr_score) or (
                 ocr_score is not None and docling_score is not None and ocr_score > docling_score
@@ -111,12 +143,11 @@ class DocumentParser:
             else:
                 record["final_status"] = "LOW_QUALITY"
 
-            chunks_output.append({
+            chunks_output = [{
                 "chunk_id": 0,
                 "headings": ["OCR_FALLBACK_TEXT"],
                 "text": ocr_text,
-            })
-
+            }]
             return chunks_output, record
 
         except Exception as exc:
@@ -125,7 +156,6 @@ class DocumentParser:
             return [], record
 
     def parse(self, file_path: str) -> Tuple[str, Dict[str, Any]]:
-        """Backward-compatible wrapper returning full text string and audit record."""
         chunks, record = self.parse_to_chunks(file_path)
         full_text = "\n\n".join(chunk["text"] for chunk in chunks)
         return full_text, record
