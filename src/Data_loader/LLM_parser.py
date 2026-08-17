@@ -19,27 +19,6 @@ except ImportError:
     print("Vui lòng cài đặt thư viện groq: pip install groq pydantic python-dotenv")
     exit(1)
 
-# Đọc PDF
-try:
-    from pypdf import PdfReader
-except ImportError:
-    PdfReader = None
-
-# Đọc DOCX
-try:
-    import docx
-except ImportError:
-    docx = None
-
-# Tích hợp bộ bóc tách ảnh & OCR Fallback
-try:
-    from document_parser import get_document_parser
-except ImportError:
-    try:
-        from src.Data_loader.document_parser import get_document_parser
-    except ImportError:
-        get_document_parser = None
-
 # Tự động tìm thư mục gốc Project
 current_file = Path(__file__).resolve()
 project_root = current_file.parent
@@ -48,11 +27,8 @@ while project_root != project_root.parent:
         break
     project_root = project_root.parent
 
-RAW_RESUMES_DIR = project_root / "Data" / "Raw" / "Resumes"
+INPUT_CLEANED_TEXT = project_root / "Data" / "Processed" / "cleaned_text.json"
 OUTPUT_JSON = project_root / "Data" / "Processed" / "parsed_resumes.json"
-
-# 3 Domains trọng tâm
-DOMAINS = ["IT", "Engineering", "Economics"]
 
 GROQ_MODELS = [
     "llama-3.3-70b-versatile",
@@ -83,43 +59,6 @@ class ResumeData(BaseModel):
         default_factory=list, 
         description="Danh sách các chức danh công việc từng đảm nhiệm (ví dụ: ['Data Engineer', 'Embedded Developer'])"
     )
-
-
-def extract_text_from_file(file_path: Path) -> str:
-    """Bóc tách nội dung văn bản hỗ trợ PDF, DOCX, TXT và các file ẢNH (PNG, JPG, JPEG)."""
-    ext = file_path.suffix.lower()
-    text = ""
-    try:
-        if ext == ".txt":
-            with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
-                text = f.read()
-
-        elif ext == ".pdf":
-            if PdfReader is not None:
-                reader = PdfReader(str(file_path), strict=False)
-                for page in reader.pages:
-                    t = page.extract_text()
-                    if t:
-                        text += t + "\n"
-            # Nếu PDF dạng scan không có text layer, gọi OCR parser
-            if not text.strip() and get_document_parser is not None:
-                parser = get_document_parser()
-                text, _ = parser.parse(str(file_path))
-
-        elif ext in [".docx", ".doc"]:
-            if docx is not None:
-                doc = docx.Document(str(file_path))
-                text = "\n".join([p.text for p in doc.paragraphs if p.text])
-
-        elif ext in [".png", ".jpg", ".jpeg", ".bmp", ".tiff"]:
-            if get_document_parser is not None:
-                parser = get_document_parser()
-                text, _ = parser.parse(str(file_path))
-
-    except Exception as e:
-        print(f"      [Lỗi đọc file {file_path.name}]: {e}")
-
-    return text.strip()
 
 
 def extract_fallback_regex(text: str) -> dict:
@@ -198,27 +137,33 @@ def parse_resume_llm(text: str, client: Groq) -> dict:
     raise last_error
 
 
-def find_domain_folder(base_dir: Path, domain_name: str) -> Optional[Path]:
-    if (base_dir / domain_name).exists():
-        return base_dir / domain_name
-    for folder in base_dir.iterdir():
-        if folder.is_dir() and domain_name.lower() in folder.name.lower():
-            return folder
-    return None
+def determine_domain_from_path(relative_path: str) -> str:
+    path_lower = relative_path.lower()
+    if "it" in path_lower:
+        return "IT"
+    if "engineer" in path_lower:
+        return "Engineering"
+    if "economics" in path_lower:
+        return "Economics"
+    return "Unknown"
 
 
 def main():
     print("=" * 80)
-    print("RESUME PARSER THEO 3 DOMAINS (IT, Engineering, Economics)")
-    print("Hỗ trợ định dạng: PDF, DOCX, TXT, PNG, JPG, JPEG")
+    print("RESUME ENTITY STRUCTURING (LLM PARSER TẦNG 2)")
     print("=" * 80)
 
-    # Đọc API key từ biến môi trường hệ thống hoặc file .env
-    api_key = os.getenv("GROQ_API_KEY", "")
-    
-    # Nếu chưa có biến môi trường, bạn có thể gán tạm thời khi chạy local:
-    # api_key = "ĐIỀN_API_KEY_CỦA_BẠN_VÀO_ĐÂY"
+    if not INPUT_CLEANED_TEXT.exists():
+        print(f"❌ Không tìm thấy file: {INPUT_CLEANED_TEXT}")
+        print("Vui lòng chạy 'python main.py' trước để bóc tách văn bản thô từ tài liệu.")
+        return
 
+    with open(INPUT_CLEANED_TEXT, "r", encoding="utf-8") as f:
+        cleaned_docs = json.load(f)
+
+    print(f"📂 Đã nạp {len(cleaned_docs)} tài liệu từ {INPUT_CLEANED_TEXT.name}...")
+
+    api_key = os.getenv("GROQ_API_KEY", "")
     client = None
     if api_key and api_key.startswith("gsk_"):
         client = Groq(api_key=api_key)
@@ -229,54 +174,49 @@ def main():
     success_api = 0
     success_fallback = 0
 
-    SUPPORTED_EXTS = [".pdf", ".docx", ".doc", ".txt", ".png", ".jpg", ".jpeg"]
+    for idx, doc in enumerate(cleaned_docs, 1):
+        filename = doc.get("filename", "")
+        content = doc.get("content", "")
+        rel_path = doc.get("relative_path", "")
+        domain = determine_domain_from_path(rel_path)
 
-    for domain in DOMAINS:
-        domain_folder = find_domain_folder(RAW_RESUMES_DIR, domain)
-        if not domain_folder or not domain_folder.exists():
-            print(f"⚠️ Thư mục chưa tồn tại cho Domain [{domain}] tại: {RAW_RESUMES_DIR}")
+        if not content.strip():
+            print(f"   [{idx}/{len(cleaned_docs)}] ⚠️ Bỏ qua (không có nội dung): {filename}")
             continue
 
-        resume_files = [f for f in domain_folder.rglob("*") if f.is_file() and f.suffix.lower() in SUPPORTED_EXTS]
-        print(f"\n📂 Đang xử lý Domain [{domain}] (Folder: {domain_folder.name}) - {len(resume_files)} files...")
+        print(f"   [{idx}/{len(cleaned_docs)}] Đang bóc tách [{domain}]: {filename}...")
 
-        for idx, file_path in enumerate(resume_files, 1):
-            cv_text = extract_text_from_file(file_path)
-            if not cv_text:
-                print(f"   [{idx}/{len(resume_files)}] ⚠️ Không đọc được text: {file_path.name}")
-                continue
+        parsed_data = None
+        if client:
+            try:
+                parsed_data = parse_resume_llm(content, client)
+                success_api += 1
+            except Exception as e:
+                print(f"      -> [LLM Lỗi, dùng Fallback]: {e}")
 
-            print(f"   [{idx}/{len(resume_files)}] Đang parse: {file_path.name}...")
-            parsed_data = None
-            if client:
-                try:
-                    parsed_data = parse_resume_llm(cv_text, client)
-                    success_api += 1
-                except Exception as e:
-                    print(f"      -> [API Lỗi, dùng Fallback]: {e}")
+        if not parsed_data:
+            parsed_data = extract_fallback_regex(content)
+            success_fallback += 1
 
-            if not parsed_data:
-                parsed_data = extract_fallback_regex(cv_text)
-                success_fallback += 1
-
-            record = {
-                "filename": file_path.name,
-                "domain": domain,
-                "parsed_data": parsed_data,
-                "raw_text_length": len(cv_text)
-            }
-            parsed_results.append(record)
+        record = {
+            "filename": filename,
+            "domain": domain,
+            "parsed_data": parsed_data,
+            "raw_text_length": len(content),
+            "source_status": doc.get("status")
+        }
+        parsed_results.append(record)
 
     OUTPUT_JSON.parent.mkdir(parents=True, exist_ok=True)
     with open(OUTPUT_JSON, "w", encoding="utf-8") as f:
         json.dump(parsed_results, f, ensure_ascii=False, indent=2)
 
     print("\n" + "=" * 80)
-    print("HOÀN TẤT XỬ LÝ TẤT CẢ RESUMES")
-    print(f"Thành công qua Groq API : {success_api}")
+    print("HOÀN TẤT CẤU TRÚC HÓA THỰC THỂ TẤT CẢ RESUMES")
+    print(f"Thành công qua Groq LLM : {success_api}")
     print(f"Thành công qua Regex    : {success_fallback}")
-    print(f"Tổng số CV đã xử lý     : {len(parsed_results)}")
-    print(f"File lưu tại            : {OUTPUT_JSON}")
+    print(f"Tổng số CV hoàn thành   : {len(parsed_results)}")
+    print(f"File kết quả lưu tại    : {OUTPUT_JSON}")
     print("=" * 80)
 
 
