@@ -1,26 +1,29 @@
+# Virtual Environments
 venv/
 env/
 .venv/
 
+# Environment Variables
 .env
 
+# Python Bytecode
 __pycache__/
 *.pyc
 *.pyo
 
+# Models & Embeddings
 models_checkpoint/
 data/embeddings/
 
+# IDE & OS
 .vscode/
 .idea/
-
 .DS_Store
 Thumbs.db
 
+# Streamlit
 .streamlit/
 
-/Data/Raw/JD/
-/Data/Raw/Resumes_PDF/
-/Data/Resume.csv
-/Data/Processed/jd_dataset.csv
-__pycache__/
+# Toàn bộ dữ liệu Raw, Processed, JSON, NPY, CSV
+Data/
+

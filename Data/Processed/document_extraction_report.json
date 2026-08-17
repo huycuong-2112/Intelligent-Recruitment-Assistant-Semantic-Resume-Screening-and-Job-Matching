@@ -1,17 +1,17 @@
 {
   "summary": {
-    "total_files": 7,
-    "successful_extractions": 7,
+    "total_files": 8,
+    "successful_extractions": 8,
     "failed_extractions": 0,
     "status_breakdown": {
-      "ACCEPTED_BY_DOCLING": 5,
-      "RECOVERED_BY_OCR": 2
+      "RECOVERED_BY_OCR": 2,
+      "ACCEPTED_BY_DOCLING": 6
     }
   },
   "details": [
     {
       "filename": "cv2.jpg",
-      "docling_score": 0.971,
+      "docling_score": 0.973,
       "ocr_triggered": false,
       "ocr_score": null,
       "final_status": "ACCEPTED_BY_DOCLING",
@@ -19,7 +19,7 @@
     },
     {
       "filename": "cv3.png",
-      "docling_score": 0.974,
+      "docling_score": 0.975,
       "ocr_triggered": false,
       "ocr_score": null,
       "final_status": "ACCEPTED_BY_DOCLING",
@@ -27,9 +27,9 @@
     },
     {
       "filename": "cv4.png",
-      "docling_score": 0.665,
+      "docling_score": 0.677,
       "ocr_triggered": true,
-      "ocr_score": 0.681,
+      "ocr_score": 0.679,
       "final_status": "RECOVERED_BY_OCR",
       "error": null
     },
@@ -43,7 +43,7 @@
     },
     {
       "filename": "cv6.png",
-      "docling_score": 0.955,
+      "docling_score": 0.956,
       "ocr_triggered": false,
       "ocr_score": null,
       "final_status": "ACCEPTED_BY_DOCLING",
@@ -51,15 +51,23 @@
     },
     {
       "filename": "cv7.png",
-      "docling_score": 0.741,
+      "docling_score": 0.749,
       "ocr_triggered": true,
-      "ocr_score": 0.846,
+      "ocr_score": 0.923,
       "final_status": "RECOVERED_BY_OCR",
       "error": null
     },
     {
       "filename": "cv8.jpg",
-      "docling_score": 0.961,
+      "docling_score": 0.962,
+      "ocr_triggered": false,
+      "ocr_score": null,
+      "final_status": "ACCEPTED_BY_DOCLING",
+      "error": null
+    },
+    {
+      "filename": "HUA-VINH-HOA-PRODUCT-OWNER-CANDIDATE.pdf",
+      "docling_score": 0.964,
       "ocr_triggered": false,
       "ocr_score": null,
       "final_status": "ACCEPTED_BY_DOCLING",

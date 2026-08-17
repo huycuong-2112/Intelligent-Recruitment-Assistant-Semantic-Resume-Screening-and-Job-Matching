@@ -3,7 +3,6 @@ from __future__ import annotations
 import os
 import tempfile
 from pathlib import Path
-
 import torch
 
 try:
@@ -29,13 +28,17 @@ except Exception:
     except Exception:
         rapidocr_module = None
 
+# Import hàm đánh giá chất lượng để chấm điểm từng engine OCR
+try:
+    from .document_quality import evaluate as evaluate_quality
+except Exception:
+    from document_quality import evaluate as evaluate_quality
+
 
 class OCRFallback:
     def __init__(self, languages: list[str] | None = None, use_gpu: bool | None = None) -> None:
         self.languages = languages or ["en", "vi"]
-        if use_gpu is None:
-            use_gpu = torch.cuda.is_available()
-        self.use_gpu = use_gpu
+        self.use_gpu = torch.cuda.is_available() if use_gpu is None else use_gpu
         self._easy_reader = None
         self._rapid_engine = None
 
@@ -50,65 +53,117 @@ class OCRFallback:
     def _rapidocr_image(self, img_path: str) -> str:
         engine = self._get_rapidocr_engine()
         if engine is None:
-            raise RuntimeError("RapidOCR engine not available")
+            raise RuntimeError("RapidOCR engine unavailable")
+        
         result, _ = engine(img_path)
         if not result:
             return ""
-        # Extract text strings from RapidOCR tuple structure [[box, text, score], ...]
-        return "\n".join(item[1] for item in result if len(item) > 1 and item[1])
+
+        lines = []
+        sorted_boxes = sorted(result, key=lambda item: (round(item[0][0][1] / 10) * 10, item[0][0][0]))
+        current_line = []
+        last_x2 = -1
+        last_y1 = -1
+
+        for box, text, conf in sorted_boxes:
+            x1, y1 = box[0][0], box[0][1]
+            x2 = box[1][0]
+
+            if not text.strip():
+                continue
+
+            if last_y1 != -1 and abs(y1 - last_y1) > 12:
+                lines.append(" ".join(current_line))
+                current_line = []
+                last_x2 = -1
+
+            if last_x2 != -1 and (x1 - last_x2) > 5:
+                current_line.append(text.strip())
+            else:
+                if current_line:
+                    current_line[-1] += f" {text.strip()}"
+                else:
+                    current_line.append(text.strip())
+
+            last_x2 = x2
+            last_y1 = y1
+
+        if current_line:
+            lines.append(" ".join(current_line))
+
+        return "\n".join(lines)
 
     def _easyocr_image(self, img_path: str) -> str:
         if self._easy_reader is None and easyocr is not None:
-            try:
-                self._easy_reader = easyocr.Reader(self.languages, gpu=self.use_gpu)
-            except Exception as e:
-                raise RuntimeError(f"EasyOCR init failed: {e}")
+            self._easy_reader = easyocr.Reader(self.languages, gpu=self.use_gpu)
         if self._easy_reader is None:
-            raise RuntimeError("EasyOCR reader not available")
-        results = self._easy_reader.readtext(img_path, detail=0)
+            raise RuntimeError("EasyOCR reader unavailable")
+        results = self._easy_reader.readtext(img_path, detail=0, paragraph=True)
         return "\n".join(results)
 
     def _pytesseract_image(self, img_path: str) -> str:
         if pytesseract is None or Image is None:
-            raise RuntimeError("pytesseract or PIL not available")
+            raise RuntimeError("pytesseract or PIL unavailable")
         img = Image.open(img_path)
-        # Add support for English + Vietnamese and Preserve Layout (PSM 6/11)
-        text = pytesseract.image_to_string(img, lang="eng+vie", config="--psm 11")
-        return text
+        return pytesseract.image_to_string(img, lang="eng+vie", config="--psm 11")
 
     def extract_from_image(self, img_path: str) -> str:
-        last_exc = None
+        """
+        Chiến lược mới: Chạy tất cả các engine OCR có sẵn, 
+        chấm điểm từng kết quả và trả về văn bản có điểm chất lượng cao nhất.
+        """
+        candidates = []
 
+        # 1. Thử RapidOCR
         if rapidocr_module is not None:
             try:
-                return self._rapidocr_image(img_path)
-            except Exception as exc:
-                last_exc = exc
+                text_rapid = self._rapidocr_image(img_path)
+                if text_rapid.strip():
+                    score, _ = evaluate_quality(text_rapid)
+                    candidates.append((score, text_rapid, "RapidOCR"))
+            except Exception:
+                pass
 
+        # 2. Thử EasyOCR
         if easyocr is not None:
             try:
-                return self._easyocr_image(img_path)
-            except Exception as exc:
-                last_exc = exc
+                text_easy = self._easyocr_image(img_path)
+                if text_easy.strip():
+                    score, _ = evaluate_quality(text_easy)
+                    candidates.append((score, text_easy, "EasyOCR"))
+            except Exception:
+                pass
 
+        # 3. Thử PyTesseract
         if pytesseract is not None and Image is not None:
             try:
-                return self._pytesseract_image(img_path)
-            except Exception as exc:
-                last_exc = exc
+                text_tess = self._pytesseract_image(img_path)
+                if text_tess.strip():
+                    score, _ = evaluate_quality(text_tess)
+                    candidates.append((score, text_tess, "PyTesseract"))
+            except Exception:
+                pass
 
-        raise RuntimeError(f"No OCR engine succeeded. Last error: {last_exc}")
+        # Nếu không có engine nào chạy ra chữ
+        if not candidates:
+            raise RuntimeError("All OCR engines failed to extract any text or returned empty results.")
+
+        # Sắp xếp các ứng viên theo điểm số giảm dần (score cao nhất đứng đầu)
+        candidates.sort(key=lambda x: x[0], reverse=True)
+        best_score, best_text, best_engine = candidates[0]
+
+        print(f"   [OCR Competition] Winner: {best_engine} with score: {best_score:.3f}")
+        return best_text
 
     def extract(self, path: str) -> str:
         p = Path(path)
-        suffix = p.suffix.lower()
-        if suffix in (".png", ".jpg", ".jpeg", ".tiff", ".bmp"):
+        if p.suffix.lower() in (".png", ".jpg", ".jpeg", ".tiff", ".bmp"):
             return self.extract_from_image(path)
 
         try:
             from pdf2image import convert_from_path
         except Exception:
-            raise RuntimeError("PDF OCR requires pdf2image and poppler installed.")
+            raise RuntimeError("pdf2image is required for PDF OCR.")
 
         pages = convert_from_path(path, dpi=300)
         texts = []
