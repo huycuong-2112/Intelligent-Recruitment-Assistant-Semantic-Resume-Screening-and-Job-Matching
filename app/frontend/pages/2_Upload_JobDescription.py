@@ -4,12 +4,24 @@ import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "..")))
 
 import streamlit as st
-from app.frontend.utils.api_client import call_matching_api
 
 st.title("💼 Upload Job Description")
 
-job_text = st.text_area("Dán nội dung mô tả công việc vào đây", height=250)
+uploaded_jd = st.file_uploader(
+    "Chọn file Job Description (PDF/DOCX/TXT)",
+    type=["pdf", "docx", "txt"]
+)
 
-if st.button("Lưu Job Description"):
-    st.session_state["job_description"] = job_text
-    st.success("Đã lưu Job Description!")
+if uploaded_jd is not None:
+    st.success(f"Đã upload: {uploaded_jd.name}")
+    # TODO: gọi API để parse text từ file JD (giống luồng xử lý CV)
+    # Hiện tại dùng placeholder để test luồng UI
+    st.session_state["job_description"] = "Nội dung JD mẫu (placeholder, sẽ được trích xuất từ file thật)"
+
+if "job_description" in st.session_state:
+    st.text_area(
+        "Nội dung JD đã trích xuất",
+        st.session_state["job_description"],
+        height=200,
+        disabled=True
+    )
