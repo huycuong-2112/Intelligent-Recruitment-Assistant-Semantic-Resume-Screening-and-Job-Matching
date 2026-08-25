@@ -1,0 +1,71 @@
+{
+  "domain": "IT",
+  "extraction_method": "groq_llm",
+  "filename": "776163774_1597556341900432_9219636715192236441_n.jpg",
+  "id": "cv_025",
+  "parsed_data": {
+    "certifications": [],
+    "education_degree": "Bachelor",
+    "education_field": "Information Technology",
+    "education_history": [
+      {
+        "degree": "Bachelor",
+        "end_year": 2027,
+        "field_of_study": "Information Technology",
+        "gpa_or_honors": "3.22/4.0",
+        "institution": "University of Transport Technology (UTT)",
+        "start_year": 2023
+      }
+    ],
+    "experience_years": 0.0,
+    "job_titles": [],
+    "projects": [
+      {
+        "description": "Architected a modular mobile app applying Clean Architecture and Flutter BLoC state management. Implemented real-time interactive features including debounced reactive search for users and posts using custom Event Transformers. Handled state synchronization across screens via an Event Bus architecture (post updates, deletions, and profile synchronizations). Integrated Supabase backend for authentication, media storage, and database RPC execution. Applied robust UI error-handling, fallback states for broken network assets, and optimistic UI updates for post likes.",
+        "heuristic_score": null,
+        "impact_metrics": [],
+        "links": [],
+        "name": "Community Board App",
+        "role": null,
+        "technologies": [
+          "Dart",
+          "Flutter",
+          "BLoC",
+          "Supabase",
+          "Clean Architecture",
+          "Event Bus",
+          "REST API",
+          "Get It",
+          "Go Route",
+          "Dependency Injection"
+        ]
+      }
+    ],
+    "skills": [
+      "Dart",
+      "Flutter",
+      "OOP",
+      "Async/Await",
+      "Widget Lifecycle",
+      "Clean Architecture",
+      "BLoC pattern",
+      "Event Bus",
+      "State Management",
+      "Get It",
+      "REST API",
+      "Go Route",
+      "Dependency Injection",
+      "UI/UX implementation",
+      "Figma",
+      "Git",
+      "GitHub",
+      "AI tools",
+      "SQLite",
+      "MySQL",
+      "Supabase"
+    ],
+    "summary": "A final-year IT student passionate about mobile application development with Flutter, who has previously taken two Flutter programming courses on Udemy. Seeking an internship in a professional environment to enhance Clean Architecture skills, optimize performance, and learn about real-world product development processes.",
+    "work_experience": []
+  },
+  "source_status": "ACCEPTED_BY_DOCLING"
+}

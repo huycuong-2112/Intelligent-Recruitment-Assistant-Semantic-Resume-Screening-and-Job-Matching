@@ -1,0 +1,11 @@
+{
+  "target_jd": "jd_001",
+  "weights": {
+    "w_skill": 0.4,
+    "w_experience": 0.2,
+    "w_education": 0.1,
+    "w_semantic": 0.3
+  },
+  "selected_on": "development",
+  "blind_evaluated": false
+}

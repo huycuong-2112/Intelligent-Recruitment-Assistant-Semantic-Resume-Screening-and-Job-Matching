@@ -1,0 +1,206 @@
+{
+  "domain": "IT",
+  "extraction_method": "groq_llm",
+  "filename": "012.jpg",
+  "id": "cv_004",
+  "parsed_data": {
+    "certifications": [],
+    "education_degree": "Bachelor",
+    "education_field": "Information Technology Software Engineering",
+    "education_history": [
+      {
+        "degree": "Bachelor",
+        "end_year": null,
+        "field_of_study": "Information Technology Software Engineering",
+        "gpa_or_honors": null,
+        "institution": "Hanol University of Natural Resources and Environment",
+        "start_year": 2022
+      }
+    ],
+    "experience_years": 4.5,
+    "job_titles": [
+      "Full‑stack & Data Integration Developer",
+      "Algorithmic Trading Developer",
+      "Backend & Automation Engineer",
+      "Algorithmic Developer (C#)",
+      "Store Manager & Operations"
+    ],
+    "projects": [
+      {
+        "description": "A trading‑psychology analysis web application that connects to MetaTrader 5 accounts, processes historical trading data, and provides behavioral insights to improve trader performance.",
+        "heuristic_score": null,
+        "impact_metrics": [
+          "20+ dashboard widgets",
+          "30+ integrated API endpoints",
+          "Real‑time data synchronization"
+        ],
+        "links": [],
+        "name": "Zentra Platform",
+        "role": "Full‑stack & Data Integration Developer",
+        "technologies": [
+          "Next.js 15",
+          "React 18",
+          "Recharts",
+          "MetaTrader 5 API",
+          "REST APIs"
+        ]
+      },
+      {
+        "description": "Real‑time pipeline that collects market data, filters signals, and pushes validated trading signals to a Telegram VIP channel for automated execution in MetaTrader.",
+        "heuristic_score": null,
+        "impact_metrics": [
+          "Ultra‑low latency signal delivery",
+          "Automated 3‑tier Scale‑In DCA strategy",
+          "Trailing‑stop risk management"
+        ],
+        "links": [],
+        "name": "Automated Trading System with Telegram Data",
+        "role": "Algorithmic Trading Developer",
+        "technologies": [
+          "Python",
+          "Telethon",
+          "State Machine",
+          "Low‑latency networking"
+        ]
+      },
+      {
+        "description": "Automated system for large‑scale data scraping and interaction on Instagram, TikTok, and Reddit, with human‑simulation techniques and encrypted credential storage.",
+        "heuristic_score": null,
+        "impact_metrics": [
+          "10 parallel browsers",
+          "300+ tasks per day",
+          "Secure storage of API keys and cookies"
+        ],
+        "links": [],
+        "name": "Data Collection & Social Media Automation System",
+        "role": "Backend & Automation Engineer",
+        "technologies": [
+          "Python",
+          "Asyncio",
+          "Playwright",
+          "AES‑128 (Fernet)",
+          "Gemini",
+          "OpenAI"
+        ]
+      },
+      {
+        "description": "Quantitative trading platform built on NinjaTrader 8, featuring low‑latency processing, risk management modules, and comprehensive audit logging.",
+        "heuristic_score": null,
+        "impact_metrics": [
+          "~1,700 lines of code",
+          "Low‑latency execution",
+          "Drawdown cut‑off and cooldown safety mechanisms"
+        ],
+        "links": [],
+        "name": "Ninja Trader 8 Quantitative Trading System",
+        "role": "Algorithmic Developer (C#)",
+        "technologies": [
+          "C#",
+          ".NET",
+          "State Machine",
+          "Low‑latency order API"
+        ]
+      },
+      {
+        "description": "Organized and operated a garage‑sale event, handling inventory, visitor coordination, and payment processing.",
+        "heuristic_score": null,
+        "impact_metrics": [
+          "First‑day revenue: 100,000,000 VND"
+        ],
+        "links": [],
+        "name": "TINY‑GARAGE SALE",
+        "role": "Co‑founder",
+        "technologies": []
+      }
+    ],
+    "skills": [
+      "Python",
+      "C# (.NET)",
+      "MQL5",
+      "Pine Script",
+      "JavaScript",
+      "TypeScript",
+      "Next.js 15",
+      "React 18",
+      "FastAPI",
+      "Tailwind CSS",
+      "MongoDB",
+      "SQLite",
+      "Playwright",
+      "Recharts",
+      "Asyncio",
+      "Telethon",
+      "Git",
+      "Vercel",
+      "Gemini",
+      "OpenAI",
+      "AES‑128 (Fernet)",
+      "API Integration",
+      "Low‑latency processing",
+      "State Machine design",
+      "Risk Management",
+      "Automated trading bots",
+      "MetaTrader",
+      "NinjaTrader"
+    ],
+    "summary": "Apply algorithmic development and big data processing experience to banking technology projects. Short‑term goal: quickly master the system and become a full‑time employee; long‑term goal: become a Financial Software Engineer, specializing in designing core systems with automation, high security, and optimized transaction performance.",
+    "work_experience": [
+      {
+        "company": "Zentra Platform (Independent FinTech Project)",
+        "end_date": "Present",
+        "responsibilities_and_impact": [
+          "Developed a trading‑psychology analysis web app for forex/crypto traders using Next.js 15 and React 18 with real‑time data sync from MetaTrader 5.",
+          "Architected a dashboard with 20+ widgets and integrated 30+ API endpoints, visualizing risk indicators via Recharts.",
+          "Implemented Error Boundaries to isolate component errors, ensuring continuous operation despite API failures."
+        ],
+        "role": "Full‑stack & Data Integration Developer",
+        "start_date": "01/2026"
+      },
+      {
+        "company": "Automated Trading System with Telegram Data",
+        "end_date": "05/2026",
+        "responsibilities_and_impact": [
+          "Built a real‑time data collection pipeline using Python Telethon to ingest market data.",
+          "Created algorithmic filters to clean noise and route qualified signals to a VIP Telegram channel with ultra‑low latency.",
+          "Implemented an inter‑process state machine for order lifecycle management and a 3‑tier Scale‑In DCA capital allocation strategy with trailing‑stop risk control."
+        ],
+        "role": "Algorithmic Trading Developer",
+        "start_date": "05/2026"
+      },
+      {
+        "company": "Data Collection & Social Media Automation System",
+        "end_date": "05/2026",
+        "responsibilities_and_impact": [
+          "Designed an asynchronous queue system (Python asyncio) handling up to 10 parallel browsers and 300+ tasks per day.",
+          "Automated data collection on Instagram, TikTok, Reddit using Playwright with human‑simulation, stealth JS injection, proxy rotation, and firewall bypass.",
+          "Secured stored credentials with AES‑128 (Fernet) encryption and integrated Gemini + OpenAI for automated content generation."
+        ],
+        "role": "Backend & Automation Engineer",
+        "start_date": "11/2025"
+      },
+      {
+        "company": "Ninja Trader 8 Quantitative Trading System",
+        "end_date": "05/2026",
+        "responsibilities_and_impact": [
+          "Developed a low‑latency automated trading system (~1,700 LOC) in C#/.NET applying state‑machine and component design patterns.",
+          "Implemented a capital safety module with drawdown cut‑off and system cooldown mechanisms.",
+          "Created CSV audit logging for full transaction traceability meeting compliance standards."
+        ],
+        "role": "Algorithmic Developer (C#)",
+        "start_date": "02/2026"
+      },
+      {
+        "company": "Khoi Store",
+        "end_date": "12/2025",
+        "responsibilities_and_impact": [
+          "Managed sales, inventory, and a network of 200+ loyal customers.",
+          "Introduced technology tools and automation for content creation and customer care, boosting store revenue by 120% in 2024.",
+          "Applied a user‑centric mindset to improve service quality and operational efficiency."
+        ],
+        "role": "Store Manager & Operations",
+        "start_date": "02/2023"
+      }
+    ]
+  },
+  "source_status": "RECOVERED_BY_OCR"
+}

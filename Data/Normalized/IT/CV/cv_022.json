@@ -1,0 +1,129 @@
+{
+  "id": "cv_022",
+  "domain": "IT",
+  "profile": {
+    "summary": "Fourth-year Software Engineering student with hands-on experience building full-stack web applications using React, Vue.js, Node.js, Express.js and Mongo DB. Developed academic and personal projects involving RESTful APIs, authentication, database management and responsive user interfaces. Interested in Software Developer/Full-stack Developer internship opportunities where I can strengthen my development, debugging and problem-solving skills.",
+    "job_titles": []
+  },
+  "skills": {
+    "all": [
+      "Java",
+      "JavaScript",
+      "HTML",
+      "React.js",
+      "Vue.js",
+      "Node.js",
+      "Express.js",
+      "REST API",
+      "Mongo DB",
+      "MySQL",
+      "Redux",
+      "Pinia",
+      "Git",
+      "VSCode",
+      "Postman",
+      "Docker",
+      "Socket.IO",
+      "JWT",
+      "Axios",
+      "AI",
+      "AI Assistant"
+    ],
+    "explicit": [
+      "Java",
+      "JavaScript",
+      "HTML",
+      "React.js",
+      "Vue.js",
+      "Node.js",
+      "Express.js",
+      "REST API",
+      "Mongo DB",
+      "MySQL",
+      "Redux",
+      "Pinia",
+      "Git",
+      "VSCode",
+      "Postman",
+      "Docker",
+      "Socket.IO",
+      "JWT",
+      "Axios",
+      "AI"
+    ],
+    "project_derived": [
+      "React.js",
+      "Redux",
+      "Node.js",
+      "Express.js",
+      "Mongo DB",
+      "Socket.IO",
+      "AI Assistant",
+      "Vue.js",
+      "Pinia",
+      "JWT",
+      "Axios"
+    ]
+  },
+  "experience": {
+    "professional_years": 0.0,
+    "work_evidence": [],
+    "project_evidence": [
+      "Developed a full-stack e-commerce application for camera products. Implemented authentication, product browsing, cart, checkout and order history. Built an admin interface for managing product categories, users and orders. Integrated an AI-powered camera recommendation chatbox. Implemented real-time communication functionality using Socket.IO.",
+      "Developed a full-stack library management system with separate interfaces for library staff and readers. Implemented book management, reader management, borrow requests and borrowing history. Developed RESTful APIs using Node.js and Express.js with Mongo DB. Implemented authentication using JWT and integrated frontend APIs using Axios."
+    ]
+  },
+  "education": {
+    "degree": "Bachelor",
+    "field": "Software Engineering",
+    "history": [
+      {
+        "degree": "Bachelor",
+        "end_year": 2027,
+        "field_of_study": "Software Engineering",
+        "gpa_or_honors": "GPA: 3.55/4",
+        "institution": "Can Tho University",
+        "start_year": 2023
+      }
+    ]
+  },
+  "projects": [
+    {
+      "description": "Developed a full-stack e-commerce application for camera products. Implemented authentication, product browsing, cart, checkout and order history. Built an admin interface for managing product categories, users and orders. Integrated an AI-powered camera recommendation chatbox. Implemented real-time communication functionality using Socket.IO.",
+      "heuristic_score": null,
+      "impact_metrics": [],
+      "links": [],
+      "name": "Camera Shop – E-commerce Website with AI Assistant",
+      "role": null,
+      "technologies": [
+        "React.js",
+        "Redux",
+        "Node.js",
+        "Express.js",
+        "Mongo DB",
+        "Socket.IO",
+        "AI Assistant"
+      ]
+    },
+    {
+      "description": "Developed a full-stack library management system with separate interfaces for library staff and readers. Implemented book management, reader management, borrow requests and borrowing history. Developed RESTful APIs using Node.js and Express.js with Mongo DB. Implemented authentication using JWT and integrated frontend APIs using Axios.",
+      "heuristic_score": null,
+      "impact_metrics": [],
+      "links": [],
+      "name": "KBook – Library Management System",
+      "role": null,
+      "technologies": [
+        "Vue.js",
+        "Pinia",
+        "Node.js",
+        "Express.js",
+        "Mongo DB",
+        "JWT",
+        "Axios"
+      ]
+    }
+  ],
+  "certifications": [
+    "English: TOEIC Listening & Reading 595 (2026)"
+  ]
+}

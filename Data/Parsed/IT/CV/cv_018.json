@@ -1,0 +1,158 @@
+{
+  "domain": "IT",
+  "extraction_method": "groq_llm",
+  "filename": "1d7b2482-fe42-4e72-9cd1-68c81233a33b- gp.pdf",
+  "id": "cv_018",
+  "parsed_data": {
+    "certifications": [
+      "Neo4j Graph Data Science Certification (2025)",
+      "Google AI Essentials Certificate (2024)",
+      "Kaggle Computer Vision Certificate (2025)"
+    ],
+    "education_degree": "Bachelor",
+    "education_field": "Information Technology",
+    "education_history": [
+      {
+        "degree": "Bachelor",
+        "end_year": null,
+        "field_of_study": "Information Technology",
+        "gpa_or_honors": "8.8/10.0 (equivalent to 3.52/4.00)",
+        "institution": "Van Lang University",
+        "start_year": null
+      }
+    ],
+    "experience_years": 0.0,
+    "job_titles": [
+      "AI Engineer Intern (NLP)"
+    ],
+    "projects": [
+      {
+        "description": "Demonstrated exceptional label efficiency (58.48% Accuracy, 0.3504 NMI) using only 0.5% labeled data for mapping. Engineered an automated topic classification system for over 580,000 unlabeled Facebook posts by integrating the MPNet language model with the Deep Embedded Clustering (DEC) unsupervised learning algorithm.",
+        "heuristic_score": null,
+        "impact_metrics": [
+          "58.48% Accuracy",
+          "0.3504 NMI",
+          "100% data coverage without discarding noisy samples"
+        ],
+        "links": [],
+        "name": "Deep Embedded Clustering for Social Media Post Classification",
+        "role": "Team Member",
+        "technologies": [
+          "MPNet",
+          "Deep Embedded Clustering (DEC)",
+          "Python"
+        ]
+      },
+      {
+        "description": "Built an end-to-end facial attribute analysis pipeline (age, gender, emotion) for consumer behavior tracking, utilizing MTCNN for face alignment, a ResNet18 backbone for classification, and SQLite for automated data storage.",
+        "heuristic_score": null,
+        "impact_metrics": [
+          "95% accuracy in gender prediction (UTKFace)",
+          "72% accuracy in emotion recognition (FER-2013)"
+        ],
+        "links": [],
+        "name": "Face Detection and Prediction (Age/Gender/Emotion)",
+        "role": "Solo Developer",
+        "technologies": [
+          "MTCNN",
+          "ResNet18",
+          "SQLite",
+          "Python"
+        ]
+      },
+      {
+        "description": "Developed and containerized a 7-day weather forecasting web application using Flask and Docker, implementing Random Forest algorithms to process historical API data from Visual Crossing.",
+        "heuristic_score": null,
+        "impact_metrics": [
+          "99.84% accuracy in weather classification (rain/sun)",
+          "0.00013 MSE for maximum temperature regression"
+        ],
+        "links": [],
+        "name": "Weather Forecast Website",
+        "role": "Team Member",
+        "technologies": [
+          "Flask",
+          "Docker",
+          "Random Forest",
+          "Visual Crossing API",
+          "Python"
+        ]
+      },
+      {
+        "description": "Fine-tuned a YOLO-based segmentation model for dermatological analysis, designing the dataset strategy and building robust training and evaluation pipelines.",
+        "heuristic_score": null,
+        "impact_metrics": [],
+        "links": [],
+        "name": "Applying YOLO-Segmentation for Skin Lesion Detection",
+        "role": "Team Member",
+        "technologies": [
+          "YOLO",
+          "Segmentation",
+          "Precision-Recall Metrics",
+          "Python"
+        ]
+      },
+      {
+        "description": "Developed a smart camera-based elderly monitoring system, building an LSTM model to classify 5+ health‑related actions (e.g., fall detection) using MediaPipe pose landmarks extracted from RGB frames. Deployed a lightweight Flask‑based application prototype for real‑time visualization and abnormal behavior notifications.",
+        "heuristic_score": null,
+        "impact_metrics": [
+          "Won the Potential Project Award at the Viet Future 2025 national innovation competition"
+        ],
+        "links": [],
+        "name": "VNHCAREAI: Smart AI Assistant for Home Health and Safety",
+        "role": "Team Member",
+        "technologies": [
+          "LSTM",
+          "MediaPipe",
+          "Flask",
+          "Python"
+        ]
+      }
+    ],
+    "skills": [
+      "Python",
+      "SQL",
+      "NoSQL",
+      "Neo4j",
+      "MinIO",
+      "RAG Pipelines",
+      "Dify",
+      "LLM Fine-tuning",
+      "Prompt Engineering",
+      "PyTorch",
+      "TensorFlow",
+      "Scikit-learn",
+      "Pandas",
+      "NumPy",
+      "MONAI",
+      "SwinViT",
+      "CNNs",
+      "EEG Decoding",
+      "Docker",
+      "Flask",
+      "MTCNN",
+      "ResNet18",
+      "SQLite",
+      "Random Forest",
+      "YOLO",
+      "LSTM",
+      "MediaPipe",
+      "English (B2)"
+    ],
+    "summary": "Al Engineer and Data Scientist with a proven academic track record (published in Q1 SCI journals and international conferences) and practical experience in Deep Learning, hybrid architectures, and data pipeline optimization. Seeking an AI Engineer role at leading technology enterprises to translate rigorous research into scalable solutions, drive datadriven decisions, and contribute to innovative commnercial products. Short-term Goal: To deploy advanced AI algorithms and optimize experimental data pipelines within the technology and telecommunications sectors, ensuring theoretical accuracy translates into real-world efficiency. Long-term Goal: To evolve into an Al Architect or Technical Lead who seamlessly merges academic innovation with business strategy, establishing frameworks where research contimuously elevates commercial ecosystems.",
+    "work_experience": [
+      {
+        "company": "Vietruvel /TCenter",
+        "end_date": null,
+        "responsibilities_and_impact": [
+          "Automated data collection from multiple sources, ensuring privacy compliance.",
+          "Developed RAG-based chatbot for sales consultations and automated customer data tools using Minl O and Dify.",
+          "Designed secure storage systems and fine-tuned models for personalized recommendations."
+        ],
+        "role": "AI Engineer Intern (NLP)",
+        "start_date": null
+      }
+    ]
+  },
+  "source_status": "ACCEPTED_BY_DOCLING"
+}

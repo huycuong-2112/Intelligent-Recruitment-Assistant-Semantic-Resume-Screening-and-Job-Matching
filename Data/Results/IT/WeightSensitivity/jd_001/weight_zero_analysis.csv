@@ -1,0 +1,5 @@
+component,best_ndcg10,within_0.01,within_0.02,count_within_0.01,count_within_0.02
+skill,0.8611426338585058,False,True,0,6
+experience,0.8634317377540522,False,True,0,4
+education,0.8611426338585058,False,True,0,2
+semantic,0.8272670758424565,False,False,0,0

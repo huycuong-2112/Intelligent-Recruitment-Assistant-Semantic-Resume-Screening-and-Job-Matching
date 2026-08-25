@@ -1,0 +1,3951 @@
+[
+  {
+    "id": "cv_001",
+    "filename": "003.jpg",
+    "domain": "IT",
+    "extraction_method": "groq_llm",
+    "source_status": "RECOVERED_BY_OCR",
+    "parsed_data": {
+      "summary": "IT professional with experience in project coordination, web development, system administration, and digital marketing. Skilled in Agile Scrum, SEO, server hosting, WordPress, and cloud-based solutions.",
+      "education_degree": "Bachelor",
+      "education_field": "Computer Science / Software Engineering",
+      "education_history": [
+        {
+          "institution": "Đại học Điện Lực",
+          "degree": "Bachelor",
+          "field_of_study": "Computer Science / Software Engineering",
+          "start_year": 2023,
+          "end_year": 2026,
+          "gpa_or_honors": null
+        }
+      ],
+      "experience_years": 2.8,
+      "job_titles": [
+        "Project Coordinator / Web Developer",
+        "System Administrator / IT Support"
+      ],
+      "work_experience": [
+        {
+          "company": "Công Ty TNHH Poka Media",
+          "role": "Project Coordinator / Web Developer",
+          "start_date": "04/2022",
+          "end_date": "08/2023",
+          "responsibilities_and_impact": [
+            "Coordinated project lifecycle between client and development teams, established timelines, managed issues, and ensured website stability, reducing downtime.",
+            "Implemented server hosting, domain management, and WordPress website construction according to technical requirements.",
+            "Provided digital marketing support including SEO, SEM, content creation, Facebook Ads, and Google Ads, improving technical SEO and user experience, and increasing conversion rate."
+          ]
+        },
+        {
+          "company": "Công Ty CP Công Nghệ và Dịch Vụ UNI365",
+          "role": "System Administrator / IT Support",
+          "start_date": "09/2020",
+          "end_date": "03/2022",
+          "responsibilities_and_impact": [
+            "Managed company IT infrastructure, developed tools for data processing, and reduced data handling time for a dropshipping model.",
+            "Ensured data security and maintained network stability across the organization.",
+            "Provided IT Helpdesk support, troubleshooting software issues and improving response times."
+          ]
+        }
+      ],
+      "projects": [
+        {
+          "name": "Multiple client websites (Arena, StartupVN, Sinhtour, thietkewebwpvn, pokamedia.com, procaffe.vn, biahalong.com, techlandaudio.com.vn)",
+          "role": "Web Developer",
+          "technologies": [
+            "WordPress",
+            "Server Hosting",
+            "Domain Management",
+            "Technical SEO"
+          ],
+          "description": "Developed, deployed, and maintained several WordPress-based client websites, handling hosting, domain setup, and SEO optimization to ensure stable performance and improved search visibility.",
+          "impact_metrics": [
+            "Reduced website downtime",
+            "Improved technical SEO rankings",
+            "Enhanced user experience leading to higher conversion rates"
+          ],
+          "links": [],
+          "heuristic_score": null
+        }
+      ],
+      "skills": [
+        "Agile Scrum",
+        "Sprint Planning",
+        "Risk Management",
+        "Business Analysis",
+        "Requirement Gathering",
+        "User Stories",
+        "Technical SEO",
+        "Server Hosting",
+        "Domain Management",
+        "WordPress",
+        "IT Support",
+        "System Administration",
+        "Helpdesk",
+        "SEO",
+        "SEM",
+        "Content Marketing",
+        "Facebook Ads",
+        "Google Ads",
+        "Project Coordination",
+        "Web Development",
+        "Digital Marketing"
+      ],
+      "certifications": [
+        "Google Project Management Professional",
+        "Google Professional Certificates",
+        "Google Digital Garage",
+        "IBM IT Project Manager Professional"
+      ]
+    }
+  },
+  {
+    "id": "cv_002",
+    "filename": "006.jpg",
+    "domain": "IT",
+    "extraction_method": "groq_llm",
+    "source_status": "RECOVERED_BY_OCR",
+    "parsed_data": {
+      "summary": "Development‑oriented IT student passionate about backend and full‑stack development. Enjoy building scalable systems, optimizing performance, and continuously learning modern technologies to become a full‑stack engineer.",
+      "education_degree": "Bachelor",
+      "education_field": "Information Technology",
+      "education_history": [
+        {
+          "institution": "Ho Chi Minh University of Natural Resources and Environment",
+          "degree": "Bachelor",
+          "field_of_study": "Information Technology",
+          "start_year": 2024,
+          "end_year": 2028,
+          "gpa_or_honors": null
+        }
+      ],
+      "experience_years": 2.3,
+      "job_titles": [
+        "Backend Developer Intern",
+        "Member/Facilitator",
+        "Member",
+        "Fullstack/Backend Developer Intern"
+      ],
+      "work_experience": [
+        {
+          "company": "Gender Insights Project",
+          "role": "Backend Developer Intern",
+          "start_date": "10/2025",
+          "end_date": "04/2026",
+          "responsibilities_and_impact": [
+            "Developed backend services for high‑concurrency user requests using Node.js (Fastify).",
+            "Optimized database queries by implementing SQL stored procedures and advanced joins in PostgreSQL, reducing data retrieval latency by 40%.",
+            "Ensured data integrity through strict 3NF normalization across service layers.",
+            "Collaborated in an Agile team to design scalable database schemas and integrate third‑party services.",
+            "Worked with frontend developers to integrate backend APIs into responsive web applications."
+          ]
+        },
+        {
+          "company": "Google Developer Cloud Groups (GDG Cloud HCM)",
+          "role": "Member/Facilitator",
+          "start_date": "11/2025",
+          "end_date": "Present",
+          "responsibilities_and_impact": [
+            "Coordinated technical workshops and supported attendees in deploying cloud‑based solutions during major GDG events."
+          ]
+        },
+        {
+          "company": "Community AI Literacy Program (TNCS Ho Chi Minh)",
+          "role": "Member",
+          "start_date": "2024",
+          "end_date": "2024",
+          "responsibilities_and_impact": [
+            "Educated 50+ local community members on AI applications and basic digital safety, earning recognition for social contribution."
+          ]
+        },
+        {
+          "company": "Independent",
+          "role": "Fullstack/Backend Developer Intern",
+          "start_date": null,
+          "end_date": null,
+          "responsibilities_and_impact": []
+        }
+      ],
+      "projects": [
+        {
+          "name": "Gender Insights Project",
+          "role": "Backend Developer Intern",
+          "technologies": [
+            "Node.js (Fastify)",
+            "PostgreSQL"
+          ],
+          "description": "Backend development for high‑concurrency user requests, database optimization with SQL stored procedures and advanced joins, data integrity enforcement via 3NF normalization, and agile collaboration to design scalable schemas and integrate third‑party services.",
+          "impact_metrics": [
+            "Data retrieval latency reduced by 40%"
+          ],
+          "links": [
+            "genderinsights.vercel.app"
+          ],
+          "heuristic_score": null
+        }
+      ],
+      "skills": [
+        "Core Java (OOP)",
+        "Node.js (Fastify, NestJS)",
+        "RESTful API Design",
+        "MVC Architecture",
+        "HTML5",
+        "CSS3",
+        "JavaScript (ES6+)",
+        "PostgreSQL",
+        "MySQL",
+        "MongoDB",
+        "Postman",
+        "Git/GitHub",
+        "Docker",
+        "Agile Methodologies"
+      ],
+      "certifications": [
+        "Road to Devfest 2025 Certificate – GDG HCMC",
+        "AI Literacy Certification – Ho Chi Minh Communist Youth Union 2024"
+      ]
+    }
+  },
+  {
+    "id": "cv_003",
+    "filename": "011adc66-9240-4bce-9402-25483c49d9ab.jpg",
+    "domain": "IT",
+    "extraction_method": "groq_llm",
+    "source_status": "ACCEPTED_BY_DOCLING",
+    "parsed_data": {
+      "summary": "Software engineer with experience in backend development, game client development, and GPU programming, complemented by a strong competitive programming background.",
+      "education_degree": null,
+      "education_field": null,
+      "education_history": [],
+      "experience_years": 1.3,
+      "job_titles": [
+        "Software Engineer Intern",
+        "Software Engineer",
+        "Trainee"
+      ],
+      "work_experience": [
+        {
+          "company": "TEKO",
+          "role": "Software Engineer Intern",
+          "start_date": null,
+          "end_date": null,
+          "responsibilities_and_impact": [
+            "Build robust and efficient APIs for the backend server of the supply chain team.",
+            "Worked closely with different teams to understand needs and create solutions that fit business goals.",
+            "Engaged in Agile development processes, including sprint planning, stand-up meetings, and retrospective sessions."
+          ]
+        },
+        {
+          "company": "VNG Zing Play Game Studios",
+          "role": "Software Engineer",
+          "start_date": "06/2024",
+          "end_date": "06/2025",
+          "responsibilities_and_impact": [
+            "Develop and maintain game clients using JavaScript and the Cocos framework for cross-platform deployment.",
+            "Collaborate with art, design, QC, and backend teams to deliver polished and engaging gameplay features.",
+            "Implement UI/UX, gameplay mechanics, and optimize client performance for smooth user experiences."
+          ]
+        },
+        {
+          "company": "Moreh Vietnam",
+          "role": "Trainee (GPU Engineer Training Program)",
+          "start_date": "06/2025",
+          "end_date": "10/2025",
+          "responsibilities_and_impact": [
+            "Completed intensive training on GPU programming, focusing on CUDA, HIP, and parallel computing fundamentals.",
+            "Gained hands-on experience with advanced GPU optimization techniques including memory hierarchy tuning, vectorization, and kernel fusion.",
+            "Implemented and profiled high-performance kernels for deep learning workloads on AMD MI250 GPUs using ROCm."
+          ]
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Golang",
+        "Backend Development",
+        "API Development",
+        "Agile",
+        "JavaScript",
+        "Cocos",
+        "UI/UX",
+        "Game Development",
+        "C++",
+        "Python",
+        "Bash",
+        "Java",
+        "Git",
+        "Linux",
+        "LaTeX",
+        "SQL",
+        "CUDA",
+        "HIP",
+        "ROCm",
+        "Parallel Computing",
+        "GPU Programming",
+        "Deep Learning",
+        "Problem Solving",
+        "Report Writing",
+        "Presentation"
+      ],
+      "certifications": [
+        "Odon Vallet Scholarship (2020)"
+      ]
+    }
+  },
+  {
+    "id": "cv_004",
+    "filename": "012.jpg",
+    "domain": "IT",
+    "extraction_method": "groq_llm",
+    "source_status": "RECOVERED_BY_OCR",
+    "parsed_data": {
+      "summary": "Apply algorithmic development and big data processing experience to banking technology projects. Short‑term goal: quickly master the system and become a full‑time employee; long‑term goal: become a Financial Software Engineer, specializing in designing core systems with automation, high security, and optimized transaction performance.",
+      "education_degree": "Bachelor",
+      "education_field": "Information Technology Software Engineering",
+      "education_history": [
+        {
+          "institution": "Hanol University of Natural Resources and Environment",
+          "degree": "Bachelor",
+          "field_of_study": "Information Technology Software Engineering",
+          "start_year": 2022,
+          "end_year": null,
+          "gpa_or_honors": null
+        }
+      ],
+      "experience_years": 4.5,
+      "job_titles": [
+        "Full‑stack & Data Integration Developer",
+        "Algorithmic Trading Developer",
+        "Backend & Automation Engineer",
+        "Algorithmic Developer (C#)",
+        "Store Manager & Operations"
+      ],
+      "work_experience": [
+        {
+          "company": "Zentra Platform (Independent FinTech Project)",
+          "role": "Full‑stack & Data Integration Developer",
+          "start_date": "01/2026",
+          "end_date": "Present",
+          "responsibilities_and_impact": [
+            "Developed a trading‑psychology analysis web app for forex/crypto traders using Next.js 15 and React 18 with real‑time data sync from MetaTrader 5.",
+            "Architected a dashboard with 20+ widgets and integrated 30+ API endpoints, visualizing risk indicators via Recharts.",
+            "Implemented Error Boundaries to isolate component errors, ensuring continuous operation despite API failures."
+          ]
+        },
+        {
+          "company": "Automated Trading System with Telegram Data",
+          "role": "Algorithmic Trading Developer",
+          "start_date": "05/2026",
+          "end_date": "05/2026",
+          "responsibilities_and_impact": [
+            "Built a real‑time data collection pipeline using Python Telethon to ingest market data.",
+            "Created algorithmic filters to clean noise and route qualified signals to a VIP Telegram channel with ultra‑low latency.",
+            "Implemented an inter‑process state machine for order lifecycle management and a 3‑tier Scale‑In DCA capital allocation strategy with trailing‑stop risk control."
+          ]
+        },
+        {
+          "company": "Data Collection & Social Media Automation System",
+          "role": "Backend & Automation Engineer",
+          "start_date": "11/2025",
+          "end_date": "05/2026",
+          "responsibilities_and_impact": [
+            "Designed an asynchronous queue system (Python asyncio) handling up to 10 parallel browsers and 300+ tasks per day.",
+            "Automated data collection on Instagram, TikTok, Reddit using Playwright with human‑simulation, stealth JS injection, proxy rotation, and firewall bypass.",
+            "Secured stored credentials with AES‑128 (Fernet) encryption and integrated Gemini + OpenAI for automated content generation."
+          ]
+        },
+        {
+          "company": "Ninja Trader 8 Quantitative Trading System",
+          "role": "Algorithmic Developer (C#)",
+          "start_date": "02/2026",
+          "end_date": "05/2026",
+          "responsibilities_and_impact": [
+            "Developed a low‑latency automated trading system (~1,700 LOC) in C#/.NET applying state‑machine and component design patterns.",
+            "Implemented a capital safety module with drawdown cut‑off and system cooldown mechanisms.",
+            "Created CSV audit logging for full transaction traceability meeting compliance standards."
+          ]
+        },
+        {
+          "company": "Khoi Store",
+          "role": "Store Manager & Operations",
+          "start_date": "02/2023",
+          "end_date": "12/2025",
+          "responsibilities_and_impact": [
+            "Managed sales, inventory, and a network of 200+ loyal customers.",
+            "Introduced technology tools and automation for content creation and customer care, boosting store revenue by 120% in 2024.",
+            "Applied a user‑centric mindset to improve service quality and operational efficiency."
+          ]
+        }
+      ],
+      "projects": [
+        {
+          "name": "Zentra Platform",
+          "role": "Full‑stack & Data Integration Developer",
+          "technologies": [
+            "Next.js 15",
+            "React 18",
+            "Recharts",
+            "MetaTrader 5 API",
+            "REST APIs"
+          ],
+          "description": "A trading‑psychology analysis web application that connects to MetaTrader 5 accounts, processes historical trading data, and provides behavioral insights to improve trader performance.",
+          "impact_metrics": [
+            "20+ dashboard widgets",
+            "30+ integrated API endpoints",
+            "Real‑time data synchronization"
+          ],
+          "links": [],
+          "heuristic_score": null
+        },
+        {
+          "name": "Automated Trading System with Telegram Data",
+          "role": "Algorithmic Trading Developer",
+          "technologies": [
+            "Python",
+            "Telethon",
+            "State Machine",
+            "Low‑latency networking"
+          ],
+          "description": "Real‑time pipeline that collects market data, filters signals, and pushes validated trading signals to a Telegram VIP channel for automated execution in MetaTrader.",
+          "impact_metrics": [
+            "Ultra‑low latency signal delivery",
+            "Automated 3‑tier Scale‑In DCA strategy",
+            "Trailing‑stop risk management"
+          ],
+          "links": [],
+          "heuristic_score": null
+        },
+        {
+          "name": "Data Collection & Social Media Automation System",
+          "role": "Backend & Automation Engineer",
+          "technologies": [
+            "Python",
+            "Asyncio",
+            "Playwright",
+            "AES‑128 (Fernet)",
+            "Gemini",
+            "OpenAI"
+          ],
+          "description": "Automated system for large‑scale data scraping and interaction on Instagram, TikTok, and Reddit, with human‑simulation techniques and encrypted credential storage.",
+          "impact_metrics": [
+            "10 parallel browsers",
+            "300+ tasks per day",
+            "Secure storage of API keys and cookies"
+          ],
+          "links": [],
+          "heuristic_score": null
+        },
+        {
+          "name": "Ninja Trader 8 Quantitative Trading System",
+          "role": "Algorithmic Developer (C#)",
+          "technologies": [
+            "C#",
+            ".NET",
+            "State Machine",
+            "Low‑latency order API"
+          ],
+          "description": "Quantitative trading platform built on NinjaTrader 8, featuring low‑latency processing, risk management modules, and comprehensive audit logging.",
+          "impact_metrics": [
+            "~1,700 lines of code",
+            "Low‑latency execution",
+            "Drawdown cut‑off and cooldown safety mechanisms"
+          ],
+          "links": [],
+          "heuristic_score": null
+        },
+        {
+          "name": "TINY‑GARAGE SALE",
+          "role": "Co‑founder",
+          "technologies": [],
+          "description": "Organized and operated a garage‑sale event, handling inventory, visitor coordination, and payment processing.",
+          "impact_metrics": [
+            "First‑day revenue: 100,000,000 VND"
+          ],
+          "links": [],
+          "heuristic_score": null
+        }
+      ],
+      "skills": [
+        "Python",
+        "C# (.NET)",
+        "MQL5",
+        "Pine Script",
+        "JavaScript",
+        "TypeScript",
+        "Next.js 15",
+        "React 18",
+        "FastAPI",
+        "Tailwind CSS",
+        "MongoDB",
+        "SQLite",
+        "Playwright",
+        "Recharts",
+        "Asyncio",
+        "Telethon",
+        "Git",
+        "Vercel",
+        "Gemini",
+        "OpenAI",
+        "AES‑128 (Fernet)",
+        "API Integration",
+        "Low‑latency processing",
+        "State Machine design",
+        "Risk Management",
+        "Automated trading bots",
+        "MetaTrader",
+        "NinjaTrader"
+      ],
+      "certifications": []
+    }
+  },
+  {
+    "id": "cv_005",
+    "filename": "019.jpg",
+    "domain": "IT",
+    "extraction_method": "groq_llm",
+    "source_status": "ACCEPTED_BY_DOCLING",
+    "parsed_data": {
+      "summary": "Detail-oriented Data Analyst with experience in data validation, reconciliation, reporting, and operational support within international business environments. Experienced in maintaining data quality, analyzing large datasets, preparing reports, investigating discrepancies, and coordinating with cross-functional teams to support business operations and decision-making. Proficient in Excel, SQL, Power BI, and Python for data cleaning, reporting automation, dashboard development, and performance analysis. Strong analytical mindset with excellent attention to detail, documentation skills, and the ability to manage multiple priorities in fast-paced environments.",
+      "education_degree": "Bachelor",
+      "education_field": "International Business",
+      "education_history": [
+        {
+          "institution": "Birmingham City University (International Program - UEL)",
+          "degree": "Bachelor",
+          "field_of_study": "International Business",
+          "start_year": 2021,
+          "end_year": 2024,
+          "gpa_or_honors": "68.67 (Distinction – UK System)"
+        }
+      ],
+      "experience_years": 1.2,
+      "job_titles": [
+        "Project Processing Specialist (Data & Operations)"
+      ],
+      "work_experience": [
+        {
+          "company": "Phalanx Services",
+          "role": "Project Processing Specialist (Data & Operations)",
+          "start_date": "02/2025",
+          "end_date": "04/2026",
+          "responsibilities_and_impact": [
+            "Collected, cleaned, validated, and analyzed financial transaction data to ensure reporting accuracy and support operational decision‑making.",
+            "Identified and investigated data discrepancies (missing data, mismatches, payment issues), collaborating with 4–5 cross‑functional teams to resolve issues.",
+            "Monitored operational KPIs including SLA, backlog, and processing performance to identify trends and support workflow optimization.",
+            "Managed and resolved approximately 20 daily requests and inquiries through Zendesk, ensuring timely responses and effective stakeholder communication.",
+            "Supported financial data validation processes, ensuring accuracy before transaction approval.",
+            "Maintained documentation, issue logs, and operational records to support reporting accuracy and process transparency."
+          ]
+        }
+      ],
+      "projects": [
+        {
+          "name": "Revenue Share (Financial Data Analysis)",
+          "role": null,
+          "technologies": [
+            "Excel",
+            "SQL",
+            "Python"
+          ],
+          "description": "Analyzed and reconciled monthly financial data for more than 200 agents, ensuring accuracy and consistency across reporting sources. Built structured validation processes to ensure data consistency across multiple data sources.",
+          "impact_metrics": [
+            "Reconciled data for >200 agents",
+            "Improved data consistency across reporting sources"
+          ],
+          "links": [],
+          "heuristic_score": null
+        },
+        {
+          "name": "1099 Reporting Project (Large-scale Data Processing & Analysis)",
+          "role": null,
+          "technologies": [
+            "Python",
+            "SQL",
+            "Excel"
+          ],
+          "description": "Processed and validated 180,000+ financial records, performing data cleaning, anomaly detection, and reporting preparation for tax compliance purposes. Cleaned, standardized, and mapped financial data (Commission, Revenue Share, DDC, Fees) with tax identifiers (TIN, SSN/EIN). Conducted data validation and anomaly detection, especially for high‑value cases. Achieved high data accuracy with an error rate below 2.5% through rigorous validation and audit processes.",
+          "impact_metrics": [
+            "180,000+ records processed",
+            "Error rate below 2.5%"
+          ],
+          "links": [],
+          "heuristic_score": null
+        },
+        {
+          "name": "E-commerce Data Analysis – Amazon Dataset",
+          "role": null,
+          "technologies": [],
+          "description": "Personal project analyzing an Amazon e‑commerce dataset to extract insights on sales performance, customer behavior, and product trends.",
+          "impact_metrics": [],
+          "links": [],
+          "heuristic_score": null
+        }
+      ],
+      "skills": [
+        "Excel",
+        "SQL",
+        "Power BI",
+        "Python",
+        "Data cleaning",
+        "Reporting automation",
+        "Dashboard development",
+        "Performance analysis",
+        "Data validation",
+        "Reconciliation",
+        "Data analysis",
+        "Operational support",
+        "Cross‑functional coordination",
+        "Zendesk"
+      ],
+      "certifications": []
+    }
+  },
+  {
+    "id": "cv_006",
+    "filename": "021.jpg",
+    "domain": "IT",
+    "extraction_method": "groq_llm",
+    "source_status": "RECOVERED_BY_OCR",
+    "parsed_data": {
+      "summary": "Software development engineer with over 3 years of experience, trained more than 1000 users and implemented software solutions for over 200 enterprises, handling client communication, system integration, UAT, training and post‑go‑live support.",
+      "education_degree": "Bachelor",
+      "education_field": "Công nghệ thông tin - Ứng dụng phần mềm",
+      "education_history": [
+        {
+          "institution": "Đại học Bách Khoa Hà Nội",
+          "degree": "Bachelor",
+          "field_of_study": "Công nghệ thông tin - Ứng dụng phần mềm",
+          "start_year": 2018,
+          "end_year": 2022,
+          "gpa_or_honors": null
+        }
+      ],
+      "experience_years": 3.4,
+      "job_titles": [
+        "Chuyenvien Trienkhai Phanmem"
+      ],
+      "work_experience": [
+        {
+          "company": "Not specified",
+          "role": "Chuyenvien Trienkhai Phanmem",
+          "start_date": "03/2023",
+          "end_date": "Present",
+          "responsibilities_and_impact": [
+            "Tiếp cận và tư vấn khách hàng, hỗ trợ hơn 200 khách hàng tới bộ phận Kinh doanh, khảo sát quy trình vận hành và đề xuất giải pháp phần mềm đa cấu hình.",
+            "Cài đặt, cấu hình và kiểm tra phần mềm theo đặc thù doanh nghiệp (tuyến xe, phân quyền, module bán vé, báo cáo vận hành).",
+            "Tích hợp hoá đơn/ve điện tử với MISA, Viettel, VISNAM, Min Voice.",
+            "Tích hợp kênh phân phối đại lý VNPay, Red Bus.",
+            "Tích hợp dữ liệu tổng đại IPVoice Cloud, V9, Tri Anh, Care Soft.",
+            "Tích hợp dữ liệu với đơn vị trung chuyển Green SM và Be.",
+            "Thực hiện UAT web và mobile, kiểm tra API bằng Postman, ghi nhận bug trên Jira và đạt 90% go‑live đúng tiến độ.",
+            "Đào tạo và chuyển giao: đào tạo hơn 1000 người dùng online qua Google Meet, Teams và onsite tại 8 tỉnh thành, hướng dẫn 30 nhân viên Bến xe Hà Nội và toàn bộ vận hành.",
+            "Chăm sóc và hỗ trợ sau Go‑live: duy trì group Zalo để tương tác khách hàng, xử lý sự cố và hỗ trợ người dùng.",
+            "Mở rộng kênh phân phối Red Bus, VNPay: cấu hình và go‑live tích hợp thanh toán, nâng cao doanh thu ngoài kênh bán vé truyền thống."
+          ]
+        }
+      ],
+      "projects": [
+        {
+          "name": "Rap chiếu phim Quốc gia (NCC)",
+          "role": "UAT Tester",
+          "technologies": [
+            "Web",
+            "Mobile",
+            "API",
+            "Postman",
+            "Jira"
+          ],
+          "description": "UAT testing for a cinema management system covering ticket booking, payment integration, schedule management and check‑in via website and mobile app.",
+          "impact_metrics": [
+            "Phát hiện và ghi nhận lỗi trong giai đoạn UAT, góp phần cải thiện chất lượng phần mềm trước khi triển khai."
+          ],
+          "links": [],
+          "heuristic_score": null
+        }
+      ],
+      "skills": [
+        "Software implementation",
+        "System configuration",
+        "API testing",
+        "Postman",
+        "Jira",
+        "Customer consulting",
+        "Training",
+        "Go‑live support",
+        "Zalo group management",
+        "Payment integration",
+        "VNPay",
+        "Red Bus",
+        "MISA",
+        "Viettel",
+        "VISNAM",
+        "Min Voice",
+        "IPVoice Cloud",
+        "V9",
+        "Tri Anh",
+        "Care Soft",
+        "PowerPoint",
+        "Excel",
+        "Cap Cut",
+        "Google Meet",
+        "Microsoft Teams",
+        "B2B solutions",
+        "UAT",
+        "Web",
+        "Mobile"
+      ],
+      "certifications": []
+    }
+  },
+  {
+    "id": "cv_007",
+    "filename": "023.jpg",
+    "domain": "IT",
+    "extraction_method": "groq_llm",
+    "source_status": "RECOVERED_BY_OCR",
+    "parsed_data": {
+      "summary": "Third-year Computer Networks and Data Communications student with CCNA-level knowledge and troubleshooting. Familiar with TCP/IP, VLAN, DNS, DHCP, NAT, VPN, VMware, and EVE-NG. Skills in a real-world environment, with a long term goal of developing into a Network Engineer.",
+      "education_degree": "Bachelor",
+      "education_field": "Computer Networks and Data Communications",
+      "education_history": [
+        {
+          "institution": "Hanoi University of Industry (Ha Ui)",
+          "degree": "Bachelor",
+          "field_of_study": "Computer Networks and Data Communications",
+          "start_year": 2023,
+          "end_year": 2027,
+          "gpa_or_honors": null
+        }
+      ],
+      "experience_years": 0.0,
+      "job_titles": [],
+      "work_experience": [],
+      "projects": [
+        {
+          "name": "Enterprise SD-WAN Network Simulation Based on Level3",
+          "role": null,
+          "technologies": [
+            "Switches",
+            "VLANs",
+            "DMZ",
+            "Internet links",
+            "Routing",
+            "NAT",
+            "Firewall policies",
+            "Site-to-Site VPN",
+            "SD-WAN",
+            "FortiGate HA",
+            "Zabbix"
+          ],
+          "description": "Simulated an enterprise SD-WAN network with switches, VLANs, a DMZ server, and Internet links. Configured routing, NAT, firewall policies, site-to-site VPN, SD-WAN failover, and FortiGate HA in a lab environment. Deployed Web/FTP services in the DMZ and used Zabbix to monitor devices, servers, and service availability. Practiced troubleshooting connectivity issues, firewall policy errors, service access failures, and WAN/VPN failover scenarios.",
+          "impact_metrics": [],
+          "links": [],
+          "heuristic_score": null
+        },
+        {
+          "name": "Android-Based Network Monitoring and Administration System",
+          "role": null,
+          "technologies": [
+            "Android Studio",
+            "SNMP",
+            "SSH",
+            "SQLite",
+            "MPAndroid Chart",
+            "Ping",
+            "Traceroute",
+            "Port scanning",
+            "IPv4 validation",
+            "Timeout handling"
+          ],
+          "description": "Developed an Android Studio project for basic network monitoring and troubleshooting. Implemented device diagnostics with ping, traceroute, port scanning, IPv4 validation, and timeout handling. Integrated SNMP to retrieve device name, CPU, and RAM metrics, and SSH to execute remote administration commands. Stored logs with SQLite and visualized real-time traffic using MPAndroid Chart.",
+          "impact_metrics": [],
+          "links": [],
+          "heuristic_score": null
+        }
+      ],
+      "skills": [
+        "TCP/IP",
+        "VLAN",
+        "DNS",
+        "DHCP",
+        "NAT",
+        "VPN",
+        "VMware",
+        "EVE-NG",
+        "Dynamic Routing",
+        "Network Security",
+        "Firewall Policy",
+        "IPsec VPN",
+        "DMZ",
+        "PS",
+        "ACL",
+        "Antivirus",
+        "Anti DoS",
+        "Zabbix",
+        "Wireshark",
+        "Windows Server",
+        "Ubuntu Server",
+        "Hardware troubleshooting",
+        "Network cable crimping"
+      ],
+      "certifications": [
+        "TOEIC 650",
+        "CPPS - Certified Phishing Prevention Specialist"
+      ]
+    }
+  },
+  {
+    "id": "cv_008",
+    "filename": "035.jpg",
+    "domain": "IT",
+    "extraction_method": "groq_llm",
+    "source_status": "RECOVERED_BY_OCR",
+    "parsed_data": {
+      "summary": "Mục tiêu nghề nghiệp: Ứng tuyển vị trí lập trình viên ứng dụng kỹ thuật về lập trình; cơ sở dữ liệu và phát triển web để xây dựng các hệ thống thực tế; mong muốn tham gia trực tiếp vào quá trình phát triển sản phẩm; từ thiết kế đến triển khai, đồng thời nâng cao kỹ năng chuyên môn trong môi trường làm việc chuyên nghiệp.",
+      "education_degree": "Bachelor",
+      "education_field": "An toàn hệ thống",
+      "education_history": [
+        {
+          "institution": "Đại học Công Thương TPHCM",
+          "degree": "Bachelor",
+          "field_of_study": "An toàn hệ thống",
+          "start_year": 2021,
+          "end_year": 2025,
+          "gpa_or_honors": "2.11/40"
+        }
+      ],
+      "experience_years": 0.3,
+      "job_titles": [
+        "Thực tập sinh"
+      ],
+      "work_experience": [
+        {
+          "company": "Công ty TNHH VIENAI",
+          "role": "Thực tập sinh",
+          "start_date": "09/2025",
+          "end_date": "12/2025",
+          "responsibilities_and_impact": [
+            "Quản lý và cập nhật nội dung SEO trên hệ thống website",
+            "Tối ưu nội dung SEO (title; meta description; từ khóa)",
+            "Kiểm tra giao diện website; phát hiện và báo lỗi UI/UX để cải thiện trải nghiệm người dùng",
+            "Hỗ trợ vận hành website; đảm bảo nội dung được đăng ổn định",
+            "Đảm bảo nội dung đáp ứng quy trình"
+          ]
+        }
+      ],
+      "projects": [
+        {
+          "name": "Website bán sách",
+          "role": null,
+          "technologies": [
+            "HTML",
+            "CSS",
+            "C#",
+            ".NET",
+            "MySQL"
+          ],
+          "description": "Phát triển website bán sách sử dụng HTML, CSS, C# (NET) và MySQL. Thiết kế cơ sở dữ liệu, xây dựng các chức năng chính: hiển thị sản phẩm, quản lý đơn hàng, quản lý bán, và thao tác nhanh hơn cho người dùng.",
+          "impact_metrics": [
+            "10+ tables"
+          ],
+          "links": [],
+          "heuristic_score": null
+        }
+      ],
+      "skills": [
+        "C",
+        "C++",
+        "C#",
+        "HTML",
+        "CSS",
+        "OOP",
+        ".NET",
+        "MySQL",
+        "UI design",
+        "Visual Studio",
+        "SEO",
+        "Teamwork",
+        "Problem solving",
+        "English (basic)"
+      ],
+      "certifications": []
+    }
+  },
+  {
+    "id": "cv_009",
+    "filename": "039.jpg",
+    "domain": "IT",
+    "extraction_method": "groq_llm",
+    "source_status": "RECOVERED_BY_OCR",
+    "parsed_data": {
+      "summary": null,
+      "education_degree": "Bachelor",
+      "education_field": "Công nghệ thông tin",
+      "education_history": [
+        {
+          "institution": "Đại học Đà Lạt",
+          "degree": "Bachelor",
+          "field_of_study": "Công nghệ thông tin",
+          "start_year": null,
+          "end_year": 2024,
+          "gpa_or_honors": null
+        },
+        {
+          "institution": "Viettel Construction (VCC) Lam Đồng",
+          "degree": "Other",
+          "field_of_study": null,
+          "start_year": 2026,
+          "end_year": 2026,
+          "gpa_or_honors": null
+        }
+      ],
+      "experience_years": 6.3,
+      "job_titles": [
+        "Thực tập sinh Kỹ thuật mạng",
+        "Nhân viên kỹ thuật IT Helpdesk",
+        "Nhân viên hỗ trợ phòng Lab",
+        "Thực tập sinh công nghệ",
+        "Nhân viên công ty xe khách",
+        "Quản lý đào tạo & tuyển dụng",
+        "Freelance Project Manager"
+      ],
+      "work_experience": [
+        {
+          "company": "Cử nhân Công nghệ Thông tin (Đại học Đà Lạt)",
+          "role": "Thực tập sinh Kỹ thuật mạng",
+          "start_date": "09/2020",
+          "end_date": "06/2024",
+          "responsibilities_and_impact": [
+            "Tham gia khảo sát, thi công và bảo dưỡng hệ thống cáp quang cho các trạm BTS.",
+            "Cấu hình, bảo trì mạng nội bộ và thiết bị mạng (router, switch, ODM, AN, Wire Guard).",
+            "Triển khai SIP Trunk và các giải pháp VoIP cho hệ thống truyền thông."
+          ]
+        },
+        {
+          "company": "Công ty TNHH Công Nghệ Song Phương",
+          "role": "Thực tập sinh",
+          "start_date": "03/2023",
+          "end_date": "06/2023",
+          "responsibilities_and_impact": [
+            "Quản lý văn bản, linh kiện điện tử.",
+            "Lắp đặt camera an ninh và máy tính cá nhân cho khách hàng."
+          ]
+        },
+        {
+          "company": "Trung tâm CNTT, Đại học Đà Lạt",
+          "role": "Hỗ trợ quản lý phòng Lab và bảo trì thiết bị học tập",
+          "start_date": "07/2023",
+          "end_date": "12/2023",
+          "responsibilities_and_impact": [
+            "Quản lý máy chủ, thiết bị mạng trong phòng Lab.",
+            "Bảo trì, nâng cấp phần cứng và phần mềm cho môi trường học tập."
+          ]
+        },
+        {
+          "company": "Công ty Cổ phần Xe Khách Phương Trang",
+          "role": "Nhân viên tư vấn và điều phối giao dịch",
+          "start_date": "06/2024",
+          "end_date": "06/2025",
+          "responsibilities_and_impact": [
+            "Tư vấn trực tiếp cho khách hàng, điều phối giao dịch trên hệ thống.",
+            "Giám sát tiến độ, tổng hợp dữ liệu lỗi, đánh giá hiệu suất nhân sự bán hàng."
+          ]
+        },
+        {
+          "company": "FPT Telecom Lam Đồng",
+          "role": "Nhân viên kỹ thuật IT Helpdesk (triển khai, bảo trì, vận hành)",
+          "start_date": "06/2025",
+          "end_date": "12/2025",
+          "responsibilities_and_impact": [
+            "Triển khai và bảo trì hệ thống camera an ninh cho khách hàng.",
+            "Cung cấp hỗ trợ kỹ thuật (Helpdesk) cho người dùng nội bộ."
+          ]
+        },
+        {
+          "company": "Viettel Construction (VCC) Lam Đồng",
+          "role": "Thực tập sinh / Đào tạo chuyên môn",
+          "start_date": "01/2026",
+          "end_date": "03/2026",
+          "responsibilities_and_impact": [
+            "Tham gia các dự án xây dựng hạ tầng viễn thông.",
+            "Học và thực hành quy trình chuẩn an toàn lao động và cấu hình mạng."
+          ]
+        }
+      ],
+      "projects": [
+        {
+          "name": "Hệ thống cáp quang cho trạm BTS",
+          "role": "Thành viên kỹ thuật",
+          "technologies": [
+            "Fiber Optic",
+            "Router",
+            "Switch",
+            "SIP Trunk"
+          ],
+          "description": "Thi công, lắp đặt và bảo dưỡng hệ thống cáp quang cấp truyền dẫn cho các trạm thu phát sóng (BTS) nhằm cải thiện độ ổn định và băng thông.",
+          "impact_metrics": [
+            "Tăng 30% độ ổn định kết nối mạng",
+            "Giảm thời gian downtime xuống dưới 2 giờ/tháng"
+          ],
+          "links": [],
+          "heuristic_score": 0.78
+        },
+        {
+          "name": "Dự án Game Online (Freelance)",
+          "role": "Quản lý dự án & Đào tạo",
+          "technologies": [
+            "SOP",
+            "KPI",
+            "Project Management"
+          ],
+          "description": "Xây dựng SOP, đánh giá KPI và tài liệu hướng dẫn cho đội ngũ 20 tester và cộng tác viên, đồng thời tổ chức đào tạo và tuyển dụng nhân sự.",
+          "impact_metrics": [
+            "Đạt mức hoàn thành KPI 95% trong 3 tháng",
+            "Tuyển dụng và đào tạo 20 tester mới"
+          ],
+          "links": [],
+          "heuristic_score": 0.65
+        }
+      ],
+      "skills": [],
+      "certifications": []
+    }
+  },
+  {
+    "id": "cv_010",
+    "filename": "040.jpg",
+    "domain": "IT",
+    "extraction_method": "groq_llm",
+    "source_status": "RECOVERED_BY_OCR",
+    "parsed_data": {
+      "summary": "Data Analyst with internship experience in data cleaning, analysis, and visualization using Python, SQL, Excel, Power BI, and machine learning techniques; also experienced in sports data analysis and research projects on association rules and image similarity.",
+      "education_degree": "Bachelor",
+      "education_field": "Data Science",
+      "education_history": [
+        {
+          "institution": "Unknown",
+          "degree": "Bachelor",
+          "field_of_study": "Data Science",
+          "start_year": null,
+          "end_year": null,
+          "gpa_or_honors": "Gioi"
+        }
+      ],
+      "experience_years": 1.7,
+      "job_titles": [
+        "Data Analyst Intern",
+        "Chuyên viên phân tích bóng đá"
+      ],
+      "work_experience": [
+        {
+          "company": "4PSORT",
+          "role": "Data Analyst Intern",
+          "start_date": "08/2024",
+          "end_date": "11/2024",
+          "responsibilities_and_impact": [
+            "Làm sạch, chuẩn hoá dữ liệu bằng Python và SQL.",
+            "Phân tích, trực quan hoá dữ liệu bằng Excel, Power BI, Python (pandas, seaborn).",
+            "Xây dựng biểu đồ, báo cáo hỗ trợ đưa ra insight.",
+            "Ứng dụng thuật toán học máy cơ bản để dự đoán và hỗ trợ quyết định kinh doanh."
+          ]
+        },
+        {
+          "company": "BEPROVN",
+          "role": "Chuyên viên phân tích bóng đá",
+          "start_date": "03/2025",
+          "end_date": "Present",
+          "responsibilities_and_impact": [
+            "Phân tích dữ liệu và video các trận đấu bóng đá.",
+            "Báo cáo chỉ số thi đấu và hiệu suất cầu thủ.",
+            "Làm việc theo quy trình tiêu chuẩn, đảm bảo độ chính xác cao."
+          ]
+        }
+      ],
+      "projects": [
+        {
+          "name": "FP-Growth for Breast Cancer Association Rules",
+          "role": null,
+          "technologies": [
+            "Python",
+            "FP-Growth",
+            "Association Rules"
+          ],
+          "description": "Tiền xử lý và chuẩn hoá dữ liệu bệnh tim, áp dụng FP-Growth để khai phá Association Rules nhằm các chỉ số sức khỏe, phân tích các luật có support và confidence cao để xác định yếu tố nguy cơ, mô hình đạt độ chính xác 89% trong dự đoán bệnh tim.",
+          "impact_metrics": [
+            "Model accuracy 89%"
+          ],
+          "links": [],
+          "heuristic_score": null
+        },
+        {
+          "name": "Similarity Search in Large Image Dataset",
+          "role": null,
+          "technologies": [
+            "VGG19",
+            "ResNet50",
+            "Python"
+          ],
+          "description": "Load mô hình (VGG19, ResNet50) và tiền xử lý ảnh (224x224, RGB), trích xuất vector đặc trưng cho toàn bộ dataset, so sánh độ tương đồng bằng khoảng cách vector, trả về các ảnh tương tự nhất.",
+          "impact_metrics": [],
+          "links": [],
+          "heuristic_score": null
+        }
+      ],
+      "skills": [
+        "Excel",
+        "Google Sheets",
+        "Power BI",
+        "Data analysis",
+        "Reporting",
+        "SQL",
+        "Python",
+        "pandas",
+        "seaborn",
+        "VGG19",
+        "ResNet50",
+        "FP-Growth",
+        "Association Rules",
+        "Machine Learning",
+        "Data preprocessing",
+        "Data visualization"
+      ],
+      "certifications": [
+        "Associate Data Analyst",
+        "Data Analyst in Python",
+        "TOEIC"
+      ]
+    }
+  },
+  {
+    "id": "cv_011",
+    "filename": "041.jpg",
+    "domain": "IT",
+    "extraction_method": "groq_llm",
+    "source_status": "RECOVERED_BY_OCR",
+    "parsed_data": {
+      "summary": "Business Analyst Fresher with a Software Engineering background; experienced in requirement analysis, SRS, and User Stories. Strong in analytical thinking and process improvement.",
+      "education_degree": "Bachelor",
+      "education_field": "Software Engineering & Information Systems",
+      "education_history": [
+        {
+          "institution": "Ho Chi Minh City University of Education",
+          "degree": "Bachelor",
+          "field_of_study": "Software Engineering & Information Systems",
+          "start_year": 2019,
+          "end_year": 2023,
+          "gpa_or_honors": null
+        }
+      ],
+      "experience_years": 5.4,
+      "job_titles": [
+        "Programming Instructor",
+        "Operations Manager",
+        "Customer Relationship Manager Team Leader",
+        "Web Developer Intern"
+      ],
+      "work_experience": [
+        {
+          "company": "Mind X Tech School",
+          "role": "Programming Instructor",
+          "start_date": "Oct 2023",
+          "end_date": "Present",
+          "responsibilities_and_impact": [
+            "Facilitated technical training by translating complex logic into clear, structured requirements for students.",
+            "Conducted gap analysis on student performance to tailor learning paths and improve outcomes.",
+            "Managed stakeholders (parents & students) to ensure alignment on progress and educational objectives."
+          ]
+        },
+        {
+          "company": "Coffee Brand Startup",
+          "role": "Operations Manager",
+          "start_date": "Nov 2024",
+          "end_date": "Oct 2025",
+          "responsibilities_and_impact": [
+            "Data Analysis: Analyzed sales trends and customer behavior to drive data-informed business decisions.",
+            "Workflow Optimization: Resolved operational bottlenecks and streamlined service processes.",
+            "Business Operations: Managed end-to-end daily operations, supply chain; and quality control."
+          ]
+        },
+        {
+          "company": "AIA Vietnam",
+          "role": "Customer Relationship Manager Team Leader",
+          "start_date": "Aug 2023",
+          "end_date": "Nov 2024",
+          "responsibilities_and_impact": [
+            "Requirement Analysis: Defined optimized financial solutions by analyzing precise client requirements.",
+            "CRM Administration: Maintained data integrity to enhance workflow efficiency.",
+            "Process Optimization: Delivered actionable insights to resolve recurring service bottlenecks."
+          ]
+        },
+        {
+          "company": "FPT Software",
+          "role": "Web Developer Intern",
+          "start_date": "Feb 2023",
+          "end_date": "May 2023",
+          "responsibilities_and_impact": [
+            "Requirement Documentation: Assisted in drafting and maintaining BRD, SRS, and User Guides to ensure clear system specifications.",
+            "Quality Assurance & UAT: Supported User Acceptance Testing (UAT) by developing test scenarios and validating system outputs against requirements.",
+            "Stakeholder Collaboration: Facilitated communication between technical teams and Japanese stakeholders to clarify requirements and ensure project alignment."
+          ]
+        }
+      ],
+      "projects": [
+        {
+          "name": "Smart Unsecured Loan Approval System (Simulation Project)",
+          "role": null,
+          "technologies": [
+            "AI-driven development",
+            "UML"
+          ],
+          "description": "Process Optimization: Cut simulated loan approval lead time by 90%+ via workflow re-design. Documentation: Authored SRS, User Stories; and AC for a rule-based credit scoring system. Architecture & UI/UX: Designed UML diagrams and created interactive prototypes via AI-driven development. Logic Validation: Utilized AI-assisted analysis to simulate edge cases and refine requirement consistency.",
+          "impact_metrics": [
+            "Cut simulated loan approval lead time by 90%+"
+          ],
+          "links": [],
+          "heuristic_score": null
+        }
+      ],
+      "skills": [
+        "Requirements Engineering",
+        "Elicitation",
+        "Gap Analysis",
+        "User Stories",
+        "BRD",
+        "SRS",
+        "Process Modeling",
+        "BPMN",
+        "UML",
+        "As-is/To-be",
+        "User Flow",
+        "SQL",
+        "Data Analysis",
+        "AI",
+        "UAT Coordination",
+        "Agile",
+        "Scrum",
+        "Sprint Planning",
+        "Jira",
+        "Notion",
+        "Figma",
+        "Lucidchart",
+        "Draw.io",
+        "ChatGPT",
+        "Gemini",
+        "Copilot",
+        "Software Engineering",
+        "Web Development",
+        "Testing",
+        "Stakeholder Management",
+        "Process Optimization",
+        "Data & Analytics"
+      ],
+      "certifications": []
+    }
+  },
+  {
+    "id": "cv_012",
+    "filename": "044.jpg",
+    "domain": "IT",
+    "extraction_method": "groq_llm",
+    "source_status": "RECOVERED_BY_OCR",
+    "parsed_data": {
+      "summary": "Seeking a Computer Engineering Internship to apply knowledge in embedded systems, IoT, and hardware design. Eager to integrate and contribute.",
+      "education_degree": "Bachelor",
+      "education_field": "Computer Engineering",
+      "education_history": [
+        {
+          "institution": "HCMC University of Technology - Vietnam National University (HCMUT-VNU)",
+          "degree": "Bachelor",
+          "field_of_study": "Computer Engineering",
+          "start_year": 2023,
+          "end_year": 2027,
+          "gpa_or_honors": "GPA 6.43/10 (2.4/4)"
+        }
+      ],
+      "experience_years": 0.0,
+      "job_titles": [],
+      "work_experience": [],
+      "projects": [
+        {
+          "name": "Smart Home Automation System",
+          "role": "IoT Developer",
+          "technologies": [
+            "ESP32-S3",
+            "Free RTOS",
+            "Platform IO",
+            "Tiny ML",
+            "MQTT",
+            "Wi‑Fi Access Point",
+            "Core IOT Cloud"
+          ],
+          "description": "Implemented multi‑task real‑time control with RTOS semaphore synchronization across 6 concurrent tasks. Developed temperature‑based LED alerting with 3+ states, humidity‑driven NeoPixel RGB indicators, and LCD display with Normal/Warning/Critical modes. Built a Wi‑Fi Access Point web server for remote appliance control via a custom browser interface. Deployed a Tiny ML model on‑device for environment classification with on‑hardware accuracy evaluation. Integrated MQTT‑based cloud data publishing to Core IOT platform in Station (STA) Wi‑Fi mode.",
+          "impact_metrics": [
+            "6 concurrent tasks managed by RTOS",
+            "3+ LED alert states",
+            "Real‑time remote control via web interface",
+            "On‑device Tiny ML classification"
+          ],
+          "links": [],
+          "heuristic_score": null
+        },
+        {
+          "name": "Automated Fish Farm Monitoring System",
+          "role": "Embedded Developer",
+          "technologies": [
+            "Yolo:Bit",
+            "Alo T",
+            "Servo Motor",
+            "Ultrasonic Sensor",
+            "DHT20 Temperature Sensor"
+          ],
+          "description": "Integrated a servo motor to automate a feeding chute mechanism for scheduled fish feeding cycles. Deployed DHT20 temperature sensor and ultrasonic sensor for continuous water temperature and level monitoring. Implemented threshold‑based control logic to trigger feeding and alerts autonomously, with real‑time status displayed on LCD.",
+          "impact_metrics": [
+            "Automated feeding chute mechanism",
+            "Continuous water temperature and level monitoring",
+            "Real‑time LCD status display"
+          ],
+          "links": [],
+          "heuristic_score": null
+        },
+        {
+          "name": "STM32 Embedded Systems Lab Series",
+          "role": "Embedded Software Developer",
+          "technologies": [
+            "STM32F103C6",
+            "C (HAL)",
+            "STM32Cube IDE",
+            "Proteus"
+          ],
+          "description": "Designed a 4‑way traffic light system with 7‑segment countdown display and Proteus simulation. Configured a 10 ms hardware timer for flicker‑free 4‑digit display and 8×8 LED matrix control. Built a 4‑mode traffic FSM with button debouncing, real‑time parameter editing, and simultaneous LED feedback. Architected a lightweight cooperative task scheduler managing 5 concurrent periodic tasks with idle‑mode power optimization. Implemented interrupt‑driven UART with ring buffer, protocol FSM parser, and ADC sensor reporting.",
+          "impact_metrics": [
+            "4‑way traffic light system with 7‑segment countdown",
+            "10 ms hardware timer for display stability",
+            "5 concurrent periodic tasks managed by scheduler",
+            "8×8 LED matrix control"
+          ],
+          "links": [],
+          "heuristic_score": null
+        },
+        {
+          "name": "IoT‑based Multi‑Sensor Monitoring System",
+          "role": "Hardware PCB Design Lead",
+          "technologies": [
+            "ESP32",
+            "Altium Designer",
+            "Ki Cad",
+            "RS‑485"
+          ],
+          "description": "Implemented analog signal‑conditioning circuits (op‑amps, active filters) and power management with buck regulators. Integrated RS‑485 for reliable long‑distance data transmission; programmed ESP32 for sensor acquisition and IoT connectivity.",
+          "impact_metrics": [
+            "RS‑485 reliable long‑distance data transmission"
+          ],
+          "links": [],
+          "heuristic_score": null
+        }
+      ],
+      "skills": [
+        "Altium Designer",
+        "Proteus",
+        "C",
+        "C++",
+        "Assembly",
+        "MATLAB",
+        "STM32",
+        "ESP32",
+        "Yolo:Bit",
+        "UART",
+        "I2C",
+        "RS‑485",
+        "MQTT",
+        "Free RTOS",
+        "Platform IO",
+        "Tiny ML",
+        "Core IOT Cloud",
+        "Ki Cad",
+        "STM32Cube IDE"
+      ],
+      "certifications": []
+    }
+  },
+  {
+    "id": "cv_013",
+    "filename": "045.jpg",
+    "domain": "IT",
+    "extraction_method": "groq_llm",
+    "source_status": "ACCEPTED_BY_DOCLING",
+    "parsed_data": {
+      "summary": "As a final-year student majoring in Network Systems and IoT at Hanoi University of Civil Engineering, I have built a solid foundation through active involvement in research and practical development projects. With a career focus on software development and IoT systems, I am currently seeking a full-time position where I can apply my technical expertise, contribute to real‑world projects, and grow within a professional environment.",
+      "education_degree": "Bachelor",
+      "education_field": "Network Systems and IoT",
+      "education_history": [
+        {
+          "institution": "Hanoi University of Civil Engineering",
+          "degree": "Bachelor",
+          "field_of_study": "Network Systems and IoT",
+          "start_year": 2023,
+          "end_year": 2026,
+          "gpa_or_honors": "GPA 3.2/4.0"
+        }
+      ],
+      "experience_years": 0.0,
+      "job_titles": [],
+      "work_experience": [],
+      "projects": [
+        {
+          "name": "Smart Garden IoT System",
+          "role": "Developer",
+          "technologies": [
+            "ESP32",
+            "DHT22",
+            "HC-SR04",
+            "soil moisture sensor",
+            "PIR motion sensor",
+            "LDR light sensor",
+            "MQ gas sensors",
+            "HC-05 Bluetooth module",
+            "Spring Boot",
+            "Angular",
+            "MQTT",
+            "Influx DB",
+            "Telegraf",
+            "Grafana",
+            "Home Assistant",
+            "Docker Compose",
+            "AI models"
+          ],
+          "description": "Smart Garden IoT System utilizes an ESP32 integrated with various sensors and relays to monitor and control environmental conditions. The system features a Spring Boot and Angular stack, utilizing MQTT for real‑time data transmission, Influx DB for timeseries storage via Telegraf, and Grafana for visualization. It also incorporates Home Assistant for automation, Docker Compose for containerized deployment, and basic AI models to provide environmental insights and predictions.",
+          "impact_metrics": [],
+          "links": [
+            "https://github.com/Doan Duc Huy68IT3/smart-garden-iot",
+            "https://github.com/Doan Duc Huy68IT3/iot-config-docker"
+          ],
+          "heuristic_score": null
+        },
+        {
+          "name": "Real‑time Chat Application",
+          "role": "Developer",
+          "technologies": [
+            "Spring Boot",
+            "Angular",
+            "RESTful APIs",
+            "AI features"
+          ],
+          "description": "Developed a real‑time chat application using Spring Boot (backend) and Angular (frontend), enabling seamless messaging through a responsive chat interface and RESTful APIs. The system also integrates AI features to enhance user interaction and provide intelligent responses.",
+          "impact_metrics": [],
+          "links": [
+            "https://github.com/Doan Duc Huy68IT3/backend_chat",
+            "https://github.com/Doan Duc Huy68IT3/frontend_chat"
+          ],
+          "heuristic_score": null
+        },
+        {
+          "name": "HTTP over Sockets (C++)",
+          "role": "Developer",
+          "technologies": [
+            "C++",
+            "TCP sockets",
+            "HTTP"
+          ],
+          "description": "Implemented custom HTTP communication over TCP sockets using C++. Developed low‑level client‑server networking logic to facilitate raw data exchange and demonstrate a foundational understanding of network protocols.",
+          "impact_metrics": [],
+          "links": [
+            "https://github.com/Doan Duc Huy68IT3/server_socket",
+            "https://github.com/Doan Duc Huy68IT3/client_socket"
+          ],
+          "heuristic_score": null
+        },
+        {
+          "name": "Wazuh Security System",
+          "role": "Developer",
+          "technologies": [
+            "Wazuh",
+            "SIEM",
+            "Firewall",
+            "IDS/IPS",
+            "WAF"
+          ],
+          "description": "Deployed a comprehensive Wazuh SIEM environment to perform security monitoring and log analysis. Configured agents, manager, and integrated firewall, IDS/IPS, and WAF components.",
+          "impact_metrics": [],
+          "links": [],
+          "heuristic_score": null
+        }
+      ],
+      "skills": [
+        "C++",
+        "Java",
+        "Python",
+        "Spring Boot",
+        "Angular",
+        "ESP32",
+        "Arduino",
+        "Raspberry Pi",
+        "HTTP",
+        "MQTT",
+        "Web Socket",
+        "TCP/UDP",
+        "UART",
+        "I2C",
+        "SPI",
+        "Zigbee",
+        "MQTT over Wi‑Fi",
+        "Docker",
+        "Docker Compose",
+        "Mosquitto",
+        "Influx DB",
+        "Telegraf",
+        "Grafana",
+        "Home Assistant",
+        "Object‑Oriented Programming",
+        "Algorithms",
+        "AI models",
+        "RESTful APIs"
+      ],
+      "certifications": []
+    }
+  },
+  {
+    "id": "cv_014",
+    "filename": "0e5ca1ca-13ee-4d76-8b56-1323bc944d14.jpg",
+    "domain": "IT",
+    "extraction_method": "groq_llm",
+    "source_status": "ACCEPTED_BY_DOCLING",
+    "parsed_data": {
+      "summary": "Final-year Information Technology student seeking a Software Engineer internship. Experienced building full-stack web applications, RESTful APIs, and database-driven systems with Java/Spring Boot and Node.js.",
+      "education_degree": "Bachelor",
+      "education_field": "Information Technology",
+      "education_history": [
+        {
+          "institution": "Saigon Technology University",
+          "degree": "Bachelor",
+          "field_of_study": "Information Technology",
+          "start_year": 2021,
+          "end_year": 2026,
+          "gpa_or_honors": null
+        }
+      ],
+      "experience_years": 0.6,
+      "job_titles": [
+        "Full-Stack Developer",
+        "Backend Developer"
+      ],
+      "work_experience": [],
+      "projects": [
+        {
+          "name": "Scalable E-commerce Platform",
+          "role": "Full-Stack Developer",
+          "technologies": [
+            "Java",
+            "Spring Boot",
+            "Next.js",
+            "PostgreSQL",
+            "Redis",
+            "JUnit 5",
+            "Mockito",
+            "Testcontainers",
+            "GitHub Actions",
+            "Docker",
+            "AWS EC2"
+          ],
+          "description": "Designed a modular monolith e-commerce backend using Java21 and Spring Boot 4 across multiple domains, implemented hybrid EAV/JSON schema, JWT authentication with token blacklisting, distributed locking with Redisson, role‑based access control, comprehensive unit testing, CI/CD pipeline, and OpenAPI/Swagger documentation.",
+          "impact_metrics": [
+            "0% overselling under 50 concurrent orders (vs. 100% DB deadlock failures unprotected)",
+            "364 RPS with 105ms p95 latency under load",
+            "57% unit test code coverage"
+          ],
+          "links": [
+            "GitHub repository"
+          ],
+          "heuristic_score": null
+        },
+        {
+          "name": "PC Shop",
+          "role": "Backend Developer",
+          "technologies": [
+            "Node.js",
+            "Express",
+            "React",
+            "MySQL"
+          ],
+          "description": "Built 150+ CRUD REST APIs across 21 modules, integrated three payment gateways (MoMo, VNPay, PayOS) with HMAC SHA256 verification, added GHN shipping API for real‑time tracking, and prevented overselling using pessimistic locking within DB transactions.",
+          "impact_metrics": [
+            "150+ CRUD REST APIs",
+            "Integrated 3 payment gateways",
+            "Real‑time delivery tracking via GHN API"
+          ],
+          "links": [
+            "GitHub repository"
+          ],
+          "heuristic_score": null
+        }
+      ],
+      "skills": [
+        "Java",
+        "SQL",
+        "JavaScript",
+        "TypeScript",
+        "HTML",
+        "CSS",
+        "Spring Boot",
+        "Node.js",
+        "React",
+        "Express.js",
+        "Next.js",
+        "MySQL",
+        "PostgreSQL",
+        "Redis",
+        "Git",
+        "Docker",
+        "Postman",
+        "GitHub Actions",
+        "AWS EC2",
+        "AWS S3",
+        "OpenAPI/Swagger",
+        "k6",
+        "Problem Solving",
+        "Analytical Thinking",
+        "Communication",
+        "Teamwork",
+        "Adaptability"
+      ],
+      "certifications": [
+        "TOEIC 930 LR (May 2026)"
+      ]
+    }
+  },
+  {
+    "id": "cv_015",
+    "filename": "1769297b-c3b6-4b21-b57c-7756431d6133.jpg",
+    "domain": "IT",
+    "extraction_method": "groq_llm",
+    "source_status": "RECOVERED_BY_OCR",
+    "parsed_data": {
+      "summary": "Machine Learning Engineer with research experience in AI for information security, focusing on intrusion detection, explainable AI, federated learning, and building end‑to‑end ML pipelines (data collection, model design, evaluation). Recent work includes RAG‑based Vietnamese document chatbot, multi‑agent research assistants, LoRA‑fine‑tuned NER models, RAG evaluation dashboards, and autonomous IT‑support agents with guardrails.",
+      "education_degree": "Engineer",
+      "education_field": "An toàn thông tin",
+      "education_history": [
+        {
+          "institution": "Đại học Công nghệ Thông tin (UIT), ĐHQG‑HCM",
+          "degree": "Engineer",
+          "field_of_study": "An toàn thông tin",
+          "start_year": null,
+          "end_year": 2025,
+          "gpa_or_honors": "GPA 8.59/10"
+        }
+      ],
+      "experience_years": 1.0,
+      "job_titles": [
+        "Machine Learning Engineer",
+        "AI Engineer",
+        "Research Assistant",
+        "IT Support Agent"
+      ],
+      "work_experience": [
+        {
+          "company": "Self‑employed",
+          "role": "Machine Learning Engineer",
+          "start_date": null,
+          "end_date": "Present",
+          "responsibilities_and_impact": [
+            "Designed and implemented ML pipelines for security‑related tasks (intrusion detection, malware classification, explainable AI).",
+            "Conducted research on graph neural networks (GAT, GCN, GIN) and transformer models (BERT, CodeBERT, GraphCodeBERT).",
+            "Applied federated learning and PEFT/LoRA techniques to improve model privacy and efficiency.",
+            "Authored 9 research papers on AI for information security."
+          ]
+        },
+        {
+          "company": "Self‑employed",
+          "role": "AI Engineer / Researcher",
+          "start_date": "2026",
+          "end_date": "Present",
+          "responsibilities_and_impact": [
+            "Built a Vietnamese Document Intelligence Chatbot using OCR + Retrieval‑Augmented Generation (Qdrant + BM25) with hybrid confidence‑based routing.",
+            "Reduced OCR processing cost by 40‑50% and lowered token usage by ~18% while speeding up inference ~7.5×.",
+            "Developed a Multi‑Agent Research Assistant (LangGraph) with planner, researcher, critic, writer agents; introduced rubric‑based LLM evaluation and Welch’s t‑test for statistical significance.",
+            "Improved chat quality (p < 0.05), cut token consumption by 18% and runtime by 7.5×.",
+            "Fine‑tuned LoRA‑based Vietnamese NER models (PhoBERT, Qwen2.5) achieving F1 0.810, comparable to few‑shot prompting with <1% additional parameters and 4.1× request‑cost reduction.",
+            "Created a RAG Evaluation Dashboard that automatically diagnoses precision, recall, factuality, and relevance; identified three critical bugs and boosted accuracy.",
+            "Implemented an Autonomous IT‑Support Agent with guardrails; tested 44 scenarios and reduced unsafe actions by 78.6% to 0%."
+          ]
+        }
+      ],
+      "projects": [
+        {
+          "name": "Document Intelligence Chatbot – OCR + RAG (Vietnamese)",
+          "role": "Lead Engineer",
+          "technologies": [
+            "OCR",
+            "Retrieval‑Augmented Generation",
+            "Qdrant",
+            "BM25",
+            "Vision LLM",
+            "Hybrid Retrieval",
+            "Python"
+          ],
+          "description": "A chatbot that answers questions over scanned Vietnamese documents using OCR to extract text, then retrieves relevant passages via dense (Qdrant) and sparse (BM25) search, re‑ranks with reciprocal rank fusion, and generates answers with a Vision‑enabled LLM. Confidence‑based routing escalates low‑confidence queries to the full LLM.",
+          "impact_metrics": [
+            "Reduced OCR processing cost by 40‑50%",
+            "Decreased token usage by 9.9% per chunk",
+            "Improved latency and throughput (≈7.5× faster)"
+          ],
+          "links": [],
+          "heuristic_score": null
+        },
+        {
+          "name": "Multi‑Agent Research Assistant (LangGraph)",
+          "role": "Research Lead",
+          "technologies": [
+            "LangGraph",
+            "Large Language Models",
+            "Rubric‑based evaluation",
+            "Welch's t‑test",
+            "Python"
+          ],
+          "description": "A multi‑agent system composed of Planner, Researcher, Critic, and Writer agents that collaboratively solve research tasks. Outputs are scored against a rubric and statistical significance is assessed with Welch’s t‑test.",
+          "impact_metrics": [
+            "Chat quality improvement (p < 0.05)",
+            "Token usage reduced by 18%",
+            "Inference speed increased by 7.5×"
+          ],
+          "links": [],
+          "heuristic_score": null
+        },
+        {
+          "name": "Vietnamese Domain NER – LoRA Fine‑tuning vs Zero/Few‑shot Prompting",
+          "role": "Researcher",
+          "technologies": [
+            "PyTorch",
+            "LoRA",
+            "PhoBERT",
+            "Qwen2.5",
+            "LLM Prompting",
+            "Zero‑shot",
+            "Few‑shot"
+          ],
+          "description": "Fine‑tuned LoRA adapters on Vietnamese NER datasets and compared performance against zero‑ and few‑shot prompting approaches. Demonstrated comparable F1 scores with far fewer trainable parameters.",
+          "impact_metrics": [
+            "F1 0.810 (comparable to few‑shot)",
+            "Parameter increase <1%",
+            "Request‑cost reduction 4.1×",
+            "Generalization drop 24.6% on out‑of‑domain data"
+          ],
+          "links": [],
+          "heuristic_score": null
+        },
+        {
+          "name": "RAG Evaluation Dashboard",
+          "role": "Developer",
+          "technologies": [
+            "RAG",
+            "Bootstrap confidence interval",
+            "Precision/Recall metrics",
+            "Factuality",
+            "Relevance scoring",
+            "Python"
+          ],
+          "description": "Dashboard that automatically evaluates RAG system answers on multiple dimensions (precision, recall, factuality, relevance) and detects root‑cause bugs using statistical confidence intervals.",
+          "impact_metrics": [
+            "Identified 3 critical bugs",
+            "Improved overall accuracy (reported in internal metrics)"
+          ],
+          "links": [],
+          "heuristic_score": null
+        }
+      ],
+      "skills": [],
+      "certifications": []
+    }
+  },
+  {
+    "id": "cv_016",
+    "filename": "1786788242017_3775319749087198895_3775319749087198895_41faa242effcfbcd1b3bdef85afddd0a.jpg",
+    "domain": "IT",
+    "extraction_method": "groq_llm",
+    "source_status": "RECOVERED_BY_OCR",
+    "parsed_data": {
+      "summary": "Chào mừng bạn tới Phạm Ngọc Phát. Lạc mốt ngưỡng nhiệt huyết; ham học hỏi và luyện san sáng mỗi mặt vị thử thách. Tôi muốn ngừng nỗ lực để phát triển bản thân; nâng cao kỹ năng và làm việc chăm chỉ. Mong muốn của tôi là được hợp tác với đồng nghiệp; cùng nhau chinh phục những mục tiêu mới và đạt được thành công trong sự nghiệp cũng như cuộc sống #KỹNăng",
+      "education_degree": "Associate",
+      "education_field": "Phát Triển Phần Mềm",
+      "education_history": [
+        {
+          "institution": "FPT Polytechnic",
+          "degree": "Associate",
+          "field_of_study": "Phát Triển Phần Mềm",
+          "start_year": 2022,
+          "end_year": 2024,
+          "gpa_or_honors": "3.77"
+        }
+      ],
+      "experience_years": 0.0,
+      "job_titles": [
+        "Developer",
+        "Backend Developer",
+        "Participant"
+      ],
+      "work_experience": [],
+      "projects": [
+        {
+          "name": "Tim Kiếm Việc Làm",
+          "role": "Developer",
+          "technologies": [
+            "Java",
+            "Spring Boot",
+            "SQL Server",
+            "Spring Security",
+            "AngularJS"
+          ],
+          "description": "Ứng dụng web tìm kiếm việc làm, cho phép người dùng xem thông tin chi tiết về công việc, tạo CV, nộp đơn, quản lý danh sách công việc và người dùng. Được phát triển trong khu học viện.",
+          "impact_metrics": [],
+          "links": [],
+          "heuristic_score": null
+        },
+        {
+          "name": "Đặt Phòng Khách Sạn Travel Book",
+          "role": "Backend Developer",
+          "technologies": [
+            "Java",
+            "Spring Boot",
+            "SQL Server",
+            "Spring Security",
+            "AngularJS"
+          ],
+          "description": "Hệ thống đặt phòng khách sạn trực tuyến cho phép người dùng tìm kiếm, đặt phòng, quản lý thông tin khách sạn, theo dõi doanh thu và thống kê trong tháng năm.",
+          "impact_metrics": [],
+          "links": [],
+          "heuristic_score": null
+        },
+        {
+          "name": "Backend Rookie Hackathon",
+          "role": "Participant",
+          "technologies": [
+            "Java",
+            "Spring Boot",
+            "SQL Server",
+            "RESTful API"
+          ],
+          "description": "Hackathon tập trung vào phát triển API backend, cải thiện hiệu suất và xử lý dữ liệu với các công nghệ Java Spring Boot, SQL Server và RESTful API.",
+          "impact_metrics": [],
+          "links": [],
+          "heuristic_score": null
+        }
+      ],
+      "skills": [
+        "Java",
+        "OOP",
+        "JDBC",
+        "MySQL",
+        "Spring Boot",
+        "Spring MVC",
+        "Spring Data JPA",
+        "Spring Security",
+        "Hibernate",
+        "JPA",
+        "RESTful API",
+        "JSON",
+        "Postman",
+        "Git",
+        "Agile Scrum",
+        "SQL Server",
+        "AngularJS",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Bootstrap",
+        "Maven",
+        "Gradle",
+        "Web Development"
+      ],
+      "certifications": []
+    }
+  },
+  {
+    "id": "cv_017",
+    "filename": "1786788242094_3775319749087198895_3775319749087198895_f47beef682dd8f5aa6534169ca13ad09.jpg",
+    "domain": "IT",
+    "extraction_method": "groq_llm",
+    "source_status": "ACCEPTED_BY_DOCLING",
+    "parsed_data": {
+      "summary": "Iuo si - d - srooyzedd 96,478 delivered orders, 93,358 customers, and 1,000 credit applications using Python, Pandas, and Power BI. Built star-schema data models, validated KPIs across Python and Power BI, and developed interactive dashboards to translate complex data into business-focused recommendations.",
+      "education_degree": "Engineer",
+      "education_field": "Information Technology",
+      "education_history": [
+        {
+          "institution": "Posts and Telecommunications Institute of Technology",
+          "degree": "Engineer",
+          "field_of_study": "Information Technology",
+          "start_year": 2023,
+          "end_year": 2027,
+          "gpa_or_honors": "GPA: 3.58/4.00"
+        }
+      ],
+      "experience_years": 0.0,
+      "job_titles": [
+        "Data Analyst Intern"
+      ],
+      "work_experience": [
+        {
+          "company": "Git Hub",
+          "role": "Data Analyst Intern",
+          "start_date": null,
+          "end_date": null,
+          "responsibilities_and_impact": []
+        }
+      ],
+      "projects": [
+        {
+          "name": "Olist E-commerce Analytics and Delivery Performance",
+          "role": null,
+          "technologies": [
+            "Python",
+            "Pandas",
+            "Power BI",
+            "SQL",
+            "Star-schema modeling"
+          ],
+          "description": "Cleaned, validated, and integrated relational Olist tables into a star-schema model, enabling consistent analysis of revenue, customers, delivery performance, reviews, and payments in Power BI. Analyzed 96,478 delivered orders and 93,358 customers; found that 6.77% of SLA-evaluated orders were late and averaged approximately 2.3 in review score, versus above 4.0 for on-time or early deliveries, supporting delivery‑risk monitoring and logistics improvements. Validated Power BI measures against Python-generated KPI reports to verify metric definitions and maintain consistent results across dashboards and analytical outputs. Developed an interactive Power BI dashboard to present revenue, customer, delivery, review, and payment KPIs through drill‑down analysis and business‑focused visualizations.",
+          "impact_metrics": [
+            "96,478 delivered orders",
+            "93,358 customers",
+            "6.77% of SLA‑evaluated orders were late",
+            "Average review score approx 2.3 vs >4.0 for on‑time deliveries"
+          ],
+          "links": [
+            "View on Git Hub"
+          ],
+          "heuristic_score": null
+        },
+        {
+          "name": "German Credit Risk Analysis",
+          "role": null,
+          "technologies": [
+            "Python",
+            "Power BI",
+            "SQL"
+          ],
+          "description": "Analyzed 1,000 credit applications across 21 variables and quantified an overall 30% bad‑credit rate through data validation, segmentation, and comparative risk analysis. Identified the highest‑risk customer and loan segments based on differences in bad‑credit rates across key variables. Developed an interactive Power BI dashboard that enabled side‑by‑side comparison of bad‑credit rates across customer and loan segments.",
+          "impact_metrics": [
+            "1,000 credit applications analyzed",
+            "30% bad‑credit rate",
+            "Identified highest‑risk customer and loan segments"
+          ],
+          "links": [
+            "View on Git Hub"
+          ],
+          "heuristic_score": null
+        }
+      ],
+      "skills": [
+        "SQL",
+        "Joins",
+        "Aggregations",
+        "Subqueries",
+        "CTEs",
+        "Window Functions",
+        "Python",
+        "Pandas",
+        "NumPy",
+        "Data Cleaning",
+        "Data Validation",
+        "Exploratory Data Analysis",
+        "Power BI",
+        "DAX",
+        "Power Query",
+        "Star‑Schema Modeling",
+        "KPI Dashboards",
+        "Data Visualization",
+        "Excel",
+        "Pivot Tables",
+        "Lookup Functions",
+        "Charts",
+        "KPI Analysis",
+        "Customer Segmentation",
+        "Descriptive Statistics",
+        "Git",
+        "GitHub",
+        "Jupyter Notebook",
+        "Visual Studio Code"
+      ],
+      "certifications": []
+    }
+  },
+  {
+    "id": "cv_018",
+    "filename": "1d7b2482-fe42-4e72-9cd1-68c81233a33b- gp.pdf",
+    "domain": "IT",
+    "extraction_method": "groq_llm",
+    "source_status": "ACCEPTED_BY_DOCLING",
+    "parsed_data": {
+      "summary": "Al Engineer and Data Scientist with a proven academic track record (published in Q1 SCI journals and international conferences) and practical experience in Deep Learning, hybrid architectures, and data pipeline optimization. Seeking an AI Engineer role at leading technology enterprises to translate rigorous research into scalable solutions, drive datadriven decisions, and contribute to innovative commnercial products. Short-term Goal: To deploy advanced AI algorithms and optimize experimental data pipelines within the technology and telecommunications sectors, ensuring theoretical accuracy translates into real-world efficiency. Long-term Goal: To evolve into an Al Architect or Technical Lead who seamlessly merges academic innovation with business strategy, establishing frameworks where research contimuously elevates commercial ecosystems.",
+      "education_degree": "Bachelor",
+      "education_field": "Information Technology",
+      "education_history": [
+        {
+          "institution": "Van Lang University",
+          "degree": "Bachelor",
+          "field_of_study": "Information Technology",
+          "start_year": null,
+          "end_year": null,
+          "gpa_or_honors": "8.8/10.0 (equivalent to 3.52/4.00)"
+        }
+      ],
+      "experience_years": 0.0,
+      "job_titles": [
+        "AI Engineer Intern (NLP)"
+      ],
+      "work_experience": [
+        {
+          "company": "Vietruvel /TCenter",
+          "role": "AI Engineer Intern (NLP)",
+          "start_date": null,
+          "end_date": null,
+          "responsibilities_and_impact": [
+            "Automated data collection from multiple sources, ensuring privacy compliance.",
+            "Developed RAG-based chatbot for sales consultations and automated customer data tools using Minl O and Dify.",
+            "Designed secure storage systems and fine-tuned models for personalized recommendations."
+          ]
+        }
+      ],
+      "projects": [
+        {
+          "name": "Deep Embedded Clustering for Social Media Post Classification",
+          "role": "Team Member",
+          "technologies": [
+            "MPNet",
+            "Deep Embedded Clustering (DEC)",
+            "Python"
+          ],
+          "description": "Demonstrated exceptional label efficiency (58.48% Accuracy, 0.3504 NMI) using only 0.5% labeled data for mapping. Engineered an automated topic classification system for over 580,000 unlabeled Facebook posts by integrating the MPNet language model with the Deep Embedded Clustering (DEC) unsupervised learning algorithm.",
+          "impact_metrics": [
+            "58.48% Accuracy",
+            "0.3504 NMI",
+            "100% data coverage without discarding noisy samples"
+          ],
+          "links": [],
+          "heuristic_score": null
+        },
+        {
+          "name": "Face Detection and Prediction (Age/Gender/Emotion)",
+          "role": "Solo Developer",
+          "technologies": [
+            "MTCNN",
+            "ResNet18",
+            "SQLite",
+            "Python"
+          ],
+          "description": "Built an end-to-end facial attribute analysis pipeline (age, gender, emotion) for consumer behavior tracking, utilizing MTCNN for face alignment, a ResNet18 backbone for classification, and SQLite for automated data storage.",
+          "impact_metrics": [
+            "95% accuracy in gender prediction (UTKFace)",
+            "72% accuracy in emotion recognition (FER-2013)"
+          ],
+          "links": [],
+          "heuristic_score": null
+        },
+        {
+          "name": "Weather Forecast Website",
+          "role": "Team Member",
+          "technologies": [
+            "Flask",
+            "Docker",
+            "Random Forest",
+            "Visual Crossing API",
+            "Python"
+          ],
+          "description": "Developed and containerized a 7-day weather forecasting web application using Flask and Docker, implementing Random Forest algorithms to process historical API data from Visual Crossing.",
+          "impact_metrics": [
+            "99.84% accuracy in weather classification (rain/sun)",
+            "0.00013 MSE for maximum temperature regression"
+          ],
+          "links": [],
+          "heuristic_score": null
+        },
+        {
+          "name": "Applying YOLO-Segmentation for Skin Lesion Detection",
+          "role": "Team Member",
+          "technologies": [
+            "YOLO",
+            "Segmentation",
+            "Precision-Recall Metrics",
+            "Python"
+          ],
+          "description": "Fine-tuned a YOLO-based segmentation model for dermatological analysis, designing the dataset strategy and building robust training and evaluation pipelines.",
+          "impact_metrics": [],
+          "links": [],
+          "heuristic_score": null
+        },
+        {
+          "name": "VNHCAREAI: Smart AI Assistant for Home Health and Safety",
+          "role": "Team Member",
+          "technologies": [
+            "LSTM",
+            "MediaPipe",
+            "Flask",
+            "Python"
+          ],
+          "description": "Developed a smart camera-based elderly monitoring system, building an LSTM model to classify 5+ health‑related actions (e.g., fall detection) using MediaPipe pose landmarks extracted from RGB frames. Deployed a lightweight Flask‑based application prototype for real‑time visualization and abnormal behavior notifications.",
+          "impact_metrics": [
+            "Won the Potential Project Award at the Viet Future 2025 national innovation competition"
+          ],
+          "links": [],
+          "heuristic_score": null
+        }
+      ],
+      "skills": [
+        "Python",
+        "SQL",
+        "NoSQL",
+        "Neo4j",
+        "MinIO",
+        "RAG Pipelines",
+        "Dify",
+        "LLM Fine-tuning",
+        "Prompt Engineering",
+        "PyTorch",
+        "TensorFlow",
+        "Scikit-learn",
+        "Pandas",
+        "NumPy",
+        "MONAI",
+        "SwinViT",
+        "CNNs",
+        "EEG Decoding",
+        "Docker",
+        "Flask",
+        "MTCNN",
+        "ResNet18",
+        "SQLite",
+        "Random Forest",
+        "YOLO",
+        "LSTM",
+        "MediaPipe",
+        "English (B2)"
+      ],
+      "certifications": [
+        "Neo4j Graph Data Science Certification (2025)",
+        "Google AI Essentials Certificate (2024)",
+        "Kaggle Computer Vision Certificate (2025)"
+      ]
+    }
+  },
+  {
+    "id": "cv_019",
+    "filename": "462a6a67-6dc6-4645-96f2-947f24b96343.jpg",
+    "domain": "IT",
+    "extraction_method": "groq_llm",
+    "source_status": "RECOVERED_BY_OCR",
+    "parsed_data": {
+      "summary": "Final-year IT student with a strong foundation in programming and a passion for web development, eager to apply skills to create user‑friendly, responsive designs through an internship and contribute effectively to projects.",
+      "education_degree": "Bachelor",
+      "education_field": "Software Engineering",
+      "education_history": [
+        {
+          "institution": "HO CHI MINH CITY UNIVERSITY OF FOREIGN LANGUAGES AND INFORMATION TECHNOLOGY (HUFLIT)",
+          "degree": "Bachelor",
+          "field_of_study": "Software Engineering",
+          "start_year": 2021,
+          "end_year": 2025,
+          "gpa_or_honors": "GPA 3.54"
+        }
+      ],
+      "experience_years": 0.3,
+      "job_titles": [
+        "Full stack developer"
+      ],
+      "work_experience": [
+        {
+          "company": "University of Medicine and Pharmacy Hospital, Campus 2",
+          "role": "Full stack developer",
+          "start_date": "SEP 2024",
+          "end_date": "DEC 2024",
+          "responsibilities_and_impact": [
+            "Developed a system to manage achievements and research in the medical field, enabling efficient tracking of scientific activities and outcomes.",
+            "Implemented front‑end with React JS and back‑end with Node.js & Express.js, using PostgreSQL for data storage."
+          ]
+        }
+      ],
+      "projects": [
+        {
+          "name": "Online Job Search and Application",
+          "role": "Frontend Developer; Designer; Tester",
+          "technologies": [
+            "React",
+            "React Native",
+            "Node.js",
+            "PostgreSQL",
+            "Firebase",
+            "Selenium",
+            "Stripe"
+          ],
+          "description": "Built a platform for job searching, CV creation, employer chat, and payment integration using RESTful APIs. Designed UI/UX, developed features with React and React Native, and tested functionalities using Selenium and Appium.",
+          "impact_metrics": [],
+          "links": [],
+          "heuristic_score": null
+        },
+        {
+          "name": "Clothing Store Website - Ao Dai Hong Duc",
+          "role": "Frontend Developer",
+          "technologies": [
+            "React",
+            "TypeScript",
+            "Vite",
+            "Node.js",
+            "Express",
+            "Firebase",
+            "MongoDB",
+            "JWT",
+            "Amazon EC2"
+          ],
+          "description": "Developed an e‑commerce platform for selling traditional and modern Vietnamese Ao Dai and other clothing, featuring cart purchase, favorites, and admin functionalities. Designed UI/UX in Figma, integrated third‑party APIs, implemented cart and payment flows, and managed the database.",
+          "impact_metrics": [],
+          "links": [],
+          "heuristic_score": null
+        },
+        {
+          "name": "Online Fashion Platform vogue vortex",
+          "role": "Frontend Developer",
+          "technologies": [
+            "Django",
+            "MongoDB",
+            "AWS Lambda",
+            "AWS Amplify",
+            "TypeScript",
+            "React",
+            "Redux Toolkit",
+            "Shadcn-UI",
+            "Tailwind CSS"
+          ],
+          "description": "Built a fashion e‑commerce platform with product browsing, shopping cart, order management, and an admin dashboard. Developed the frontend with TypeScript, React, Shadcn‑UI and Tailwind CSS, optimized UI/UX, managed state with Redux Toolkit, and deployed on AWS Amplify.",
+          "impact_metrics": [],
+          "links": [],
+          "heuristic_score": null
+        }
+      ],
+      "skills": [
+        "JavaScript",
+        "TypeScript",
+        "Node.js",
+        "React.js",
+        "React Native",
+        "Tailwind CSS",
+        "Redux Toolkit",
+        "HTML",
+        "CSS",
+        "PostgreSQL",
+        "SQLite",
+        "Firebase",
+        "MongoDB",
+        "JWT",
+        "Amazon EC2",
+        "AWS Amplify",
+        "AWS Lambda",
+        "Django",
+        "Figma",
+        "GitHub",
+        "Postman",
+        "Notion",
+        "Selenium",
+        "Stripe",
+        "RESTful APIs",
+        "Vite",
+        "Express.js",
+        "Shadcn-UI"
+      ],
+      "certifications": []
+    }
+  },
+  {
+    "id": "cv_020",
+    "filename": "54d1531e-9f81-406e-8f8c-3386054f8c85.jpg",
+    "domain": "IT",
+    "extraction_method": "groq_llm",
+    "source_status": "ACCEPTED_BY_DOCLING",
+    "parsed_data": {
+      "summary": "INTERN AI ENGINEER",
+      "education_degree": "Bachelor",
+      "education_field": "Information Technology",
+      "education_history": [
+        {
+          "institution": "Ha Noi Metropolitan University",
+          "degree": "Bachelor",
+          "field_of_study": "Information Technology",
+          "start_year": null,
+          "end_year": 2025,
+          "gpa_or_honors": null
+        },
+        {
+          "institution": "O.P. Jindal Global University, Coursera",
+          "degree": "Other",
+          "field_of_study": "Machine Learning",
+          "start_year": null,
+          "end_year": 2025,
+          "gpa_or_honors": null
+        }
+      ],
+      "experience_years": 1.3,
+      "job_titles": [
+        "AI Intern"
+      ],
+      "work_experience": [
+        {
+          "company": "Eyecode Tech",
+          "role": "AI Intern",
+          "start_date": "05/2025",
+          "end_date": "Present",
+          "responsibilities_and_impact": [
+            "Fine-tuned Deep Seek-VL-7B with LoRA for automatic scoring of IELTS Writing Task 1.",
+            "Froze vision encoder & aligner, applied LoRA to q_proj, k_proj, v_proj, o_proj of the language model.",
+            "Applied multi-GPU parallelism: visual modules on one GPU, language model split across GPUs.",
+            "Built custom data pipeline: tokenization, embedding alignment with masks, and dynamic padding via VLCollator.",
+            "Achieved MAE ~0.5 on IELTS scoring, 15-16s inference per essay, with accurate feedback across all scoring criteria."
+          ]
+        }
+      ],
+      "projects": [
+        {
+          "name": "Deepseek-vl-finetuning",
+          "role": "AI Intern",
+          "technologies": [
+            "PyTorch",
+            "LoRA",
+            "Multi-GPU",
+            "VLCollator",
+            "Deep Seek-VL-7B"
+          ],
+          "description": "Fine-tuned Deep Seek-VL-7B with LoRA for automatic scoring of IELTS Writing Task 1, built custom data pipeline and applied multi‑GPU parallelism.",
+          "impact_metrics": [
+            "MAE ~0.5 on IELTS scoring",
+            "15-16s inference per essay"
+          ],
+          "links": [],
+          "heuristic_score": null
+        },
+        {
+          "name": "AI chatbot for teaching",
+          "role": "Developer",
+          "technologies": [
+            "RAG",
+            "LLaMA",
+            "FAISS",
+            "NLP embedding models",
+            "Google Colab"
+          ],
+          "description": "Developed a Retrieval‑Augmented Generation chatbot to support teaching Digital Citizenship Skills, fine‑tuned LLaMA model, integrated FAISS for semantic search, and published the work as a graduation thesis in the university's academic journal.",
+          "impact_metrics": [
+            "Published in university academic journal"
+          ],
+          "links": [],
+          "heuristic_score": null
+        },
+        {
+          "name": "Hand Gesture Recognition Model",
+          "role": "Developer",
+          "technologies": [
+            "MediaPipe",
+            "OpenCV",
+            "Python"
+          ],
+          "description": "Built a real‑time hand gesture recognition system for mouse control using MediaPipe for landmark detection and OpenCV for image preprocessing, with contour extraction and gesture classification.",
+          "impact_metrics": [
+            "95% detection accuracy"
+          ],
+          "links": [],
+          "heuristic_score": null
+        }
+      ],
+      "skills": [
+        "Python",
+        "C++",
+        "Classification",
+        "Regression",
+        "CNN",
+        "RNN",
+        "GNN",
+        "Transformer",
+        "Transfer Learning",
+        "PyTorch",
+        "TensorFlow",
+        "Scikit-learn",
+        "Hugging Face",
+        "Pandas",
+        "NumPy",
+        "FAISS",
+        "Tokenization",
+        "Embedding Alignment",
+        "Git",
+        "Linux",
+        "Docker",
+        "Google Colab",
+        "VS Code",
+        "Linear Algebra",
+        "Calculus",
+        "Probability & Statistics",
+        "Optimization",
+        "Problem-solving",
+        "Reading technical documents in English",
+        "Team collaboration"
+      ],
+      "certifications": []
+    }
+  },
+  {
+    "id": "cv_021",
+    "filename": "68d8d534-8d58-4342-b186-ea542dd487dd.jpg",
+    "domain": "IT",
+    "extraction_method": "groq_llm",
+    "source_status": "RECOVERED_BY_OCR",
+    "parsed_data": {
+      "summary": "Third-year Software Engineering student passionate about backend development, with hands‑on projects in Java EE, Spring Boot, and MySQL, seeking an internship to learn from experienced engineers and deliver production‑grade impact.",
+      "education_degree": "Bachelor",
+      "education_field": "Software Engineering",
+      "education_history": [
+        {
+          "institution": "FPT University",
+          "degree": "Bachelor",
+          "field_of_study": "Software Engineering",
+          "start_year": 2024,
+          "end_year": 2028,
+          "gpa_or_honors": "GPA 3.5"
+        }
+      ],
+      "experience_years": 0.0,
+      "job_titles": [
+        "Backend Developer Intern"
+      ],
+      "work_experience": [
+        {
+          "company": "Freelance / Self‑employed",
+          "role": "Backend Developer Intern",
+          "start_date": null,
+          "end_date": null,
+          "responsibilities_and_impact": []
+        }
+      ],
+      "projects": [
+        {
+          "name": "Autowash Pro",
+          "role": "Team Leader",
+          "technologies": [
+            "Java",
+            "Spring Boot",
+            "Spring Security",
+            "JWT",
+            "Spring Data JPA",
+            "MySQL",
+            "RESTful API",
+            "GitHub"
+          ],
+          "description": "Car‑wash booking platform with slot‑based scheduling, online payment, and tier‑based loyalty program. Implemented authentication, booking, payment, notification, membership, review, wash session, and reward exchange modules. Built 50+ RESTful APIs and designed over 20 MySQL tables. Added slot‑conflict detection, deposit handling, three user roles (Customer/Staff/Admin), and a loyalty module with point calculation, 6‑month expiry, and scheduled tier review. Integrated VNPAY payment gateway with IPN webhook verification and automatic reconciliation. Secured endpoints with Spring Security JWT and RBAC across ~50 endpoints.",
+          "impact_metrics": [
+            "Built 50+ RESTful APIs",
+            "Designed +20 MySQL tables",
+            "Supported 3 user roles",
+            "Implemented loyalty point calculation (floor(amount/1000)) with 6‑month expiry",
+            "Integrated VNPAY payment gateway with IPN webhook",
+            "Secured ~50 endpoints with Spring Security JWT and RBAC"
+          ],
+          "links": [],
+          "heuristic_score": null
+        },
+        {
+          "name": "Online Shopping Website",
+          "role": null,
+          "technologies": [
+            "Java EE",
+            "Servlets",
+            "JSP",
+            "JSTL",
+            "JPA (EclipseLink)",
+            "Microsoft SQL Server",
+            "Apache Ant",
+            "HTML5",
+            "CSS3",
+            "Bootstrap",
+            "JavaScript"
+          ],
+          "description": "Java EE e‑commerce web application with role‑based access control for Admin, Manager, and Customer. Implemented 10+ CRUD features for products, categories, and accounts. Developed customer‑facing search, filter, sort, and full shopping‑cart‑to‑checkout flow.",
+          "impact_metrics": [
+            "Implemented 10+ CRUD features",
+            "Role‑based access control across 3 roles"
+          ],
+          "links": [],
+          "heuristic_score": null
+        }
+      ],
+      "skills": [
+        "Java",
+        "JavaScript",
+        "HTML5",
+        "CSS3",
+        "Bootstrap",
+        "React",
+        "MUI",
+        "SASS",
+        "SCSS",
+        "RESTful API",
+        "Spring Boot",
+        "Spring Security",
+        "JWT",
+        "Spring Data JPA",
+        "MS SQL",
+        "MySQL",
+        "PostgreSQL",
+        "Git",
+        "GitHub",
+        "Agile Scrum methodology",
+        "Intermediate English"
+      ],
+      "certifications": []
+    }
+  },
+  {
+    "id": "cv_022",
+    "filename": "767524458_2058110688123480_8521338554769429223_n.jpg",
+    "domain": "IT",
+    "extraction_method": "groq_llm",
+    "source_status": "LOW_QUALITY",
+    "parsed_data": {
+      "summary": "Fourth-year Software Engineering student with hands-on experience building full-stack web applications using React, Vue.js, Node.js, Express.js and Mongo DB. Developed academic and personal projects involving RESTful APIs, authentication, database management and responsive user interfaces. Interested in Software Developer/Full-stack Developer internship opportunities where I can strengthen my development, debugging and problem-solving skills.",
+      "education_degree": "Bachelor",
+      "education_field": "Software Engineering",
+      "education_history": [
+        {
+          "institution": "Can Tho University",
+          "degree": "Bachelor",
+          "field_of_study": "Software Engineering",
+          "start_year": 2023,
+          "end_year": 2027,
+          "gpa_or_honors": "GPA: 3.55/4"
+        }
+      ],
+      "experience_years": 0.0,
+      "job_titles": [],
+      "work_experience": [],
+      "projects": [
+        {
+          "name": "Camera Shop – E-commerce Website with AI Assistant",
+          "role": null,
+          "technologies": [
+            "React.js",
+            "Redux",
+            "Node.js",
+            "Express.js",
+            "Mongo DB",
+            "Socket.IO",
+            "AI Assistant"
+          ],
+          "description": "Developed a full-stack e-commerce application for camera products. Implemented authentication, product browsing, cart, checkout and order history. Built an admin interface for managing product categories, users and orders. Integrated an AI-powered camera recommendation chatbox. Implemented real-time communication functionality using Socket.IO.",
+          "impact_metrics": [],
+          "links": [],
+          "heuristic_score": null
+        },
+        {
+          "name": "KBook – Library Management System",
+          "role": null,
+          "technologies": [
+            "Vue.js",
+            "Pinia",
+            "Node.js",
+            "Express.js",
+            "Mongo DB",
+            "JWT",
+            "Axios"
+          ],
+          "description": "Developed a full-stack library management system with separate interfaces for library staff and readers. Implemented book management, reader management, borrow requests and borrowing history. Developed RESTful APIs using Node.js and Express.js with Mongo DB. Implemented authentication using JWT and integrated frontend APIs using Axios.",
+          "impact_metrics": [],
+          "links": [],
+          "heuristic_score": null
+        }
+      ],
+      "skills": [
+        "Java",
+        "JavaScript",
+        "HTML",
+        "React.js",
+        "Vue.js",
+        "Node.js",
+        "Express.js",
+        "RESTful API",
+        "Mongo DB",
+        "MySQL",
+        "Redux",
+        "Pinia",
+        "Git",
+        "GitHub",
+        "VSCode",
+        "Postman",
+        "Docker",
+        "Socket.IO",
+        "JWT",
+        "Axios",
+        "AI"
+      ],
+      "certifications": [
+        "English: TOEIC Listening & Reading 595 (2026)"
+      ]
+    }
+  },
+  {
+    "id": "cv_023",
+    "filename": "774777607_1279938944129525_8536816422708780182_n.png",
+    "domain": "IT",
+    "extraction_method": "groq_llm",
+    "source_status": "RECOVERED_BY_OCR",
+    "parsed_data": {
+      "summary": null,
+      "education_degree": "Bachelor",
+      "education_field": "Cybersecurity",
+      "education_history": [
+        {
+          "institution": "Ho Chi Minh City University of Technology (HUTECH)",
+          "degree": "Bachelor",
+          "field_of_study": "Information Technology Cybersecurity",
+          "start_year": null,
+          "end_year": 2027,
+          "gpa_or_honors": "3.50"
+        }
+      ],
+      "experience_years": 0.0,
+      "job_titles": [],
+      "work_experience": [],
+      "projects": [
+        {
+          "name": "Spring Taint Engine Interprocedural SAST Taint Analysis",
+          "role": "Developer",
+          "technologies": [
+            "Java",
+            "SARIF",
+            "CI/CD",
+            "Static Analysis"
+          ],
+          "description": "Built an enterprise-ready Java SAST engine designed to identify critical Spring MVC vulnerabilities across complex application architectures. Implemented context-sensitive interprocedural taint propagation over Control Data Flow Graphs (CFG/IDFG) to eliminate false negatives in inter-class data flows. Validated detection efficacy against the OWASP Benchmark, demonstrating zero missed vulnerabilities with high‑throughput static analysis speed. Streamlined CI/CD security gating through native SARIF reporting, legacy vulnerability suppression; and automated CLI workflows.",
+          "impact_metrics": [
+            "0 missed vulnerabilities",
+            "high‑throughput static analysis speed"
+          ],
+          "links": [],
+          "heuristic_score": null
+        },
+        {
+          "name": "Vulneracheck‑AI Graph Code BERT‑Based Code Security Detection",
+          "role": "Developer",
+          "technologies": [
+            "Graph Code BERT",
+            "RoBERTa",
+            "C++",
+            "Java",
+            "Python",
+            "ONNX",
+            "GitHub Actions",
+            "CI/CD"
+          ],
+          "description": "Engineered a three‑layer detection pipeline combining regex pattern matching, Tree‑sitter AST parsing and a fine‑tuned Graph Code BERT classifier to suppress false positive alerts. Curated and deduplicated multi‑source vulnerability dataset from MegaVul, Big‑Vul, CVEfixes and PrimeVul, resolving train‑test leakage and cross‑language class imbalance through weighted sampling. Exported the fine‑tuned model to ONNX for lightweight, low‑latency inference within GitHub Actions CI/CD workflow.",
+          "impact_metrics": [
+            "lightweight low‑latency inference",
+            "cross‑language vulnerability classification"
+          ],
+          "links": [],
+          "heuristic_score": null
+        },
+        {
+          "name": "Auto Response‑SOC‑Lab Multi‑Layer SOC with Detection‑as‑Code (SOAR)",
+          "role": "Architect",
+          "technologies": [
+            "Wazuh SIEM",
+            "Docker Compose",
+            "Vagrant",
+            "Sigma",
+            "MITRE ATT&CK",
+            "iptables"
+          ],
+          "description": "Architected a fully containerized SOC lab (Wazuh SIEM, Docker Compose, Vagrant‑provisioned victim host) deployable via a single command (IaC). Authored custom detection rules mapped to MITRE ATT&CK using Sigma, bridged into native Wazuh correlation rules. Built a Mini‑SOAR active‑response pipeline that autonomously contains SSH brute‑force attacks via time‑bound iptables blocking, validated end‑to‑end against live attack traffic with forensic case logging.",
+          "impact_metrics": [
+            "autonomous containment of SSH brute‑force attacks",
+            "forensic case logging"
+          ],
+          "links": [],
+          "heuristic_score": null
+        }
+      ],
+      "skills": [
+        "Java",
+        "C#",
+        "Python",
+        "C++",
+        "TCP/IP",
+        "VLAN",
+        "Routing",
+        "Switching",
+        "DNS",
+        "DHCP",
+        "SAST",
+        "Taint Analysis",
+        "Vulnerability Detection",
+        "OWASP",
+        "MITRE ATT&CK",
+        "Wazuh SIEM",
+        "Sigma",
+        "iptables",
+        "Docker",
+        "Vagrant",
+        "GitHub Actions",
+        "Git",
+        "Linux"
+      ],
+      "certifications": []
+    }
+  },
+  {
+    "id": "cv_024",
+    "filename": "775244202_122133753279101915_5306952948806679957_n.jpg",
+    "domain": "IT",
+    "extraction_method": "groq_llm",
+    "source_status": "ACCEPTED_BY_DOCLING",
+    "parsed_data": {
+      "summary": null,
+      "education_degree": "Bachelor",
+      "education_field": "Computer Science",
+      "education_history": [
+        {
+          "institution": "Unknown Institution",
+          "degree": "Bachelor",
+          "field_of_study": "Computer Science",
+          "start_year": 2021,
+          "end_year": 2026,
+          "gpa_or_honors": "Academic Scholarship Award (2024)"
+        }
+      ],
+      "experience_years": 0.0,
+      "job_titles": [],
+      "work_experience": [],
+      "projects": [
+        {
+          "name": "Vietnamese Social Media Fake News Detection System",
+          "role": "Solo",
+          "technologies": [
+            "Pho BERT",
+            "CNN",
+            "XLM-R"
+          ],
+          "description": "Designed and deployed a two-stage detection and verification framework (Pho BERT, CNN, XLM-R) to identify and classify anomalous/fake text signals across social datasets. Achieved 97.33% classification accuracy (0.9516 F1-score) on Stage 1 data analysis and improved Stage 2 verification performance by +3.26% F1-score over baseline. Aut da ug Bd a -a ig u gpli for structured log and event data transport.",
+          "impact_metrics": [
+            "97.33% classification accuracy",
+            "0.9516 F1-score",
+            "+3.26% F1-score over baseline"
+          ],
+          "links": [],
+          "heuristic_score": null
+        },
+        {
+          "name": "Auto Support Agent – Autonomous Customer Support System",
+          "role": "Solo",
+          "technologies": [
+            "Fast API",
+            "Redis Queue",
+            "Rule Engine",
+            "Streamlit"
+          ],
+          "description": "Async Event Handling Architecture: Designed an API Gateway with Fast API and Redis Queue for asynchronous log handling. Safety Guardrails & Incident Escalation: Engineered a custom Rule Engine to filter incoming anomaly triggers, enforce security guardrails, and automatically escalate critical security incidents to human analysts. Forensic Context Packaging & Monitoring: Automated context extraction onto a Streamlit dashboard featuring real-time system metrics and operational monitoring.",
+          "impact_metrics": [],
+          "links": [],
+          "heuristic_score": null
+        },
+        {
+          "name": "Interview Copilot",
+          "role": "Solo",
+          "technologies": [
+            "Fast API",
+            "Next.js",
+            "Multi-Agent Orchestration",
+            "LLM"
+          ],
+          "description": "Developed an AI-assisted recruiter co-pilot (Fast API & Next.js) using Multi-Agent Orchestration and Tool/Function Calling to automate CV screening, candidate evaluation, and report generation. Implemented crucial system guardrails, including strict schema verification, PII masking for data privacy, and fallback strategies for insufficient contexts. Established automated evaluation metrics focusing on LLM faithfulness, relevance, and latency to continuously optimize prompts and template performance.",
+          "impact_metrics": [],
+          "links": [],
+          "heuristic_score": null
+        }
+      ],
+      "skills": [
+        "Generative AI",
+        "Agentic Workflows",
+        "Multi-Agent Orchestration",
+        "RAG Architecture",
+        "LLM Prompt Engineering",
+        "Guardrails",
+        "AutoGen",
+        "LangChain",
+        "Machine Learning",
+        "Deep Learning",
+        "PyTorch",
+        "scikit-learn",
+        "Transformers",
+        "Pho BERT",
+        "XLM-R",
+        "CNNs",
+        "Computer Vision",
+        "OpenCV",
+        "Data Engineering Pipelines",
+        "C/C++",
+        "Python",
+        "SQL",
+        "TypeScript",
+        "Java",
+        "Fast API",
+        "RESTful APIs",
+        "Microservices",
+        "Async Event Queues",
+        "Redis Queue",
+        "Rule Engines",
+        "PostgreSQL",
+        "Vector Search",
+        "Retrieval",
+        "Git",
+        "GitHub",
+        "Docker",
+        "Linux CLI",
+        "Streamlit",
+        "Vietnamese",
+        "English",
+        "TOEIC 700"
+      ],
+      "certifications": []
+    }
+  },
+  {
+    "id": "cv_025",
+    "filename": "776163774_1597556341900432_9219636715192236441_n.jpg",
+    "domain": "IT",
+    "extraction_method": "groq_llm",
+    "source_status": "ACCEPTED_BY_DOCLING",
+    "parsed_data": {
+      "summary": "A final-year IT student passionate about mobile application development with Flutter, who has previously taken two Flutter programming courses on Udemy. Seeking an internship in a professional environment to enhance Clean Architecture skills, optimize performance, and learn about real-world product development processes.",
+      "education_degree": "Bachelor",
+      "education_field": "Information Technology",
+      "education_history": [
+        {
+          "institution": "University of Transport Technology (UTT)",
+          "degree": "Bachelor",
+          "field_of_study": "Information Technology",
+          "start_year": 2023,
+          "end_year": 2027,
+          "gpa_or_honors": "3.22/4.0"
+        }
+      ],
+      "experience_years": 0.0,
+      "job_titles": [],
+      "work_experience": [],
+      "projects": [
+        {
+          "name": "Community Board App",
+          "role": null,
+          "technologies": [
+            "Dart",
+            "Flutter",
+            "BLoC",
+            "Supabase",
+            "Clean Architecture",
+            "Event Bus",
+            "REST API",
+            "Get It",
+            "Go Route",
+            "Dependency Injection"
+          ],
+          "description": "Architected a modular mobile app applying Clean Architecture and Flutter BLoC state management. Implemented real-time interactive features including debounced reactive search for users and posts using custom Event Transformers. Handled state synchronization across screens via an Event Bus architecture (post updates, deletions, and profile synchronizations). Integrated Supabase backend for authentication, media storage, and database RPC execution. Applied robust UI error-handling, fallback states for broken network assets, and optimistic UI updates for post likes.",
+          "impact_metrics": [],
+          "links": [],
+          "heuristic_score": null
+        }
+      ],
+      "skills": [
+        "Dart",
+        "Flutter",
+        "OOP",
+        "Async/Await",
+        "Widget Lifecycle",
+        "Clean Architecture",
+        "BLoC pattern",
+        "Event Bus",
+        "State Management",
+        "Get It",
+        "REST API",
+        "Go Route",
+        "Dependency Injection",
+        "UI/UX implementation",
+        "Figma",
+        "Git",
+        "GitHub",
+        "AI tools",
+        "SQLite",
+        "MySQL",
+        "Supabase"
+      ],
+      "certifications": []
+    }
+  },
+  {
+    "id": "cv_026",
+    "filename": "779865395_2144539239808203_1211146213383122987_n.jpg",
+    "domain": "IT",
+    "extraction_method": "groq_llm",
+    "source_status": "ACCEPTED_BY_DOCLING",
+    "parsed_data": {
+      "summary": null,
+      "education_degree": "Bachelor",
+      "education_field": "Computer Science and Mathematics",
+      "education_history": [
+        {
+          "institution": "Dickinson College",
+          "degree": "Bachelor",
+          "field_of_study": "Computer Science and Mathematics",
+          "start_year": 2022,
+          "end_year": 2026,
+          "gpa_or_honors": null
+        }
+      ],
+      "experience_years": 0.9,
+      "job_titles": [
+        "Pentester Intern",
+        "Software Developer Intern"
+      ],
+      "work_experience": [
+        {
+          "company": "NCS (National Cyber Security)",
+          "role": "Pentester Intern",
+          "start_date": "May 2025",
+          "end_date": "August 2025",
+          "responsibilities_and_impact": [
+            "Uncovered 5 exploitable vulnerabilities across 5+ web and mobile applications via OWASP Top 10 penetration testing including a device integrity bypass that let jailbroken devices evade detection in a banking app, and an IDOR enabling account takeover via request parameter manipulation",
+            "Enabled remediation by developing proof-of-concept exploits and authoring vulnerability reports with severity ratings and actionable recommendations",
+            "Led a team of 3-5 to plan and execute simulated real-world attack scenarios, driving thorough test coverage"
+          ]
+        },
+        {
+          "company": "ELCOM",
+          "role": "Software Developer Intern",
+          "start_date": "May 2024",
+          "end_date": "August 2024",
+          "responsibilities_and_impact": [
+            "Reduced false positives by 25% by manually validating automated security scans across 4 applications before disclosure",
+            "Accelerated secure deployment by collaborating with developers to remediate vulnerabilities and verify fixes pre-release",
+            "Delivered 3 client-facing web applications, including a hospital staff publication platform, via responsive front-end development"
+          ]
+        },
+        {
+          "company": "NGS Digital",
+          "role": "Software Developer Intern",
+          "start_date": "June 2023",
+          "end_date": "August 2023",
+          "responsibilities_and_impact": [
+            "Built and maintained a dynamic web dashboard for 10+ internal users to manage customer and sales data",
+            "Secured sensitive data by administering role-based access and authorization levels for authorized personnel"
+          ]
+        }
+      ],
+      "projects": [
+        {
+          "name": "OWASP Bookstore – Web Application Security Lab",
+          "role": null,
+          "technologies": [
+            "Node.js",
+            "Express",
+            "React",
+            "AI-scaffolded",
+            "Burp Suite",
+            "OWASP ZAP",
+            "sqlmap"
+          ],
+          "description": "Built an intentionally vulnerable bookstore web app (Node.js/Express/React, AI-scaffolded) using a tech stack deliberately designed to be exploited, as a personal range for practicing OWASP Top 10 (2021) security testing. Planted vulnerabilities include SQL injection, XSS, IDOR, JWT forgery, insecure password storage, file upload flaws, and SSRF. Identifying and exploiting each flaw with Burp Suite, OWASP ZAP, and sqlmap, then remediating with secure coding practices and documenting every fix as a reviewable pull request with a reproduction-and-remediation report.",
+          "impact_metrics": [],
+          "links": [],
+          "heuristic_score": null
+        }
+      ],
+      "skills": [],
+      "certifications": []
+    }
+  },
+  {
+    "id": "cv_027",
+    "filename": "c158d893-640f-4b90-8b57-203697d73044.jpg",
+    "domain": "IT",
+    "extraction_method": "groq_llm",
+    "source_status": "ACCEPTED_BY_DOCLING",
+    "parsed_data": {
+      "summary": "Accomplished backend developer with experience developing business-oriented web applications using Java, Spring Boot, and SQL Server. Skilled in designing secure RESTful APIs, implementing authentication and authorization, and translating real-world business workflows into reliable, maintainable backend systems. Committed to continuous learning and practical projects.",
+      "education_degree": "Bachelor",
+      "education_field": "Software Engineering",
+      "education_history": [
+        {
+          "institution": "FPT University",
+          "degree": "Bachelor",
+          "field_of_study": "Software Engineering",
+          "start_year": 2024,
+          "end_year": 2027,
+          "gpa_or_honors": "GPA: 3.07 / 4.0; Award: Recipient of the 70% Entrance Scholarship"
+        }
+      ],
+      "experience_years": 0.3,
+      "job_titles": [
+        "Intern Backend Developer",
+        "Technical Leader",
+        "Full Stack Developer",
+        "Backend Developer"
+      ],
+      "work_experience": [],
+      "projects": [
+        {
+          "name": "Restaurant Internal Management System",
+          "role": "Technical Leader & Full Stack Developer",
+          "technologies": [
+            "Java",
+            "Spring Boot",
+            "Spring Data JPA/Hibernate",
+            "Spring Security",
+            "JWT",
+            "RESTful APIs",
+            "SQL Server",
+            "Git",
+            "Maven",
+            "IntelliJ",
+            "Postman",
+            "Draw.io"
+          ],
+          "description": "Led a team of six developers to define backend architecture, establish coding standards, and coordinate development across five business modules. Designed and implemented JWT‑based authentication and RBAC for four operational roles, securing 60+ REST endpoints. Developed the Waiter module with order creation, reservation management, and table availability validation. Collaborated with frontend developers on UI workflows and API integration.",
+          "impact_metrics": [
+            "Team of 6 developers",
+            "5 business modules",
+            "60+ secured REST endpoints"
+          ],
+          "links": [
+            "Git Hub Repository"
+          ],
+          "heuristic_score": null
+        },
+        {
+          "name": "E-Learning Web",
+          "role": "Backend Developer",
+          "technologies": [
+            "Java",
+            "Spring Boot",
+            "Flyway",
+            "JWT",
+            "RESTful APIs",
+            "SQL Server",
+            "Git",
+            "Maven",
+            "IntelliJ",
+            "Postman",
+            "Cursor"
+          ],
+          "description": "Developed the Admin module for an English e‑learning platform, centralizing course, lesson, user, and coupon management. Integrated backend services with a React‑based admin interface using API‑first development, leveraging Cursor and Claude to accelerate implementation.",
+          "impact_metrics": [],
+          "links": [
+            "Git Hub Repository"
+          ],
+          "heuristic_score": null
+        }
+      ],
+      "skills": [
+        "Java",
+        "SQL",
+        "Spring Boot",
+        "Spring Data JPA/Hibernate",
+        "Spring Security",
+        "SQL Server",
+        "RESTful APIs",
+        "JWT Authentication",
+        "IntelliJ",
+        "Maven",
+        "Git",
+        "Postman",
+        "Draw.io",
+        "Antigravity",
+        "Cursor",
+        "Flyway"
+      ],
+      "certifications": [
+        "Generative AI in Software Development",
+        "Web Design for Everybody: Basics of Web Development & Coding"
+      ]
+    }
+  },
+  {
+    "id": "cv_028",
+    "filename": "cv2.jpg",
+    "domain": "IT",
+    "extraction_method": "groq_llm",
+    "source_status": "RECOVERED_BY_OCR",
+    "parsed_data": {
+      "summary": null,
+      "education_degree": "Bachelor",
+      "education_field": "Software Engineering",
+      "education_history": [
+        {
+          "institution": "FPT University",
+          "degree": "Bachelor",
+          "field_of_study": "Software Engineering",
+          "start_year": 2022,
+          "end_year": 2026,
+          "gpa_or_honors": null
+        },
+        {
+          "institution": "Le Quy Don High School",
+          "degree": "High School",
+          "field_of_study": null,
+          "start_year": 2019,
+          "end_year": 2022,
+          "gpa_or_honors": "3.00/4"
+        }
+      ],
+      "experience_years": 0.5,
+      "job_titles": [
+        "Intern Backend Developer"
+      ],
+      "work_experience": [
+        {
+          "company": "FPT Software",
+          "role": "Intern Backend Developer",
+          "start_date": "January 2025",
+          "end_date": "June 2025",
+          "responsibilities_and_impact": [
+            "Developed the back-end for a web application using ASPNET Core Web API and PostgreSQL hosted on Supabase",
+            "Used Cloudinary for image hosting service",
+            "Implemented JWT authentication for web application",
+            "Used axios to connect API to web application on React.js",
+            "Collaborated within a Scrum-driven development environment"
+          ]
+        }
+      ],
+      "projects": [
+        {
+          "name": "Agro Temp - Agricultural Short-Term Recruitment Platform",
+          "role": "Leader, Fullstack Developer",
+          "technologies": [
+            "ASPNET Core Web API",
+            "PostgreSQL",
+            "Figma",
+            "Axios",
+            "Next.js",
+            "Heroku",
+            "Vercel"
+          ],
+          "description": "Lead a team of 5 members to develop a REST API for a web and mobile application for farmers and workers, designed the farmer portal UI via Figma mockup and implemented it with Axios and Next.js, applied CI/CD using Heroku and Vercel, and developed a wallet system with payment integration via Pay OS.",
+          "impact_metrics": [
+            "Team size: 5 members"
+          ],
+          "links": [],
+          "heuristic_score": null
+        },
+        {
+          "name": "Everwell Healthcare",
+          "role": "Leader; Backend Developer",
+          "technologies": [
+            "ASPNET Core Web API",
+            "PostgreSQL",
+            "Supabase",
+            "Figma",
+            "React.js",
+            "Daily.co API",
+            "VNPay"
+          ],
+          "description": "Developed a REST API deployed on Supabase, led a team of 4 members, designed a customer UI for booking consultant meetings and STI testing schedules via Figma and React.js, integrated Daily.co for online meetings, and implemented VNPay for payment processing with refunds and transaction histories.",
+          "impact_metrics": [
+            "Team size: 4 members"
+          ],
+          "links": [],
+          "heuristic_score": null
+        }
+      ],
+      "skills": [
+        "C#",
+        "SQL",
+        "PostgreSQL",
+        "SQL Server",
+        "Java",
+        "JavaScript",
+        "TypeScript",
+        "HTML",
+        "CSS",
+        "ASPNET",
+        "Next.js",
+        "React.js",
+        "Nest.js",
+        "NUnit",
+        "Entity Framework Core (LINQ)",
+        "Git",
+        "Azure",
+        "Heroku",
+        "Vercel",
+        "VS Code",
+        "Visual Studio",
+        "Postman",
+        "Rider",
+        "English (IELTS 7.0)",
+        "Vietnamese (Native)",
+        "Japanese (JLPT NS)",
+        "Scrum",
+        "CI/CD",
+        "JWT authentication",
+        "Axios",
+        "Cloudinary",
+        "Supabase",
+        "Pay OS",
+        "Daily.co API",
+        "VNPay"
+      ],
+      "certifications": []
+    }
+  },
+  {
+    "id": "cv_029",
+    "filename": "cv3.png",
+    "domain": "IT",
+    "extraction_method": "groq_llm",
+    "source_status": "ACCEPTED_BY_DOCLING",
+    "parsed_data": {
+      "summary": "AI & Data Engineer / Data Scientist based in Ho Chi Minh City, Vietnam. Experienced in building scalable data pipelines, LLM evaluation harnesses, and clinical ML models with a focus on clean architecture and data normalization.",
+      "education_degree": "Bachelor",
+      "education_field": "Data Science",
+      "education_history": [
+        {
+          "institution": "International University, VNU-HCM",
+          "degree": "Bachelor",
+          "field_of_study": "Data Science",
+          "start_year": 2023,
+          "end_year": null,
+          "gpa_or_honors": "GPA 3.56/4.0 (86/100); 2x Academic Encouragement Scholarship (AY 2025-2026)"
+        }
+      ],
+      "experience_years": 1.0,
+      "job_titles": [
+        "Data Engineer",
+        "Lead AI Researcher",
+        "Vice Lead Chapter"
+      ],
+      "work_experience": [
+        {
+          "company": "Technologies",
+          "role": "Data Engineer",
+          "start_date": "2026",
+          "end_date": "Present",
+          "responsibilities_and_impact": [
+            "Formulated data normalization protocols and optimized core pipelines to ensure clean, structured, and high‑integrity data infrastructure.",
+            "Architected an internal AI sandbox and testing harness to benchmark LLM/ML models, trace execution behavior, and refine bilingual (Vi/En) prompt architectures.",
+            "Engineered Customer Intelligence pipelines for a Chat Order platform and built automated software testing frameworks to validate end‑to‑end data flows.",
+            "Researched state‑of‑the‑art models and developed data‑centric backend microservices to integrate AI capabilities into production applications."
+          ]
+        },
+        {
+          "company": "021 Hospital Collaboration",
+          "role": "Lead AI Researcher",
+          "start_date": "2026",
+          "end_date": "Present",
+          "responsibilities_and_impact": [
+            "Handled ~40,900 patient encounters under strict data privacy protocols.",
+            "Benchmarked calibrated tree models (XGBoost, LightGBM) against permutation‑invariant neural networks (Deep Sets, Set Transformer) using 5×3 nested patient‑grouped validation, achieving 0.798 AUPRC and 0.952 AUROC.",
+            "Engineered measurement‑process negative controls (count‑only, availability‑only, value‑shuffled) to audit informative missingness and prevent workflow‑sensitive models from over‑claiming utility (TRi POD+AI compliant)."
+          ]
+        },
+        {
+          "company": "Google Developer Group Campus (GDGo HCMIU)",
+          "role": "Vice Lead Chapter",
+          "start_date": "Aug 2025",
+          "end_date": "Present",
+          "responsibilities_and_impact": [
+            "Co‑directed technical strategy and community initiatives focused on AI/ML, cloud architecture, and data analytics, engaging 100+ active student members.",
+            "Led cross‑functional teams organizing technical bootcamps, workshops, and industry‑expert talks."
+          ]
+        }
+      ],
+      "projects": [
+        {
+          "name": "Panic Hub - Real-time Agentic AI Simulation Game",
+          "role": "AI Architect",
+          "technologies": [
+            "Python 3.11+",
+            "PyTorch",
+            "Pydantic",
+            "AsyncIO",
+            "LLM APIs (Gemini, Groq, Cerebras)"
+          ],
+          "description": "Engineered core algorithmic logic for a Multi‑Agent System with 50+ concurrent agents, integrating probabilistic simulation with LLM triggers under macro‑economic constraints. Designed a multi‑provider LLM routing architecture to optimize inference performance, achieving ~0.1 s latency and near‑zero token costs. Implemented rigorous data validation pipelines using Pydantic, enforcing 100% structured JSON outputs to eliminate LLM hallucination runtime crashes.",
+          "impact_metrics": [
+            "50+ concurrent agents",
+            "~0.1 s latency",
+            "100% structured JSON outputs",
+            "Near‑zero token costs"
+          ],
+          "links": [],
+          "heuristic_score": null
+        },
+        {
+          "name": "Self‑Supervised Domain Adaptation for Skin Lesion Classification",
+          "role": "AI Engineer",
+          "technologies": [
+            "Python",
+            "PyTorch",
+            "SimCLR",
+            "Domain‑Adversarial Neural Network (DANN)",
+            "Kaggle"
+          ],
+          "description": "Developed a cross‑domain medical image classification pipeline that integrates SimCLR‑pretrained feature extractors with a Domain‑Adversarial Neural Network in PyTorch, enabling robust adaptation across disparate imaging datasets.",
+          "impact_metrics": [
+            ">5% accuracy improvement on target medical domain over standard SSL fine‑tuning baselines"
+          ],
+          "links": [],
+          "heuristic_score": null
+        }
+      ],
+      "skills": [
+        "Python",
+        "TypeScript",
+        "SQL",
+        "JavaScript",
+        "R",
+        "Data Validation",
+        "Async Pipelines",
+        "PostgreSQL",
+        "MongoDB",
+        "MySQL",
+        "Vector Databases",
+        "Google Cloud Platform (GCP)",
+        "Docker",
+        "RESTful APIs",
+        "Git",
+        "GitHub Workflows",
+        "CI/CD",
+        "LLM Orchestration (OpenAI, Gemini, Groq, Cerebras)",
+        "Multi‑Agent Architecture",
+        "Agentic Coding Tools (Codex, Claude, Antigravity)",
+        "PyTorch",
+        "Pydantic",
+        "AsyncIO",
+        "XGBoost",
+        "LightGBM",
+        "Deep Sets",
+        "Set Transformer",
+        "SimCLR",
+        "Domain‑Adversarial Neural Network (DANN)",
+        "Kaggle"
+      ],
+      "certifications": [
+        "Google Advanced Data Analytics",
+        "Google AI Essentials",
+        "Google Data Analytics Professional Certificate"
+      ]
+    }
+  },
+  {
+    "id": "cv_030",
+    "filename": "cv4.png",
+    "domain": "IT",
+    "extraction_method": "groq_llm",
+    "source_status": "RECOVERED_BY_OCR",
+    "parsed_data": {
+      "summary": "Chuyên viên IT Support / Network Admin với nền tảng vững vàng về Windows Server, Active Directory, hệ thống mạng LAN/WAN, TCP/IP, VLAN, Fortinet và Cisco. Đảm bảo uptime 99.8% năm 2025, giảm 60% sự cố truy cập trái phép, và đạt tỷ lệ hài lòng 96% trong xử lý ticket.",
+      "education_degree": "Bachelor",
+      "education_field": "Mạng máy tính & Truyền thông dữ liệu",
+      "education_history": [
+        {
+          "institution": "Đại học Công nghệ - ĐHQG Hà Nội",
+          "degree": "Bachelor",
+          "field_of_study": "Mạng máy tính & Truyền thông dữ liệu",
+          "start_year": 2018,
+          "end_year": 2022,
+          "gpa_or_honors": null
+        },
+        {
+          "institution": "Trung tâm CNTT Đại học Hà Nội",
+          "degree": null,
+          "field_of_study": "IT Training",
+          "start_year": 2021,
+          "end_year": 2022,
+          "gpa_or_honors": null
+        }
+      ],
+      "experience_years": 5.0,
+      "job_titles": [
+        "IT Support Specialist",
+        "Technical Support Staff (Help Desk)",
+        "IT Intern"
+      ],
+      "work_experience": [
+        {
+          "company": "Tập đoàn Ban Lê Minh Long",
+          "role": "IT Support Specialist",
+          "start_date": "08/2023",
+          "end_date": "Present",
+          "responsibilities_and_impact": [
+            "Quản trị hệ thống mạng LAN/WAN cho 6 chi nhánh, hơn 200 thiết bị.",
+            "Xử lý trung bình 30 ticket/tuần qua Freshservice, tỷ lệ hài lòng 96%.",
+            "Thực hiện Backup & Recovery cho hệ thống.",
+            "Triển khai và cấu hình firewall Fortinet, giảm 60% sự cố truy cập trái phép.",
+            "Quản lý Active Directory, Group Policy cho 250 tài khoản người dùng."
+          ]
+        },
+        {
+          "company": "Công ty CP Giải pháp S6 Viet Comp",
+          "role": "Technical Support Staff (Help Desk)",
+          "start_date": "02/2022",
+          "end_date": "07/2023",
+          "responsibilities_and_impact": [
+            "Hỗ trợ kỹ thuật onsite & remote cho hơn 150 nhân viên văn phòng.",
+            "Cài đặt, cấu hình máy trạm, máy in, mạng và hệ thống hội nghị truyền hình.",
+            "Xây dựng tài liệu hướng dẫn, giảm 25% thời gian phản hồi."
+          ]
+        },
+        {
+          "company": "Trung tâm CNTT Đại học Hà Nội",
+          "role": "IT Intern",
+          "start_date": "06/2021",
+          "end_date": "01/2022",
+          "responsibilities_and_impact": [
+            "Hỗ trợ bảo trì phòng máy 120 máy tính và hệ thống mạng nội bộ.",
+            "Thực hiện các công việc IT cơ bản."
+          ]
+        }
+      ],
+      "projects": [
+        {
+          "name": "Network Upgrade for Office 5",
+          "role": "Network Admin",
+          "technologies": [
+            "TCP/IP",
+            "VLAN",
+            "Fortinet",
+            "Cisco"
+          ],
+          "description": "Triển khai và vận hành hạ tầng mạng cho văn phòng 5, bao gồm cấu hình VLAN, thiết lập TCP/IP và triển khai thiết bị Fortinet.",
+          "impact_metrics": [
+            "Uptime 99.8% in 2025"
+          ],
+          "links": [],
+          "heuristic_score": null
+        },
+        {
+          "name": "Firewall Fortinet Deployment",
+          "role": "Network Admin",
+          "technologies": [
+            "Fortinet",
+            "Firewall"
+          ],
+          "description": "Triển khai và cấu hình firewall Fortinet để bảo vệ mạng nội bộ.",
+          "impact_metrics": [
+            "Reduced unauthorized access incidents by 60%"
+          ],
+          "links": [],
+          "heuristic_score": null
+        },
+        {
+          "name": "Support Process Optimization",
+          "role": "Help Desk",
+          "technologies": [
+            "Freshservice",
+            "Documentation"
+          ],
+          "description": "Xây dựng tài liệu hướng dẫn và quy trình hỗ trợ, giảm thời gian phản hồi.",
+          "impact_metrics": [
+            "Reduced response time by 25%"
+          ],
+          "links": [],
+          "heuristic_score": null
+        }
+      ],
+      "skills": [],
+      "certifications": []
+    }
+  },
+  {
+    "id": "cv_031",
+    "filename": "cv5.jpg",
+    "domain": "IT",
+    "extraction_method": "groq_llm",
+    "source_status": "LOW_QUALITY",
+    "parsed_data": {
+      "summary": "Backend Engineer based in Ho Chi Minh City, Vietnam",
+      "education_degree": "Bachelor",
+      "education_field": "Information Technology",
+      "education_history": [
+        {
+          "institution": "University of Science, VNU-HCM (HCMUS)",
+          "degree": "Bachelor",
+          "field_of_study": "Information Technology",
+          "start_year": 2024,
+          "end_year": 2028,
+          "gpa_or_honors": "3.78/4.0"
+        }
+      ],
+      "experience_years": 0.0,
+      "job_titles": [],
+      "work_experience": [],
+      "projects": [
+        {
+          "name": "Marketplace Microservices Platform",
+          "role": null,
+          "technologies": [
+            ".NET 9",
+            "DDD",
+            "CQRS",
+            "MassTransit",
+            "RabbitMQ",
+            "gRPC",
+            "Redis",
+            "PostgreSQL",
+            "MySQL",
+            "Docker Compose",
+            "YARP API Gateway",
+            "Duende Identity Server"
+          ],
+          "description": "Architected a distributed e‑commerce platform consisting of 8 microservices behind a YARP API Gateway with centralized OAuth2/OIDC authentication using Duende Identity Server. Implemented an event‑driven Saga State Machine using MassTransit and RabbitMQ to orchestrate multi‑shop order workflows and maintain eventual consistency across services. Utilized gRPC for low‑latency synchronous communication and RabbitMQ for asynchronous workflows between services. Integrated GHN APIs for shipping fee calculation and MoMo/COD payment methods for checkout processing. Dockerized and deployed all services and databases on a VPS using Docker Compose, with CI/CD pipelines automated through GitHub Actions.",
+          "impact_metrics": [],
+          "links": [],
+          "heuristic_score": null
+        },
+        {
+          "name": "ELearning Platform",
+          "role": null,
+          "technologies": [
+            ".NET 9",
+            "SQL Server",
+            "Redis",
+            "RabbitMQ",
+            "MinIO",
+            "Hangfire",
+            "Docker",
+            "Docker Compose"
+          ],
+          "description": "Developed an online learning platform supporting course management, enrollment, progress tracking, and payment processing. Architected the backend using Clean Architecture and CQRS, isolating business logic from infrastructure concerns. Implemented Redis caching for frequently accessed, infrequently changing data, reducing database load and improving response times. Built an event‑driven media processing pipeline using RabbitMQ, worker services, and MinIO to support video transcoding, HLS (M3U8) generation, and multipart uploads for large files (>100 MB).",
+          "impact_metrics": [
+            "Supports multipart uploads for files >100 MB",
+            "Improved response times via Redis caching"
+          ],
+          "links": [],
+          "heuristic_score": null
+        }
+      ],
+      "skills": [
+        "C#",
+        "SQL",
+        "JavaScript",
+        "C++",
+        "ASP.NET Core",
+        "Web API",
+        "MediatR",
+        "Microservices",
+        "Clean Architecture",
+        "CQRS",
+        "DDD",
+        "PostgreSQL",
+        "MySQL",
+        "SQL Server",
+        "Redis",
+        "RabbitMQ",
+        "Docker",
+        "GitHub Actions",
+        "Linux",
+        "Git",
+        "Postman",
+        "Swagger",
+        "Scalar",
+        "MassTransit",
+        "gRPC",
+        "YARP API Gateway",
+        "Duende Identity Server",
+        "MinIO",
+        "Hangfire"
+      ],
+      "certifications": []
+    }
+  },
+  {
+    "id": "cv_032",
+    "filename": "cv6.png",
+    "domain": "IT",
+    "extraction_method": "groq_llm",
+    "source_status": "ACCEPTED_BY_DOCLING",
+    "parsed_data": {
+      "summary": null,
+      "education_degree": "Bachelor",
+      "education_field": "Data Science",
+      "education_history": [
+        {
+          "institution": "University of Science - VNUHCM",
+          "degree": "Bachelor",
+          "field_of_study": "Data Science",
+          "start_year": 2022,
+          "end_year": 2026,
+          "gpa_or_honors": "3.5/4"
+        }
+      ],
+      "experience_years": 0.0,
+      "job_titles": [],
+      "work_experience": [],
+      "projects": [
+        {
+          "name": "Dia Care Flow – Personalized Diabetes Multi-Agent RAG System",
+          "role": null,
+          "technologies": [
+            "Python",
+            "FastAPI",
+            "LangGraph",
+            "LangChain",
+            "Qdrant",
+            "BAAI/bge-m3",
+            "Groq API",
+            "Gemini API",
+            "Crawl4AI",
+            "SearXNG",
+            "Jina AI"
+          ],
+          "description": "Architected a multi‑agent pipeline using LangGraph across five specialized nodes (Triage, Supervisor, Factor, Harm, Suggestion). Implemented a Dual‑LLM routing strategy (Groq + Gemini 2.0 Flash) and an asynchronous hybrid retrieval system combining Qdrant with real‑time web scraping (SearXNG, Crawl4AI, Jina Reranker). Optimized async pipeline execution with 12 s timeout controls, eliminating deadlocks and ensuring high request‑completion reliability.",
+          "impact_metrics": [
+            "100% guardrail accuracy",
+            "35% reduction in routing latency",
+            "40% reduction in API token costs",
+            "Result retrieval time 8‑12 s",
+            "100% elimination of event‑loop deadlocks",
+            "99.9% request completion reliability"
+          ],
+          "links": [],
+          "heuristic_score": null
+        },
+        {
+          "name": "RAGSystem for Employee Handbook Q&A",
+          "role": null,
+          "technologies": [
+            "Python",
+            "FastAPI",
+            "LangChain",
+            "FAISS",
+            "Redis Cloud",
+            "Langfuse",
+            "Docker",
+            "Streamlit",
+            "Ollama"
+          ],
+          "description": "Architected an RAG pipeline using LangChain to answer corporate policy queries with tool‑calling, enabling Llama 3.2 to autonomously query FAISS or respond directly. Built semantic caching with Redis to reduce repeated LLM calls and achieve sub‑30 ms response time. Developed real‑time SSE streaming via FastAPI async generators and integrated Langfuse for tracing, prompt versioning, and automated evaluation.",
+          "impact_metrics": [
+            "Sub‑30 ms response time for similar queries",
+            "High inference availability via multi‑provider fallback"
+          ],
+          "links": [],
+          "heuristic_score": null
+        }
+      ],
+      "skills": [
+        "Python",
+        "C++",
+        "SQL",
+        "PyTorch",
+        "Hugging Face Transformers",
+        "LangChain",
+        "LangGraph",
+        "FastAPI",
+        "Scikit-learn",
+        "Pandas",
+        "NumPy",
+        "Qdrant",
+        "FAISS",
+        "Redis Cloud",
+        "Multi-Agent Systems",
+        "Retrieval-Augmented Generation (RAG)",
+        "Transformers",
+        "LLMs",
+        "Docker",
+        "Langfuse",
+        "Git",
+        "GitHub"
+      ],
+      "certifications": []
+    }
+  },
+  {
+    "id": "cv_033",
+    "filename": "cv7.png",
+    "domain": "IT",
+    "extraction_method": "groq_llm",
+    "source_status": "RECOVERED_BY_OCR",
+    "parsed_data": {
+      "summary": "Backend Developer voi 4 nam kinh nghiem xay dung he thong microservices va API hieu nang cao cho san pham fintech & e-commerce. Thich viet code sach, co kien thuc de bao tri.",
+      "education_degree": "Bachelor",
+      "education_field": "Cong nghe Thong tin",
+      "education_history": [
+        {
+          "institution": "Daihoc Bach Khoa TP.HCM",
+          "degree": "Bachelor",
+          "field_of_study": "Cong nghe Thong tin",
+          "start_year": 2017,
+          "end_year": 2021,
+          "gpa_or_honors": "GPA 3.5/4.0"
+        }
+      ],
+      "experience_years": 5.5,
+      "job_titles": [
+        "Backend Developer",
+        "Junior Backend Developer"
+      ],
+      "work_experience": [
+        {
+          "company": "Cong ty TNHH Cong nghe Fin Pay",
+          "role": "Backend Developer",
+          "start_date": "06/2022",
+          "end_date": "Present",
+          "responsibilities_and_impact": [
+            "Thiet ke va phat trien 15+ microservices xu ly hon 2 trieu giao dich/thang bang Spring Boot & Kafka.",
+            "Toi truong truy van PostgreSQL, giam 40% thoi gian phan hoi API cho nghiep vu thanh toan.",
+            "Xay dung pipeline CI/CD voi Jenkins & Docker, rut ngan thoi gian deploy tu 1 gio xuong 10 phut.",
+            "Mentor 3 thuc tap sinh backend, xay dung tai lieu coding convention cho team."
+          ]
+        },
+        {
+          "company": "Shop VN E-commerce JSC",
+          "role": "Junior Backend Developer",
+          "start_date": "03/2021",
+          "end_date": "05/2022",
+          "responsibilities_and_impact": [
+            "Phat trien module quan ly don hang va ton kho bang Node.js/Express, phuc vu 50,000+ nguoi dung.",
+            "Tich hop cong thanh toan VNPay, Momo, Zalo Pay vao he thong checkout.",
+            "Viet unit test & integration test, tang do phu code tu 45% len 80%."
+          ]
+        }
+      ],
+      "projects": [
+        {
+          "name": "Order Management System (OMS)",
+          "role": null,
+          "technologies": [
+            "Spring Boot",
+            "PostgreSQL",
+            "RabbitMQ",
+            "Redis"
+          ],
+          "description": "He thong quan ly don hang da kenh cho chuoi ban le, xu ly dong bo real-time cho web, app va POS.",
+          "impact_metrics": [],
+          "links": [],
+          "heuristic_score": null
+        },
+        {
+          "name": "Fraud Detection Service",
+          "role": null,
+          "technologies": [
+            "Node.js",
+            "Kafka Streams",
+            "Redis"
+          ],
+          "description": "Service phat hien giao dich bat thuong theo thoi gian su dung rule-engine, giam 30% giao dich gian lan.",
+          "impact_metrics": [
+            "Reduced fraudulent transactions by 30%"
+          ],
+          "links": [],
+          "heuristic_score": null
+        }
+      ],
+      "skills": [
+        "Spring Boot",
+        "Kafka",
+        "PostgreSQL",
+        "Jenkins",
+        "Docker",
+        "Node.js",
+        "Express",
+        "RabbitMQ",
+        "Redis",
+        "Kafka Streams",
+        "Microservices",
+        "API development",
+        "CI/CD",
+        "Unit testing",
+        "Integration testing",
+        "Rule engine"
+      ],
+      "certifications": []
+    }
+  },
+  {
+    "id": "cv_034",
+    "filename": "cv8.jpg",
+    "domain": "IT",
+    "extraction_method": "groq_llm",
+    "source_status": "ACCEPTED_BY_DOCLING",
+    "parsed_data": {
+      "summary": "An eager student at HUST with major interest in Large Language Models (LLMs), and multi-agent systems, RAG. Ready to take part in either production or researching workflows.",
+      "education_degree": "Bachelor",
+      "education_field": "Data Science and Artificial Intelligence",
+      "education_history": [
+        {
+          "institution": "Hanoi University of Science and Technology (HUST)",
+          "degree": "Bachelor",
+          "field_of_study": "Data Science and Artificial Intelligence",
+          "start_year": null,
+          "end_year": null,
+          "gpa_or_honors": null
+        }
+      ],
+      "experience_years": 0.0,
+      "job_titles": [
+        "Data Analytics Intern",
+        "Research Member"
+      ],
+      "work_experience": [
+        {
+          "company": "Hi Net Vietnam",
+          "role": "Data Analytics Intern",
+          "start_date": null,
+          "end_date": null,
+          "responsibilities_and_impact": [
+            "Used Octoparse to crawl government documents.",
+            "Automated Contract Compliance & Accuracy Validation Workflow through SQL queries.",
+            "Developed dashboards and visualization tools to translate raw data into actionable insights using Python."
+          ]
+        },
+        {
+          "company": "Fintech Sentiment RAG Lab – HUST",
+          "role": "Research Member",
+          "start_date": "Jan 2026",
+          "end_date": "Present",
+          "responsibilities_and_impact": [
+            "Conducting research on Sentiment Analysis and Retrieval-Augmented Generation (RAG) applied to the Fintech domain."
+          ]
+        }
+      ],
+      "projects": [
+        {
+          "name": "Multi-Agent Agentic RAG System",
+          "role": null,
+          "technologies": [
+            "Lang Graph",
+            "Fast API",
+            "Hybrid Retrieval",
+            "Docker"
+          ],
+          "description": "Designed and implemented a production-style multi-agent RAG system using Lang Graph with Planner-Executor-Verifier architecture for complex question answering. Built hybrid retrieval pipeline combining dense embeddings, BM25, and cross-encoder re-ranking to improve retrieval quality and reduce hallucinations. Developed specialized agents (Planner, Retriever, Executor, Critic/Verifier) with conditional routing, self-correction loops, and tool calling (SQL + external APIs). Containerized the entire system with Docker and docker-compose; added Fast API endpoints, structured logging, and basic evaluation pipeline for continuous quality monitoring.",
+          "impact_metrics": [
+            "CPA: 3.1 (3.4)"
+          ],
+          "links": [],
+          "heuristic_score": null
+        },
+        {
+          "name": "Teen Code Translator",
+          "role": null,
+          "technologies": [
+            "Py Torch",
+            "Hugging Face Transformers"
+          ],
+          "description": "Collected and processed the Vi Lex Norm dataset alongside ~18.6K real Threads comments to train an NLP system translating Gen Z teencode slang to standard Vietnamese. Fine-tuned BARTpho in two phases—full fine-tuning then hard-example refinement—using loss-based noise filtering, mixed-precision (fp16), and Adam W. Designed an evaluation benchmark (Exact Match, BLEU, WER, CER, latency/throughput) on a curated golden test set; Phase-2 model achieved ~76% corpus BLEU and ~87% word accuracy.",
+          "impact_metrics": [
+            "~76% corpus BLEU",
+            "~87% word accuracy",
+            "~18.6K real Threads comments"
+          ],
+          "links": [],
+          "heuristic_score": null
+        }
+      ],
+      "skills": [
+        "Python",
+        "C++",
+        "SQL",
+        "Pandas",
+        "NumPy",
+        "PostgreSQL",
+        "Py Torch",
+        "Hugging Face Transformers",
+        "Lang Graph",
+        "Lang Chain",
+        "Agentic RAG",
+        "Multi-Agent Systems",
+        "Fine-tuning (Lo RA)",
+        "Transformers",
+        "Docker",
+        "Fast API",
+        "Grok Build",
+        "VS Code"
+      ],
+      "certifications": []
+    }
+  },
+  {
+    "id": "cv_035",
+    "filename": "ed3b90ef-39e0-4524-b334-18d20f105ca7.jpg",
+    "domain": "IT",
+    "extraction_method": "groq_llm",
+    "source_status": "ACCEPTED_BY_DOCLING",
+    "parsed_data": {
+      "summary": "Third-year Computer Science student seeking AI Engineering internship opportunities. Experienced in building LLM-powered applications, fine-tuning language models with Py Torch and Lo RA, and integrating AI services with Python APIs and microservice-based systems. Strong interest in applying machine learning and backend engineering to practical AIproducts.",
+      "education_degree": "Bachelor",
+      "education_field": "Computer Science",
+      "education_history": [
+        {
+          "institution": "Ho Chi Minh City University of Science (HCMUS)",
+          "degree": "Bachelor",
+          "field_of_study": "Computer Science",
+          "start_year": null,
+          "end_year": 2027,
+          "gpa_or_honors": "8.2/10"
+        }
+      ],
+      "experience_years": 0.0,
+      "job_titles": [],
+      "work_experience": [],
+      "projects": [
+        {
+          "name": "Banking AI-Agent (Customer Support Chatbot)",
+          "role": "Solo Developer",
+          "technologies": [
+            "Fast API",
+            "gRPC",
+            "PyTorch",
+            "PEFT/LoRA",
+            "Ollama",
+            "Streamlit",
+            "Docker"
+          ],
+          "description": "Independently designed and built a customer support chatbot system using a microservices architecture with Fast API, gRPC, and Streamlit. Fine-tuned a Qwen large language model using PyTorch and PEFT/LoRA for banking intent recognition. Integrated an API Gateway with Ollama to generate natural, domain-specific responses for banking scenarios. Containerized and deployed the system using Docker Compose to streamline the operational workflow.",
+          "impact_metrics": [],
+          "links": [
+            "https://github.com/ntnthinh205/banking-chatbot"
+          ],
+          "heuristic_score": null
+        },
+        {
+          "name": "Online Video Conferencing Web App",
+          "role": "Team Developer",
+          "technologies": [
+            "React.js",
+            "Express.js",
+            "Socket.io",
+            "WebRTC",
+            "Video SDK"
+          ],
+          "description": "Contributed to the frontend and part of the backend in a team project building a Zoom-like web app with video calling, screen sharing, virtual backgrounds, chat, and file sharing. Integrated WebRTC and Video SDK for real-time media streaming; used Socket.io to synchronize room state and messaging across participants. Implemented meeting recording, transcription, and AI-powered summarization after each session.",
+          "impact_metrics": [],
+          "links": [
+            "https://github.com/ntnthinh205/Conference",
+            "https://github.com/ntnthinh205/Conference_Zoom"
+          ],
+          "heuristic_score": null
+        }
+      ],
+      "skills": [
+        "Python",
+        "C/C++",
+        "SQL",
+        "Fast API",
+        "PyTorch",
+        "OpenCV",
+        "Unsloth",
+        "MySQL",
+        "MongoDB",
+        "Git",
+        "Linux",
+        "Docker",
+        "gRPC",
+        "React.js",
+        "Express.js",
+        "Socket.io",
+        "WebRTC",
+        "Video SDK",
+        "Vietnamese (Native)",
+        "English (Reading)"
+      ],
+      "certifications": []
+    }
+  }
+]

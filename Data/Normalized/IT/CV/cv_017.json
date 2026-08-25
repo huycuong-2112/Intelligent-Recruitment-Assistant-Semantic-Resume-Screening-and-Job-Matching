@@ -1,0 +1,154 @@
+{
+  "id": "cv_017",
+  "domain": "IT",
+  "profile": {
+    "summary": "Iuo si - d - srooyzedd 96,478 delivered orders, 93,358 customers, and 1,000 credit applications using Python, Pandas, and Power BI. Built star-schema data models, validated KPIs across Python and Power BI, and developed interactive dashboards to translate complex data into business-focused recommendations.",
+    "job_titles": [
+      "Data Analyst Intern"
+    ]
+  },
+  "skills": {
+    "all": [
+      "SQL",
+      "Joins",
+      "Aggregations",
+      "Subqueries",
+      "CTEs",
+      "Window Functions",
+      "Python",
+      "Pandas",
+      "NumPy",
+      "Data Cleaning",
+      "Data Validation",
+      "Exploratory Data Analysis",
+      "Power BI",
+      "DAX",
+      "Power Query",
+      "Star‑Schema Modeling",
+      "KPI Dashboards",
+      "Data Visualization",
+      "Excel",
+      "Pivot Tables",
+      "Lookup Functions",
+      "Charts",
+      "KPI Analysis",
+      "Customer Segmentation",
+      "Descriptive Statistics",
+      "Git",
+      "Jupyter Notebook",
+      "Visual Studio Code",
+      "Star-schema modeling"
+    ],
+    "explicit": [
+      "SQL",
+      "Joins",
+      "Aggregations",
+      "Subqueries",
+      "CTEs",
+      "Window Functions",
+      "Python",
+      "Pandas",
+      "NumPy",
+      "Data Cleaning",
+      "Data Validation",
+      "Exploratory Data Analysis",
+      "Power BI",
+      "DAX",
+      "Power Query",
+      "Star‑Schema Modeling",
+      "KPI Dashboards",
+      "Data Visualization",
+      "Excel",
+      "Pivot Tables",
+      "Lookup Functions",
+      "Charts",
+      "KPI Analysis",
+      "Customer Segmentation",
+      "Descriptive Statistics",
+      "Git",
+      "Jupyter Notebook",
+      "Visual Studio Code"
+    ],
+    "project_derived": [
+      "Python",
+      "Pandas",
+      "Power BI",
+      "SQL",
+      "Star-schema modeling"
+    ]
+  },
+  "experience": {
+    "professional_years": 0.0,
+    "work_evidence": [
+      {
+        "company": "Git Hub",
+        "end_date": null,
+        "responsibilities_and_impact": [],
+        "role": "Data Analyst Intern",
+        "start_date": null
+      }
+    ],
+    "project_evidence": [
+      "Cleaned, validated, and integrated relational Olist tables into a star-schema model, enabling consistent analysis of revenue, customers, delivery performance, reviews, and payments in Power BI. Analyzed 96,478 delivered orders and 93,358 customers; found that 6.77% of SLA-evaluated orders were late and averaged approximately 2.3 in review score, versus above 4.0 for on-time or early deliveries, supporting delivery‑risk monitoring and logistics improvements. Validated Power BI measures against Python-generated KPI reports to verify metric definitions and maintain consistent results across dashboards and analytical outputs. Developed an interactive Power BI dashboard to present revenue, customer, delivery, review, and payment KPIs through drill‑down analysis and business‑focused visualizations.",
+      "Analyzed 1,000 credit applications across 21 variables and quantified an overall 30% bad‑credit rate through data validation, segmentation, and comparative risk analysis. Identified the highest‑risk customer and loan segments based on differences in bad‑credit rates across key variables. Developed an interactive Power BI dashboard that enabled side‑by‑side comparison of bad‑credit rates across customer and loan segments."
+    ]
+  },
+  "education": {
+    "degree": "Engineer",
+    "field": "Information Technology",
+    "history": [
+      {
+        "degree": "Engineer",
+        "end_year": 2027,
+        "field_of_study": "Information Technology",
+        "gpa_or_honors": "GPA: 3.58/4.00",
+        "institution": "Posts and Telecommunications Institute of Technology",
+        "start_year": 2023
+      }
+    ]
+  },
+  "projects": [
+    {
+      "description": "Cleaned, validated, and integrated relational Olist tables into a star-schema model, enabling consistent analysis of revenue, customers, delivery performance, reviews, and payments in Power BI. Analyzed 96,478 delivered orders and 93,358 customers; found that 6.77% of SLA-evaluated orders were late and averaged approximately 2.3 in review score, versus above 4.0 for on-time or early deliveries, supporting delivery‑risk monitoring and logistics improvements. Validated Power BI measures against Python-generated KPI reports to verify metric definitions and maintain consistent results across dashboards and analytical outputs. Developed an interactive Power BI dashboard to present revenue, customer, delivery, review, and payment KPIs through drill‑down analysis and business‑focused visualizations.",
+      "heuristic_score": null,
+      "impact_metrics": [
+        "96,478 delivered orders",
+        "93,358 customers",
+        "6.77% of SLA‑evaluated orders were late",
+        "Average review score approx 2.3 vs >4.0 for on‑time deliveries"
+      ],
+      "links": [
+        "View on Git Hub"
+      ],
+      "name": "Olist E-commerce Analytics and Delivery Performance",
+      "role": null,
+      "technologies": [
+        "Python",
+        "Pandas",
+        "Power BI",
+        "SQL",
+        "Star-schema modeling"
+      ]
+    },
+    {
+      "description": "Analyzed 1,000 credit applications across 21 variables and quantified an overall 30% bad‑credit rate through data validation, segmentation, and comparative risk analysis. Identified the highest‑risk customer and loan segments based on differences in bad‑credit rates across key variables. Developed an interactive Power BI dashboard that enabled side‑by‑side comparison of bad‑credit rates across customer and loan segments.",
+      "heuristic_score": null,
+      "impact_metrics": [
+        "1,000 credit applications analyzed",
+        "30% bad‑credit rate",
+        "Identified highest‑risk customer and loan segments"
+      ],
+      "links": [
+        "View on Git Hub"
+      ],
+      "name": "German Credit Risk Analysis",
+      "role": null,
+      "technologies": [
+        "Python",
+        "Power BI",
+        "SQL"
+      ]
+    }
+  ],
+  "certifications": []
+}

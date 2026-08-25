@@ -1,0 +1,64 @@
+{
+  "parsed_cv_records": 35,
+  "parsed_jd_records": 3,
+  "gt_rows": 24,
+  "unique_annotated_cvs": 24,
+  "missing_gt_cv_mappings": [],
+  "missing_gt_jd_mappings": [],
+  "duplicates": [],
+  "grade_distribution": {
+    "0": 13,
+    "1": 5,
+    "2": 4,
+    "3": 2
+  },
+  "split_distribution": {
+    "development": 18,
+    "blind_test": 6
+  },
+  "annotated_cv_ids": [
+    "cv_001",
+    "cv_002",
+    "cv_003",
+    "cv_004",
+    "cv_005",
+    "cv_006",
+    "cv_007",
+    "cv_009",
+    "cv_010",
+    "cv_012",
+    "cv_013",
+    "cv_014",
+    "cv_017",
+    "cv_018",
+    "cv_020",
+    "cv_021",
+    "cv_023",
+    "cv_024",
+    "cv_025",
+    "cv_028",
+    "cv_029",
+    "cv_032",
+    "cv_033",
+    "cv_034"
+  ],
+  "unannotated_cv_ids": [
+    "cv_008",
+    "cv_011",
+    "cv_015",
+    "cv_016",
+    "cv_019",
+    "cv_022",
+    "cv_026",
+    "cv_027",
+    "cv_030",
+    "cv_031",
+    "cv_035"
+  ],
+  "source_status_distribution": {
+    "ACCEPTED_BY_DOCLING": 12,
+    "RECOVERED_BY_OCR": 12
+  },
+  "obvious_missing_core_fields": [],
+  "warnings": []
+}

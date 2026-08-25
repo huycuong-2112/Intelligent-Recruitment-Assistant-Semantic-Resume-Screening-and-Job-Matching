@@ -1,0 +1,85 @@
+{
+  "domain": "IT",
+  "extraction_method": "groq_llm",
+  "filename": "011adc66-9240-4bce-9402-25483c49d9ab.jpg",
+  "id": "cv_003",
+  "parsed_data": {
+    "certifications": [
+      "Odon Vallet Scholarship (2020)"
+    ],
+    "education_degree": null,
+    "education_field": null,
+    "education_history": [],
+    "experience_years": 1.3,
+    "job_titles": [
+      "Software Engineer Intern",
+      "Software Engineer",
+      "Trainee"
+    ],
+    "projects": [],
+    "skills": [
+      "Golang",
+      "Backend Development",
+      "API Development",
+      "Agile",
+      "JavaScript",
+      "Cocos",
+      "UI/UX",
+      "Game Development",
+      "C++",
+      "Python",
+      "Bash",
+      "Java",
+      "Git",
+      "Linux",
+      "LaTeX",
+      "SQL",
+      "CUDA",
+      "HIP",
+      "ROCm",
+      "Parallel Computing",
+      "GPU Programming",
+      "Deep Learning",
+      "Problem Solving",
+      "Report Writing",
+      "Presentation"
+    ],
+    "summary": "Software engineer with experience in backend development, game client development, and GPU programming, complemented by a strong competitive programming background.",
+    "work_experience": [
+      {
+        "company": "TEKO",
+        "end_date": null,
+        "responsibilities_and_impact": [
+          "Build robust and efficient APIs for the backend server of the supply chain team.",
+          "Worked closely with different teams to understand needs and create solutions that fit business goals.",
+          "Engaged in Agile development processes, including sprint planning, stand-up meetings, and retrospective sessions."
+        ],
+        "role": "Software Engineer Intern",
+        "start_date": null
+      },
+      {
+        "company": "VNG Zing Play Game Studios",
+        "end_date": "06/2025",
+        "responsibilities_and_impact": [
+          "Develop and maintain game clients using JavaScript and the Cocos framework for cross-platform deployment.",
+          "Collaborate with art, design, QC, and backend teams to deliver polished and engaging gameplay features.",
+          "Implement UI/UX, gameplay mechanics, and optimize client performance for smooth user experiences."
+        ],
+        "role": "Software Engineer",
+        "start_date": "06/2024"
+      },
+      {
+        "company": "Moreh Vietnam",
+        "end_date": "10/2025",
+        "responsibilities_and_impact": [
+          "Completed intensive training on GPU programming, focusing on CUDA, HIP, and parallel computing fundamentals.",
+          "Gained hands-on experience with advanced GPU optimization techniques including memory hierarchy tuning, vectorization, and kernel fusion.",
+          "Implemented and profiled high-performance kernels for deep learning workloads on AMD MI250 GPUs using ROCm."
+        ],
+        "role": "Trainee (GPU Engineer Training Program)",
+        "start_date": "06/2025"
+      }
+    ]
+  },
+  "source_status": "ACCEPTED_BY_DOCLING"
+}

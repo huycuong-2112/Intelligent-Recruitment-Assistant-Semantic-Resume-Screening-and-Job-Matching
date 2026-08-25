@@ -1,0 +1,110 @@
+{
+  "domain": "IT",
+  "extraction_method": "groq_llm",
+  "filename": "68d8d534-8d58-4342-b186-ea542dd487dd.jpg",
+  "id": "cv_021",
+  "parsed_data": {
+    "certifications": [],
+    "education_degree": "Bachelor",
+    "education_field": "Software Engineering",
+    "education_history": [
+      {
+        "degree": "Bachelor",
+        "end_year": 2028,
+        "field_of_study": "Software Engineering",
+        "gpa_or_honors": "GPA 3.5",
+        "institution": "FPT University",
+        "start_year": 2024
+      }
+    ],
+    "experience_years": 0.0,
+    "job_titles": [
+      "Backend Developer Intern"
+    ],
+    "projects": [
+      {
+        "description": "Car‑wash booking platform with slot‑based scheduling, online payment, and tier‑based loyalty program. Implemented authentication, booking, payment, notification, membership, review, wash session, and reward exchange modules. Built 50+ RESTful APIs and designed over 20 MySQL tables. Added slot‑conflict detection, deposit handling, three user roles (Customer/Staff/Admin), and a loyalty module with point calculation, 6‑month expiry, and scheduled tier review. Integrated VNPAY payment gateway with IPN webhook verification and automatic reconciliation. Secured endpoints with Spring Security JWT and RBAC across ~50 endpoints.",
+        "heuristic_score": null,
+        "impact_metrics": [
+          "Built 50+ RESTful APIs",
+          "Designed +20 MySQL tables",
+          "Supported 3 user roles",
+          "Implemented loyalty point calculation (floor(amount/1000)) with 6‑month expiry",
+          "Integrated VNPAY payment gateway with IPN webhook",
+          "Secured ~50 endpoints with Spring Security JWT and RBAC"
+        ],
+        "links": [],
+        "name": "Autowash Pro",
+        "role": "Team Leader",
+        "technologies": [
+          "Java",
+          "Spring Boot",
+          "Spring Security",
+          "JWT",
+          "Spring Data JPA",
+          "MySQL",
+          "RESTful API",
+          "GitHub"
+        ]
+      },
+      {
+        "description": "Java EE e‑commerce web application with role‑based access control for Admin, Manager, and Customer. Implemented 10+ CRUD features for products, categories, and accounts. Developed customer‑facing search, filter, sort, and full shopping‑cart‑to‑checkout flow.",
+        "heuristic_score": null,
+        "impact_metrics": [
+          "Implemented 10+ CRUD features",
+          "Role‑based access control across 3 roles"
+        ],
+        "links": [],
+        "name": "Online Shopping Website",
+        "role": null,
+        "technologies": [
+          "Java EE",
+          "Servlets",
+          "JSP",
+          "JSTL",
+          "JPA (EclipseLink)",
+          "Microsoft SQL Server",
+          "Apache Ant",
+          "HTML5",
+          "CSS3",
+          "Bootstrap",
+          "JavaScript"
+        ]
+      }
+    ],
+    "skills": [
+      "Java",
+      "JavaScript",
+      "HTML5",
+      "CSS3",
+      "Bootstrap",
+      "React",
+      "MUI",
+      "SASS",
+      "SCSS",
+      "RESTful API",
+      "Spring Boot",
+      "Spring Security",
+      "JWT",
+      "Spring Data JPA",
+      "MS SQL",
+      "MySQL",
+      "PostgreSQL",
+      "Git",
+      "GitHub",
+      "Agile Scrum methodology",
+      "Intermediate English"
+    ],
+    "summary": "Third-year Software Engineering student passionate about backend development, with hands‑on projects in Java EE, Spring Boot, and MySQL, seeking an internship to learn from experienced engineers and deliver production‑grade impact.",
+    "work_experience": [
+      {
+        "company": "Freelance / Self‑employed",
+        "end_date": null,
+        "responsibilities_and_impact": [],
+        "role": "Backend Developer Intern",
+        "start_date": null
+      }
+    ]
+  },
+  "source_status": "RECOVERED_BY_OCR"
+}

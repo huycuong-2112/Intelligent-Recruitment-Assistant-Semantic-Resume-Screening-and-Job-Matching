@@ -1,0 +1,102 @@
+{
+  "domain": "IT",
+  "extraction_method": "groq_llm",
+  "filename": "cv5.jpg",
+  "id": "cv_031",
+  "parsed_data": {
+    "certifications": [],
+    "education_degree": "Bachelor",
+    "education_field": "Information Technology",
+    "education_history": [
+      {
+        "degree": "Bachelor",
+        "end_year": 2028,
+        "field_of_study": "Information Technology",
+        "gpa_or_honors": "3.78/4.0",
+        "institution": "University of Science, VNU-HCM (HCMUS)",
+        "start_year": 2024
+      }
+    ],
+    "experience_years": 0.0,
+    "job_titles": [],
+    "projects": [
+      {
+        "description": "Architected a distributed e‑commerce platform consisting of 8 microservices behind a YARP API Gateway with centralized OAuth2/OIDC authentication using Duende Identity Server. Implemented an event‑driven Saga State Machine using MassTransit and RabbitMQ to orchestrate multi‑shop order workflows and maintain eventual consistency across services. Utilized gRPC for low‑latency synchronous communication and RabbitMQ for asynchronous workflows between services. Integrated GHN APIs for shipping fee calculation and MoMo/COD payment methods for checkout processing. Dockerized and deployed all services and databases on a VPS using Docker Compose, with CI/CD pipelines automated through GitHub Actions.",
+        "heuristic_score": null,
+        "impact_metrics": [],
+        "links": [],
+        "name": "Marketplace Microservices Platform",
+        "role": null,
+        "technologies": [
+          ".NET 9",
+          "DDD",
+          "CQRS",
+          "MassTransit",
+          "RabbitMQ",
+          "gRPC",
+          "Redis",
+          "PostgreSQL",
+          "MySQL",
+          "Docker Compose",
+          "YARP API Gateway",
+          "Duende Identity Server"
+        ]
+      },
+      {
+        "description": "Developed an online learning platform supporting course management, enrollment, progress tracking, and payment processing. Architected the backend using Clean Architecture and CQRS, isolating business logic from infrastructure concerns. Implemented Redis caching for frequently accessed, infrequently changing data, reducing database load and improving response times. Built an event‑driven media processing pipeline using RabbitMQ, worker services, and MinIO to support video transcoding, HLS (M3U8) generation, and multipart uploads for large files (>100 MB).",
+        "heuristic_score": null,
+        "impact_metrics": [
+          "Supports multipart uploads for files >100 MB",
+          "Improved response times via Redis caching"
+        ],
+        "links": [],
+        "name": "ELearning Platform",
+        "role": null,
+        "technologies": [
+          ".NET 9",
+          "SQL Server",
+          "Redis",
+          "RabbitMQ",
+          "MinIO",
+          "Hangfire",
+          "Docker",
+          "Docker Compose"
+        ]
+      }
+    ],
+    "skills": [
+      "C#",
+      "SQL",
+      "JavaScript",
+      "C++",
+      "ASP.NET Core",
+      "Web API",
+      "MediatR",
+      "Microservices",
+      "Clean Architecture",
+      "CQRS",
+      "DDD",
+      "PostgreSQL",
+      "MySQL",
+      "SQL Server",
+      "Redis",
+      "RabbitMQ",
+      "Docker",
+      "GitHub Actions",
+      "Linux",
+      "Git",
+      "Postman",
+      "Swagger",
+      "Scalar",
+      "MassTransit",
+      "gRPC",
+      "YARP API Gateway",
+      "Duende Identity Server",
+      "MinIO",
+      "Hangfire"
+    ],
+    "summary": "Backend Engineer based in Ho Chi Minh City, Vietnam",
+    "work_experience": []
+  },
+  "source_status": "LOW_QUALITY"
+}

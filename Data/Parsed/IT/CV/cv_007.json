@@ -1,0 +1,97 @@
+{
+  "domain": "IT",
+  "extraction_method": "groq_llm",
+  "filename": "023.jpg",
+  "id": "cv_007",
+  "parsed_data": {
+    "certifications": [
+      "TOEIC 650",
+      "CPPS - Certified Phishing Prevention Specialist"
+    ],
+    "education_degree": "Bachelor",
+    "education_field": "Computer Networks and Data Communications",
+    "education_history": [
+      {
+        "degree": "Bachelor",
+        "end_year": 2027,
+        "field_of_study": "Computer Networks and Data Communications",
+        "gpa_or_honors": null,
+        "institution": "Hanoi University of Industry (Ha Ui)",
+        "start_year": 2023
+      }
+    ],
+    "experience_years": 0.0,
+    "job_titles": [],
+    "projects": [
+      {
+        "description": "Simulated an enterprise SD-WAN network with switches, VLANs, a DMZ server, and Internet links. Configured routing, NAT, firewall policies, site-to-site VPN, SD-WAN failover, and FortiGate HA in a lab environment. Deployed Web/FTP services in the DMZ and used Zabbix to monitor devices, servers, and service availability. Practiced troubleshooting connectivity issues, firewall policy errors, service access failures, and WAN/VPN failover scenarios.",
+        "heuristic_score": null,
+        "impact_metrics": [],
+        "links": [],
+        "name": "Enterprise SD-WAN Network Simulation Based on Level3",
+        "role": null,
+        "technologies": [
+          "Switches",
+          "VLANs",
+          "DMZ",
+          "Internet links",
+          "Routing",
+          "NAT",
+          "Firewall policies",
+          "Site-to-Site VPN",
+          "SD-WAN",
+          "FortiGate HA",
+          "Zabbix"
+        ]
+      },
+      {
+        "description": "Developed an Android Studio project for basic network monitoring and troubleshooting. Implemented device diagnostics with ping, traceroute, port scanning, IPv4 validation, and timeout handling. Integrated SNMP to retrieve device name, CPU, and RAM metrics, and SSH to execute remote administration commands. Stored logs with SQLite and visualized real-time traffic using MPAndroid Chart.",
+        "heuristic_score": null,
+        "impact_metrics": [],
+        "links": [],
+        "name": "Android-Based Network Monitoring and Administration System",
+        "role": null,
+        "technologies": [
+          "Android Studio",
+          "SNMP",
+          "SSH",
+          "SQLite",
+          "MPAndroid Chart",
+          "Ping",
+          "Traceroute",
+          "Port scanning",
+          "IPv4 validation",
+          "Timeout handling"
+        ]
+      }
+    ],
+    "skills": [
+      "TCP/IP",
+      "VLAN",
+      "DNS",
+      "DHCP",
+      "NAT",
+      "VPN",
+      "VMware",
+      "EVE-NG",
+      "Dynamic Routing",
+      "Network Security",
+      "Firewall Policy",
+      "IPsec VPN",
+      "DMZ",
+      "PS",
+      "ACL",
+      "Antivirus",
+      "Anti DoS",
+      "Zabbix",
+      "Wireshark",
+      "Windows Server",
+      "Ubuntu Server",
+      "Hardware troubleshooting",
+      "Network cable crimping"
+    ],
+    "summary": "Third-year Computer Networks and Data Communications student with CCNA-level knowledge and troubleshooting. Familiar with TCP/IP, VLAN, DNS, DHCP, NAT, VPN, VMware, and EVE-NG. Skills in a real-world environment, with a long term goal of developing into a Network Engineer.",
+    "work_experience": []
+  },
+  "source_status": "RECOVERED_BY_OCR"
+}

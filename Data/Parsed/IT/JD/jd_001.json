@@ -1,0 +1,47 @@
+{
+  "extraction_method": "groq_llm",
+  "filename": "AI Engineer Intern.pdf",
+  "id": "jd_001",
+  "parsed_data": {
+    "company_name": null,
+    "job_overview": "Join the team as an AI Engineer Intern to work closely with senior engineers on building and deploying AI/ML applications, with a focus on Generative AI and large language models.",
+    "job_title": "AI Engineer Intern",
+    "key_deliverables": [
+      "Prototype implementations of Generative AI features",
+      "Implemented and documented AI/ML algorithms",
+      "Tested and benchmarked AI model performance reports",
+      "Research summaries on emerging AI technologies"
+    ],
+    "min_experience_years": 0.0,
+    "preferred_fields": [
+      "Computer Science",
+      "Artificial Intelligence",
+      "Data Science"
+    ],
+    "preferred_skills": [
+      "Large Language Models (LLMs) and agentic frameworks (e.g., LangChain, Google ADK)",
+      "Containerization (Docker)",
+      "Cloud platforms (AWS, Azure, GCP)",
+      "Generative AI prototyping",
+      "Basic Natural Language Processing concepts",
+      "Proactive learning and research mindset"
+    ],
+    "required_certifications": [],
+    "required_degree": "Bachelor",
+    "required_skills": [
+      "Python programming",
+      "Data structures and algorithms",
+      "Version control (Git)",
+      "Basic Machine Learning / Deep Learning concepts",
+      "English proficiency (technical reading and communication)"
+    ],
+    "responsibilities": [
+      "Deeply understand project objectives and study data hypotheses under guidance of senior team members",
+      "Research and implement algorithms for data science and AI projects",
+      "Assist in prototyping features using Generative AI capabilities (LLMs, AI agents, embeddings) and basic NLP concepts",
+      "Support testing and benchmarking of AI models using established evaluation frameworks",
+      "Stay updated on the latest research, trends, and technologies in data science and AI"
+    ]
+  },
+  "source_status": "ACCEPTED_BY_DOCLING"
+}

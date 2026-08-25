@@ -1,0 +1,110 @@
+[
+  {
+    "id": "jd_001_01",
+    "extraction_method": "offline_hybrid",
+    "raw_text_length": 1887,
+    "parsed_data": {
+      "job_title": "AI Engineer Intern",
+      "company_name": null,
+      "job_overview": "## AI Engineer Intern\nWe are looking for a passionate AI Engineer Intern to join our team. In this role, you will work closely with senior engineers to explore, build, and deploy AI/ML applications, with a specific focus on Generative AI and LLMs. This is an excellent opportunity to gain hands-on experience with state-of-the-art technologies in a p",
+      "min_experience_years": 1.0,
+      "required_degree": "Engineer",
+      "preferred_fields": [],
+      "required_skills": [],
+      "preferred_skills": [],
+      "responsibilities": [
+        "Research &amp; Implement: Participate in researching and implementing algorithms for data science and AI projects."
+      ],
+      "key_deliverables": [],
+      "required_certifications": [
+        "Cloud: Basic awareness of cloud platforms (AWS, Azure, or GCP) is an advantage."
+      ]
+    }
+  },
+  {
+    "id": "jd_001_02",
+    "extraction_method": "offline_hybrid",
+    "raw_text_length": 2167,
+    "parsed_data": {
+      "job_title": "Data Science Intern",
+      "company_name": null,
+      "job_overview": "## Data Science Intern\nWe are seeking a curious and analytical Data Science Intern to join our team. In this role, you will support data scientists in performing exploratory data analysis, building predictive models, and translating complex data into actionable insights. You will gain hands-on experience with real-world datasets and modern MLOps pr",
+      "min_experience_years": 0.0,
+      "required_degree": "Any",
+      "preferred_fields": [],
+      "required_skills": [],
+      "preferred_skills": [],
+      "responsibilities": [
+        "Modeling: Research, implement, and evaluate machine learning, statistical, or NLP algorithms tailored to project requirements.",
+        "Ability to read, synthesize, and implement techniques from technical research papers."
+      ],
+      "key_deliverables": [],
+      "required_certifications": [
+        "Familiarity with cloud platforms (e.g., GCP, AWS, Azure)."
+      ]
+    }
+  },
+  {
+    "id": "jd_001_03",
+    "extraction_method": "offline_hybrid",
+    "raw_text_length": 1275,
+    "parsed_data": {
+      "job_title": "TUYEN DUNG",
+      "company_name": null,
+      "job_overview": "TUYEN DUNG\nTHUC TAP SINH\nLAP TRi NH NHUNG\nCOHOI TRAINGHIEM-HOC HOI-PHAT TRIEN SUNGHIEP\n1.MO TA CONG VIEC\n·Phattrien Firmware:Thietke,laptrinhvatoiuu\nthuattoandieukhiencho cachethongrobot\n4banhtyhanh,thietbjlo Tvacachethongnhung.\nThietkephattrien Hardware:Thamgiathietke\nphattrienvatoiuuschematic,PCBlayer.\n·Phat trienphanmem Robot:Lap trinhung dung\nd",
+      "min_experience_years": 0.0,
+      "required_degree": "Any",
+      "preferred_fields": [],
+      "required_skills": [
+        "TUYEN DUNG",
+        "THUC TAP SINH",
+        "LAP TRi NH NHUNG",
+        "1.MO TA CONG VIEC",
+        "surdungnentang ROS",
+        "ROS2.",
+        "2.YEU CAU",
+        "Ca chieu:13h30-17h30."
+      ],
+      "preferred_skills": [],
+      "responsibilities": [],
+      "key_deliverables": [],
+      "required_certifications": []
+    }
+  },
+  {
+    "id": "jd_001_04",
+    "extraction_method": "offline_hybrid",
+    "raw_text_length": 5745,
+    "parsed_data": {
+      "job_title": "KỸ SƯ LẬ P TRÌNH HỆ THÓNG",
+      "company_name": null,
+      "job_overview": "KỸ SƯ LẬ P TRÌNH HỆ THÓNG\nMÔ TẢ CÔNG VIẸ C Tham gia v ào qu á trinh ph ân t ích; thi ết k ế v à ph át tri ến h ệ h ống ph ần m ềm cho c ác h ệ th ông c ó kh à n ắng ch ịu l ỗi cao (Mission-critical systems) . Xây dyng giao di ện ng ười d ùng th ời gian thuc (real-time UVHMI) h ỗ tr ợ hi ển thj v à t ương t ác v ới đ ộ Ir ễ th âp v à c ập nh ật li ê",
+      "min_experience_years": 0.0,
+      "required_degree": "Engineer",
+      "preferred_fields": [],
+      "required_skills": [
+        "KỸ SƯ LẬ P TRÌNH HỆ THÓNG",
+        "Doi voi Javascript:",
+        "dongian(Redux",
+        "Zustand coban).",
+        "YEUCAUMU'CMIDDLE",
+        "donghoa",
+        "CNTT",
+        "Doivoi C++:",
+        "Doi voi Java:",
+        "Kafka",
+        "Pulsar",
+        "semantics.",
+        "Redis...).",
+        "Doivoi Javascript:",
+        "LƯ UY"
+      ],
+      "preferred_skills": [],
+      "responsibilities": [],
+      "key_deliverables": [],
+      "required_certifications": [
+        "YÊU CÀU CHUNG Tốt nghi ệp Đ ại h ọc logi Kh á tr ở l ên c ác chuy ên ng ành Cơ đi ện t ử, đi ện l ử vi ễn th ông, đi ện 2 l ự d ộng h óa, CNTT. Ti éng Anh: 2 650 TOEIC (ho ặc t ương đ ưong) Có kh ả n ăng l àm vi ệc theo nh óm v à l àm vi ệc d ộc l ập. Đ ức t ính t ỉ m ỉ. c ẩn th ận, l àm vi ệc v ới tinh th ần tr ách nhi ệm cao, ham h ọc h ỏi. Tu duy s áng l ạo, ch ủ d ộng Irong c ông vi ệc, c ó kỹ n ăng l àm viic nh óm; l ập k ế hoach."
+      ]
+    }
+  }
+]

@@ -1,0 +1,133 @@
+{
+  "id": "cv_035",
+  "domain": "IT",
+  "profile": {
+    "summary": "Third-year Computer Science student seeking AI Engineering internship opportunities. Experienced in building LLM-powered applications, fine-tuning language models with Py Torch and Lo RA, and integrating AI services with Python APIs and microservice-based systems. Strong interest in applying machine learning and backend engineering to practical AIproducts.",
+    "job_titles": []
+  },
+  "skills": {
+    "all": [
+      "Python",
+      "C/C++",
+      "SQL",
+      "Fast API",
+      "PyTorch",
+      "OpenCV",
+      "Unsloth",
+      "MySQL",
+      "MongoDB",
+      "Git",
+      "Linux",
+      "Docker",
+      "gRPC",
+      "React.js",
+      "Express.js",
+      "Socket.io",
+      "WebRTC",
+      "Video SDK",
+      "Vietnamese (Native)",
+      "English (Reading)",
+      "PEFT/LoRA",
+      "Ollama",
+      "Streamlit"
+    ],
+    "explicit": [
+      "Python",
+      "C/C++",
+      "SQL",
+      "Fast API",
+      "PyTorch",
+      "OpenCV",
+      "Unsloth",
+      "MySQL",
+      "MongoDB",
+      "Git",
+      "Linux",
+      "Docker",
+      "gRPC",
+      "React.js",
+      "Express.js",
+      "Socket.io",
+      "WebRTC",
+      "Video SDK",
+      "Vietnamese (Native)",
+      "English (Reading)"
+    ],
+    "project_derived": [
+      "Fast API",
+      "gRPC",
+      "PyTorch",
+      "PEFT/LoRA",
+      "Ollama",
+      "Streamlit",
+      "Docker",
+      "React.js",
+      "Express.js",
+      "Socket.io",
+      "WebRTC",
+      "Video SDK"
+    ]
+  },
+  "experience": {
+    "professional_years": 0.0,
+    "work_evidence": [],
+    "project_evidence": [
+      "Independently designed and built a customer support chatbot system using a microservices architecture with Fast API, gRPC, and Streamlit. Fine-tuned a Qwen large language model using PyTorch and PEFT/LoRA for banking intent recognition. Integrated an API Gateway with Ollama to generate natural, domain-specific responses for banking scenarios. Containerized and deployed the system using Docker Compose to streamline the operational workflow.",
+      "Contributed to the frontend and part of the backend in a team project building a Zoom-like web app with video calling, screen sharing, virtual backgrounds, chat, and file sharing. Integrated WebRTC and Video SDK for real-time media streaming; used Socket.io to synchronize room state and messaging across participants. Implemented meeting recording, transcription, and AI-powered summarization after each session."
+    ]
+  },
+  "education": {
+    "degree": "Bachelor",
+    "field": "Computer Science",
+    "history": [
+      {
+        "degree": "Bachelor",
+        "end_year": 2027,
+        "field_of_study": "Computer Science",
+        "gpa_or_honors": "8.2/10",
+        "institution": "Ho Chi Minh City University of Science (HCMUS)",
+        "start_year": null
+      }
+    ]
+  },
+  "projects": [
+    {
+      "description": "Independently designed and built a customer support chatbot system using a microservices architecture with Fast API, gRPC, and Streamlit. Fine-tuned a Qwen large language model using PyTorch and PEFT/LoRA for banking intent recognition. Integrated an API Gateway with Ollama to generate natural, domain-specific responses for banking scenarios. Containerized and deployed the system using Docker Compose to streamline the operational workflow.",
+      "heuristic_score": null,
+      "impact_metrics": [],
+      "links": [
+        "https://github.com/ntnthinh205/banking-chatbot"
+      ],
+      "name": "Banking AI-Agent (Customer Support Chatbot)",
+      "role": "Solo Developer",
+      "technologies": [
+        "Fast API",
+        "gRPC",
+        "PyTorch",
+        "PEFT/LoRA",
+        "Ollama",
+        "Streamlit",
+        "Docker"
+      ]
+    },
+    {
+      "description": "Contributed to the frontend and part of the backend in a team project building a Zoom-like web app with video calling, screen sharing, virtual backgrounds, chat, and file sharing. Integrated WebRTC and Video SDK for real-time media streaming; used Socket.io to synchronize room state and messaging across participants. Implemented meeting recording, transcription, and AI-powered summarization after each session.",
+      "heuristic_score": null,
+      "impact_metrics": [],
+      "links": [
+        "https://github.com/ntnthinh205/Conference",
+        "https://github.com/ntnthinh205/Conference_Zoom"
+      ],
+      "name": "Online Video Conferencing Web App",
+      "role": "Team Developer",
+      "technologies": [
+        "React.js",
+        "Express.js",
+        "Socket.io",
+        "WebRTC",
+        "Video SDK"
+      ]
+    }
+  ],
+  "certifications": []
+}

@@ -1,0 +1,106 @@
+{
+  "id": "cv_008",
+  "domain": "IT",
+  "profile": {
+    "summary": "Mục tiêu nghề nghiệp: Ứng tuyển vị trí lập trình viên ứng dụng kỹ thuật về lập trình; cơ sở dữ liệu và phát triển web để xây dựng các hệ thống thực tế; mong muốn tham gia trực tiếp vào quá trình phát triển sản phẩm; từ thiết kế đến triển khai, đồng thời nâng cao kỹ năng chuyên môn trong môi trường làm việc chuyên nghiệp.",
+    "job_titles": [
+      "Thực tập sinh"
+    ]
+  },
+  "skills": {
+    "all": [
+      "C",
+      "C++",
+      "C#",
+      "HTML",
+      "CSS",
+      "OOP",
+      ".NET",
+      "MySQL",
+      "UI design",
+      "Visual Studio",
+      "SEO",
+      "Teamwork",
+      "Problem solving",
+      "English (basic)"
+    ],
+    "explicit": [
+      "C",
+      "C++",
+      "C#",
+      "HTML",
+      "CSS",
+      "OOP",
+      ".NET",
+      "MySQL",
+      "UI design",
+      "Visual Studio",
+      "SEO",
+      "Teamwork",
+      "Problem solving",
+      "English (basic)"
+    ],
+    "project_derived": [
+      "HTML",
+      "CSS",
+      "C#",
+      ".NET",
+      "MySQL"
+    ]
+  },
+  "experience": {
+    "professional_years": 0.3,
+    "work_evidence": [
+      {
+        "company": "Công ty TNHH VIENAI",
+        "end_date": "12/2025",
+        "responsibilities_and_impact": [
+          "Quản lý và cập nhật nội dung SEO trên hệ thống website",
+          "Tối ưu nội dung SEO (title; meta description; từ khóa)",
+          "Kiểm tra giao diện website; phát hiện và báo lỗi UI/UX để cải thiện trải nghiệm người dùng",
+          "Hỗ trợ vận hành website; đảm bảo nội dung được đăng ổn định",
+          "Đảm bảo nội dung đáp ứng quy trình"
+        ],
+        "role": "Thực tập sinh",
+        "start_date": "09/2025"
+      }
+    ],
+    "project_evidence": [
+      "Phát triển website bán sách sử dụng HTML, CSS, C# (NET) và MySQL. Thiết kế cơ sở dữ liệu, xây dựng các chức năng chính: hiển thị sản phẩm, quản lý đơn hàng, quản lý bán, và thao tác nhanh hơn cho người dùng."
+    ]
+  },
+  "education": {
+    "degree": "Bachelor",
+    "field": "An toàn hệ thống",
+    "history": [
+      {
+        "degree": "Bachelor",
+        "end_year": 2025,
+        "field_of_study": "An toàn hệ thống",
+        "gpa_or_honors": "2.11/40",
+        "institution": "Đại học Công Thương TPHCM",
+        "start_year": 2021
+      }
+    ]
+  },
+  "projects": [
+    {
+      "description": "Phát triển website bán sách sử dụng HTML, CSS, C# (NET) và MySQL. Thiết kế cơ sở dữ liệu, xây dựng các chức năng chính: hiển thị sản phẩm, quản lý đơn hàng, quản lý bán, và thao tác nhanh hơn cho người dùng.",
+      "heuristic_score": null,
+      "impact_metrics": [
+        "10+ tables"
+      ],
+      "links": [],
+      "name": "Website bán sách",
+      "role": null,
+      "technologies": [
+        "HTML",
+        "CSS",
+        "C#",
+        ".NET",
+        "MySQL"
+      ]
+    }
+  ],
+  "certifications": []
+}

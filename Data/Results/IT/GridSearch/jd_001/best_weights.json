@@ -1,0 +1,35 @@
+{
+  "target_jd": "jd_001",
+  "development_candidate_count": 18,
+  "objective": "maximize development ndcg@10",
+  "grid_step": 0.1,
+  "best_weights": {
+    "w_skill": 0.4,
+    "w_experience": 0.2,
+    "w_education": 0.1,
+    "w_semantic": 0.3
+  },
+  "development_metrics": {
+    "recall@5": 1.0,
+    "recall@10": 1.0,
+    "recall@15": 1.0,
+    "ndcg@5": 0.8698687319194839,
+    "ndcg@10": 0.8793433720438693,
+    "ndcg@15": 0.8793433720438693,
+    "spearman": 0.9021441564491928,
+    "mae_0_to_3": 0.7152424218541343
+  },
+  "tie_break_logic": [
+    "higher ndcg@10",
+    "higher spearman",
+    "higher ndcg@5",
+    "lower mae_0_to_3",
+    "smaller L1 distance from equal weights",
+    "lexicographic weights"
+  ],
+  "metric_tolerance": 1e-09,
+  "source_component_score_artifact": "C:\\Users\\Asus\\Documents\\UITCSNAM1\\ML_IOT\\Projcet cu\u1ed1i kh\u00f3a\\Intelligent-Recruitment-Assistant-Semantic-Resume-Screening-and-Job-Matching\\Data\\Results\\IT\\Evaluation\\development\\jd_001_candidate_diagnostics_continuous_experience.csv",
+  "selected_on": "development",
+  "blind_evaluated": false,
+  "timestamp_utc": "2026-08-25T15:35:35.809651+00:00"
+}

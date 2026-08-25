@@ -1,0 +1,3 @@
+region,count,skill_min,skill_max,skill_mean,skill_median,skill_std,experience_min,experience_max,experience_mean,experience_median,experience_std,education_min,education_max,education_mean,education_median,education_std,semantic_min,semantic_max,semantic_mean,semantic_median,semantic_std
+within_0.01,3,0.2,0.4,0.3,0.3,0.08164965809277261,0.2,0.3,0.26666666666666666,0.3,0.04714045207910316,0.1,0.1,0.10000000000000002,0.1,1.3877787807814457e-17,0.3,0.4,0.3333333333333333,0.3,0.04714045207910319
+within_0.02,22,0.0,0.8,0.23636363636363633,0.2,0.21436047495548358,0.0,0.7,0.26818181818181813,0.2,0.21188840037830298,0.0,0.2,0.10000000000000003,0.1,0.04264014327112209,0.1,0.8,0.39545454545454545,0.4,0.1636994827760828

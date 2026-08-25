@@ -1,0 +1,110 @@
+{
+  "domain": "IT",
+  "extraction_method": "groq_llm",
+  "filename": "774777607_1279938944129525_8536816422708780182_n.png",
+  "id": "cv_023",
+  "parsed_data": {
+    "certifications": [],
+    "education_degree": "Bachelor",
+    "education_field": "Cybersecurity",
+    "education_history": [
+      {
+        "degree": "Bachelor",
+        "end_year": 2027,
+        "field_of_study": "Information Technology Cybersecurity",
+        "gpa_or_honors": "3.50",
+        "institution": "Ho Chi Minh City University of Technology (HUTECH)",
+        "start_year": null
+      }
+    ],
+    "experience_years": 0.0,
+    "job_titles": [],
+    "projects": [
+      {
+        "description": "Built an enterprise-ready Java SAST engine designed to identify critical Spring MVC vulnerabilities across complex application architectures. Implemented context-sensitive interprocedural taint propagation over Control Data Flow Graphs (CFG/IDFG) to eliminate false negatives in inter-class data flows. Validated detection efficacy against the OWASP Benchmark, demonstrating zero missed vulnerabilities with high‑throughput static analysis speed. Streamlined CI/CD security gating through native SARIF reporting, legacy vulnerability suppression; and automated CLI workflows.",
+        "heuristic_score": null,
+        "impact_metrics": [
+          "0 missed vulnerabilities",
+          "high‑throughput static analysis speed"
+        ],
+        "links": [],
+        "name": "Spring Taint Engine Interprocedural SAST Taint Analysis",
+        "role": "Developer",
+        "technologies": [
+          "Java",
+          "SARIF",
+          "CI/CD",
+          "Static Analysis"
+        ]
+      },
+      {
+        "description": "Engineered a three‑layer detection pipeline combining regex pattern matching, Tree‑sitter AST parsing and a fine‑tuned Graph Code BERT classifier to suppress false positive alerts. Curated and deduplicated multi‑source vulnerability dataset from MegaVul, Big‑Vul, CVEfixes and PrimeVul, resolving train‑test leakage and cross‑language class imbalance through weighted sampling. Exported the fine‑tuned model to ONNX for lightweight, low‑latency inference within GitHub Actions CI/CD workflow.",
+        "heuristic_score": null,
+        "impact_metrics": [
+          "lightweight low‑latency inference",
+          "cross‑language vulnerability classification"
+        ],
+        "links": [],
+        "name": "Vulneracheck‑AI Graph Code BERT‑Based Code Security Detection",
+        "role": "Developer",
+        "technologies": [
+          "Graph Code BERT",
+          "RoBERTa",
+          "C++",
+          "Java",
+          "Python",
+          "ONNX",
+          "GitHub Actions",
+          "CI/CD"
+        ]
+      },
+      {
+        "description": "Architected a fully containerized SOC lab (Wazuh SIEM, Docker Compose, Vagrant‑provisioned victim host) deployable via a single command (IaC). Authored custom detection rules mapped to MITRE ATT&CK using Sigma, bridged into native Wazuh correlation rules. Built a Mini‑SOAR active‑response pipeline that autonomously contains SSH brute‑force attacks via time‑bound iptables blocking, validated end‑to‑end against live attack traffic with forensic case logging.",
+        "heuristic_score": null,
+        "impact_metrics": [
+          "autonomous containment of SSH brute‑force attacks",
+          "forensic case logging"
+        ],
+        "links": [],
+        "name": "Auto Response‑SOC‑Lab Multi‑Layer SOC with Detection‑as‑Code (SOAR)",
+        "role": "Architect",
+        "technologies": [
+          "Wazuh SIEM",
+          "Docker Compose",
+          "Vagrant",
+          "Sigma",
+          "MITRE ATT&CK",
+          "iptables"
+        ]
+      }
+    ],
+    "skills": [
+      "Java",
+      "C#",
+      "Python",
+      "C++",
+      "TCP/IP",
+      "VLAN",
+      "Routing",
+      "Switching",
+      "DNS",
+      "DHCP",
+      "SAST",
+      "Taint Analysis",
+      "Vulnerability Detection",
+      "OWASP",
+      "MITRE ATT&CK",
+      "Wazuh SIEM",
+      "Sigma",
+      "iptables",
+      "Docker",
+      "Vagrant",
+      "GitHub Actions",
+      "Git",
+      "Linux"
+    ],
+    "summary": null,
+    "work_experience": []
+  },
+  "source_status": "RECOVERED_BY_OCR"
+}

@@ -1,0 +1,300 @@
+{
+  "jd_id": "jd_001",
+  "cv_id": "cv_024",
+  "score_0_1": 0.5901588729070234,
+  "status": "evaluated",
+  "skill": {
+    "score": 0.2124330489485423,
+    "coverage": 1.0,
+    "matched_required": [
+      "Python programming"
+    ],
+    "matched_preferred": [
+      "Containerization (Docker)",
+      "Generative AI prototyping"
+    ],
+    "missing_required": [
+      "Data structures and algorithms",
+      "Version control (Git)",
+      "Basic Machine Learning / Deep Learning concepts",
+      "English proficiency (technical reading and communication)"
+    ],
+    "missing_preferred": [
+      "Large Language Models (LLMs) and agentic frameworks (e.g., LangChain, Google ADK)",
+      "Cloud platforms (AWS, Azure, GCP)",
+      "Basic Natural Language Processing concepts",
+      "Proactive learning and research mindset"
+    ],
+    "requirements": [
+      {
+        "jd_skill": "Python programming",
+        "importance": "required",
+        "score": 0.9071955142823183,
+        "availability": "available",
+        "status": "matched",
+        "match_method": "semantic",
+        "matched_cv_skill": "Python",
+        "cv_skill_provenance": [
+          "explicit"
+        ],
+        "similarity": 0.9071955142823183,
+        "weight": 1.0
+      },
+      {
+        "jd_skill": "Data structures and algorithms",
+        "importance": "required",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.4218503599608085,
+        "weight": 1.0
+      },
+      {
+        "jd_skill": "Version control (Git)",
+        "importance": "required",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.6936659063731485,
+        "weight": 1.0
+      },
+      {
+        "jd_skill": "Basic Machine Learning / Deep Learning concepts",
+        "importance": "required",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.6123681109139575,
+        "weight": 1.0
+      },
+      {
+        "jd_skill": "English proficiency (technical reading and communication)",
+        "importance": "required",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.4093763870011389,
+        "weight": 1.0
+      },
+      {
+        "jd_skill": "Large Language Models (LLMs) and agentic frameworks (e.g., LangChain, Google ADK)",
+        "importance": "preferred",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.48101288177806517,
+        "weight": 0.5
+      },
+      {
+        "jd_skill": "Containerization (Docker)",
+        "importance": "preferred",
+        "score": 0.8207147875842624,
+        "availability": "available",
+        "status": "matched",
+        "match_method": "semantic",
+        "matched_cv_skill": "Docker",
+        "cv_skill_provenance": [
+          "explicit"
+        ],
+        "similarity": 0.8207147875842624,
+        "weight": 0.5
+      },
+      {
+        "jd_skill": "Cloud platforms (AWS, Azure, GCP)",
+        "importance": "preferred",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.3366015550972531,
+        "weight": 0.5
+      },
+      {
+        "jd_skill": "Generative AI prototyping",
+        "importance": "preferred",
+        "score": 0.7638229670277783,
+        "availability": "available",
+        "status": "matched",
+        "match_method": "semantic",
+        "matched_cv_skill": "Generative AI",
+        "cv_skill_provenance": [
+          "explicit"
+        ],
+        "similarity": 0.7638229670277783,
+        "weight": 0.5
+      },
+      {
+        "jd_skill": "Basic Natural Language Processing concepts",
+        "importance": "preferred",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.37736751021665027,
+        "weight": 0.5
+      },
+      {
+        "jd_skill": "Proactive learning and research mindset",
+        "importance": "preferred",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.2455599888767027,
+        "weight": 0.5
+      }
+    ]
+  },
+  "experience": {
+    "score": 0.5336712683275664,
+    "coverage": 1.0,
+    "years": {
+      "score": 1.0,
+      "availability": "available",
+      "status": "satisfied",
+      "weight": 0.3,
+      "details": {
+        "candidate_years": 0.0,
+        "minimum_years": 0.0
+      }
+    },
+    "evidence": {
+      "score": 0.3338160976108092,
+      "availability": "available",
+      "status": "evaluated",
+      "weight": 0.7,
+      "details": {
+        "responsibilities": [
+          {
+            "responsibility": "Deeply understand project objectives and study data hypotheses under guidance of senior team members",
+            "score": 0.23982168120381853,
+            "status": "low_match",
+            "matched_chunk_id": "cv_024_project_010",
+            "matched_text": "Established automated evaluation metrics focusing on LLM faithfulness, relevance, and latency to continuously optimize prompts and template performance.",
+            "source_type": "project",
+            "source_name": "Interview Copilot",
+            "raw_similarity": 0.23982168120381853,
+            "threshold": 0.6
+          },
+          {
+            "responsibility": "Research and implement algorithms for data science and AI projects",
+            "score": 0.2941481419657684,
+            "status": "low_match",
+            "matched_chunk_id": "cv_024_project_008",
+            "matched_text": "Developed an AI-assisted recruiter co-pilot (Fast API & Next.js) using Multi-Agent Orchestration and Tool/Function Calling to automate CV screening, candidate evaluation, and report generation.",
+            "source_type": "project",
+            "source_name": "Interview Copilot",
+            "raw_similarity": 0.2941481419657684,
+            "threshold": 0.6
+          },
+          {
+            "responsibility": "Assist in prototyping features using Generative AI capabilities (LLMs, AI agents, embeddings) and basic NLP concepts",
+            "score": 0.38444319470500427,
+            "status": "low_match",
+            "matched_chunk_id": "cv_024_project_010",
+            "matched_text": "Established automated evaluation metrics focusing on LLM faithfulness, relevance, and latency to continuously optimize prompts and template performance.",
+            "source_type": "project",
+            "source_name": "Interview Copilot",
+            "raw_similarity": 0.38444319470500427,
+            "threshold": 0.6
+          },
+          {
+            "responsibility": "Support testing and benchmarking of AI models using established evaluation frameworks",
+            "score": 0.4038990100454759,
+            "status": "low_match",
+            "matched_chunk_id": "cv_024_project_008",
+            "matched_text": "Developed an AI-assisted recruiter co-pilot (Fast API & Next.js) using Multi-Agent Orchestration and Tool/Function Calling to automate CV screening, candidate evaluation, and report generation.",
+            "source_type": "project",
+            "source_name": "Interview Copilot",
+            "raw_similarity": 0.4038990100454759,
+            "threshold": 0.6
+          },
+          {
+            "responsibility": "Stay updated on the latest research, trends, and technologies in data science and AI",
+            "score": 0.34676846013397883,
+            "status": "low_match",
+            "matched_chunk_id": "cv_024_project_008",
+            "matched_text": "Developed an AI-assisted recruiter co-pilot (Fast API & Next.js) using Multi-Agent Orchestration and Tool/Function Calling to automate CV screening, candidate evaluation, and report generation.",
+            "source_type": "project",
+            "source_name": "Interview Copilot",
+            "raw_similarity": 0.34676846013397883,
+            "threshold": 0.6
+          }
+        ]
+      }
+    }
+  },
+  "education": {
+    "score": 1.0,
+    "coverage": 1.0,
+    "degree": {
+      "score": 1.0,
+      "availability": "available",
+      "status": "satisfied",
+      "weight": 0.6,
+      "details": {
+        "candidate": "Bachelor",
+        "required": "Bachelor"
+      }
+    },
+    "field": {
+      "score": 1.0,
+      "availability": "available",
+      "status": "matched",
+      "weight": 0.4,
+      "details": {
+        "candidate": "Computer Science",
+        "preferred_fields": [
+          "Computer Science",
+          "Artificial Intelligence",
+          "Data Science"
+        ]
+      }
+    }
+  },
+  "semantic": {
+    "score": 0.6145311743519849,
+    "coverage": 1.0,
+    "status": "evaluated",
+    "availability": "available",
+    "raw_similarity": 0.6145311743519849
+  },
+  "mdms": {
+    "final_score": 0.5901588729070234,
+    "status": "evaluated",
+    "coverage": 1.0,
+    "effective_weights": {
+      "skill": 0.25,
+      "experience": 0.25,
+      "education": 0.25,
+      "semantic": 0.25
+    },
+    "weights": {
+      "skill": 0.25,
+      "experience": 0.25,
+      "education": 0.25,
+      "semantic": 0.25
+    }
+  }
+}

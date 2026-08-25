@@ -1,0 +1,127 @@
+{
+  "domain": "IT",
+  "extraction_method": "groq_llm",
+  "filename": "cv2.jpg",
+  "id": "cv_028",
+  "parsed_data": {
+    "certifications": [],
+    "education_degree": "Bachelor",
+    "education_field": "Software Engineering",
+    "education_history": [
+      {
+        "degree": "Bachelor",
+        "end_year": 2026,
+        "field_of_study": "Software Engineering",
+        "gpa_or_honors": null,
+        "institution": "FPT University",
+        "start_year": 2022
+      },
+      {
+        "degree": "High School",
+        "end_year": 2022,
+        "field_of_study": null,
+        "gpa_or_honors": "3.00/4",
+        "institution": "Le Quy Don High School",
+        "start_year": 2019
+      }
+    ],
+    "experience_years": 0.5,
+    "job_titles": [
+      "Intern Backend Developer"
+    ],
+    "projects": [
+      {
+        "description": "Lead a team of 5 members to develop a REST API for a web and mobile application for farmers and workers, designed the farmer portal UI via Figma mockup and implemented it with Axios and Next.js, applied CI/CD using Heroku and Vercel, and developed a wallet system with payment integration via Pay OS.",
+        "heuristic_score": null,
+        "impact_metrics": [
+          "Team size: 5 members"
+        ],
+        "links": [],
+        "name": "Agro Temp - Agricultural Short-Term Recruitment Platform",
+        "role": "Leader, Fullstack Developer",
+        "technologies": [
+          "ASPNET Core Web API",
+          "PostgreSQL",
+          "Figma",
+          "Axios",
+          "Next.js",
+          "Heroku",
+          "Vercel"
+        ]
+      },
+      {
+        "description": "Developed a REST API deployed on Supabase, led a team of 4 members, designed a customer UI for booking consultant meetings and STI testing schedules via Figma and React.js, integrated Daily.co for online meetings, and implemented VNPay for payment processing with refunds and transaction histories.",
+        "heuristic_score": null,
+        "impact_metrics": [
+          "Team size: 4 members"
+        ],
+        "links": [],
+        "name": "Everwell Healthcare",
+        "role": "Leader; Backend Developer",
+        "technologies": [
+          "ASPNET Core Web API",
+          "PostgreSQL",
+          "Supabase",
+          "Figma",
+          "React.js",
+          "Daily.co API",
+          "VNPay"
+        ]
+      }
+    ],
+    "skills": [
+      "C#",
+      "SQL",
+      "PostgreSQL",
+      "SQL Server",
+      "Java",
+      "JavaScript",
+      "TypeScript",
+      "HTML",
+      "CSS",
+      "ASPNET",
+      "Next.js",
+      "React.js",
+      "Nest.js",
+      "NUnit",
+      "Entity Framework Core (LINQ)",
+      "Git",
+      "Azure",
+      "Heroku",
+      "Vercel",
+      "VS Code",
+      "Visual Studio",
+      "Postman",
+      "Rider",
+      "English (IELTS 7.0)",
+      "Vietnamese (Native)",
+      "Japanese (JLPT NS)",
+      "Scrum",
+      "CI/CD",
+      "JWT authentication",
+      "Axios",
+      "Cloudinary",
+      "Supabase",
+      "Pay OS",
+      "Daily.co API",
+      "VNPay"
+    ],
+    "summary": null,
+    "work_experience": [
+      {
+        "company": "FPT Software",
+        "end_date": "June 2025",
+        "responsibilities_and_impact": [
+          "Developed the back-end for a web application using ASPNET Core Web API and PostgreSQL hosted on Supabase",
+          "Used Cloudinary for image hosting service",
+          "Implemented JWT authentication for web application",
+          "Used axios to connect API to web application on React.js",
+          "Collaborated within a Scrum-driven development environment"
+        ],
+        "role": "Intern Backend Developer",
+        "start_date": "January 2025"
+      }
+    ]
+  },
+  "source_status": "RECOVERED_BY_OCR"
+}

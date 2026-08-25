@@ -1,0 +1,57 @@
+{
+  "id": "jd_002",
+  "domain": "IT",
+  "role": {
+    "job_title": "Data Science Intern",
+    "overview": "Support data scientists in exploratory data analysis, predictive modeling, and translating data insights while gaining hands‑on experience with real‑world datasets and MLOps practices."
+  },
+  "skills": {
+    "required": [
+      "Python",
+      "SQL",
+      "Pandas",
+      "NumPy",
+      "Scikit-learn",
+      "Matplotlib",
+      "Machine Learning fundamentals",
+      "Natural Language Processing fundamentals",
+      "Computer Vision fundamentals",
+      "Applied Statistics fundamentals",
+      "Ability to read and implement research papers",
+      "Strong verbal and written English communication",
+      "Analytical mindset",
+      "Problem‑solving capabilities",
+      "Collaborative team player"
+    ],
+    "preferred": [
+      "GCP",
+      "AWS",
+      "Azure",
+      "MLOps principles (model tracking, automated pipelines)",
+      "Looker Studio",
+      "Tableau",
+      "Streamlit"
+    ]
+  },
+  "experience": {
+    "minimum_years": 0.0
+  },
+  "education": {
+    "minimum_degree": "Bachelor",
+    "preferred_fields": [
+      "Mathematics",
+      "Statistics",
+      "Data Science",
+      "Computer Science",
+      "Quantitative"
+    ]
+  },
+  "responsibilities": [
+    "Formulate and evaluate data hypotheses; perform exploratory data analysis (EDA) to uncover key patterns and trends",
+    "Research, implement, and evaluate machine learning, statistical, or NLP algorithms tailored to project requirements",
+    "Collaborate with senior team members and business stakeholders to understand domain needs and project objectives",
+    "Stay current with emerging research, methodologies, and industry trends in data science",
+    "Document experimental workflows, model architectures, and performance metrics clearly"
+  ],
+  "certifications": []
+}

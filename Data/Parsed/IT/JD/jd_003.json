@@ -1,0 +1,60 @@
+{
+  "extraction_method": "groq_llm",
+  "filename": "jd_it_viettel.pdf",
+  "id": "jd_003",
+  "parsed_data": {
+    "company_name": "Viettel",
+    "job_overview": "Tham gia vào quy trình phát triển, thiết kế và triển khai các hệ thống phần mềm mission‑critical, xây dựng giao diện người dùng thời gian thực, hỗ trợ mô phỏng (HIL/SIL), kiểm thử, gỡ lỗi và tối ưu hiệu suất phần mềm trên môi trường Windows/Linux.",
+    "job_title": "Kỹ sư lập trình hệ thống",
+    "key_deliverables": [
+      "Hệ thống phần mềm mission‑critical cho các sản phẩm thực tế",
+      "Giao diện người dùng thời gian thực đáp ứng yêu cầu độ trễ thấp",
+      "Nền tảng mô phỏng HIL/SIL cho kiểm thử phần cứng và phần mềm",
+      "Microservice backend cho các dịch vụ hỗ trợ",
+      "Bộ công cụ CI/CD, Docker và Kubernetes cho triển khai liên tục"
+    ],
+    "min_experience_years": 0.5,
+    "preferred_fields": [
+      "Electrical Engineering",
+      "Electronics",
+      "Telecommunications",
+      "Automation",
+      "Computer Science",
+      "Information Technology"
+    ],
+    "preferred_skills": [
+      "Qt Framework and QML",
+      "Unit testing frameworks (Google Test, etc.)",
+      "Build systems (CMake, Bazel)",
+      "Docker and basic Kubernetes",
+      "Observability concepts (logging, metrics, tracing)",
+      "Java (Spring Boot, REST, Maven/Gradle)",
+      "JavaScript/TypeScript (React, Vue, Angular, Redux, Zustand)",
+      "Microservice backend development",
+      "SQL (PostgreSQL, MySQL) and NoSQL (MongoDB, Redis)"
+    ],
+    "required_certifications": [
+      "TOEIC ≥ 650"
+    ],
+    "required_degree": "Bachelor",
+    "required_skills": [
+      "C/C++ programming (C++11+)",
+      "Experience on Windows and Linux platforms",
+      "Git (advanced workflow, code review, CI/CD integration)",
+      "UML for system and software design",
+      "Real‑time / low‑latency software development",
+      "Debugging and performance optimization",
+      "English proficiency (TOEIC ≥ 650)"
+    ],
+    "responsibilities": [
+      "Tham gia toàn bộ vòng đời phát triển phần mềm: phân tích, thiết kế, lập trình, kiểm thử và bảo trì",
+      "Xây dựng giao diện người dùng thời gian thực (real‑time UI/HMI)",
+      "Thực hiện mô phỏng phần cứng‑in‑the‑loop (HIL) và phần mềm‑in‑the‑loop (SIL)",
+      "Kiểm tra, gỡ lỗi và tối ưu nguồn lực để đảm bảo chất lượng và hiệu suất",
+      "Phát triển và duy trì các thành phần phần mềm cho hệ thống mission‑critical",
+      "Hỗ trợ triển khai và vận hành môi trường CI/CD, Docker/Kubernetes",
+      "Làm việc nhóm, lập kế hoạch và phối hợp với các bộ phận liên quan"
+    ]
+  },
+  "source_status": "RECOVERED_BY_OCR"
+}

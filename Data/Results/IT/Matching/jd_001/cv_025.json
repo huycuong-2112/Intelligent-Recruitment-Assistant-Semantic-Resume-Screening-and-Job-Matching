@@ -1,0 +1,292 @@
+{
+  "jd_id": "jd_001",
+  "cv_id": "cv_025",
+  "score_0_1": 0.3303378184752429,
+  "status": "evaluated",
+  "skill": {
+    "score": 0.0,
+    "coverage": 1.0,
+    "matched_required": [],
+    "matched_preferred": [],
+    "missing_required": [
+      "Python programming",
+      "Data structures and algorithms",
+      "Version control (Git)",
+      "Basic Machine Learning / Deep Learning concepts",
+      "English proficiency (technical reading and communication)"
+    ],
+    "missing_preferred": [
+      "Large Language Models (LLMs) and agentic frameworks (e.g., LangChain, Google ADK)",
+      "Containerization (Docker)",
+      "Cloud platforms (AWS, Azure, GCP)",
+      "Generative AI prototyping",
+      "Basic Natural Language Processing concepts",
+      "Proactive learning and research mindset"
+    ],
+    "requirements": [
+      {
+        "jd_skill": "Python programming",
+        "importance": "required",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.36077460990518767,
+        "weight": 1.0
+      },
+      {
+        "jd_skill": "Data structures and algorithms",
+        "importance": "required",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.31198757816441375,
+        "weight": 1.0
+      },
+      {
+        "jd_skill": "Version control (Git)",
+        "importance": "required",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.6936658963484451,
+        "weight": 1.0
+      },
+      {
+        "jd_skill": "Basic Machine Learning / Deep Learning concepts",
+        "importance": "required",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.4257627306413267,
+        "weight": 1.0
+      },
+      {
+        "jd_skill": "English proficiency (technical reading and communication)",
+        "importance": "required",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.12046337132045494,
+        "weight": 1.0
+      },
+      {
+        "jd_skill": "Large Language Models (LLMs) and agentic frameworks (e.g., LangChain, Google ADK)",
+        "importance": "preferred",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.39946538685307365,
+        "weight": 0.5
+      },
+      {
+        "jd_skill": "Containerization (Docker)",
+        "importance": "preferred",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.24288056436122268,
+        "weight": 0.5
+      },
+      {
+        "jd_skill": "Cloud platforms (AWS, Azure, GCP)",
+        "importance": "preferred",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.2047794079801839,
+        "weight": 0.5
+      },
+      {
+        "jd_skill": "Generative AI prototyping",
+        "importance": "preferred",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.6110699813119653,
+        "weight": 0.5
+      },
+      {
+        "jd_skill": "Basic Natural Language Processing concepts",
+        "importance": "preferred",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.2598324575168665,
+        "weight": 0.5
+      },
+      {
+        "jd_skill": "Proactive learning and research mindset",
+        "importance": "preferred",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.15991876475337377,
+        "weight": 0.5
+      }
+    ]
+  },
+  "experience": {
+    "score": 0.43228605377158036,
+    "coverage": 1.0,
+    "years": {
+      "score": 1.0,
+      "availability": "available",
+      "status": "satisfied",
+      "weight": 0.3,
+      "details": {
+        "candidate_years": 0.0,
+        "minimum_years": 0.0
+      }
+    },
+    "evidence": {
+      "score": 0.18898007681654339,
+      "availability": "available",
+      "status": "evaluated",
+      "weight": 0.7,
+      "details": {
+        "responsibilities": [
+          {
+            "responsibility": "Deeply understand project objectives and study data hypotheses under guidance of senior team members",
+            "score": 0.09670740909532115,
+            "status": "low_match",
+            "matched_chunk_id": "cv_025_project_001",
+            "matched_text": "Architected a modular mobile app applying Clean Architecture and Flutter BLoC state management.",
+            "source_type": "project",
+            "source_name": "Community Board App",
+            "raw_similarity": 0.09670740909532115,
+            "threshold": 0.6
+          },
+          {
+            "responsibility": "Research and implement algorithms for data science and AI projects",
+            "score": 0.18150576902983193,
+            "status": "low_match",
+            "matched_chunk_id": "cv_025_project_002",
+            "matched_text": "Implemented real-time interactive features including debounced reactive search for users and posts using custom Event Transformers.",
+            "source_type": "project",
+            "source_name": "Community Board App",
+            "raw_similarity": 0.18150576902983193,
+            "threshold": 0.6
+          },
+          {
+            "responsibility": "Assist in prototyping features using Generative AI capabilities (LLMs, AI agents, embeddings) and basic NLP concepts",
+            "score": 0.2016619224771562,
+            "status": "low_match",
+            "matched_chunk_id": "cv_025_project_002",
+            "matched_text": "Implemented real-time interactive features including debounced reactive search for users and posts using custom Event Transformers.",
+            "source_type": "project",
+            "source_name": "Community Board App",
+            "raw_similarity": 0.2016619224771562,
+            "threshold": 0.6
+          },
+          {
+            "responsibility": "Support testing and benchmarking of AI models using established evaluation frameworks",
+            "score": 0.1964242921128409,
+            "status": "low_match",
+            "matched_chunk_id": "cv_025_project_005",
+            "matched_text": "Applied robust UI error-handling, fallback states for broken network assets, and optimistic UI updates for post likes.",
+            "source_type": "project",
+            "source_name": "Community Board App",
+            "raw_similarity": 0.1964242921128409,
+            "threshold": 0.6
+          },
+          {
+            "responsibility": "Stay updated on the latest research, trends, and technologies in data science and AI",
+            "score": 0.26860099136756677,
+            "status": "low_match",
+            "matched_chunk_id": "cv_025_project_003",
+            "matched_text": "Handled state synchronization across screens via an Event Bus architecture (post updates, deletions, and profile synchronizations).",
+            "source_type": "project",
+            "source_name": "Community Board App",
+            "raw_similarity": 0.26860099136756677,
+            "threshold": 0.6
+          }
+        ]
+      }
+    }
+  },
+  "education": {
+    "score": 0.6,
+    "coverage": 1.0,
+    "degree": {
+      "score": 1.0,
+      "availability": "available",
+      "status": "satisfied",
+      "weight": 0.6,
+      "details": {
+        "candidate": "Bachelor",
+        "required": "Bachelor"
+      }
+    },
+    "field": {
+      "score": 0.0,
+      "availability": "available",
+      "status": "no_evidence",
+      "weight": 0.4,
+      "details": {
+        "candidate": "Information Technology",
+        "preferred_fields": [
+          "Computer Science",
+          "Artificial Intelligence",
+          "Data Science"
+        ]
+      }
+    }
+  },
+  "semantic": {
+    "score": 0.2890652201293912,
+    "coverage": 1.0,
+    "status": "evaluated",
+    "availability": "available",
+    "raw_similarity": 0.2890652201293912
+  },
+  "mdms": {
+    "final_score": 0.3303378184752429,
+    "status": "evaluated",
+    "coverage": 1.0,
+    "effective_weights": {
+      "skill": 0.25,
+      "experience": 0.25,
+      "education": 0.25,
+      "semantic": 0.25
+    },
+    "weights": {
+      "skill": 0.25,
+      "experience": 0.25,
+      "education": 0.25,
+      "semantic": 0.25
+    }
+  }
+}

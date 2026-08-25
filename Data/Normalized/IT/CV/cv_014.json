@@ -1,0 +1,166 @@
+{
+  "id": "cv_014",
+  "domain": "IT",
+  "profile": {
+    "summary": "Final-year Information Technology student seeking a Software Engineer internship. Experienced building full-stack web applications, RESTful APIs, and database-driven systems with Java/Spring Boot and Node.js.",
+    "job_titles": [
+      "Full-Stack Developer",
+      "Backend Developer"
+    ]
+  },
+  "skills": {
+    "all": [
+      "Java",
+      "SQL",
+      "JavaScript",
+      "TypeScript",
+      "HTML",
+      "CSS",
+      "Spring Boot",
+      "Node.js",
+      "React",
+      "Express.js",
+      "Next.js",
+      "MySQL",
+      "PostgreSQL",
+      "Redis",
+      "Git",
+      "Docker",
+      "Postman",
+      "GitHub Actions",
+      "AWS EC2",
+      "AWS S3",
+      "OpenAPI/Swagger",
+      "k6",
+      "Problem Solving",
+      "Analytical Thinking",
+      "Communication",
+      "Teamwork",
+      "Adaptability",
+      "JUnit 5",
+      "Mockito",
+      "Testcontainers",
+      "Express"
+    ],
+    "explicit": [
+      "Java",
+      "SQL",
+      "JavaScript",
+      "TypeScript",
+      "HTML",
+      "CSS",
+      "Spring Boot",
+      "Node.js",
+      "React",
+      "Express.js",
+      "Next.js",
+      "MySQL",
+      "PostgreSQL",
+      "Redis",
+      "Git",
+      "Docker",
+      "Postman",
+      "GitHub Actions",
+      "AWS EC2",
+      "AWS S3",
+      "OpenAPI/Swagger",
+      "k6",
+      "Problem Solving",
+      "Analytical Thinking",
+      "Communication",
+      "Teamwork",
+      "Adaptability"
+    ],
+    "project_derived": [
+      "Java",
+      "Spring Boot",
+      "Next.js",
+      "PostgreSQL",
+      "Redis",
+      "JUnit 5",
+      "Mockito",
+      "Testcontainers",
+      "GitHub Actions",
+      "Docker",
+      "AWS EC2",
+      "Node.js",
+      "Express",
+      "React",
+      "MySQL"
+    ]
+  },
+  "experience": {
+    "professional_years": 0.6,
+    "work_evidence": [],
+    "project_evidence": [
+      "Designed a modular monolith e-commerce backend using Java21 and Spring Boot 4 across multiple domains, implemented hybrid EAV/JSON schema, JWT authentication with token blacklisting, distributed locking with Redisson, role‑based access control, comprehensive unit testing, CI/CD pipeline, and OpenAPI/Swagger documentation.",
+      "Built 150+ CRUD REST APIs across 21 modules, integrated three payment gateways (MoMo, VNPay, PayOS) with HMAC SHA256 verification, added GHN shipping API for real‑time tracking, and prevented overselling using pessimistic locking within DB transactions."
+    ]
+  },
+  "education": {
+    "degree": "Bachelor",
+    "field": "Information Technology",
+    "history": [
+      {
+        "degree": "Bachelor",
+        "end_year": 2026,
+        "field_of_study": "Information Technology",
+        "gpa_or_honors": null,
+        "institution": "Saigon Technology University",
+        "start_year": 2021
+      }
+    ]
+  },
+  "projects": [
+    {
+      "description": "Designed a modular monolith e-commerce backend using Java21 and Spring Boot 4 across multiple domains, implemented hybrid EAV/JSON schema, JWT authentication with token blacklisting, distributed locking with Redisson, role‑based access control, comprehensive unit testing, CI/CD pipeline, and OpenAPI/Swagger documentation.",
+      "heuristic_score": null,
+      "impact_metrics": [
+        "0% overselling under 50 concurrent orders (vs. 100% DB deadlock failures unprotected)",
+        "364 RPS with 105ms p95 latency under load",
+        "57% unit test code coverage"
+      ],
+      "links": [
+        "GitHub repository"
+      ],
+      "name": "Scalable E-commerce Platform",
+      "role": "Full-Stack Developer",
+      "technologies": [
+        "Java",
+        "Spring Boot",
+        "Next.js",
+        "PostgreSQL",
+        "Redis",
+        "JUnit 5",
+        "Mockito",
+        "Testcontainers",
+        "GitHub Actions",
+        "Docker",
+        "AWS EC2"
+      ]
+    },
+    {
+      "description": "Built 150+ CRUD REST APIs across 21 modules, integrated three payment gateways (MoMo, VNPay, PayOS) with HMAC SHA256 verification, added GHN shipping API for real‑time tracking, and prevented overselling using pessimistic locking within DB transactions.",
+      "heuristic_score": null,
+      "impact_metrics": [
+        "150+ CRUD REST APIs",
+        "Integrated 3 payment gateways",
+        "Real‑time delivery tracking via GHN API"
+      ],
+      "links": [
+        "GitHub repository"
+      ],
+      "name": "PC Shop",
+      "role": "Backend Developer",
+      "technologies": [
+        "Node.js",
+        "Express",
+        "React",
+        "MySQL"
+      ]
+    }
+  ],
+  "certifications": [
+    "TOEIC 930 LR (May 2026)"
+  ]
+}

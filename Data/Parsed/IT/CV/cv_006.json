@@ -1,0 +1,97 @@
+{
+  "domain": "IT",
+  "extraction_method": "groq_llm",
+  "filename": "021.jpg",
+  "id": "cv_006",
+  "parsed_data": {
+    "certifications": [],
+    "education_degree": "Bachelor",
+    "education_field": "Công nghệ thông tin - Ứng dụng phần mềm",
+    "education_history": [
+      {
+        "degree": "Bachelor",
+        "end_year": 2022,
+        "field_of_study": "Công nghệ thông tin - Ứng dụng phần mềm",
+        "gpa_or_honors": null,
+        "institution": "Đại học Bách Khoa Hà Nội",
+        "start_year": 2018
+      }
+    ],
+    "experience_years": 3.4,
+    "job_titles": [
+      "Chuyenvien Trienkhai Phanmem"
+    ],
+    "projects": [
+      {
+        "description": "UAT testing for a cinema management system covering ticket booking, payment integration, schedule management and check‑in via website and mobile app.",
+        "heuristic_score": null,
+        "impact_metrics": [
+          "Phát hiện và ghi nhận lỗi trong giai đoạn UAT, góp phần cải thiện chất lượng phần mềm trước khi triển khai."
+        ],
+        "links": [],
+        "name": "Rap chiếu phim Quốc gia (NCC)",
+        "role": "UAT Tester",
+        "technologies": [
+          "Web",
+          "Mobile",
+          "API",
+          "Postman",
+          "Jira"
+        ]
+      }
+    ],
+    "skills": [
+      "Software implementation",
+      "System configuration",
+      "API testing",
+      "Postman",
+      "Jira",
+      "Customer consulting",
+      "Training",
+      "Go‑live support",
+      "Zalo group management",
+      "Payment integration",
+      "VNPay",
+      "Red Bus",
+      "MISA",
+      "Viettel",
+      "VISNAM",
+      "Min Voice",
+      "IPVoice Cloud",
+      "V9",
+      "Tri Anh",
+      "Care Soft",
+      "PowerPoint",
+      "Excel",
+      "Cap Cut",
+      "Google Meet",
+      "Microsoft Teams",
+      "B2B solutions",
+      "UAT",
+      "Web",
+      "Mobile"
+    ],
+    "summary": "Software development engineer with over 3 years of experience, trained more than 1000 users and implemented software solutions for over 200 enterprises, handling client communication, system integration, UAT, training and post‑go‑live support.",
+    "work_experience": [
+      {
+        "company": "Not specified",
+        "end_date": "Present",
+        "responsibilities_and_impact": [
+          "Tiếp cận và tư vấn khách hàng, hỗ trợ hơn 200 khách hàng tới bộ phận Kinh doanh, khảo sát quy trình vận hành và đề xuất giải pháp phần mềm đa cấu hình.",
+          "Cài đặt, cấu hình và kiểm tra phần mềm theo đặc thù doanh nghiệp (tuyến xe, phân quyền, module bán vé, báo cáo vận hành).",
+          "Tích hợp hoá đơn/ve điện tử với MISA, Viettel, VISNAM, Min Voice.",
+          "Tích hợp kênh phân phối đại lý VNPay, Red Bus.",
+          "Tích hợp dữ liệu tổng đại IPVoice Cloud, V9, Tri Anh, Care Soft.",
+          "Tích hợp dữ liệu với đơn vị trung chuyển Green SM và Be.",
+          "Thực hiện UAT web và mobile, kiểm tra API bằng Postman, ghi nhận bug trên Jira và đạt 90% go‑live đúng tiến độ.",
+          "Đào tạo và chuyển giao: đào tạo hơn 1000 người dùng online qua Google Meet, Teams và onsite tại 8 tỉnh thành, hướng dẫn 30 nhân viên Bến xe Hà Nội và toàn bộ vận hành.",
+          "Chăm sóc và hỗ trợ sau Go‑live: duy trì group Zalo để tương tác khách hàng, xử lý sự cố và hỗ trợ người dùng.",
+          "Mở rộng kênh phân phối Red Bus, VNPay: cấu hình và go‑live tích hợp thanh toán, nâng cao doanh thu ngoài kênh bán vé truyền thống."
+        ],
+        "role": "Chuyenvien Trienkhai Phanmem",
+        "start_date": "03/2023"
+      }
+    ]
+  },
+  "source_status": "RECOVERED_BY_OCR"
+}

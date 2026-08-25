@@ -1,0 +1,158 @@
+{
+  "id": "cv_032",
+  "domain": "IT",
+  "profile": {
+    "summary": null,
+    "job_titles": []
+  },
+  "skills": {
+    "all": [
+      "Python",
+      "C++",
+      "SQL",
+      "PyTorch",
+      "Hugging Face Transformers",
+      "LangChain",
+      "LangGraph",
+      "FastAPI",
+      "Scikit-learn",
+      "Pandas",
+      "NumPy",
+      "Qdrant",
+      "FAISS",
+      "Redis Cloud",
+      "Multi-Agent Systems",
+      "Retrieval-Augmented Generation (RAG)",
+      "Transformers",
+      "LLM",
+      "Docker",
+      "Langfuse",
+      "Git",
+      "BAAI/bge-m3",
+      "Groq API",
+      "Gemini API",
+      "Crawl4AI",
+      "SearXNG",
+      "Jina AI",
+      "Streamlit",
+      "Ollama"
+    ],
+    "explicit": [
+      "Python",
+      "C++",
+      "SQL",
+      "PyTorch",
+      "Hugging Face Transformers",
+      "LangChain",
+      "LangGraph",
+      "FastAPI",
+      "Scikit-learn",
+      "Pandas",
+      "NumPy",
+      "Qdrant",
+      "FAISS",
+      "Redis Cloud",
+      "Multi-Agent Systems",
+      "Retrieval-Augmented Generation (RAG)",
+      "Transformers",
+      "LLM",
+      "Docker",
+      "Langfuse",
+      "Git"
+    ],
+    "project_derived": [
+      "Python",
+      "FastAPI",
+      "LangGraph",
+      "LangChain",
+      "Qdrant",
+      "BAAI/bge-m3",
+      "Groq API",
+      "Gemini API",
+      "Crawl4AI",
+      "SearXNG",
+      "Jina AI",
+      "FAISS",
+      "Redis Cloud",
+      "Langfuse",
+      "Docker",
+      "Streamlit",
+      "Ollama"
+    ]
+  },
+  "experience": {
+    "professional_years": 0.0,
+    "work_evidence": [],
+    "project_evidence": [
+      "Architected a multi‑agent pipeline using LangGraph across five specialized nodes (Triage, Supervisor, Factor, Harm, Suggestion). Implemented a Dual‑LLM routing strategy (Groq + Gemini 2.0 Flash) and an asynchronous hybrid retrieval system combining Qdrant with real‑time web scraping (SearXNG, Crawl4AI, Jina Reranker). Optimized async pipeline execution with 12 s timeout controls, eliminating deadlocks and ensuring high request‑completion reliability.",
+      "Architected an RAG pipeline using LangChain to answer corporate policy queries with tool‑calling, enabling Llama 3.2 to autonomously query FAISS or respond directly. Built semantic caching with Redis to reduce repeated LLM calls and achieve sub‑30 ms response time. Developed real‑time SSE streaming via FastAPI async generators and integrated Langfuse for tracing, prompt versioning, and automated evaluation."
+    ]
+  },
+  "education": {
+    "degree": "Bachelor",
+    "field": "Data Science",
+    "history": [
+      {
+        "degree": "Bachelor",
+        "end_year": 2026,
+        "field_of_study": "Data Science",
+        "gpa_or_honors": "3.5/4",
+        "institution": "University of Science - VNUHCM",
+        "start_year": 2022
+      }
+    ]
+  },
+  "projects": [
+    {
+      "description": "Architected a multi‑agent pipeline using LangGraph across five specialized nodes (Triage, Supervisor, Factor, Harm, Suggestion). Implemented a Dual‑LLM routing strategy (Groq + Gemini 2.0 Flash) and an asynchronous hybrid retrieval system combining Qdrant with real‑time web scraping (SearXNG, Crawl4AI, Jina Reranker). Optimized async pipeline execution with 12 s timeout controls, eliminating deadlocks and ensuring high request‑completion reliability.",
+      "heuristic_score": null,
+      "impact_metrics": [
+        "100% guardrail accuracy",
+        "35% reduction in routing latency",
+        "40% reduction in API token costs",
+        "Result retrieval time 8‑12 s",
+        "100% elimination of event‑loop deadlocks",
+        "99.9% request completion reliability"
+      ],
+      "links": [],
+      "name": "Dia Care Flow – Personalized Diabetes Multi-Agent RAG System",
+      "role": null,
+      "technologies": [
+        "Python",
+        "FastAPI",
+        "LangGraph",
+        "LangChain",
+        "Qdrant",
+        "BAAI/bge-m3",
+        "Groq API",
+        "Gemini API",
+        "Crawl4AI",
+        "SearXNG",
+        "Jina AI"
+      ]
+    },
+    {
+      "description": "Architected an RAG pipeline using LangChain to answer corporate policy queries with tool‑calling, enabling Llama 3.2 to autonomously query FAISS or respond directly. Built semantic caching with Redis to reduce repeated LLM calls and achieve sub‑30 ms response time. Developed real‑time SSE streaming via FastAPI async generators and integrated Langfuse for tracing, prompt versioning, and automated evaluation.",
+      "heuristic_score": null,
+      "impact_metrics": [
+        "Sub‑30 ms response time for similar queries",
+        "High inference availability via multi‑provider fallback"
+      ],
+      "links": [],
+      "name": "RAGSystem for Employee Handbook Q&A",
+      "role": null,
+      "technologies": [
+        "Python",
+        "FastAPI",
+        "LangChain",
+        "FAISS",
+        "Redis Cloud",
+        "Langfuse",
+        "Docker",
+        "Streamlit",
+        "Ollama"
+      ]
+    }
+  ],
+  "certifications": []
+}

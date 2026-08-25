@@ -1,0 +1,296 @@
+{
+  "jd_id": "jd_001",
+  "cv_id": "cv_010",
+  "score_0_1": 0.47707436082378335,
+  "status": "evaluated",
+  "skill": {
+    "score": 0.11339944191090037,
+    "coverage": 1.0,
+    "matched_required": [
+      "Python programming"
+    ],
+    "matched_preferred": [],
+    "missing_required": [
+      "Data structures and algorithms",
+      "Version control (Git)",
+      "Basic Machine Learning / Deep Learning concepts",
+      "English proficiency (technical reading and communication)"
+    ],
+    "missing_preferred": [
+      "Large Language Models (LLMs) and agentic frameworks (e.g., LangChain, Google ADK)",
+      "Containerization (Docker)",
+      "Cloud platforms (AWS, Azure, GCP)",
+      "Generative AI prototyping",
+      "Basic Natural Language Processing concepts",
+      "Proactive learning and research mindset"
+    ],
+    "requirements": [
+      {
+        "jd_skill": "Python programming",
+        "importance": "required",
+        "score": 0.907195535287203,
+        "availability": "available",
+        "status": "matched",
+        "match_method": "semantic",
+        "matched_cv_skill": "Python",
+        "cv_skill_provenance": [
+          "explicit",
+          "project_derived"
+        ],
+        "similarity": 0.907195535287203,
+        "weight": 1.0
+      },
+      {
+        "jd_skill": "Data structures and algorithms",
+        "importance": "required",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.5210617028062223,
+        "weight": 1.0
+      },
+      {
+        "jd_skill": "Version control (Git)",
+        "importance": "required",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.09994200578360568,
+        "weight": 1.0
+      },
+      {
+        "jd_skill": "Basic Machine Learning / Deep Learning concepts",
+        "importance": "required",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.5256541023460152,
+        "weight": 1.0
+      },
+      {
+        "jd_skill": "English proficiency (technical reading and communication)",
+        "importance": "required",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.24170175132884317,
+        "weight": 1.0
+      },
+      {
+        "jd_skill": "Large Language Models (LLMs) and agentic frameworks (e.g., LangChain, Google ADK)",
+        "importance": "preferred",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.27209602387862336,
+        "weight": 0.5
+      },
+      {
+        "jd_skill": "Containerization (Docker)",
+        "importance": "preferred",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.22015825727459337,
+        "weight": 0.5
+      },
+      {
+        "jd_skill": "Cloud platforms (AWS, Azure, GCP)",
+        "importance": "preferred",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.20127792486993676,
+        "weight": 0.5
+      },
+      {
+        "jd_skill": "Generative AI prototyping",
+        "importance": "preferred",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.3334391474527015,
+        "weight": 0.5
+      },
+      {
+        "jd_skill": "Basic Natural Language Processing concepts",
+        "importance": "preferred",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.3773675662777919,
+        "weight": 0.5
+      },
+      {
+        "jd_skill": "Proactive learning and research mindset",
+        "importance": "preferred",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.171339783730528,
+        "weight": 0.5
+      }
+    ]
+  },
+  "experience": {
+    "score": 0.463141227473714,
+    "coverage": 1.0,
+    "years": {
+      "score": 1.0,
+      "availability": "available",
+      "status": "satisfied",
+      "weight": 0.3,
+      "details": {
+        "candidate_years": 1.7,
+        "minimum_years": 0.0
+      }
+    },
+    "evidence": {
+      "score": 0.23305889639102,
+      "availability": "available",
+      "status": "evaluated",
+      "weight": 0.7,
+      "details": {
+        "responsibilities": [
+          {
+            "responsibility": "Deeply understand project objectives and study data hypotheses under guidance of senior team members",
+            "score": 0.18575108979387414,
+            "status": "low_match",
+            "matched_chunk_id": "cv_010_project_002",
+            "matched_text": "Impact: Model accuracy 89%.",
+            "source_type": "project",
+            "source_name": "FP-Growth for Breast Cancer Association Rules",
+            "raw_similarity": 0.18575108979387414,
+            "threshold": 0.6
+          },
+          {
+            "responsibility": "Research and implement algorithms for data science and AI projects",
+            "score": 0.27740802348882054,
+            "status": "low_match",
+            "matched_chunk_id": "cv_010_work_002",
+            "matched_text": "Phân tích, trực quan hoá dữ liệu bằng Excel, Power BI, Python (pandas, seaborn).",
+            "source_type": "work",
+            "source_name": "4PSORT",
+            "raw_similarity": 0.27740802348882054,
+            "threshold": 0.6
+          },
+          {
+            "responsibility": "Assist in prototyping features using Generative AI capabilities (LLMs, AI agents, embeddings) and basic NLP concepts",
+            "score": 0.13681985831622126,
+            "status": "low_match",
+            "matched_chunk_id": "cv_010_project_002",
+            "matched_text": "Impact: Model accuracy 89%.",
+            "source_type": "project",
+            "source_name": "FP-Growth for Breast Cancer Association Rules",
+            "raw_similarity": 0.13681985831622126,
+            "threshold": 0.6
+          },
+          {
+            "responsibility": "Support testing and benchmarking of AI models using established evaluation frameworks",
+            "score": 0.37248980077743604,
+            "status": "low_match",
+            "matched_chunk_id": "cv_010_project_002",
+            "matched_text": "Impact: Model accuracy 89%.",
+            "source_type": "project",
+            "source_name": "FP-Growth for Breast Cancer Association Rules",
+            "raw_similarity": 0.37248980077743604,
+            "threshold": 0.6
+          },
+          {
+            "responsibility": "Stay updated on the latest research, trends, and technologies in data science and AI",
+            "score": 0.19282570957874803,
+            "status": "low_match",
+            "matched_chunk_id": "cv_010_work_002",
+            "matched_text": "Phân tích, trực quan hoá dữ liệu bằng Excel, Power BI, Python (pandas, seaborn).",
+            "source_type": "work",
+            "source_name": "4PSORT",
+            "raw_similarity": 0.19282570957874803,
+            "threshold": 0.6
+          }
+        ]
+      }
+    }
+  },
+  "education": {
+    "score": 1.0,
+    "coverage": 1.0,
+    "degree": {
+      "score": 1.0,
+      "availability": "available",
+      "status": "satisfied",
+      "weight": 0.6,
+      "details": {
+        "candidate": "Bachelor",
+        "required": "Bachelor"
+      }
+    },
+    "field": {
+      "score": 1.0,
+      "availability": "available",
+      "status": "matched",
+      "weight": 0.4,
+      "details": {
+        "candidate": "Data Science",
+        "preferred_fields": [
+          "Computer Science",
+          "Artificial Intelligence",
+          "Data Science"
+        ]
+      }
+    }
+  },
+  "semantic": {
+    "score": 0.3317567739105191,
+    "coverage": 1.0,
+    "status": "evaluated",
+    "availability": "available",
+    "raw_similarity": 0.3317567739105191
+  },
+  "mdms": {
+    "final_score": 0.47707436082378335,
+    "status": "evaluated",
+    "coverage": 1.0,
+    "effective_weights": {
+      "skill": 0.25,
+      "experience": 0.25,
+      "education": 0.25,
+      "semantic": 0.25
+    },
+    "weights": {
+      "skill": 0.25,
+      "experience": 0.25,
+      "education": 0.25,
+      "semantic": 0.25
+    }
+  }
+}

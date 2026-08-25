@@ -1,0 +1,136 @@
+{
+  "domain": "IT",
+  "extraction_method": "groq_llm",
+  "filename": "045.jpg",
+  "id": "cv_013",
+  "parsed_data": {
+    "certifications": [],
+    "education_degree": "Bachelor",
+    "education_field": "Network Systems and IoT",
+    "education_history": [
+      {
+        "degree": "Bachelor",
+        "end_year": 2026,
+        "field_of_study": "Network Systems and IoT",
+        "gpa_or_honors": "GPA 3.2/4.0",
+        "institution": "Hanoi University of Civil Engineering",
+        "start_year": 2023
+      }
+    ],
+    "experience_years": 0.0,
+    "job_titles": [],
+    "projects": [
+      {
+        "description": "Smart Garden IoT System utilizes an ESP32 integrated with various sensors and relays to monitor and control environmental conditions. The system features a Spring Boot and Angular stack, utilizing MQTT for real‑time data transmission, Influx DB for timeseries storage via Telegraf, and Grafana for visualization. It also incorporates Home Assistant for automation, Docker Compose for containerized deployment, and basic AI models to provide environmental insights and predictions.",
+        "heuristic_score": null,
+        "impact_metrics": [],
+        "links": [
+          "https://github.com/Doan Duc Huy68IT3/smart-garden-iot",
+          "https://github.com/Doan Duc Huy68IT3/iot-config-docker"
+        ],
+        "name": "Smart Garden IoT System",
+        "role": "Developer",
+        "technologies": [
+          "ESP32",
+          "DHT22",
+          "HC-SR04",
+          "soil moisture sensor",
+          "PIR motion sensor",
+          "LDR light sensor",
+          "MQ gas sensors",
+          "HC-05 Bluetooth module",
+          "Spring Boot",
+          "Angular",
+          "MQTT",
+          "Influx DB",
+          "Telegraf",
+          "Grafana",
+          "Home Assistant",
+          "Docker Compose",
+          "AI models"
+        ]
+      },
+      {
+        "description": "Developed a real‑time chat application using Spring Boot (backend) and Angular (frontend), enabling seamless messaging through a responsive chat interface and RESTful APIs. The system also integrates AI features to enhance user interaction and provide intelligent responses.",
+        "heuristic_score": null,
+        "impact_metrics": [],
+        "links": [
+          "https://github.com/Doan Duc Huy68IT3/backend_chat",
+          "https://github.com/Doan Duc Huy68IT3/frontend_chat"
+        ],
+        "name": "Real‑time Chat Application",
+        "role": "Developer",
+        "technologies": [
+          "Spring Boot",
+          "Angular",
+          "RESTful APIs",
+          "AI features"
+        ]
+      },
+      {
+        "description": "Implemented custom HTTP communication over TCP sockets using C++. Developed low‑level client‑server networking logic to facilitate raw data exchange and demonstrate a foundational understanding of network protocols.",
+        "heuristic_score": null,
+        "impact_metrics": [],
+        "links": [
+          "https://github.com/Doan Duc Huy68IT3/server_socket",
+          "https://github.com/Doan Duc Huy68IT3/client_socket"
+        ],
+        "name": "HTTP over Sockets (C++)",
+        "role": "Developer",
+        "technologies": [
+          "C++",
+          "TCP sockets",
+          "HTTP"
+        ]
+      },
+      {
+        "description": "Deployed a comprehensive Wazuh SIEM environment to perform security monitoring and log analysis. Configured agents, manager, and integrated firewall, IDS/IPS, and WAF components.",
+        "heuristic_score": null,
+        "impact_metrics": [],
+        "links": [],
+        "name": "Wazuh Security System",
+        "role": "Developer",
+        "technologies": [
+          "Wazuh",
+          "SIEM",
+          "Firewall",
+          "IDS/IPS",
+          "WAF"
+        ]
+      }
+    ],
+    "skills": [
+      "C++",
+      "Java",
+      "Python",
+      "Spring Boot",
+      "Angular",
+      "ESP32",
+      "Arduino",
+      "Raspberry Pi",
+      "HTTP",
+      "MQTT",
+      "Web Socket",
+      "TCP/UDP",
+      "UART",
+      "I2C",
+      "SPI",
+      "Zigbee",
+      "MQTT over Wi‑Fi",
+      "Docker",
+      "Docker Compose",
+      "Mosquitto",
+      "Influx DB",
+      "Telegraf",
+      "Grafana",
+      "Home Assistant",
+      "Object‑Oriented Programming",
+      "Algorithms",
+      "AI models",
+      "RESTful APIs"
+    ],
+    "summary": "As a final-year student majoring in Network Systems and IoT at Hanoi University of Civil Engineering, I have built a solid foundation through active involvement in research and practical development projects. With a career focus on software development and IoT systems, I am currently seeking a full-time position where I can apply my technical expertise, contribute to real‑world projects, and grow within a professional environment.",
+    "work_experience": []
+  },
+  "source_status": "ACCEPTED_BY_DOCLING"
+}

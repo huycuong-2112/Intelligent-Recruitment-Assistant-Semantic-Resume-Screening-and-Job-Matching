@@ -1,0 +1,177 @@
+{
+  "metrics": {
+    "rule_based": {
+      "recall@5": 0.8,
+      "recall@10": 1.0,
+      "recall@15": 1.0,
+      "ndcg@5": 0.7797481355613946,
+      "ndcg@10": 0.9035952210540213,
+      "ndcg@15": 0.9035952210540213,
+      "spearman": 0.4670403356568722,
+      "mae": 0.9688888888888889
+    },
+    "equal_mdms": {
+      "recall@5": 0.8,
+      "recall@10": 1.0,
+      "recall@15": 1.0,
+      "ndcg@5": 0.7843762699362018,
+      "ndcg@10": 0.8259349581299807,
+      "ndcg@15": 0.8259349581299807,
+      "spearman": 0.759758888846854,
+      "mae_0_to_3": 0.8202332802108788
+    },
+    "full_tuned": {
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "recall@15": 1.0,
+      "ndcg@5": 0.8698687319194839,
+      "ndcg@10": 0.8793433720438693,
+      "ndcg@15": 0.8793433720438693,
+      "spearman": 0.9021441564491928,
+      "mae_0_to_3": 0.7152424218541342
+    },
+    "no_semantic_frozen": {
+      "recall@5": 0.6,
+      "recall@10": 1.0,
+      "recall@15": 1.0,
+      "ndcg@5": 0.6333513308383866,
+      "ndcg@10": 0.8105814675307701,
+      "ndcg@15": 0.8255738528108971,
+      "spearman": 0.7530845794279944,
+      "mae_0_to_3": 0.7414612695546372
+    },
+    "no_semantic_reoptimized": {
+      "recall@5": 0.8,
+      "recall@10": 1.0,
+      "recall@15": 1.0,
+      "ndcg@5": 0.7867608030679949,
+      "ndcg@10": 0.8272670758424565,
+      "ndcg@15": 0.8434731339567159,
+      "spearman": 0.8298391377448803,
+      "mae_0_to_3": 0.7953730881886865
+    }
+  },
+  "correlations": [
+    {
+      "component": "skill_score",
+      "spearman_skill_score": 1.0,
+      "pearson_skill_score": 0.9999999999999999,
+      "spearman_experience_score": 0.6251481524706679,
+      "pearson_experience_score": 0.6876333560971393,
+      "spearman_education_score": 0.45912846398829316,
+      "pearson_education_score": 0.3647078709703649,
+      "spearman_semantic_score": 0.7143051876384645,
+      "pearson_semantic_score": 0.7534187947580643,
+      "spearman_s_evidence_continuous": 0.6251481524706679,
+      "pearson_s_evidence_continuous": 0.6876333560971394
+    },
+    {
+      "component": "experience_score",
+      "spearman_skill_score": 0.6251481524706679,
+      "pearson_skill_score": 0.6876333560971393,
+      "spearman_experience_score": 1.0,
+      "pearson_experience_score": 0.9999999999999999,
+      "spearman_education_score": 0.12247926660025583,
+      "pearson_education_score": 0.18673281617596998,
+      "spearman_semantic_score": 0.8080495356037152,
+      "pearson_semantic_score": 0.7711262332360307,
+      "spearman_s_evidence_continuous": 1.0,
+      "pearson_s_evidence_continuous": 0.9999999999999998
+    },
+    {
+      "component": "education_score",
+      "spearman_skill_score": 0.4591284639882931,
+      "pearson_skill_score": 0.3647078709703649,
+      "spearman_experience_score": 0.12247926660025585,
+      "pearson_experience_score": 0.18673281617596998,
+      "spearman_education_score": 1.0,
+      "pearson_education_score": 1.0,
+      "spearman_semantic_score": 0.2304717382262879,
+      "pearson_semantic_score": 0.10565829307477793,
+      "spearman_s_evidence_continuous": 0.12247926660025585,
+      "pearson_s_evidence_continuous": 0.1867328161759702
+    },
+    {
+      "component": "semantic_score",
+      "spearman_skill_score": 0.7143051876384645,
+      "pearson_skill_score": 0.7534187947580643,
+      "spearman_experience_score": 0.8080495356037152,
+      "pearson_experience_score": 0.7711262332360307,
+      "spearman_education_score": 0.2304717382262879,
+      "pearson_education_score": 0.10565829307477793,
+      "spearman_semantic_score": 1.0,
+      "pearson_semantic_score": 0.9999999999999997,
+      "spearman_s_evidence_continuous": 0.8080495356037152,
+      "pearson_s_evidence_continuous": 0.7711262332360307
+    },
+    {
+      "component": "s_evidence_continuous",
+      "spearman_skill_score": 0.6251481524706679,
+      "pearson_skill_score": 0.6876333560971394,
+      "spearman_experience_score": 1.0,
+      "pearson_experience_score": 0.9999999999999998,
+      "spearman_education_score": 0.12247926660025583,
+      "pearson_education_score": 0.1867328161759702,
+      "spearman_semantic_score": 0.8080495356037152,
+      "pearson_semantic_score": 0.7711262332360307,
+      "spearman_s_evidence_continuous": 1.0,
+      "pearson_s_evidence_continuous": 0.9999999999999999
+    }
+  ],
+  "stability": {
+    "winner": {
+      "w_skill": 0.4,
+      "w_experience": 0.2,
+      "w_education": 0.1,
+      "w_semantic": 0.3,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "recall@15": 1.0,
+      "ndcg@5": 0.8698687319194839,
+      "ndcg@10": 0.8793433720438693,
+      "ndcg@15": 0.8793433720438693,
+      "spearman": 0.9021441564491928,
+      "mae_0_to_3": 0.7152424218541343,
+      "objective_rank": 1.0
+    },
+    "within_0.01": 3,
+    "within_0.02": 22,
+    "semantic_distribution_within_0.01": {
+      "0.3": 2,
+      "0.4": 1
+    },
+    "semantic_distribution_within_0.02": {
+      "0.1": 1,
+      "0.2": 3,
+      "0.3": 5,
+      "0.4": 6,
+      "0.5": 4,
+      "0.6": 1,
+      "0.7": 1,
+      "0.8": 1
+    }
+  },
+  "no_semantic_best": {
+    "w_skill": 0.4,
+    "w_experience": 0.6,
+    "w_education": 0.0,
+    "recall@5": 0.8,
+    "recall@10": 1.0,
+    "recall@15": 1.0,
+    "ndcg@5": 0.7867608030679949,
+    "ndcg@10": 0.8272670758424565,
+    "ndcg@15": 0.8434731339567159,
+    "spearman": 0.8298391377448803,
+    "mae_0_to_3": 0.7953730881886865
+  },
+  "full_minus_no_semantic": {
+    "recall@5": 0.19999999999999996,
+    "recall@10": 0.0,
+    "recall@15": 0.0,
+    "ndcg@5": 0.08310792885148899,
+    "ndcg@10": 0.05207629620141274,
+    "ndcg@15": 0.035870238087153394,
+    "spearman": 0.0723050187043125,
+    "mae_0_to_3": -0.08013066633455224
+  }
+}

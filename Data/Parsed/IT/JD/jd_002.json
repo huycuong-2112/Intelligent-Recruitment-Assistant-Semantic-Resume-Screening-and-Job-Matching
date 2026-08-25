@@ -1,0 +1,60 @@
+{
+  "extraction_method": "groq_llm",
+  "filename": "Data Science Intern.pdf",
+  "id": "jd_002",
+  "parsed_data": {
+    "company_name": null,
+    "job_overview": "Support data scientists in exploratory data analysis, predictive modeling, and translating data insights while gaining hands‑on experience with real‑world datasets and MLOps practices.",
+    "job_title": "Data Science Intern",
+    "key_deliverables": [
+      "Deliver exploratory data analysis reports highlighting actionable insights",
+      "Develop and evaluate predictive models for assigned business problems",
+      "Produce documented model pipelines and performance dashboards",
+      "Contribute to MLOps implementation such as model tracking and automated deployment"
+    ],
+    "min_experience_years": 0.0,
+    "preferred_fields": [
+      "Mathematics",
+      "Statistics",
+      "Data Science",
+      "Computer Science",
+      "Quantitative"
+    ],
+    "preferred_skills": [
+      "GCP",
+      "AWS",
+      "Azure",
+      "MLOps principles (model tracking, automated pipelines)",
+      "Looker Studio",
+      "Tableau",
+      "Streamlit"
+    ],
+    "required_certifications": [],
+    "required_degree": "Bachelor",
+    "required_skills": [
+      "Python",
+      "SQL",
+      "Pandas",
+      "NumPy",
+      "Scikit-Learn",
+      "Matplotlib",
+      "Machine Learning fundamentals",
+      "Natural Language Processing fundamentals",
+      "Computer Vision fundamentals",
+      "Applied Statistics fundamentals",
+      "Ability to read and implement research papers",
+      "Strong verbal and written English communication",
+      "Analytical mindset",
+      "Problem‑solving capabilities",
+      "Collaborative team player"
+    ],
+    "responsibilities": [
+      "Formulate and evaluate data hypotheses; perform exploratory data analysis (EDA) to uncover key patterns and trends",
+      "Research, implement, and evaluate machine learning, statistical, or NLP algorithms tailored to project requirements",
+      "Collaborate with senior team members and business stakeholders to understand domain needs and project objectives",
+      "Stay current with emerging research, methodologies, and industry trends in data science",
+      "Document experimental workflows, model architectures, and performance metrics clearly"
+    ]
+  },
+  "source_status": "ACCEPTED_BY_DOCLING"
+}

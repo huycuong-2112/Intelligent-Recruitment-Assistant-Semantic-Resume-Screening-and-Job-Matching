@@ -1,0 +1,169 @@
+[
+  {
+    "id": "jd_001",
+    "filename": "AI Engineer Intern.pdf",
+    "extraction_method": "groq_llm",
+    "source_status": "ACCEPTED_BY_DOCLING",
+    "parsed_data": {
+      "job_title": "AI Engineer Intern",
+      "company_name": null,
+      "job_overview": "Join the team as an AI Engineer Intern to work closely with senior engineers on building and deploying AI/ML applications, with a focus on Generative AI and large language models.",
+      "min_experience_years": 0.0,
+      "required_degree": "Bachelor",
+      "preferred_fields": [
+        "Computer Science",
+        "Artificial Intelligence",
+        "Data Science"
+      ],
+      "required_skills": [
+        "Python programming",
+        "Data structures and algorithms",
+        "Version control (Git)",
+        "Basic Machine Learning / Deep Learning concepts",
+        "English proficiency (technical reading and communication)"
+      ],
+      "preferred_skills": [
+        "Large Language Models (LLMs) and agentic frameworks (e.g., LangChain, Google ADK)",
+        "Containerization (Docker)",
+        "Cloud platforms (AWS, Azure, GCP)",
+        "Generative AI prototyping",
+        "Basic Natural Language Processing concepts",
+        "Proactive learning and research mindset"
+      ],
+      "responsibilities": [
+        "Deeply understand project objectives and study data hypotheses under guidance of senior team members",
+        "Research and implement algorithms for data science and AI projects",
+        "Assist in prototyping features using Generative AI capabilities (LLMs, AI agents, embeddings) and basic NLP concepts",
+        "Support testing and benchmarking of AI models using established evaluation frameworks",
+        "Stay updated on the latest research, trends, and technologies in data science and AI"
+      ],
+      "key_deliverables": [
+        "Prototype implementations of Generative AI features",
+        "Implemented and documented AI/ML algorithms",
+        "Tested and benchmarked AI model performance reports",
+        "Research summaries on emerging AI technologies"
+      ],
+      "required_certifications": []
+    }
+  },
+  {
+    "id": "jd_002",
+    "filename": "Data Science Intern.pdf",
+    "extraction_method": "groq_llm",
+    "source_status": "ACCEPTED_BY_DOCLING",
+    "parsed_data": {
+      "job_title": "Data Science Intern",
+      "company_name": null,
+      "job_overview": "Support data scientists in exploratory data analysis, predictive modeling, and translating data insights while gaining hands‑on experience with real‑world datasets and MLOps practices.",
+      "min_experience_years": 0.0,
+      "required_degree": "Bachelor",
+      "preferred_fields": [
+        "Mathematics",
+        "Statistics",
+        "Data Science",
+        "Computer Science",
+        "Quantitative"
+      ],
+      "required_skills": [
+        "Python",
+        "SQL",
+        "Pandas",
+        "NumPy",
+        "Scikit-Learn",
+        "Matplotlib",
+        "Machine Learning fundamentals",
+        "Natural Language Processing fundamentals",
+        "Computer Vision fundamentals",
+        "Applied Statistics fundamentals",
+        "Ability to read and implement research papers",
+        "Strong verbal and written English communication",
+        "Analytical mindset",
+        "Problem‑solving capabilities",
+        "Collaborative team player"
+      ],
+      "preferred_skills": [
+        "GCP",
+        "AWS",
+        "Azure",
+        "MLOps principles (model tracking, automated pipelines)",
+        "Looker Studio",
+        "Tableau",
+        "Streamlit"
+      ],
+      "responsibilities": [
+        "Formulate and evaluate data hypotheses; perform exploratory data analysis (EDA) to uncover key patterns and trends",
+        "Research, implement, and evaluate machine learning, statistical, or NLP algorithms tailored to project requirements",
+        "Collaborate with senior team members and business stakeholders to understand domain needs and project objectives",
+        "Stay current with emerging research, methodologies, and industry trends in data science",
+        "Document experimental workflows, model architectures, and performance metrics clearly"
+      ],
+      "key_deliverables": [
+        "Deliver exploratory data analysis reports highlighting actionable insights",
+        "Develop and evaluate predictive models for assigned business problems",
+        "Produce documented model pipelines and performance dashboards",
+        "Contribute to MLOps implementation such as model tracking and automated deployment"
+      ],
+      "required_certifications": []
+    }
+  },
+  {
+    "id": "jd_003",
+    "filename": "jd_it_viettel.pdf",
+    "extraction_method": "groq_llm",
+    "source_status": "RECOVERED_BY_OCR",
+    "parsed_data": {
+      "job_title": "Kỹ sư lập trình hệ thống",
+      "company_name": "Viettel",
+      "job_overview": "Tham gia vào quy trình phát triển, thiết kế và triển khai các hệ thống phần mềm mission‑critical, xây dựng giao diện người dùng thời gian thực, hỗ trợ mô phỏng (HIL/SIL), kiểm thử, gỡ lỗi và tối ưu hiệu suất phần mềm trên môi trường Windows/Linux.",
+      "min_experience_years": 0.5,
+      "required_degree": "Bachelor",
+      "preferred_fields": [
+        "Electrical Engineering",
+        "Electronics",
+        "Telecommunications",
+        "Automation",
+        "Computer Science",
+        "Information Technology"
+      ],
+      "required_skills": [
+        "C/C++ programming (C++11+)",
+        "Experience on Windows and Linux platforms",
+        "Git (advanced workflow, code review, CI/CD integration)",
+        "UML for system and software design",
+        "Real‑time / low‑latency software development",
+        "Debugging and performance optimization",
+        "English proficiency (TOEIC ≥ 650)"
+      ],
+      "preferred_skills": [
+        "Qt Framework and QML",
+        "Unit testing frameworks (Google Test, etc.)",
+        "Build systems (CMake, Bazel)",
+        "Docker and basic Kubernetes",
+        "Observability concepts (logging, metrics, tracing)",
+        "Java (Spring Boot, REST, Maven/Gradle)",
+        "JavaScript/TypeScript (React, Vue, Angular, Redux, Zustand)",
+        "Microservice backend development",
+        "SQL (PostgreSQL, MySQL) and NoSQL (MongoDB, Redis)"
+      ],
+      "responsibilities": [
+        "Tham gia toàn bộ vòng đời phát triển phần mềm: phân tích, thiết kế, lập trình, kiểm thử và bảo trì",
+        "Xây dựng giao diện người dùng thời gian thực (real‑time UI/HMI)",
+        "Thực hiện mô phỏng phần cứng‑in‑the‑loop (HIL) và phần mềm‑in‑the‑loop (SIL)",
+        "Kiểm tra, gỡ lỗi và tối ưu nguồn lực để đảm bảo chất lượng và hiệu suất",
+        "Phát triển và duy trì các thành phần phần mềm cho hệ thống mission‑critical",
+        "Hỗ trợ triển khai và vận hành môi trường CI/CD, Docker/Kubernetes",
+        "Làm việc nhóm, lập kế hoạch và phối hợp với các bộ phận liên quan"
+      ],
+      "key_deliverables": [
+        "Hệ thống phần mềm mission‑critical cho các sản phẩm thực tế",
+        "Giao diện người dùng thời gian thực đáp ứng yêu cầu độ trễ thấp",
+        "Nền tảng mô phỏng HIL/SIL cho kiểm thử phần cứng và phần mềm",
+        "Microservice backend cho các dịch vụ hỗ trợ",
+        "Bộ công cụ CI/CD, Docker và Kubernetes cho triển khai liên tục"
+      ],
+      "required_certifications": [
+        "TOEIC ≥ 650"
+      ]
+    }
+  }
+]

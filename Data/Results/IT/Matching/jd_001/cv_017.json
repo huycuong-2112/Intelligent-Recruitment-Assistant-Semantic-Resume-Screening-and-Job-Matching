@@ -1,0 +1,296 @@
+{
+  "jd_id": "jd_001",
+  "cv_id": "cv_017",
+  "score_0_1": 0.373434254702672,
+  "status": "evaluated",
+  "skill": {
+    "score": 0.11339944002039061,
+    "coverage": 1.0,
+    "matched_required": [
+      "Python programming"
+    ],
+    "matched_preferred": [],
+    "missing_required": [
+      "Data structures and algorithms",
+      "Version control (Git)",
+      "Basic Machine Learning / Deep Learning concepts",
+      "English proficiency (technical reading and communication)"
+    ],
+    "missing_preferred": [
+      "Large Language Models (LLMs) and agentic frameworks (e.g., LangChain, Google ADK)",
+      "Containerization (Docker)",
+      "Cloud platforms (AWS, Azure, GCP)",
+      "Generative AI prototyping",
+      "Basic Natural Language Processing concepts",
+      "Proactive learning and research mindset"
+    ],
+    "requirements": [
+      {
+        "jd_skill": "Python programming",
+        "importance": "required",
+        "score": 0.9071955201631249,
+        "availability": "available",
+        "status": "matched",
+        "match_method": "semantic",
+        "matched_cv_skill": "Python",
+        "cv_skill_provenance": [
+          "explicit",
+          "project_derived"
+        ],
+        "similarity": 0.9071955201631249,
+        "weight": 1.0
+      },
+      {
+        "jd_skill": "Data structures and algorithms",
+        "importance": "required",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.44032965199649965,
+        "weight": 1.0
+      },
+      {
+        "jd_skill": "Version control (Git)",
+        "importance": "required",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.6936658393058673,
+        "weight": 1.0
+      },
+      {
+        "jd_skill": "Basic Machine Learning / Deep Learning concepts",
+        "importance": "required",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.30228961876712496,
+        "weight": 1.0
+      },
+      {
+        "jd_skill": "English proficiency (technical reading and communication)",
+        "importance": "required",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.18399945628094677,
+        "weight": 1.0
+      },
+      {
+        "jd_skill": "Large Language Models (LLMs) and agentic frameworks (e.g., LangChain, Google ADK)",
+        "importance": "preferred",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.31854933762785403,
+        "weight": 0.5
+      },
+      {
+        "jd_skill": "Containerization (Docker)",
+        "importance": "preferred",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.20240981742900285,
+        "weight": 0.5
+      },
+      {
+        "jd_skill": "Cloud platforms (AWS, Azure, GCP)",
+        "importance": "preferred",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.2047793409110929,
+        "weight": 0.5
+      },
+      {
+        "jd_skill": "Generative AI prototyping",
+        "importance": "preferred",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.2586583973460956,
+        "weight": 0.5
+      },
+      {
+        "jd_skill": "Basic Natural Language Processing concepts",
+        "importance": "preferred",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.32551171978671073,
+        "weight": 0.5
+      },
+      {
+        "jd_skill": "Proactive learning and research mindset",
+        "importance": "preferred",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.18835150365193054,
+        "weight": 0.5
+      }
+    ]
+  },
+  "experience": {
+    "score": 0.46168838086929853,
+    "coverage": 1.0,
+    "years": {
+      "score": 1.0,
+      "availability": "available",
+      "status": "satisfied",
+      "weight": 0.3,
+      "details": {
+        "candidate_years": 0.0,
+        "minimum_years": 0.0
+      }
+    },
+    "evidence": {
+      "score": 0.2309834012418551,
+      "availability": "available",
+      "status": "evaluated",
+      "weight": 0.7,
+      "details": {
+        "responsibilities": [
+          {
+            "responsibility": "Deeply understand project objectives and study data hypotheses under guidance of senior team members",
+            "score": 0.19315277708545495,
+            "status": "low_match",
+            "matched_chunk_id": "cv_017_project_003",
+            "matched_text": "Validated Power BI measures against Python-generated KPI reports to verify metric definitions and maintain consistent results across dashboards and analytical outputs.",
+            "source_type": "project",
+            "source_name": "Olist E-commerce Analytics and Delivery Performance",
+            "raw_similarity": 0.19315277708545495,
+            "threshold": 0.6
+          },
+          {
+            "responsibility": "Research and implement algorithms for data science and AI projects",
+            "score": 0.24687149649049703,
+            "status": "low_match",
+            "matched_chunk_id": "cv_017_project_001",
+            "matched_text": "Cleaned, validated, and integrated relational Olist tables into a star-schema model, enabling consistent analysis of revenue, customers, delivery performance, reviews, and payments in Power BI.",
+            "source_type": "project",
+            "source_name": "Olist E-commerce Analytics and Delivery Performance",
+            "raw_similarity": 0.24687149649049703,
+            "threshold": 0.6
+          },
+          {
+            "responsibility": "Assist in prototyping features using Generative AI capabilities (LLMs, AI agents, embeddings) and basic NLP concepts",
+            "score": 0.1723701753008881,
+            "status": "low_match",
+            "matched_chunk_id": "cv_017_project_004",
+            "matched_text": "Developed an interactive Power BI dashboard to present revenue, customer, delivery, review, and payment KPIs through drill‑down analysis and business‑focused visualizations.",
+            "source_type": "project",
+            "source_name": "Olist E-commerce Analytics and Delivery Performance",
+            "raw_similarity": 0.1723701753008881,
+            "threshold": 0.6
+          },
+          {
+            "responsibility": "Support testing and benchmarking of AI models using established evaluation frameworks",
+            "score": 0.26033777998548896,
+            "status": "low_match",
+            "matched_chunk_id": "cv_017_project_003",
+            "matched_text": "Validated Power BI measures against Python-generated KPI reports to verify metric definitions and maintain consistent results across dashboards and analytical outputs.",
+            "source_type": "project",
+            "source_name": "Olist E-commerce Analytics and Delivery Performance",
+            "raw_similarity": 0.26033777998548896,
+            "threshold": 0.6
+          },
+          {
+            "responsibility": "Stay updated on the latest research, trends, and technologies in data science and AI",
+            "score": 0.28218477734694647,
+            "status": "low_match",
+            "matched_chunk_id": "cv_017_project_001",
+            "matched_text": "Cleaned, validated, and integrated relational Olist tables into a star-schema model, enabling consistent analysis of revenue, customers, delivery performance, reviews, and payments in Power BI.",
+            "source_type": "project",
+            "source_name": "Olist E-commerce Analytics and Delivery Performance",
+            "raw_similarity": 0.28218477734694647,
+            "threshold": 0.6
+          }
+        ]
+      }
+    }
+  },
+  "education": {
+    "score": 0.6,
+    "coverage": 1.0,
+    "degree": {
+      "score": 1.0,
+      "availability": "available",
+      "status": "satisfied",
+      "weight": 0.6,
+      "details": {
+        "candidate": "Engineer",
+        "required": "Bachelor"
+      }
+    },
+    "field": {
+      "score": 0.0,
+      "availability": "available",
+      "status": "no_evidence",
+      "weight": 0.4,
+      "details": {
+        "candidate": "Information Technology",
+        "preferred_fields": [
+          "Computer Science",
+          "Artificial Intelligence",
+          "Data Science"
+        ]
+      }
+    }
+  },
+  "semantic": {
+    "score": 0.3186491979209989,
+    "coverage": 1.0,
+    "status": "evaluated",
+    "availability": "available",
+    "raw_similarity": 0.3186491979209989
+  },
+  "mdms": {
+    "final_score": 0.373434254702672,
+    "status": "evaluated",
+    "coverage": 1.0,
+    "effective_weights": {
+      "skill": 0.25,
+      "experience": 0.25,
+      "education": 0.25,
+      "semantic": 0.25
+    },
+    "weights": {
+      "skill": 0.25,
+      "experience": 0.25,
+      "education": 0.25,
+      "semantic": 0.25
+    }
+  }
+}

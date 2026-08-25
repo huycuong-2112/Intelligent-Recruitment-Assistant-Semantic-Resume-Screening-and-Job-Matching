@@ -1,0 +1,187 @@
+{
+  "id": "cv_019",
+  "domain": "IT",
+  "profile": {
+    "summary": "Final-year IT student with a strong foundation in programming and a passion for web development, eager to apply skills to create user‑friendly, responsive designs through an internship and contribute effectively to projects.",
+    "job_titles": [
+      "Full stack developer"
+    ]
+  },
+  "skills": {
+    "all": [
+      "JavaScript",
+      "TypeScript",
+      "Node.js",
+      "React.js",
+      "React Native",
+      "Tailwind CSS",
+      "Redux Toolkit",
+      "HTML",
+      "CSS",
+      "PostgreSQL",
+      "SQLite",
+      "Firebase",
+      "MongoDB",
+      "JWT",
+      "Amazon EC2",
+      "AWS Amplify",
+      "AWS Lambda",
+      "Django",
+      "Figma",
+      "Git",
+      "Postman",
+      "Notion",
+      "Selenium",
+      "Stripe",
+      "REST API",
+      "Vite",
+      "Express.js",
+      "Shadcn-UI",
+      "React",
+      "Express"
+    ],
+    "explicit": [
+      "JavaScript",
+      "TypeScript",
+      "Node.js",
+      "React.js",
+      "React Native",
+      "Tailwind CSS",
+      "Redux Toolkit",
+      "HTML",
+      "CSS",
+      "PostgreSQL",
+      "SQLite",
+      "Firebase",
+      "MongoDB",
+      "JWT",
+      "Amazon EC2",
+      "AWS Amplify",
+      "AWS Lambda",
+      "Django",
+      "Figma",
+      "Git",
+      "Postman",
+      "Notion",
+      "Selenium",
+      "Stripe",
+      "REST API",
+      "Vite",
+      "Express.js",
+      "Shadcn-UI"
+    ],
+    "project_derived": [
+      "React",
+      "React Native",
+      "Node.js",
+      "PostgreSQL",
+      "Firebase",
+      "Selenium",
+      "Stripe",
+      "TypeScript",
+      "Vite",
+      "Express",
+      "MongoDB",
+      "JWT",
+      "Amazon EC2",
+      "Django",
+      "AWS Lambda",
+      "AWS Amplify",
+      "Redux Toolkit",
+      "Shadcn-UI",
+      "Tailwind CSS"
+    ]
+  },
+  "experience": {
+    "professional_years": 0.3,
+    "work_evidence": [
+      {
+        "company": "University of Medicine and Pharmacy Hospital, Campus 2",
+        "end_date": "DEC 2024",
+        "responsibilities_and_impact": [
+          "Developed a system to manage achievements and research in the medical field, enabling efficient tracking of scientific activities and outcomes.",
+          "Implemented front‑end with React JS and back‑end with Node.js & Express.js, using PostgreSQL for data storage."
+        ],
+        "role": "Full stack developer",
+        "start_date": "SEP 2024"
+      }
+    ],
+    "project_evidence": [
+      "Built a platform for job searching, CV creation, employer chat, and payment integration using RESTful APIs. Designed UI/UX, developed features with React and React Native, and tested functionalities using Selenium and Appium.",
+      "Developed an e‑commerce platform for selling traditional and modern Vietnamese Ao Dai and other clothing, featuring cart purchase, favorites, and admin functionalities. Designed UI/UX in Figma, integrated third‑party APIs, implemented cart and payment flows, and managed the database.",
+      "Built a fashion e‑commerce platform with product browsing, shopping cart, order management, and an admin dashboard. Developed the frontend with TypeScript, React, Shadcn‑UI and Tailwind CSS, optimized UI/UX, managed state with Redux Toolkit, and deployed on AWS Amplify."
+    ]
+  },
+  "education": {
+    "degree": "Bachelor",
+    "field": "Software Engineering",
+    "history": [
+      {
+        "degree": "Bachelor",
+        "end_year": 2025,
+        "field_of_study": "Software Engineering",
+        "gpa_or_honors": "GPA 3.54",
+        "institution": "HO CHI MINH CITY UNIVERSITY OF FOREIGN LANGUAGES AND INFORMATION TECHNOLOGY (HUFLIT)",
+        "start_year": 2021
+      }
+    ]
+  },
+  "projects": [
+    {
+      "description": "Built a platform for job searching, CV creation, employer chat, and payment integration using RESTful APIs. Designed UI/UX, developed features with React and React Native, and tested functionalities using Selenium and Appium.",
+      "heuristic_score": null,
+      "impact_metrics": [],
+      "links": [],
+      "name": "Online Job Search and Application",
+      "role": "Frontend Developer; Designer; Tester",
+      "technologies": [
+        "React",
+        "React Native",
+        "Node.js",
+        "PostgreSQL",
+        "Firebase",
+        "Selenium",
+        "Stripe"
+      ]
+    },
+    {
+      "description": "Developed an e‑commerce platform for selling traditional and modern Vietnamese Ao Dai and other clothing, featuring cart purchase, favorites, and admin functionalities. Designed UI/UX in Figma, integrated third‑party APIs, implemented cart and payment flows, and managed the database.",
+      "heuristic_score": null,
+      "impact_metrics": [],
+      "links": [],
+      "name": "Clothing Store Website - Ao Dai Hong Duc",
+      "role": "Frontend Developer",
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Node.js",
+        "Express",
+        "Firebase",
+        "MongoDB",
+        "JWT",
+        "Amazon EC2"
+      ]
+    },
+    {
+      "description": "Built a fashion e‑commerce platform with product browsing, shopping cart, order management, and an admin dashboard. Developed the frontend with TypeScript, React, Shadcn‑UI and Tailwind CSS, optimized UI/UX, managed state with Redux Toolkit, and deployed on AWS Amplify.",
+      "heuristic_score": null,
+      "impact_metrics": [],
+      "links": [],
+      "name": "Online Fashion Platform vogue vortex",
+      "role": "Frontend Developer",
+      "technologies": [
+        "Django",
+        "MongoDB",
+        "AWS Lambda",
+        "AWS Amplify",
+        "TypeScript",
+        "React",
+        "Redux Toolkit",
+        "Shadcn-UI",
+        "Tailwind CSS"
+      ]
+    }
+  ],
+  "certifications": []
+}

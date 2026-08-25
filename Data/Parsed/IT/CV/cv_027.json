@@ -1,0 +1,105 @@
+{
+  "domain": "IT",
+  "extraction_method": "groq_llm",
+  "filename": "c158d893-640f-4b90-8b57-203697d73044.jpg",
+  "id": "cv_027",
+  "parsed_data": {
+    "certifications": [
+      "Generative AI in Software Development",
+      "Web Design for Everybody: Basics of Web Development & Coding"
+    ],
+    "education_degree": "Bachelor",
+    "education_field": "Software Engineering",
+    "education_history": [
+      {
+        "degree": "Bachelor",
+        "end_year": 2027,
+        "field_of_study": "Software Engineering",
+        "gpa_or_honors": "GPA: 3.07 / 4.0; Award: Recipient of the 70% Entrance Scholarship",
+        "institution": "FPT University",
+        "start_year": 2024
+      }
+    ],
+    "experience_years": 0.3,
+    "job_titles": [
+      "Intern Backend Developer",
+      "Technical Leader",
+      "Full Stack Developer",
+      "Backend Developer"
+    ],
+    "projects": [
+      {
+        "description": "Led a team of six developers to define backend architecture, establish coding standards, and coordinate development across five business modules. Designed and implemented JWT‑based authentication and RBAC for four operational roles, securing 60+ REST endpoints. Developed the Waiter module with order creation, reservation management, and table availability validation. Collaborated with frontend developers on UI workflows and API integration.",
+        "heuristic_score": null,
+        "impact_metrics": [
+          "Team of 6 developers",
+          "5 business modules",
+          "60+ secured REST endpoints"
+        ],
+        "links": [
+          "Git Hub Repository"
+        ],
+        "name": "Restaurant Internal Management System",
+        "role": "Technical Leader & Full Stack Developer",
+        "technologies": [
+          "Java",
+          "Spring Boot",
+          "Spring Data JPA/Hibernate",
+          "Spring Security",
+          "JWT",
+          "RESTful APIs",
+          "SQL Server",
+          "Git",
+          "Maven",
+          "IntelliJ",
+          "Postman",
+          "Draw.io"
+        ]
+      },
+      {
+        "description": "Developed the Admin module for an English e‑learning platform, centralizing course, lesson, user, and coupon management. Integrated backend services with a React‑based admin interface using API‑first development, leveraging Cursor and Claude to accelerate implementation.",
+        "heuristic_score": null,
+        "impact_metrics": [],
+        "links": [
+          "Git Hub Repository"
+        ],
+        "name": "E-Learning Web",
+        "role": "Backend Developer",
+        "technologies": [
+          "Java",
+          "Spring Boot",
+          "Flyway",
+          "JWT",
+          "RESTful APIs",
+          "SQL Server",
+          "Git",
+          "Maven",
+          "IntelliJ",
+          "Postman",
+          "Cursor"
+        ]
+      }
+    ],
+    "skills": [
+      "Java",
+      "SQL",
+      "Spring Boot",
+      "Spring Data JPA/Hibernate",
+      "Spring Security",
+      "SQL Server",
+      "RESTful APIs",
+      "JWT Authentication",
+      "IntelliJ",
+      "Maven",
+      "Git",
+      "Postman",
+      "Draw.io",
+      "Antigravity",
+      "Cursor",
+      "Flyway"
+    ],
+    "summary": "Accomplished backend developer with experience developing business-oriented web applications using Java, Spring Boot, and SQL Server. Skilled in designing secure RESTful APIs, implementing authentication and authorization, and translating real-world business workflows into reliable, maintainable backend systems. Committed to continuous learning and practical projects.",
+    "work_experience": []
+  },
+  "source_status": "ACCEPTED_BY_DOCLING"
+}

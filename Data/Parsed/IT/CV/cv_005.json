@@ -1,0 +1,102 @@
+{
+  "domain": "IT",
+  "extraction_method": "groq_llm",
+  "filename": "019.jpg",
+  "id": "cv_005",
+  "parsed_data": {
+    "certifications": [],
+    "education_degree": "Bachelor",
+    "education_field": "International Business",
+    "education_history": [
+      {
+        "degree": "Bachelor",
+        "end_year": 2024,
+        "field_of_study": "International Business",
+        "gpa_or_honors": "68.67 (Distinction – UK System)",
+        "institution": "Birmingham City University (International Program - UEL)",
+        "start_year": 2021
+      }
+    ],
+    "experience_years": 1.2,
+    "job_titles": [
+      "Project Processing Specialist (Data & Operations)"
+    ],
+    "projects": [
+      {
+        "description": "Analyzed and reconciled monthly financial data for more than 200 agents, ensuring accuracy and consistency across reporting sources. Built structured validation processes to ensure data consistency across multiple data sources.",
+        "heuristic_score": null,
+        "impact_metrics": [
+          "Reconciled data for >200 agents",
+          "Improved data consistency across reporting sources"
+        ],
+        "links": [],
+        "name": "Revenue Share (Financial Data Analysis)",
+        "role": null,
+        "technologies": [
+          "Excel",
+          "SQL",
+          "Python"
+        ]
+      },
+      {
+        "description": "Processed and validated 180,000+ financial records, performing data cleaning, anomaly detection, and reporting preparation for tax compliance purposes. Cleaned, standardized, and mapped financial data (Commission, Revenue Share, DDC, Fees) with tax identifiers (TIN, SSN/EIN). Conducted data validation and anomaly detection, especially for high‑value cases. Achieved high data accuracy with an error rate below 2.5% through rigorous validation and audit processes.",
+        "heuristic_score": null,
+        "impact_metrics": [
+          "180,000+ records processed",
+          "Error rate below 2.5%"
+        ],
+        "links": [],
+        "name": "1099 Reporting Project (Large-scale Data Processing & Analysis)",
+        "role": null,
+        "technologies": [
+          "Python",
+          "SQL",
+          "Excel"
+        ]
+      },
+      {
+        "description": "Personal project analyzing an Amazon e‑commerce dataset to extract insights on sales performance, customer behavior, and product trends.",
+        "heuristic_score": null,
+        "impact_metrics": [],
+        "links": [],
+        "name": "E-commerce Data Analysis – Amazon Dataset",
+        "role": null,
+        "technologies": []
+      }
+    ],
+    "skills": [
+      "Excel",
+      "SQL",
+      "Power BI",
+      "Python",
+      "Data cleaning",
+      "Reporting automation",
+      "Dashboard development",
+      "Performance analysis",
+      "Data validation",
+      "Reconciliation",
+      "Data analysis",
+      "Operational support",
+      "Cross‑functional coordination",
+      "Zendesk"
+    ],
+    "summary": "Detail-oriented Data Analyst with experience in data validation, reconciliation, reporting, and operational support within international business environments. Experienced in maintaining data quality, analyzing large datasets, preparing reports, investigating discrepancies, and coordinating with cross-functional teams to support business operations and decision-making. Proficient in Excel, SQL, Power BI, and Python for data cleaning, reporting automation, dashboard development, and performance analysis. Strong analytical mindset with excellent attention to detail, documentation skills, and the ability to manage multiple priorities in fast-paced environments.",
+    "work_experience": [
+      {
+        "company": "Phalanx Services",
+        "end_date": "04/2026",
+        "responsibilities_and_impact": [
+          "Collected, cleaned, validated, and analyzed financial transaction data to ensure reporting accuracy and support operational decision‑making.",
+          "Identified and investigated data discrepancies (missing data, mismatches, payment issues), collaborating with 4–5 cross‑functional teams to resolve issues.",
+          "Monitored operational KPIs including SLA, backlog, and processing performance to identify trends and support workflow optimization.",
+          "Managed and resolved approximately 20 daily requests and inquiries through Zendesk, ensuring timely responses and effective stakeholder communication.",
+          "Supported financial data validation processes, ensuring accuracy before transaction approval.",
+          "Maintained documentation, issue logs, and operational records to support reporting accuracy and process transparency."
+        ],
+        "role": "Project Processing Specialist (Data & Operations)",
+        "start_date": "02/2025"
+      }
+    ]
+  },
+  "source_status": "ACCEPTED_BY_DOCLING"
+}

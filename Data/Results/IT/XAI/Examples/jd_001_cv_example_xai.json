@@ -1,0 +1,25 @@
+{
+  "schema_version": "xai_v1",
+  "jd_id": "jd_001",
+  "cv_id": "cv_001",
+  "job_title": "AI Engineer Intern",
+  "decision": {
+    "final_score": 0.2690701919978331,
+    "status": "evaluated",
+    "coverage": 1.0,
+    "weights": {"skill": 0.4, "experience": 0.2, "education": 0.1, "semantic": 0.3}
+  },
+  "dimensions": {
+    "skill": {"score": 0.0, "status": "AVAILABLE", "weight": 0.4, "weighted_contribution": 0.0, "coverage": 1.0, "matched_required": [], "missing_required": ["Python programming", "Data structures and algorithms", "Version control (Git)", "Basic Machine Learning / Deep Learning concepts", "English proficiency (technical reading and communication)"]},
+    "experience": {"score": 0.49747815116482985, "status": "AVAILABLE", "weight": 0.2, "weighted_contribution": 0.09949563023296597, "coverage": 1.0, "years": {"score": 1.0, "status": "MATCHED", "minimum_years": 0.0, "candidate_years": 2.8}, "selected_evidence": [{"evidence_ref": "ev_cv001_work001", "raw_similarity": 0.3867523347840044, "status": "NO_EVIDENCE"}]},
+    "education": {"score": 0.6, "status": "AVAILABLE", "weight": 0.1, "weighted_contribution": 0.06, "coverage": 1.0, "degree": {"status": "MATCHED", "candidate": "Bachelor", "required": "Bachelor"}, "field": {"status": "NO_EVIDENCE", "candidate": "Computer Science / Software Engineering", "preferred_fields": ["Computer Science", "Artificial Intelligence", "Data Science"]}},
+    "semantic": {"score": 0.3652485392162237, "status": "AVAILABLE", "weight": 0.3, "weighted_contribution": 0.10957456176486711, "coverage": 1.0, "profile_scope": "global profile-to-role alignment", "raw_similarity": 0.3652485392162237}
+  },
+  "strength_candidates": [{"type": "degree_match", "dimension": "education", "evidence_ref": "ev_cv001_education"}],
+  "gap_candidates": [{"type": "missing_required_skill", "dimension": "skill", "requirement": "Python programming", "evidence_ref": null}, {"type": "weak_responsibility_evidence", "dimension": "experience", "requirement": "Research and implement algorithms for data science and AI projects", "evidence_ref": "ev_cv001_work001"}],
+  "interview_focus": [{"topic": "Python programming", "reason": "required_skill_no_evidence", "evidence_ref": null}],
+  "evidence_registry": {
+    "ev_cv001_work001": {"evidence_id": "ev_cv001_work001", "source_type": "cv_work_experience", "source_id": "cv_001_work_001", "source_text": "Coordinated project lifecycle between client and development teams...", "matcher": "experience", "similarity": 0.3867523347840044},
+    "ev_cv001_education": {"evidence_id": "ev_cv001_education", "source_type": "cv_education", "source_id": "cv_001", "source_text": "Bachelor — Computer Science / Software Engineering", "matcher": "education"}
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "domain": "IT",
+  "extraction_method": "groq_llm",
+  "filename": "767524458_2058110688123480_8521338554769429223_n.jpg",
+  "id": "cv_022",
+  "parsed_data": {
+    "certifications": [
+      "English: TOEIC Listening & Reading 595 (2026)"
+    ],
+    "education_degree": "Bachelor",
+    "education_field": "Software Engineering",
+    "education_history": [
+      {
+        "degree": "Bachelor",
+        "end_year": 2027,
+        "field_of_study": "Software Engineering",
+        "gpa_or_honors": "GPA: 3.55/4",
+        "institution": "Can Tho University",
+        "start_year": 2023
+      }
+    ],
+    "experience_years": 0.0,
+    "job_titles": [],
+    "projects": [
+      {
+        "description": "Developed a full-stack e-commerce application for camera products. Implemented authentication, product browsing, cart, checkout and order history. Built an admin interface for managing product categories, users and orders. Integrated an AI-powered camera recommendation chatbox. Implemented real-time communication functionality using Socket.IO.",
+        "heuristic_score": null,
+        "impact_metrics": [],
+        "links": [],
+        "name": "Camera Shop – E-commerce Website with AI Assistant",
+        "role": null,
+        "technologies": [
+          "React.js",
+          "Redux",
+          "Node.js",
+          "Express.js",
+          "Mongo DB",
+          "Socket.IO",
+          "AI Assistant"
+        ]
+      },
+      {
+        "description": "Developed a full-stack library management system with separate interfaces for library staff and readers. Implemented book management, reader management, borrow requests and borrowing history. Developed RESTful APIs using Node.js and Express.js with Mongo DB. Implemented authentication using JWT and integrated frontend APIs using Axios.",
+        "heuristic_score": null,
+        "impact_metrics": [],
+        "links": [],
+        "name": "KBook – Library Management System",
+        "role": null,
+        "technologies": [
+          "Vue.js",
+          "Pinia",
+          "Node.js",
+          "Express.js",
+          "Mongo DB",
+          "JWT",
+          "Axios"
+        ]
+      }
+    ],
+    "skills": [
+      "Java",
+      "JavaScript",
+      "HTML",
+      "React.js",
+      "Vue.js",
+      "Node.js",
+      "Express.js",
+      "RESTful API",
+      "Mongo DB",
+      "MySQL",
+      "Redux",
+      "Pinia",
+      "Git",
+      "GitHub",
+      "VSCode",
+      "Postman",
+      "Docker",
+      "Socket.IO",
+      "JWT",
+      "Axios",
+      "AI"
+    ],
+    "summary": "Fourth-year Software Engineering student with hands-on experience building full-stack web applications using React, Vue.js, Node.js, Express.js and Mongo DB. Developed academic and personal projects involving RESTful APIs, authentication, database management and responsive user interfaces. Interested in Software Developer/Full-stack Developer internship opportunities where I can strengthen my development, debugging and problem-solving skills.",
+    "work_experience": []
+  },
+  "source_status": "LOW_QUALITY"
+}

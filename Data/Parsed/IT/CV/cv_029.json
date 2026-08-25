@@ -1,0 +1,139 @@
+{
+  "domain": "IT",
+  "extraction_method": "groq_llm",
+  "filename": "cv3.png",
+  "id": "cv_029",
+  "parsed_data": {
+    "certifications": [
+      "Google Advanced Data Analytics",
+      "Google AI Essentials",
+      "Google Data Analytics Professional Certificate"
+    ],
+    "education_degree": "Bachelor",
+    "education_field": "Data Science",
+    "education_history": [
+      {
+        "degree": "Bachelor",
+        "end_year": null,
+        "field_of_study": "Data Science",
+        "gpa_or_honors": "GPA 3.56/4.0 (86/100); 2x Academic Encouragement Scholarship (AY 2025-2026)",
+        "institution": "International University, VNU-HCM",
+        "start_year": 2023
+      }
+    ],
+    "experience_years": 1.0,
+    "job_titles": [
+      "Data Engineer",
+      "Lead AI Researcher",
+      "Vice Lead Chapter"
+    ],
+    "projects": [
+      {
+        "description": "Engineered core algorithmic logic for a Multi‑Agent System with 50+ concurrent agents, integrating probabilistic simulation with LLM triggers under macro‑economic constraints. Designed a multi‑provider LLM routing architecture to optimize inference performance, achieving ~0.1 s latency and near‑zero token costs. Implemented rigorous data validation pipelines using Pydantic, enforcing 100% structured JSON outputs to eliminate LLM hallucination runtime crashes.",
+        "heuristic_score": null,
+        "impact_metrics": [
+          "50+ concurrent agents",
+          "~0.1 s latency",
+          "100% structured JSON outputs",
+          "Near‑zero token costs"
+        ],
+        "links": [],
+        "name": "Panic Hub - Real-time Agentic AI Simulation Game",
+        "role": "AI Architect",
+        "technologies": [
+          "Python 3.11+",
+          "PyTorch",
+          "Pydantic",
+          "AsyncIO",
+          "LLM APIs (Gemini, Groq, Cerebras)"
+        ]
+      },
+      {
+        "description": "Developed a cross‑domain medical image classification pipeline that integrates SimCLR‑pretrained feature extractors with a Domain‑Adversarial Neural Network in PyTorch, enabling robust adaptation across disparate imaging datasets.",
+        "heuristic_score": null,
+        "impact_metrics": [
+          ">5% accuracy improvement on target medical domain over standard SSL fine‑tuning baselines"
+        ],
+        "links": [],
+        "name": "Self‑Supervised Domain Adaptation for Skin Lesion Classification",
+        "role": "AI Engineer",
+        "technologies": [
+          "Python",
+          "PyTorch",
+          "SimCLR",
+          "Domain‑Adversarial Neural Network (DANN)",
+          "Kaggle"
+        ]
+      }
+    ],
+    "skills": [
+      "Python",
+      "TypeScript",
+      "SQL",
+      "JavaScript",
+      "R",
+      "Data Validation",
+      "Async Pipelines",
+      "PostgreSQL",
+      "MongoDB",
+      "MySQL",
+      "Vector Databases",
+      "Google Cloud Platform (GCP)",
+      "Docker",
+      "RESTful APIs",
+      "Git",
+      "GitHub Workflows",
+      "CI/CD",
+      "LLM Orchestration (OpenAI, Gemini, Groq, Cerebras)",
+      "Multi‑Agent Architecture",
+      "Agentic Coding Tools (Codex, Claude, Antigravity)",
+      "PyTorch",
+      "Pydantic",
+      "AsyncIO",
+      "XGBoost",
+      "LightGBM",
+      "Deep Sets",
+      "Set Transformer",
+      "SimCLR",
+      "Domain‑Adversarial Neural Network (DANN)",
+      "Kaggle"
+    ],
+    "summary": "AI & Data Engineer / Data Scientist based in Ho Chi Minh City, Vietnam. Experienced in building scalable data pipelines, LLM evaluation harnesses, and clinical ML models with a focus on clean architecture and data normalization.",
+    "work_experience": [
+      {
+        "company": "Technologies",
+        "end_date": "Present",
+        "responsibilities_and_impact": [
+          "Formulated data normalization protocols and optimized core pipelines to ensure clean, structured, and high‑integrity data infrastructure.",
+          "Architected an internal AI sandbox and testing harness to benchmark LLM/ML models, trace execution behavior, and refine bilingual (Vi/En) prompt architectures.",
+          "Engineered Customer Intelligence pipelines for a Chat Order platform and built automated software testing frameworks to validate end‑to‑end data flows.",
+          "Researched state‑of‑the‑art models and developed data‑centric backend microservices to integrate AI capabilities into production applications."
+        ],
+        "role": "Data Engineer",
+        "start_date": "2026"
+      },
+      {
+        "company": "021 Hospital Collaboration",
+        "end_date": "Present",
+        "responsibilities_and_impact": [
+          "Handled ~40,900 patient encounters under strict data privacy protocols.",
+          "Benchmarked calibrated tree models (XGBoost, LightGBM) against permutation‑invariant neural networks (Deep Sets, Set Transformer) using 5×3 nested patient‑grouped validation, achieving 0.798 AUPRC and 0.952 AUROC.",
+          "Engineered measurement‑process negative controls (count‑only, availability‑only, value‑shuffled) to audit informative missingness and prevent workflow‑sensitive models from over‑claiming utility (TRi POD+AI compliant)."
+        ],
+        "role": "Lead AI Researcher",
+        "start_date": "2026"
+      },
+      {
+        "company": "Google Developer Group Campus (GDGo HCMIU)",
+        "end_date": "Present",
+        "responsibilities_and_impact": [
+          "Co‑directed technical strategy and community initiatives focused on AI/ML, cloud architecture, and data analytics, engaging 100+ active student members.",
+          "Led cross‑functional teams organizing technical bootcamps, workshops, and industry‑expert talks."
+        ],
+        "role": "Vice Lead Chapter",
+        "start_date": "Aug 2025"
+      }
+    ]
+  },
+  "source_status": "ACCEPTED_BY_DOCLING"
+}

@@ -1,0 +1,137 @@
+{
+  "id": "cv_010",
+  "domain": "IT",
+  "profile": {
+    "summary": "Data Analyst with internship experience in data cleaning, analysis, and visualization using Python, SQL, Excel, Power BI, and machine learning techniques; also experienced in sports data analysis and research projects on association rules and image similarity.",
+    "job_titles": [
+      "Data Analyst Intern",
+      "Chuyên viên phân tích bóng đá"
+    ]
+  },
+  "skills": {
+    "all": [
+      "Excel",
+      "Google Sheets",
+      "Power BI",
+      "Data analysis",
+      "Reporting",
+      "SQL",
+      "Python",
+      "pandas",
+      "seaborn",
+      "VGG19",
+      "ResNet50",
+      "FP-Growth",
+      "Association Rules",
+      "Machine Learning",
+      "Data preprocessing",
+      "Data visualization"
+    ],
+    "explicit": [
+      "Excel",
+      "Google Sheets",
+      "Power BI",
+      "Data analysis",
+      "Reporting",
+      "SQL",
+      "Python",
+      "pandas",
+      "seaborn",
+      "VGG19",
+      "ResNet50",
+      "FP-Growth",
+      "Association Rules",
+      "Machine Learning",
+      "Data preprocessing",
+      "Data visualization"
+    ],
+    "project_derived": [
+      "Python",
+      "FP-Growth",
+      "Association Rules",
+      "VGG19",
+      "ResNet50"
+    ]
+  },
+  "experience": {
+    "professional_years": 1.7,
+    "work_evidence": [
+      {
+        "company": "4PSORT",
+        "end_date": "11/2024",
+        "responsibilities_and_impact": [
+          "Làm sạch, chuẩn hoá dữ liệu bằng Python và SQL.",
+          "Phân tích, trực quan hoá dữ liệu bằng Excel, Power BI, Python (pandas, seaborn).",
+          "Xây dựng biểu đồ, báo cáo hỗ trợ đưa ra insight.",
+          "Ứng dụng thuật toán học máy cơ bản để dự đoán và hỗ trợ quyết định kinh doanh."
+        ],
+        "role": "Data Analyst Intern",
+        "start_date": "08/2024"
+      },
+      {
+        "company": "BEPROVN",
+        "end_date": "Present",
+        "responsibilities_and_impact": [
+          "Phân tích dữ liệu và video các trận đấu bóng đá.",
+          "Báo cáo chỉ số thi đấu và hiệu suất cầu thủ.",
+          "Làm việc theo quy trình tiêu chuẩn, đảm bảo độ chính xác cao."
+        ],
+        "role": "Chuyên viên phân tích bóng đá",
+        "start_date": "03/2025"
+      }
+    ],
+    "project_evidence": [
+      "Tiền xử lý và chuẩn hoá dữ liệu bệnh tim, áp dụng FP-Growth để khai phá Association Rules nhằm các chỉ số sức khỏe, phân tích các luật có support và confidence cao để xác định yếu tố nguy cơ, mô hình đạt độ chính xác 89% trong dự đoán bệnh tim.",
+      "Load mô hình (VGG19, ResNet50) và tiền xử lý ảnh (224x224, RGB), trích xuất vector đặc trưng cho toàn bộ dataset, so sánh độ tương đồng bằng khoảng cách vector, trả về các ảnh tương tự nhất."
+    ]
+  },
+  "education": {
+    "degree": "Bachelor",
+    "field": "Data Science",
+    "history": [
+      {
+        "degree": "Bachelor",
+        "end_year": null,
+        "field_of_study": "Data Science",
+        "gpa_or_honors": "Gioi",
+        "institution": "Unknown",
+        "start_year": null
+      }
+    ]
+  },
+  "projects": [
+    {
+      "description": "Tiền xử lý và chuẩn hoá dữ liệu bệnh tim, áp dụng FP-Growth để khai phá Association Rules nhằm các chỉ số sức khỏe, phân tích các luật có support và confidence cao để xác định yếu tố nguy cơ, mô hình đạt độ chính xác 89% trong dự đoán bệnh tim.",
+      "heuristic_score": null,
+      "impact_metrics": [
+        "Model accuracy 89%"
+      ],
+      "links": [],
+      "name": "FP-Growth for Breast Cancer Association Rules",
+      "role": null,
+      "technologies": [
+        "Python",
+        "FP-Growth",
+        "Association Rules"
+      ]
+    },
+    {
+      "description": "Load mô hình (VGG19, ResNet50) và tiền xử lý ảnh (224x224, RGB), trích xuất vector đặc trưng cho toàn bộ dataset, so sánh độ tương đồng bằng khoảng cách vector, trả về các ảnh tương tự nhất.",
+      "heuristic_score": null,
+      "impact_metrics": [],
+      "links": [],
+      "name": "Similarity Search in Large Image Dataset",
+      "role": null,
+      "technologies": [
+        "VGG19",
+        "ResNet50",
+        "Python"
+      ]
+    }
+  ],
+  "certifications": [
+    "Associate Data Analyst",
+    "Data Analyst in Python",
+    "TOEIC"
+  ]
+}

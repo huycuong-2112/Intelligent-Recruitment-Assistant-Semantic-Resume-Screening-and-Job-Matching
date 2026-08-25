@@ -1,0 +1,185 @@
+{
+  "id": "cv_012",
+  "domain": "IT",
+  "profile": {
+    "summary": "Seeking a Computer Engineering Internship to apply knowledge in embedded systems, IoT, and hardware design. Eager to integrate and contribute.",
+    "job_titles": []
+  },
+  "skills": {
+    "all": [
+      "Altium Designer",
+      "Proteus",
+      "C",
+      "C++",
+      "Assembly",
+      "MATLAB",
+      "STM32",
+      "ESP32",
+      "Yolo:Bit",
+      "UART",
+      "I2C",
+      "RS‑485",
+      "MQTT",
+      "Free RTOS",
+      "Platform IO",
+      "Tiny ML",
+      "Core IOT Cloud",
+      "Ki Cad",
+      "STM32Cube IDE",
+      "ESP32-S3",
+      "Wi‑Fi Access Point",
+      "Alo T",
+      "Servo Motor",
+      "Ultrasonic Sensor",
+      "DHT20 Temperature Sensor",
+      "STM32F103C6",
+      "C (HAL)"
+    ],
+    "explicit": [
+      "Altium Designer",
+      "Proteus",
+      "C",
+      "C++",
+      "Assembly",
+      "MATLAB",
+      "STM32",
+      "ESP32",
+      "Yolo:Bit",
+      "UART",
+      "I2C",
+      "RS‑485",
+      "MQTT",
+      "Free RTOS",
+      "Platform IO",
+      "Tiny ML",
+      "Core IOT Cloud",
+      "Ki Cad",
+      "STM32Cube IDE"
+    ],
+    "project_derived": [
+      "ESP32-S3",
+      "Free RTOS",
+      "Platform IO",
+      "Tiny ML",
+      "MQTT",
+      "Wi‑Fi Access Point",
+      "Core IOT Cloud",
+      "Yolo:Bit",
+      "Alo T",
+      "Servo Motor",
+      "Ultrasonic Sensor",
+      "DHT20 Temperature Sensor",
+      "STM32F103C6",
+      "C (HAL)",
+      "STM32Cube IDE",
+      "Proteus",
+      "ESP32",
+      "Altium Designer",
+      "Ki Cad",
+      "RS‑485"
+    ]
+  },
+  "experience": {
+    "professional_years": 0.0,
+    "work_evidence": [],
+    "project_evidence": [
+      "Implemented multi‑task real‑time control with RTOS semaphore synchronization across 6 concurrent tasks. Developed temperature‑based LED alerting with 3+ states, humidity‑driven NeoPixel RGB indicators, and LCD display with Normal/Warning/Critical modes. Built a Wi‑Fi Access Point web server for remote appliance control via a custom browser interface. Deployed a Tiny ML model on‑device for environment classification with on‑hardware accuracy evaluation. Integrated MQTT‑based cloud data publishing to Core IOT platform in Station (STA) Wi‑Fi mode.",
+      "Integrated a servo motor to automate a feeding chute mechanism for scheduled fish feeding cycles. Deployed DHT20 temperature sensor and ultrasonic sensor for continuous water temperature and level monitoring. Implemented threshold‑based control logic to trigger feeding and alerts autonomously, with real‑time status displayed on LCD.",
+      "Designed a 4‑way traffic light system with 7‑segment countdown display and Proteus simulation. Configured a 10 ms hardware timer for flicker‑free 4‑digit display and 8×8 LED matrix control. Built a 4‑mode traffic FSM with button debouncing, real‑time parameter editing, and simultaneous LED feedback. Architected a lightweight cooperative task scheduler managing 5 concurrent periodic tasks with idle‑mode power optimization. Implemented interrupt‑driven UART with ring buffer, protocol FSM parser, and ADC sensor reporting.",
+      "Implemented analog signal‑conditioning circuits (op‑amps, active filters) and power management with buck regulators. Integrated RS‑485 for reliable long‑distance data transmission; programmed ESP32 for sensor acquisition and IoT connectivity."
+    ]
+  },
+  "education": {
+    "degree": "Bachelor",
+    "field": "Computer Engineering",
+    "history": [
+      {
+        "degree": "Bachelor",
+        "end_year": 2027,
+        "field_of_study": "Computer Engineering",
+        "gpa_or_honors": "GPA 6.43/10 (2.4/4)",
+        "institution": "HCMC University of Technology - Vietnam National University (HCMUT-VNU)",
+        "start_year": 2023
+      }
+    ]
+  },
+  "projects": [
+    {
+      "description": "Implemented multi‑task real‑time control with RTOS semaphore synchronization across 6 concurrent tasks. Developed temperature‑based LED alerting with 3+ states, humidity‑driven NeoPixel RGB indicators, and LCD display with Normal/Warning/Critical modes. Built a Wi‑Fi Access Point web server for remote appliance control via a custom browser interface. Deployed a Tiny ML model on‑device for environment classification with on‑hardware accuracy evaluation. Integrated MQTT‑based cloud data publishing to Core IOT platform in Station (STA) Wi‑Fi mode.",
+      "heuristic_score": null,
+      "impact_metrics": [
+        "6 concurrent tasks managed by RTOS",
+        "3+ LED alert states",
+        "Real‑time remote control via web interface",
+        "On‑device Tiny ML classification"
+      ],
+      "links": [],
+      "name": "Smart Home Automation System",
+      "role": "IoT Developer",
+      "technologies": [
+        "ESP32-S3",
+        "Free RTOS",
+        "Platform IO",
+        "Tiny ML",
+        "MQTT",
+        "Wi‑Fi Access Point",
+        "Core IOT Cloud"
+      ]
+    },
+    {
+      "description": "Integrated a servo motor to automate a feeding chute mechanism for scheduled fish feeding cycles. Deployed DHT20 temperature sensor and ultrasonic sensor for continuous water temperature and level monitoring. Implemented threshold‑based control logic to trigger feeding and alerts autonomously, with real‑time status displayed on LCD.",
+      "heuristic_score": null,
+      "impact_metrics": [
+        "Automated feeding chute mechanism",
+        "Continuous water temperature and level monitoring",
+        "Real‑time LCD status display"
+      ],
+      "links": [],
+      "name": "Automated Fish Farm Monitoring System",
+      "role": "Embedded Developer",
+      "technologies": [
+        "Yolo:Bit",
+        "Alo T",
+        "Servo Motor",
+        "Ultrasonic Sensor",
+        "DHT20 Temperature Sensor"
+      ]
+    },
+    {
+      "description": "Designed a 4‑way traffic light system with 7‑segment countdown display and Proteus simulation. Configured a 10 ms hardware timer for flicker‑free 4‑digit display and 8×8 LED matrix control. Built a 4‑mode traffic FSM with button debouncing, real‑time parameter editing, and simultaneous LED feedback. Architected a lightweight cooperative task scheduler managing 5 concurrent periodic tasks with idle‑mode power optimization. Implemented interrupt‑driven UART with ring buffer, protocol FSM parser, and ADC sensor reporting.",
+      "heuristic_score": null,
+      "impact_metrics": [
+        "4‑way traffic light system with 7‑segment countdown",
+        "10 ms hardware timer for display stability",
+        "5 concurrent periodic tasks managed by scheduler",
+        "8×8 LED matrix control"
+      ],
+      "links": [],
+      "name": "STM32 Embedded Systems Lab Series",
+      "role": "Embedded Software Developer",
+      "technologies": [
+        "STM32F103C6",
+        "C (HAL)",
+        "STM32Cube IDE",
+        "Proteus"
+      ]
+    },
+    {
+      "description": "Implemented analog signal‑conditioning circuits (op‑amps, active filters) and power management with buck regulators. Integrated RS‑485 for reliable long‑distance data transmission; programmed ESP32 for sensor acquisition and IoT connectivity.",
+      "heuristic_score": null,
+      "impact_metrics": [
+        "RS‑485 reliable long‑distance data transmission"
+      ],
+      "links": [],
+      "name": "IoT‑based Multi‑Sensor Monitoring System",
+      "role": "Hardware PCB Design Lead",
+      "technologies": [
+        "ESP32",
+        "Altium Designer",
+        "Ki Cad",
+        "RS‑485"
+      ]
+    }
+  ],
+  "certifications": []
+}

@@ -1,0 +1,292 @@
+{
+  "jd_id": "jd_001",
+  "cv_id": "cv_009",
+  "score_0_1": 0.2817425850944771,
+  "status": "evaluated",
+  "skill": {
+    "score": 0.0,
+    "coverage": 1.0,
+    "matched_required": [],
+    "matched_preferred": [],
+    "missing_required": [
+      "Python programming",
+      "Data structures and algorithms",
+      "Version control (Git)",
+      "Basic Machine Learning / Deep Learning concepts",
+      "English proficiency (technical reading and communication)"
+    ],
+    "missing_preferred": [
+      "Large Language Models (LLMs) and agentic frameworks (e.g., LangChain, Google ADK)",
+      "Containerization (Docker)",
+      "Cloud platforms (AWS, Azure, GCP)",
+      "Generative AI prototyping",
+      "Basic Natural Language Processing concepts",
+      "Proactive learning and research mindset"
+    ],
+    "requirements": [
+      {
+        "jd_skill": "Python programming",
+        "importance": "required",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.2267730245010407,
+        "weight": 1.0
+      },
+      {
+        "jd_skill": "Data structures and algorithms",
+        "importance": "required",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.20097500477674707,
+        "weight": 1.0
+      },
+      {
+        "jd_skill": "Version control (Git)",
+        "importance": "required",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.3393866115897434,
+        "weight": 1.0
+      },
+      {
+        "jd_skill": "Basic Machine Learning / Deep Learning concepts",
+        "importance": "required",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.1994881520261798,
+        "weight": 1.0
+      },
+      {
+        "jd_skill": "English proficiency (technical reading and communication)",
+        "importance": "required",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.14832704504658223,
+        "weight": 1.0
+      },
+      {
+        "jd_skill": "Large Language Models (LLMs) and agentic frameworks (e.g., LangChain, Google ADK)",
+        "importance": "preferred",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.15173868532313803,
+        "weight": 0.5
+      },
+      {
+        "jd_skill": "Containerization (Docker)",
+        "importance": "preferred",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.19798028830273753,
+        "weight": 0.5
+      },
+      {
+        "jd_skill": "Cloud platforms (AWS, Azure, GCP)",
+        "importance": "preferred",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.13685442060931122,
+        "weight": 0.5
+      },
+      {
+        "jd_skill": "Generative AI prototyping",
+        "importance": "preferred",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.21751848911978744,
+        "weight": 0.5
+      },
+      {
+        "jd_skill": "Basic Natural Language Processing concepts",
+        "importance": "preferred",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.13558829735743183,
+        "weight": 0.5
+      },
+      {
+        "jd_skill": "Proactive learning and research mindset",
+        "importance": "preferred",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.246602511920475,
+        "weight": 0.5
+      }
+    ]
+  },
+  "experience": {
+    "score": 0.3764832039368869,
+    "coverage": 1.0,
+    "years": {
+      "score": 1.0,
+      "availability": "available",
+      "status": "satisfied",
+      "weight": 0.3,
+      "details": {
+        "candidate_years": 6.3,
+        "minimum_years": 0.0
+      }
+    },
+    "evidence": {
+      "score": 0.10926171990983843,
+      "availability": "available",
+      "status": "evaluated",
+      "weight": 0.7,
+      "details": {
+        "responsibilities": [
+          {
+            "responsibility": "Deeply understand project objectives and study data hypotheses under guidance of senior team members",
+            "score": 0.12773865020838746,
+            "status": "low_match",
+            "matched_chunk_id": "cv_009_project_004",
+            "matched_text": "Impact: Đạt mức hoàn thành KPI 95% trong 3 tháng; Tuyển dụng và đào tạo 20 tester mới.",
+            "source_type": "project",
+            "source_name": "Dự án Game Online (Freelance)",
+            "raw_similarity": 0.12773865020838746,
+            "threshold": 0.6
+          },
+          {
+            "responsibility": "Research and implement algorithms for data science and AI projects",
+            "score": 0.10731912676040686,
+            "status": "low_match",
+            "matched_chunk_id": "cv_009_project_003",
+            "matched_text": "Xây dựng SOP, đánh giá KPI và tài liệu hướng dẫn cho đội ngũ 20 tester và cộng tác viên, đồng thời tổ chức đào tạo và tuyển dụng nhân sự.",
+            "source_type": "project",
+            "source_name": "Dự án Game Online (Freelance)",
+            "raw_similarity": 0.10731912676040686,
+            "threshold": 0.6
+          },
+          {
+            "responsibility": "Assist in prototyping features using Generative AI capabilities (LLMs, AI agents, embeddings) and basic NLP concepts",
+            "score": 0.11261349118475586,
+            "status": "low_match",
+            "matched_chunk_id": "cv_009_project_003",
+            "matched_text": "Xây dựng SOP, đánh giá KPI và tài liệu hướng dẫn cho đội ngũ 20 tester và cộng tác viên, đồng thời tổ chức đào tạo và tuyển dụng nhân sự.",
+            "source_type": "project",
+            "source_name": "Dự án Game Online (Freelance)",
+            "raw_similarity": 0.11261349118475586,
+            "threshold": 0.6
+          },
+          {
+            "responsibility": "Support testing and benchmarking of AI models using established evaluation frameworks",
+            "score": 0.15225516244290013,
+            "status": "low_match",
+            "matched_chunk_id": "cv_009_project_002",
+            "matched_text": "Impact: Tăng 30% độ ổn định kết nối mạng; Giảm thời gian downtime xuống dưới 2 giờ/tháng.",
+            "source_type": "project",
+            "source_name": "Hệ thống cáp quang cho trạm BTS",
+            "raw_similarity": 0.15225516244290013,
+            "threshold": 0.6
+          },
+          {
+            "responsibility": "Stay updated on the latest research, trends, and technologies in data science and AI",
+            "score": 0.046382168952741915,
+            "status": "low_match",
+            "matched_chunk_id": "cv_009_project_003",
+            "matched_text": "Xây dựng SOP, đánh giá KPI và tài liệu hướng dẫn cho đội ngũ 20 tester và cộng tác viên, đồng thời tổ chức đào tạo và tuyển dụng nhân sự.",
+            "source_type": "project",
+            "source_name": "Dự án Game Online (Freelance)",
+            "raw_similarity": 0.046382168952741915,
+            "threshold": 0.6
+          }
+        ]
+      }
+    }
+  },
+  "education": {
+    "score": 0.6,
+    "coverage": 1.0,
+    "degree": {
+      "score": 1.0,
+      "availability": "available",
+      "status": "satisfied",
+      "weight": 0.6,
+      "details": {
+        "candidate": "Bachelor",
+        "required": "Bachelor"
+      }
+    },
+    "field": {
+      "score": 0.0,
+      "availability": "available",
+      "status": "no_evidence",
+      "weight": 0.4,
+      "details": {
+        "candidate": "Công nghệ thông tin",
+        "preferred_fields": [
+          "Computer Science",
+          "Artificial Intelligence",
+          "Data Science"
+        ]
+      }
+    }
+  },
+  "semantic": {
+    "score": 0.15048713644102152,
+    "coverage": 1.0,
+    "status": "evaluated",
+    "availability": "available",
+    "raw_similarity": 0.15048713644102152
+  },
+  "mdms": {
+    "final_score": 0.2817425850944771,
+    "status": "evaluated",
+    "coverage": 1.0,
+    "effective_weights": {
+      "skill": 0.25,
+      "experience": 0.25,
+      "education": 0.25,
+      "semantic": 0.25
+    },
+    "weights": {
+      "skill": 0.25,
+      "experience": 0.25,
+      "education": 0.25,
+      "semantic": 0.25
+    }
+  }
+}

@@ -1,0 +1,144 @@
+{
+  "id": "cv_016",
+  "domain": "IT",
+  "profile": {
+    "summary": "Chào mừng bạn tới Phạm Ngọc Phát. Lạc mốt ngưỡng nhiệt huyết; ham học hỏi và luyện san sáng mỗi mặt vị thử thách. Tôi muốn ngừng nỗ lực để phát triển bản thân; nâng cao kỹ năng và làm việc chăm chỉ. Mong muốn của tôi là được hợp tác với đồng nghiệp; cùng nhau chinh phục những mục tiêu mới và đạt được thành công trong sự nghiệp cũng như cuộc sống #KỹNăng",
+    "job_titles": [
+      "Developer",
+      "Backend Developer",
+      "Participant"
+    ]
+  },
+  "skills": {
+    "all": [
+      "Java",
+      "OOP",
+      "JDBC",
+      "MySQL",
+      "Spring Boot",
+      "Spring MVC",
+      "Spring Data JPA",
+      "Spring Security",
+      "Hibernate",
+      "JPA",
+      "REST API",
+      "JSON",
+      "Postman",
+      "Git",
+      "Agile Scrum",
+      "SQL Server",
+      "AngularJS",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Bootstrap",
+      "Maven",
+      "Gradle",
+      "Web Development"
+    ],
+    "explicit": [
+      "Java",
+      "OOP",
+      "JDBC",
+      "MySQL",
+      "Spring Boot",
+      "Spring MVC",
+      "Spring Data JPA",
+      "Spring Security",
+      "Hibernate",
+      "JPA",
+      "REST API",
+      "JSON",
+      "Postman",
+      "Git",
+      "Agile Scrum",
+      "SQL Server",
+      "AngularJS",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Bootstrap",
+      "Maven",
+      "Gradle",
+      "Web Development"
+    ],
+    "project_derived": [
+      "Java",
+      "Spring Boot",
+      "SQL Server",
+      "Spring Security",
+      "AngularJS",
+      "REST API"
+    ]
+  },
+  "experience": {
+    "professional_years": 0.0,
+    "work_evidence": [],
+    "project_evidence": [
+      "Ứng dụng web tìm kiếm việc làm, cho phép người dùng xem thông tin chi tiết về công việc, tạo CV, nộp đơn, quản lý danh sách công việc và người dùng. Được phát triển trong khu học viện.",
+      "Hệ thống đặt phòng khách sạn trực tuyến cho phép người dùng tìm kiếm, đặt phòng, quản lý thông tin khách sạn, theo dõi doanh thu và thống kê trong tháng năm.",
+      "Hackathon tập trung vào phát triển API backend, cải thiện hiệu suất và xử lý dữ liệu với các công nghệ Java Spring Boot, SQL Server và RESTful API."
+    ]
+  },
+  "education": {
+    "degree": "Associate",
+    "field": "Phát Triển Phần Mềm",
+    "history": [
+      {
+        "degree": "Associate",
+        "end_year": 2024,
+        "field_of_study": "Phát Triển Phần Mềm",
+        "gpa_or_honors": "3.77",
+        "institution": "FPT Polytechnic",
+        "start_year": 2022
+      }
+    ]
+  },
+  "projects": [
+    {
+      "description": "Ứng dụng web tìm kiếm việc làm, cho phép người dùng xem thông tin chi tiết về công việc, tạo CV, nộp đơn, quản lý danh sách công việc và người dùng. Được phát triển trong khu học viện.",
+      "heuristic_score": null,
+      "impact_metrics": [],
+      "links": [],
+      "name": "Tim Kiếm Việc Làm",
+      "role": "Developer",
+      "technologies": [
+        "Java",
+        "Spring Boot",
+        "SQL Server",
+        "Spring Security",
+        "AngularJS"
+      ]
+    },
+    {
+      "description": "Hệ thống đặt phòng khách sạn trực tuyến cho phép người dùng tìm kiếm, đặt phòng, quản lý thông tin khách sạn, theo dõi doanh thu và thống kê trong tháng năm.",
+      "heuristic_score": null,
+      "impact_metrics": [],
+      "links": [],
+      "name": "Đặt Phòng Khách Sạn Travel Book",
+      "role": "Backend Developer",
+      "technologies": [
+        "Java",
+        "Spring Boot",
+        "SQL Server",
+        "Spring Security",
+        "AngularJS"
+      ]
+    },
+    {
+      "description": "Hackathon tập trung vào phát triển API backend, cải thiện hiệu suất và xử lý dữ liệu với các công nghệ Java Spring Boot, SQL Server và RESTful API.",
+      "heuristic_score": null,
+      "impact_metrics": [],
+      "links": [],
+      "name": "Backend Rookie Hackathon",
+      "role": "Participant",
+      "technologies": [
+        "Java",
+        "Spring Boot",
+        "SQL Server",
+        "RESTful API"
+      ]
+    }
+  ],
+  "certifications": []
+}

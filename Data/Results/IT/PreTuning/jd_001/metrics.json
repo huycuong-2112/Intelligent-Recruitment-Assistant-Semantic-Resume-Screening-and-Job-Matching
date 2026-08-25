@@ -1,0 +1,34 @@
+{
+  "rule_based": {
+    "jd_id": "jd_001",
+    "method": "rule_based",
+    "n_candidates": 18,
+    "metrics": {
+      "recall@5": 0.8,
+      "recall@10": 1.0,
+      "recall@15": 1.0,
+      "ndcg@5": 0.7797481355613946,
+      "ndcg@10": 0.9035952210540213,
+      "ndcg@15": 0.9035952210540213,
+      "spearman": 0.4670403356568722,
+      "mae": 0.9688888888888889
+    },
+    "warnings": []
+  },
+  "mdms_equal_weight": {
+    "jd_id": "jd_001",
+    "method": "mdms_equal_weight",
+    "n_candidates": 18,
+    "metrics": {
+      "recall@5": 0.8,
+      "recall@10": 1.0,
+      "recall@15": 1.0,
+      "ndcg@5": 0.683692977204325,
+      "ndcg@10": 0.8185837430246177,
+      "ndcg@15": 0.8185837430246177,
+      "spearman": 0.7541969643311377,
+      "mae": 0.7935084644915618
+    },
+    "warnings": []
+  }
+}

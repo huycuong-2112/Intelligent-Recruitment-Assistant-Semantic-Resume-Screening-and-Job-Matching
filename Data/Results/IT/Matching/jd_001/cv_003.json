@@ -1,0 +1,295 @@
+{
+  "jd_id": "jd_001",
+  "cv_id": "cv_003",
+  "score_0_1": 0.30088615497392324,
+  "status": "evaluated",
+  "skill": {
+    "score": 0.11339944191090037,
+    "coverage": 1.0,
+    "matched_required": [
+      "Python programming"
+    ],
+    "matched_preferred": [],
+    "missing_required": [
+      "Data structures and algorithms",
+      "Version control (Git)",
+      "Basic Machine Learning / Deep Learning concepts",
+      "English proficiency (technical reading and communication)"
+    ],
+    "missing_preferred": [
+      "Large Language Models (LLMs) and agentic frameworks (e.g., LangChain, Google ADK)",
+      "Containerization (Docker)",
+      "Cloud platforms (AWS, Azure, GCP)",
+      "Generative AI prototyping",
+      "Basic Natural Language Processing concepts",
+      "Proactive learning and research mindset"
+    ],
+    "requirements": [
+      {
+        "jd_skill": "Python programming",
+        "importance": "required",
+        "score": 0.907195535287203,
+        "availability": "available",
+        "status": "matched",
+        "match_method": "semantic",
+        "matched_cv_skill": "Python",
+        "cv_skill_provenance": [
+          "explicit"
+        ],
+        "similarity": 0.907195535287203,
+        "weight": 1.0
+      },
+      {
+        "jd_skill": "Data structures and algorithms",
+        "importance": "required",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.4083876096325676,
+        "weight": 1.0
+      },
+      {
+        "jd_skill": "Version control (Git)",
+        "importance": "required",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.6936658963484451,
+        "weight": 1.0
+      },
+      {
+        "jd_skill": "Basic Machine Learning / Deep Learning concepts",
+        "importance": "required",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.6123681219855599,
+        "weight": 1.0
+      },
+      {
+        "jd_skill": "English proficiency (technical reading and communication)",
+        "importance": "required",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.317074825089766,
+        "weight": 1.0
+      },
+      {
+        "jd_skill": "Large Language Models (LLMs) and agentic frameworks (e.g., LangChain, Google ADK)",
+        "importance": "preferred",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.25362076505781445,
+        "weight": 0.5
+      },
+      {
+        "jd_skill": "Containerization (Docker)",
+        "importance": "preferred",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.2024098714980638,
+        "weight": 0.5
+      },
+      {
+        "jd_skill": "Cloud platforms (AWS, Azure, GCP)",
+        "importance": "preferred",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.24088285954464106,
+        "weight": 0.5
+      },
+      {
+        "jd_skill": "Generative AI prototyping",
+        "importance": "preferred",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.3880852578352176,
+        "weight": 0.5
+      },
+      {
+        "jd_skill": "Basic Natural Language Processing concepts",
+        "importance": "preferred",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.30233515501690605,
+        "weight": 0.5
+      },
+      {
+        "jd_skill": "Proactive learning and research mindset",
+        "importance": "preferred",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.2131875283100662,
+        "weight": 0.5
+      }
+    ]
+  },
+  "experience": {
+    "score": 0.5284384631545742,
+    "coverage": 1.0,
+    "years": {
+      "score": 1.0,
+      "availability": "available",
+      "status": "satisfied",
+      "weight": 0.3,
+      "details": {
+        "candidate_years": 1.3,
+        "minimum_years": 0.0
+      }
+    },
+    "evidence": {
+      "score": 0.32634066164939174,
+      "availability": "available",
+      "status": "evaluated",
+      "weight": 0.7,
+      "details": {
+        "responsibilities": [
+          {
+            "responsibility": "Deeply understand project objectives and study data hypotheses under guidance of senior team members",
+            "score": 0.5121755903632604,
+            "status": "low_match",
+            "matched_chunk_id": "cv_003_work_002",
+            "matched_text": "Worked closely with different teams to understand needs and create solutions that fit business goals.",
+            "source_type": "work",
+            "source_name": "TEKO",
+            "raw_similarity": 0.5121755903632604,
+            "threshold": 0.6
+          },
+          {
+            "responsibility": "Research and implement algorithms for data science and AI projects",
+            "score": 0.2966773825558396,
+            "status": "low_match",
+            "matched_chunk_id": "cv_003_work_007",
+            "matched_text": "Completed intensive training on GPU programming, focusing on CUDA, HIP, and parallel computing fundamentals.",
+            "source_type": "work",
+            "source_name": "Moreh Vietnam",
+            "raw_similarity": 0.2966773825558396,
+            "threshold": 0.6
+          },
+          {
+            "responsibility": "Assist in prototyping features using Generative AI capabilities (LLMs, AI agents, embeddings) and basic NLP concepts",
+            "score": 0.37547020255769825,
+            "status": "low_match",
+            "matched_chunk_id": "cv_003_work_005",
+            "matched_text": "Collaborate with art, design, QC, and backend teams to deliver polished and engaging gameplay features.",
+            "source_type": "work",
+            "source_name": "VNG Zing Play Game Studios",
+            "raw_similarity": 0.37547020255769825,
+            "threshold": 0.6
+          },
+          {
+            "responsibility": "Support testing and benchmarking of AI models using established evaluation frameworks",
+            "score": 0.1820396502231872,
+            "status": "low_match",
+            "matched_chunk_id": "cv_003_work_006",
+            "matched_text": "Implement UI/UX, gameplay mechanics, and optimize client performance for smooth user experiences.",
+            "source_type": "work",
+            "source_name": "VNG Zing Play Game Studios",
+            "raw_similarity": 0.1820396502231872,
+            "threshold": 0.6
+          },
+          {
+            "responsibility": "Stay updated on the latest research, trends, and technologies in data science and AI",
+            "score": 0.26534048254697323,
+            "status": "low_match",
+            "matched_chunk_id": "cv_003_work_007",
+            "matched_text": "Completed intensive training on GPU programming, focusing on CUDA, HIP, and parallel computing fundamentals.",
+            "source_type": "work",
+            "source_name": "Moreh Vietnam",
+            "raw_similarity": 0.26534048254697323,
+            "threshold": 0.6
+          }
+        ]
+      }
+    }
+  },
+  "education": {
+    "score": 0.0,
+    "coverage": 1.0,
+    "degree": {
+      "score": 0.0,
+      "availability": "available",
+      "status": "no_evidence",
+      "weight": 0.6,
+      "details": {
+        "candidate": null,
+        "required": "Bachelor"
+      }
+    },
+    "field": {
+      "score": 0.0,
+      "availability": "available",
+      "status": "no_evidence",
+      "weight": 0.4,
+      "details": {
+        "candidate": null,
+        "preferred_fields": [
+          "Computer Science",
+          "Artificial Intelligence",
+          "Data Science"
+        ]
+      }
+    }
+  },
+  "semantic": {
+    "score": 0.5617067148302183,
+    "coverage": 1.0,
+    "status": "evaluated",
+    "availability": "available",
+    "raw_similarity": 0.5617067148302183
+  },
+  "mdms": {
+    "final_score": 0.30088615497392324,
+    "status": "evaluated",
+    "coverage": 1.0,
+    "effective_weights": {
+      "skill": 0.25,
+      "experience": 0.25,
+      "education": 0.25,
+      "semantic": 0.25
+    },
+    "weights": {
+      "skill": 0.25,
+      "experience": 0.25,
+      "education": 0.25,
+      "semantic": 0.25
+    }
+  }
+}

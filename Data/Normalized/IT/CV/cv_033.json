@@ -1,0 +1,135 @@
+{
+  "id": "cv_033",
+  "domain": "IT",
+  "profile": {
+    "summary": "Backend Developer voi 4 nam kinh nghiem xay dung he thong microservices va API hieu nang cao cho san pham fintech & e-commerce. Thich viet code sach, co kien thuc de bao tri.",
+    "job_titles": [
+      "Backend Developer",
+      "Junior Backend Developer"
+    ]
+  },
+  "skills": {
+    "all": [
+      "Spring Boot",
+      "Kafka",
+      "PostgreSQL",
+      "Jenkins",
+      "Docker",
+      "Node.js",
+      "Express",
+      "RabbitMQ",
+      "Redis",
+      "Kafka Streams",
+      "Microservices",
+      "API development",
+      "CI/CD",
+      "Unit testing",
+      "Integration testing",
+      "Rule engine"
+    ],
+    "explicit": [
+      "Spring Boot",
+      "Kafka",
+      "PostgreSQL",
+      "Jenkins",
+      "Docker",
+      "Node.js",
+      "Express",
+      "RabbitMQ",
+      "Redis",
+      "Kafka Streams",
+      "Microservices",
+      "API development",
+      "CI/CD",
+      "Unit testing",
+      "Integration testing",
+      "Rule engine"
+    ],
+    "project_derived": [
+      "Spring Boot",
+      "PostgreSQL",
+      "RabbitMQ",
+      "Redis",
+      "Node.js",
+      "Kafka Streams"
+    ]
+  },
+  "experience": {
+    "professional_years": 5.5,
+    "work_evidence": [
+      {
+        "company": "Cong ty TNHH Cong nghe Fin Pay",
+        "end_date": "Present",
+        "responsibilities_and_impact": [
+          "Thiet ke va phat trien 15+ microservices xu ly hon 2 trieu giao dich/thang bang Spring Boot & Kafka.",
+          "Toi truong truy van PostgreSQL, giam 40% thoi gian phan hoi API cho nghiep vu thanh toan.",
+          "Xay dung pipeline CI/CD voi Jenkins & Docker, rut ngan thoi gian deploy tu 1 gio xuong 10 phut.",
+          "Mentor 3 thuc tap sinh backend, xay dung tai lieu coding convention cho team."
+        ],
+        "role": "Backend Developer",
+        "start_date": "06/2022"
+      },
+      {
+        "company": "Shop VN E-commerce JSC",
+        "end_date": "05/2022",
+        "responsibilities_and_impact": [
+          "Phat trien module quan ly don hang va ton kho bang Node.js/Express, phuc vu 50,000+ nguoi dung.",
+          "Tich hop cong thanh toan VNPay, Momo, Zalo Pay vao he thong checkout.",
+          "Viet unit test & integration test, tang do phu code tu 45% len 80%."
+        ],
+        "role": "Junior Backend Developer",
+        "start_date": "03/2021"
+      }
+    ],
+    "project_evidence": [
+      "He thong quan ly don hang da kenh cho chuoi ban le, xu ly dong bo real-time cho web, app va POS.",
+      "Service phat hien giao dich bat thuong theo thoi gian su dung rule-engine, giam 30% giao dich gian lan."
+    ]
+  },
+  "education": {
+    "degree": "Bachelor",
+    "field": "Cong nghe Thong tin",
+    "history": [
+      {
+        "degree": "Bachelor",
+        "end_year": 2021,
+        "field_of_study": "Cong nghe Thong tin",
+        "gpa_or_honors": "GPA 3.5/4.0",
+        "institution": "Daihoc Bach Khoa TP.HCM",
+        "start_year": 2017
+      }
+    ]
+  },
+  "projects": [
+    {
+      "description": "He thong quan ly don hang da kenh cho chuoi ban le, xu ly dong bo real-time cho web, app va POS.",
+      "heuristic_score": null,
+      "impact_metrics": [],
+      "links": [],
+      "name": "Order Management System (OMS)",
+      "role": null,
+      "technologies": [
+        "Spring Boot",
+        "PostgreSQL",
+        "RabbitMQ",
+        "Redis"
+      ]
+    },
+    {
+      "description": "Service phat hien giao dich bat thuong theo thoi gian su dung rule-engine, giam 30% giao dich gian lan.",
+      "heuristic_score": null,
+      "impact_metrics": [
+        "Reduced fraudulent transactions by 30%"
+      ],
+      "links": [],
+      "name": "Fraud Detection Service",
+      "role": null,
+      "technologies": [
+        "Node.js",
+        "Kafka Streams",
+        "Redis"
+      ]
+    }
+  ],
+  "certifications": []
+}

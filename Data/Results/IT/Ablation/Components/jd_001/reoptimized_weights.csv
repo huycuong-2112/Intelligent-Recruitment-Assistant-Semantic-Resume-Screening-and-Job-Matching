@@ -1,0 +1,5 @@
+removed,experience,education,semantic,skill
+skill,0.5,0.1,0.4,
+experience,,0.1,0.5,0.4
+education,0.2,,0.2,0.6
+semantic,0.6,0.0,,0.4

@@ -1,0 +1,165 @@
+{
+  "id": "cv_009",
+  "domain": "IT",
+  "profile": {
+    "summary": null,
+    "job_titles": [
+      "Thực tập sinh Kỹ thuật mạng",
+      "Nhân viên kỹ thuật IT Helpdesk",
+      "Nhân viên hỗ trợ phòng Lab",
+      "Thực tập sinh công nghệ",
+      "Nhân viên công ty xe khách",
+      "Quản lý đào tạo & tuyển dụng",
+      "Freelance Project Manager"
+    ]
+  },
+  "skills": {
+    "all": [
+      "Fiber Optic",
+      "Router",
+      "Switch",
+      "SIP Trunk",
+      "SOP",
+      "KPI",
+      "Project Management"
+    ],
+    "explicit": [],
+    "project_derived": [
+      "Fiber Optic",
+      "Router",
+      "Switch",
+      "SIP Trunk",
+      "SOP",
+      "KPI",
+      "Project Management"
+    ]
+  },
+  "experience": {
+    "professional_years": 6.3,
+    "work_evidence": [
+      {
+        "company": "Cử nhân Công nghệ Thông tin (Đại học Đà Lạt)",
+        "end_date": "06/2024",
+        "responsibilities_and_impact": [
+          "Tham gia khảo sát, thi công và bảo dưỡng hệ thống cáp quang cho các trạm BTS.",
+          "Cấu hình, bảo trì mạng nội bộ và thiết bị mạng (router, switch, ODM, AN, Wire Guard).",
+          "Triển khai SIP Trunk và các giải pháp VoIP cho hệ thống truyền thông."
+        ],
+        "role": "Thực tập sinh Kỹ thuật mạng",
+        "start_date": "09/2020"
+      },
+      {
+        "company": "Công ty TNHH Công Nghệ Song Phương",
+        "end_date": "06/2023",
+        "responsibilities_and_impact": [
+          "Quản lý văn bản, linh kiện điện tử.",
+          "Lắp đặt camera an ninh và máy tính cá nhân cho khách hàng."
+        ],
+        "role": "Thực tập sinh",
+        "start_date": "03/2023"
+      },
+      {
+        "company": "Trung tâm CNTT, Đại học Đà Lạt",
+        "end_date": "12/2023",
+        "responsibilities_and_impact": [
+          "Quản lý máy chủ, thiết bị mạng trong phòng Lab.",
+          "Bảo trì, nâng cấp phần cứng và phần mềm cho môi trường học tập."
+        ],
+        "role": "Hỗ trợ quản lý phòng Lab và bảo trì thiết bị học tập",
+        "start_date": "07/2023"
+      },
+      {
+        "company": "Công ty Cổ phần Xe Khách Phương Trang",
+        "end_date": "06/2025",
+        "responsibilities_and_impact": [
+          "Tư vấn trực tiếp cho khách hàng, điều phối giao dịch trên hệ thống.",
+          "Giám sát tiến độ, tổng hợp dữ liệu lỗi, đánh giá hiệu suất nhân sự bán hàng."
+        ],
+        "role": "Nhân viên tư vấn và điều phối giao dịch",
+        "start_date": "06/2024"
+      },
+      {
+        "company": "FPT Telecom Lam Đồng",
+        "end_date": "12/2025",
+        "responsibilities_and_impact": [
+          "Triển khai và bảo trì hệ thống camera an ninh cho khách hàng.",
+          "Cung cấp hỗ trợ kỹ thuật (Helpdesk) cho người dùng nội bộ."
+        ],
+        "role": "Nhân viên kỹ thuật IT Helpdesk (triển khai, bảo trì, vận hành)",
+        "start_date": "06/2025"
+      },
+      {
+        "company": "Viettel Construction (VCC) Lam Đồng",
+        "end_date": "03/2026",
+        "responsibilities_and_impact": [
+          "Tham gia các dự án xây dựng hạ tầng viễn thông.",
+          "Học và thực hành quy trình chuẩn an toàn lao động và cấu hình mạng."
+        ],
+        "role": "Thực tập sinh / Đào tạo chuyên môn",
+        "start_date": "01/2026"
+      }
+    ],
+    "project_evidence": [
+      "Thi công, lắp đặt và bảo dưỡng hệ thống cáp quang cấp truyền dẫn cho các trạm thu phát sóng (BTS) nhằm cải thiện độ ổn định và băng thông.",
+      "Xây dựng SOP, đánh giá KPI và tài liệu hướng dẫn cho đội ngũ 20 tester và cộng tác viên, đồng thời tổ chức đào tạo và tuyển dụng nhân sự."
+    ]
+  },
+  "education": {
+    "degree": "Bachelor",
+    "field": "Công nghệ thông tin",
+    "history": [
+      {
+        "degree": "Bachelor",
+        "end_year": 2024,
+        "field_of_study": "Công nghệ thông tin",
+        "gpa_or_honors": null,
+        "institution": "Đại học Đà Lạt",
+        "start_year": null
+      },
+      {
+        "degree": "Other",
+        "end_year": 2026,
+        "field_of_study": null,
+        "gpa_or_honors": null,
+        "institution": "Viettel Construction (VCC) Lam Đồng",
+        "start_year": 2026
+      }
+    ]
+  },
+  "projects": [
+    {
+      "description": "Thi công, lắp đặt và bảo dưỡng hệ thống cáp quang cấp truyền dẫn cho các trạm thu phát sóng (BTS) nhằm cải thiện độ ổn định và băng thông.",
+      "heuristic_score": 0.78,
+      "impact_metrics": [
+        "Tăng 30% độ ổn định kết nối mạng",
+        "Giảm thời gian downtime xuống dưới 2 giờ/tháng"
+      ],
+      "links": [],
+      "name": "Hệ thống cáp quang cho trạm BTS",
+      "role": "Thành viên kỹ thuật",
+      "technologies": [
+        "Fiber Optic",
+        "Router",
+        "Switch",
+        "SIP Trunk"
+      ]
+    },
+    {
+      "description": "Xây dựng SOP, đánh giá KPI và tài liệu hướng dẫn cho đội ngũ 20 tester và cộng tác viên, đồng thời tổ chức đào tạo và tuyển dụng nhân sự.",
+      "heuristic_score": 0.65,
+      "impact_metrics": [
+        "Đạt mức hoàn thành KPI 95% trong 3 tháng",
+        "Tuyển dụng và đào tạo 20 tester mới"
+      ],
+      "links": [],
+      "name": "Dự án Game Online (Freelance)",
+      "role": "Quản lý dự án & Đào tạo",
+      "technologies": [
+        "SOP",
+        "KPI",
+        "Project Management"
+      ]
+    }
+  ],
+  "certifications": []
+}

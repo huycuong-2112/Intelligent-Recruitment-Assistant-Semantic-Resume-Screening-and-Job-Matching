@@ -1,0 +1,202 @@
+{
+  "id": "cv_015",
+  "domain": "IT",
+  "profile": {
+    "summary": "Machine Learning Engineer with research experience in AI for information security, focusing on intrusion detection, explainable AI, federated learning, and building end‑to‑end ML pipelines (data collection, model design, evaluation). Recent work includes RAG‑based Vietnamese document chatbot, multi‑agent research assistants, LoRA‑fine‑tuned NER models, RAG evaluation dashboards, and autonomous IT‑support agents with guardrails.",
+    "job_titles": [
+      "Machine Learning Engineer",
+      "AI Engineer",
+      "Research Assistant",
+      "IT Support Agent"
+    ]
+  },
+  "skills": {
+    "all": [
+      "OCR",
+      "Retrieval‑Augmented Generation",
+      "Qdrant",
+      "BM25",
+      "Vision LLM",
+      "Hybrid Retrieval",
+      "Python",
+      "LangGraph",
+      "Large Language Models",
+      "Rubric‑based evaluation",
+      "Welch's t‑test",
+      "PyTorch",
+      "LoRA",
+      "PhoBERT",
+      "Qwen2.5",
+      "LLM Prompting",
+      "Zero‑shot",
+      "Few‑shot",
+      "RAG",
+      "Bootstrap confidence interval",
+      "Precision/Recall metrics",
+      "Factuality",
+      "Relevance scoring"
+    ],
+    "explicit": [],
+    "project_derived": [
+      "OCR",
+      "Retrieval‑Augmented Generation",
+      "Qdrant",
+      "BM25",
+      "Vision LLM",
+      "Hybrid Retrieval",
+      "Python",
+      "LangGraph",
+      "Large Language Models",
+      "Rubric‑based evaluation",
+      "Welch's t‑test",
+      "PyTorch",
+      "LoRA",
+      "PhoBERT",
+      "Qwen2.5",
+      "LLM Prompting",
+      "Zero‑shot",
+      "Few‑shot",
+      "RAG",
+      "Bootstrap confidence interval",
+      "Precision/Recall metrics",
+      "Factuality",
+      "Relevance scoring"
+    ]
+  },
+  "experience": {
+    "professional_years": 1.0,
+    "work_evidence": [
+      {
+        "company": "Self‑employed",
+        "end_date": "Present",
+        "responsibilities_and_impact": [
+          "Designed and implemented ML pipelines for security‑related tasks (intrusion detection, malware classification, explainable AI).",
+          "Conducted research on graph neural networks (GAT, GCN, GIN) and transformer models (BERT, CodeBERT, GraphCodeBERT).",
+          "Applied federated learning and PEFT/LoRA techniques to improve model privacy and efficiency.",
+          "Authored 9 research papers on AI for information security."
+        ],
+        "role": "Machine Learning Engineer",
+        "start_date": null
+      },
+      {
+        "company": "Self‑employed",
+        "end_date": "Present",
+        "responsibilities_and_impact": [
+          "Built a Vietnamese Document Intelligence Chatbot using OCR + Retrieval‑Augmented Generation (Qdrant + BM25) with hybrid confidence‑based routing.",
+          "Reduced OCR processing cost by 40‑50% and lowered token usage by ~18% while speeding up inference ~7.5×.",
+          "Developed a Multi‑Agent Research Assistant (LangGraph) with planner, researcher, critic, writer agents; introduced rubric‑based LLM evaluation and Welch’s t‑test for statistical significance.",
+          "Improved chat quality (p < 0.05), cut token consumption by 18% and runtime by 7.5×.",
+          "Fine‑tuned LoRA‑based Vietnamese NER models (PhoBERT, Qwen2.5) achieving F1 0.810, comparable to few‑shot prompting with <1% additional parameters and 4.1× request‑cost reduction.",
+          "Created a RAG Evaluation Dashboard that automatically diagnoses precision, recall, factuality, and relevance; identified three critical bugs and boosted accuracy.",
+          "Implemented an Autonomous IT‑Support Agent with guardrails; tested 44 scenarios and reduced unsafe actions by 78.6% to 0%."
+        ],
+        "role": "AI Engineer / Researcher",
+        "start_date": "2026"
+      }
+    ],
+    "project_evidence": [
+      "A chatbot that answers questions over scanned Vietnamese documents using OCR to extract text, then retrieves relevant passages via dense (Qdrant) and sparse (BM25) search, re‑ranks with reciprocal rank fusion, and generates answers with a Vision‑enabled LLM. Confidence‑based routing escalates low‑confidence queries to the full LLM.",
+      "A multi‑agent system composed of Planner, Researcher, Critic, and Writer agents that collaboratively solve research tasks. Outputs are scored against a rubric and statistical significance is assessed with Welch’s t‑test.",
+      "Fine‑tuned LoRA adapters on Vietnamese NER datasets and compared performance against zero‑ and few‑shot prompting approaches. Demonstrated comparable F1 scores with far fewer trainable parameters.",
+      "Dashboard that automatically evaluates RAG system answers on multiple dimensions (precision, recall, factuality, relevance) and detects root‑cause bugs using statistical confidence intervals."
+    ]
+  },
+  "education": {
+    "degree": "Engineer",
+    "field": "An toàn thông tin",
+    "history": [
+      {
+        "degree": "Engineer",
+        "end_year": 2025,
+        "field_of_study": "An toàn thông tin",
+        "gpa_or_honors": "GPA 8.59/10",
+        "institution": "Đại học Công nghệ Thông tin (UIT), ĐHQG‑HCM",
+        "start_year": null
+      }
+    ]
+  },
+  "projects": [
+    {
+      "description": "A chatbot that answers questions over scanned Vietnamese documents using OCR to extract text, then retrieves relevant passages via dense (Qdrant) and sparse (BM25) search, re‑ranks with reciprocal rank fusion, and generates answers with a Vision‑enabled LLM. Confidence‑based routing escalates low‑confidence queries to the full LLM.",
+      "heuristic_score": null,
+      "impact_metrics": [
+        "Reduced OCR processing cost by 40‑50%",
+        "Decreased token usage by 9.9% per chunk",
+        "Improved latency and throughput (≈7.5× faster)"
+      ],
+      "links": [],
+      "name": "Document Intelligence Chatbot – OCR + RAG (Vietnamese)",
+      "role": "Lead Engineer",
+      "technologies": [
+        "OCR",
+        "Retrieval‑Augmented Generation",
+        "Qdrant",
+        "BM25",
+        "Vision LLM",
+        "Hybrid Retrieval",
+        "Python"
+      ]
+    },
+    {
+      "description": "A multi‑agent system composed of Planner, Researcher, Critic, and Writer agents that collaboratively solve research tasks. Outputs are scored against a rubric and statistical significance is assessed with Welch’s t‑test.",
+      "heuristic_score": null,
+      "impact_metrics": [
+        "Chat quality improvement (p < 0.05)",
+        "Token usage reduced by 18%",
+        "Inference speed increased by 7.5×"
+      ],
+      "links": [],
+      "name": "Multi‑Agent Research Assistant (LangGraph)",
+      "role": "Research Lead",
+      "technologies": [
+        "LangGraph",
+        "Large Language Models",
+        "Rubric‑based evaluation",
+        "Welch's t‑test",
+        "Python"
+      ]
+    },
+    {
+      "description": "Fine‑tuned LoRA adapters on Vietnamese NER datasets and compared performance against zero‑ and few‑shot prompting approaches. Demonstrated comparable F1 scores with far fewer trainable parameters.",
+      "heuristic_score": null,
+      "impact_metrics": [
+        "F1 0.810 (comparable to few‑shot)",
+        "Parameter increase <1%",
+        "Request‑cost reduction 4.1×",
+        "Generalization drop 24.6% on out‑of‑domain data"
+      ],
+      "links": [],
+      "name": "Vietnamese Domain NER – LoRA Fine‑tuning vs Zero/Few‑shot Prompting",
+      "role": "Researcher",
+      "technologies": [
+        "PyTorch",
+        "LoRA",
+        "PhoBERT",
+        "Qwen2.5",
+        "LLM Prompting",
+        "Zero‑shot",
+        "Few‑shot"
+      ]
+    },
+    {
+      "description": "Dashboard that automatically evaluates RAG system answers on multiple dimensions (precision, recall, factuality, relevance) and detects root‑cause bugs using statistical confidence intervals.",
+      "heuristic_score": null,
+      "impact_metrics": [
+        "Identified 3 critical bugs",
+        "Improved overall accuracy (reported in internal metrics)"
+      ],
+      "links": [],
+      "name": "RAG Evaluation Dashboard",
+      "role": "Developer",
+      "technologies": [
+        "RAG",
+        "Bootstrap confidence interval",
+        "Precision/Recall metrics",
+        "Factuality",
+        "Relevance scoring",
+        "Python"
+      ]
+    }
+  ],
+  "certifications": []
+}

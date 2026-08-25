@@ -1,0 +1,120 @@
+{
+  "domain": "IT",
+  "extraction_method": "groq_llm",
+  "filename": "cv4.png",
+  "id": "cv_030",
+  "parsed_data": {
+    "certifications": [],
+    "education_degree": "Bachelor",
+    "education_field": "Mạng máy tính & Truyền thông dữ liệu",
+    "education_history": [
+      {
+        "degree": "Bachelor",
+        "end_year": 2022,
+        "field_of_study": "Mạng máy tính & Truyền thông dữ liệu",
+        "gpa_or_honors": null,
+        "institution": "Đại học Công nghệ - ĐHQG Hà Nội",
+        "start_year": 2018
+      },
+      {
+        "degree": null,
+        "end_year": 2022,
+        "field_of_study": "IT Training",
+        "gpa_or_honors": null,
+        "institution": "Trung tâm CNTT Đại học Hà Nội",
+        "start_year": 2021
+      }
+    ],
+    "experience_years": 5.0,
+    "job_titles": [
+      "IT Support Specialist",
+      "Technical Support Staff (Help Desk)",
+      "IT Intern"
+    ],
+    "projects": [
+      {
+        "description": "Triển khai và vận hành hạ tầng mạng cho văn phòng 5, bao gồm cấu hình VLAN, thiết lập TCP/IP và triển khai thiết bị Fortinet.",
+        "heuristic_score": null,
+        "impact_metrics": [
+          "Uptime 99.8% in 2025"
+        ],
+        "links": [],
+        "name": "Network Upgrade for Office 5",
+        "role": "Network Admin",
+        "technologies": [
+          "TCP/IP",
+          "VLAN",
+          "Fortinet",
+          "Cisco"
+        ]
+      },
+      {
+        "description": "Triển khai và cấu hình firewall Fortinet để bảo vệ mạng nội bộ.",
+        "heuristic_score": null,
+        "impact_metrics": [
+          "Reduced unauthorized access incidents by 60%"
+        ],
+        "links": [],
+        "name": "Firewall Fortinet Deployment",
+        "role": "Network Admin",
+        "technologies": [
+          "Fortinet",
+          "Firewall"
+        ]
+      },
+      {
+        "description": "Xây dựng tài liệu hướng dẫn và quy trình hỗ trợ, giảm thời gian phản hồi.",
+        "heuristic_score": null,
+        "impact_metrics": [
+          "Reduced response time by 25%"
+        ],
+        "links": [],
+        "name": "Support Process Optimization",
+        "role": "Help Desk",
+        "technologies": [
+          "Freshservice",
+          "Documentation"
+        ]
+      }
+    ],
+    "skills": [],
+    "summary": "Chuyên viên IT Support / Network Admin với nền tảng vững vàng về Windows Server, Active Directory, hệ thống mạng LAN/WAN, TCP/IP, VLAN, Fortinet và Cisco. Đảm bảo uptime 99.8% năm 2025, giảm 60% sự cố truy cập trái phép, và đạt tỷ lệ hài lòng 96% trong xử lý ticket.",
+    "work_experience": [
+      {
+        "company": "Tập đoàn Ban Lê Minh Long",
+        "end_date": "Present",
+        "responsibilities_and_impact": [
+          "Quản trị hệ thống mạng LAN/WAN cho 6 chi nhánh, hơn 200 thiết bị.",
+          "Xử lý trung bình 30 ticket/tuần qua Freshservice, tỷ lệ hài lòng 96%.",
+          "Thực hiện Backup & Recovery cho hệ thống.",
+          "Triển khai và cấu hình firewall Fortinet, giảm 60% sự cố truy cập trái phép.",
+          "Quản lý Active Directory, Group Policy cho 250 tài khoản người dùng."
+        ],
+        "role": "IT Support Specialist",
+        "start_date": "08/2023"
+      },
+      {
+        "company": "Công ty CP Giải pháp S6 Viet Comp",
+        "end_date": "07/2023",
+        "responsibilities_and_impact": [
+          "Hỗ trợ kỹ thuật onsite & remote cho hơn 150 nhân viên văn phòng.",
+          "Cài đặt, cấu hình máy trạm, máy in, mạng và hệ thống hội nghị truyền hình.",
+          "Xây dựng tài liệu hướng dẫn, giảm 25% thời gian phản hồi."
+        ],
+        "role": "Technical Support Staff (Help Desk)",
+        "start_date": "02/2022"
+      },
+      {
+        "company": "Trung tâm CNTT Đại học Hà Nội",
+        "end_date": "01/2022",
+        "responsibilities_and_impact": [
+          "Hỗ trợ bảo trì phòng máy 120 máy tính và hệ thống mạng nội bộ.",
+          "Thực hiện các công việc IT cơ bản."
+        ],
+        "role": "IT Intern",
+        "start_date": "06/2021"
+      }
+    ]
+  },
+  "source_status": "RECOVERED_BY_OCR"
+}

@@ -1,0 +1,180 @@
+{
+  "id": "cv_024",
+  "domain": "IT",
+  "profile": {
+    "summary": null,
+    "job_titles": []
+  },
+  "skills": {
+    "all": [
+      "Generative AI",
+      "Agentic Workflows",
+      "Multi-Agent Orchestration",
+      "RAG Architecture",
+      "LLM Prompt Engineering",
+      "Guardrails",
+      "AutoGen",
+      "LangChain",
+      "Machine Learning",
+      "Deep Learning",
+      "PyTorch",
+      "Scikit-learn",
+      "Transformers",
+      "PhoBERT",
+      "XLM-R",
+      "CNN",
+      "Computer Vision",
+      "OpenCV",
+      "Data Engineering Pipelines",
+      "C/C++",
+      "Python",
+      "SQL",
+      "TypeScript",
+      "Java",
+      "Fast API",
+      "REST API",
+      "Microservices",
+      "Async Event Queues",
+      "Redis Queue",
+      "Rule Engines",
+      "PostgreSQL",
+      "Vector Search",
+      "Retrieval",
+      "Git",
+      "Docker",
+      "Linux CLI",
+      "Streamlit",
+      "Vietnamese",
+      "English",
+      "TOEIC 700",
+      "Rule Engine",
+      "Next.js",
+      "LLM"
+    ],
+    "explicit": [
+      "Generative AI",
+      "Agentic Workflows",
+      "Multi-Agent Orchestration",
+      "RAG Architecture",
+      "LLM Prompt Engineering",
+      "Guardrails",
+      "AutoGen",
+      "LangChain",
+      "Machine Learning",
+      "Deep Learning",
+      "PyTorch",
+      "Scikit-learn",
+      "Transformers",
+      "PhoBERT",
+      "XLM-R",
+      "CNN",
+      "Computer Vision",
+      "OpenCV",
+      "Data Engineering Pipelines",
+      "C/C++",
+      "Python",
+      "SQL",
+      "TypeScript",
+      "Java",
+      "Fast API",
+      "REST API",
+      "Microservices",
+      "Async Event Queues",
+      "Redis Queue",
+      "Rule Engines",
+      "PostgreSQL",
+      "Vector Search",
+      "Retrieval",
+      "Git",
+      "Docker",
+      "Linux CLI",
+      "Streamlit",
+      "Vietnamese",
+      "English",
+      "TOEIC 700"
+    ],
+    "project_derived": [
+      "PhoBERT",
+      "CNN",
+      "XLM-R",
+      "Fast API",
+      "Redis Queue",
+      "Rule Engine",
+      "Streamlit",
+      "Next.js",
+      "Multi-Agent Orchestration",
+      "LLM"
+    ]
+  },
+  "experience": {
+    "professional_years": 0.0,
+    "work_evidence": [],
+    "project_evidence": [
+      "Designed and deployed a two-stage detection and verification framework (Pho BERT, CNN, XLM-R) to identify and classify anomalous/fake text signals across social datasets. Achieved 97.33% classification accuracy (0.9516 F1-score) on Stage 1 data analysis and improved Stage 2 verification performance by +3.26% F1-score over baseline. Aut da ug Bd a -a ig u gpli for structured log and event data transport.",
+      "Async Event Handling Architecture: Designed an API Gateway with Fast API and Redis Queue for asynchronous log handling. Safety Guardrails & Incident Escalation: Engineered a custom Rule Engine to filter incoming anomaly triggers, enforce security guardrails, and automatically escalate critical security incidents to human analysts. Forensic Context Packaging & Monitoring: Automated context extraction onto a Streamlit dashboard featuring real-time system metrics and operational monitoring.",
+      "Developed an AI-assisted recruiter co-pilot (Fast API & Next.js) using Multi-Agent Orchestration and Tool/Function Calling to automate CV screening, candidate evaluation, and report generation. Implemented crucial system guardrails, including strict schema verification, PII masking for data privacy, and fallback strategies for insufficient contexts. Established automated evaluation metrics focusing on LLM faithfulness, relevance, and latency to continuously optimize prompts and template performance."
+    ]
+  },
+  "education": {
+    "degree": "Bachelor",
+    "field": "Computer Science",
+    "history": [
+      {
+        "degree": "Bachelor",
+        "end_year": 2026,
+        "field_of_study": "Computer Science",
+        "gpa_or_honors": "Academic Scholarship Award (2024)",
+        "institution": "Unknown Institution",
+        "start_year": 2021
+      }
+    ]
+  },
+  "projects": [
+    {
+      "description": "Designed and deployed a two-stage detection and verification framework (Pho BERT, CNN, XLM-R) to identify and classify anomalous/fake text signals across social datasets. Achieved 97.33% classification accuracy (0.9516 F1-score) on Stage 1 data analysis and improved Stage 2 verification performance by +3.26% F1-score over baseline. Aut da ug Bd a -a ig u gpli for structured log and event data transport.",
+      "heuristic_score": null,
+      "impact_metrics": [
+        "97.33% classification accuracy",
+        "0.9516 F1-score",
+        "+3.26% F1-score over baseline"
+      ],
+      "links": [],
+      "name": "Vietnamese Social Media Fake News Detection System",
+      "role": "Solo",
+      "technologies": [
+        "Pho BERT",
+        "CNN",
+        "XLM-R"
+      ]
+    },
+    {
+      "description": "Async Event Handling Architecture: Designed an API Gateway with Fast API and Redis Queue for asynchronous log handling. Safety Guardrails & Incident Escalation: Engineered a custom Rule Engine to filter incoming anomaly triggers, enforce security guardrails, and automatically escalate critical security incidents to human analysts. Forensic Context Packaging & Monitoring: Automated context extraction onto a Streamlit dashboard featuring real-time system metrics and operational monitoring.",
+      "heuristic_score": null,
+      "impact_metrics": [],
+      "links": [],
+      "name": "Auto Support Agent – Autonomous Customer Support System",
+      "role": "Solo",
+      "technologies": [
+        "Fast API",
+        "Redis Queue",
+        "Rule Engine",
+        "Streamlit"
+      ]
+    },
+    {
+      "description": "Developed an AI-assisted recruiter co-pilot (Fast API & Next.js) using Multi-Agent Orchestration and Tool/Function Calling to automate CV screening, candidate evaluation, and report generation. Implemented crucial system guardrails, including strict schema verification, PII masking for data privacy, and fallback strategies for insufficient contexts. Established automated evaluation metrics focusing on LLM faithfulness, relevance, and latency to continuously optimize prompts and template performance.",
+      "heuristic_score": null,
+      "impact_metrics": [],
+      "links": [],
+      "name": "Interview Copilot",
+      "role": "Solo",
+      "technologies": [
+        "Fast API",
+        "Next.js",
+        "Multi-Agent Orchestration",
+        "LLM"
+      ]
+    }
+  ],
+  "certifications": []
+}

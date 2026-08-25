@@ -1,0 +1,10 @@
+{
+  "three_way_exact": 5,
+  "two_of_three": 12,
+  "three_different": 1,
+  "weighted_kappa": {
+    "a1_a2": 0.8096676737160121,
+    "a1_a3": 0.7195467422096318,
+    "a2_a3": 0.6905444126074498
+  }
+}

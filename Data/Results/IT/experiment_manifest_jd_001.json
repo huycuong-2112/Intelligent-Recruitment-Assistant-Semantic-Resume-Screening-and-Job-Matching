@@ -1,0 +1,43 @@
+{
+  "domain": "IT",
+  "jd_id": "jd_001",
+  "ground_truth_file": "C:\\Users\\Asus\\Documents\\UITCSNAM1\\ML_IOT\\Projcet cu\u1ed1i kh\u00f3a\\Intelligent-Recruitment-Assistant-Semantic-Resume-Screening-and-Job-Matching\\Data\\GroundTruth\\IT\\jd_001.json",
+  "candidate_ids": [
+    "cv_001",
+    "cv_002",
+    "cv_003",
+    "cv_004",
+    "cv_005",
+    "cv_006",
+    "cv_007",
+    "cv_009",
+    "cv_010",
+    "cv_012",
+    "cv_013",
+    "cv_014",
+    "cv_017",
+    "cv_018",
+    "cv_020",
+    "cv_021",
+    "cv_023",
+    "cv_024",
+    "cv_025",
+    "cv_028",
+    "cv_029",
+    "cv_032",
+    "cv_033",
+    "cv_034"
+  ],
+  "n_candidates": 24,
+  "gt_scale": "0-3 ordinal integer",
+  "relevant_threshold": 2,
+  "k_values": [
+    5,
+    10,
+    15
+  ],
+  "splits": {
+    "development": 18,
+    "blind_test": 6
+  }
+}

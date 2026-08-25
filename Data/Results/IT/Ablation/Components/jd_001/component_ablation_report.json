@@ -1,0 +1,228 @@
+{
+  "development_n": 18,
+  "relevant_n": 5,
+  "full": {
+    "weights": {
+      "skill": 0.4,
+      "experience": 0.2,
+      "education": 0.1,
+      "semantic": 0.3
+    },
+    "metrics": {
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "recall@15": 1.0,
+      "ndcg@5": 0.8698687319194839,
+      "ndcg@10": 0.8793433720438693,
+      "ndcg@15": 0.8793433720438693,
+      "spearman": 0.9021441564491928,
+      "mae_0_to_3": 0.7152424218541342
+    }
+  },
+  "models": [
+    {
+      "model": "full_tuned",
+      "skill": 0.4,
+      "experience": 0.2,
+      "education": 0.1,
+      "semantic": 0.3,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "recall@15": 1.0,
+      "ndcg@5": 0.8698687319194839,
+      "ndcg@10": 0.8793433720438693,
+      "ndcg@15": 0.8793433720438693,
+      "spearman": 0.9021441564491928,
+      "mae_0_to_3": 0.7152424218541342
+    },
+    {
+      "model": "no_skill_frozen_renorm",
+      "skill": 0.0,
+      "experience": 0.33333333333333337,
+      "education": 0.16666666666666669,
+      "semantic": 0.5,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "recall@15": 1.0,
+      "ndcg@5": 0.8698687319194839,
+      "ndcg@10": 0.8600710707188142,
+      "ndcg@15": 0.8767991511683153,
+      "spearman": 0.8587611452266052,
+      "mae_0_to_3": 0.8992562882189706
+    },
+    {
+      "model": "no_skill_reoptimized",
+      "skill": 0.0,
+      "experience": 0.5,
+      "education": 0.1,
+      "semantic": 0.4,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "recall@15": 1.0,
+      "ndcg@5": 0.8698687319194839,
+      "ndcg@10": 0.8611426338585058,
+      "ndcg@15": 0.8778707143080068,
+      "spearman": 0.8732221489674676,
+      "mae_0_to_3": 0.9189675082465493
+    },
+    {
+      "model": "no_experience_frozen_renorm",
+      "skill": 0.5,
+      "experience": 0.0,
+      "education": 0.125,
+      "semantic": 0.37499999999999994,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "recall@15": 1.0,
+      "ndcg@5": 0.8404207565708445,
+      "ndcg@10": 0.8348667461386331,
+      "ndcg@15": 0.8515948265881342,
+      "spearman": 0.8765593036768975,
+      "mae_0_to_3": 0.6851213941396548
+    },
+    {
+      "model": "no_experience_reoptimized",
+      "skill": 0.4,
+      "experience": 0.0,
+      "education": 0.1,
+      "semantic": 0.5,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "recall@15": 1.0,
+      "ndcg@5": 0.851826437108253,
+      "ndcg@10": 0.8634317377540522,
+      "ndcg@15": 0.8634317377540522,
+      "spearman": 0.9110432356743389,
+      "mae_0_to_3": 0.6746970321991914
+    },
+    {
+      "model": "no_education_frozen_renorm",
+      "skill": 0.4444444444444445,
+      "experience": 0.22222222222222224,
+      "education": 0.0,
+      "semantic": 0.3333333333333333,
+      "recall@5": 0.8,
+      "recall@10": 1.0,
+      "recall@15": 1.0,
+      "ndcg@5": 0.8195270855535455,
+      "ndcg@10": 0.8583326795028244,
+      "ndcg@15": 0.8745387376170838,
+      "spearman": 0.8654354546454648,
+      "mae_0_to_3": 0.7129653408556469
+    },
+    {
+      "model": "no_education_reoptimized",
+      "skill": 0.6,
+      "experience": 0.2,
+      "education": 0.0,
+      "semantic": 0.2,
+      "recall@5": 1.0,
+      "recall@10": 1.0,
+      "recall@15": 1.0,
+      "ndcg@5": 0.8698687319194839,
+      "ndcg@10": 0.8611426338585058,
+      "ndcg@15": 0.8778707143080068,
+      "spearman": 0.8732221489674676,
+      "mae_0_to_3": 0.714836529257385
+    },
+    {
+      "model": "no_semantic_frozen_renorm",
+      "skill": 0.5714285714285715,
+      "experience": 0.28571428571428575,
+      "education": 0.14285714285714288,
+      "semantic": 0.0,
+      "recall@5": 0.6,
+      "recall@10": 1.0,
+      "recall@15": 1.0,
+      "ndcg@5": 0.6333513308383866,
+      "ndcg@10": 0.8105814675307701,
+      "ndcg@15": 0.8255738528108971,
+      "spearman": 0.7530845794279944,
+      "mae_0_to_3": 0.7414612695546372
+    },
+    {
+      "model": "no_semantic_reoptimized",
+      "skill": 0.4,
+      "experience": 0.6,
+      "education": 0.0,
+      "semantic": 0.0,
+      "recall@5": 0.8,
+      "recall@10": 1.0,
+      "recall@15": 1.0,
+      "ndcg@5": 0.7867608030679949,
+      "ndcg@10": 0.8272670758424565,
+      "ndcg@15": 0.8434731339567159,
+      "spearman": 0.8298391377448803,
+      "mae_0_to_3": 0.7953730881886865
+    }
+  ],
+  "reoptimized_weights": {
+    "skill": {
+      "experience": 0.5,
+      "education": 0.1,
+      "semantic": 0.4
+    },
+    "experience": {
+      "skill": 0.4,
+      "education": 0.1,
+      "semantic": 0.5
+    },
+    "education": {
+      "skill": 0.6,
+      "experience": 0.2,
+      "semantic": 0.2
+    },
+    "semantic": {
+      "skill": 0.4,
+      "experience": 0.6,
+      "education": 0.0
+    }
+  },
+  "deltas_full_minus_reoptimized": [
+    {
+      "removed": "skill",
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "recall@15": 0.0,
+      "ndcg@5": 0.0,
+      "ndcg@10": 0.018200738185363496,
+      "ndcg@15": 0.0014726577358624704,
+      "spearman": 0.02892200748172513,
+      "mae_0_to_3": -0.20372508639241504
+    },
+    {
+      "removed": "experience",
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "recall@15": 0.0,
+      "ndcg@5": 0.018042294811230875,
+      "ndcg@10": 0.01591163428981701,
+      "ndcg@15": 0.01591163428981701,
+      "spearman": -0.0088990792251461,
+      "mae_0_to_3": 0.04054538965494281
+    },
+    {
+      "removed": "education",
+      "recall@5": 0.0,
+      "recall@10": 0.0,
+      "recall@15": 0.0,
+      "ndcg@5": 0.0,
+      "ndcg@10": 0.018200738185363496,
+      "ndcg@15": 0.0014726577358624704,
+      "spearman": 0.02892200748172513,
+      "mae_0_to_3": 0.0004058925967492799
+    },
+    {
+      "removed": "semantic",
+      "recall@5": 0.19999999999999996,
+      "recall@10": 0.0,
+      "recall@15": 0.0,
+      "ndcg@5": 0.08310792885148899,
+      "ndcg@10": 0.05207629620141274,
+      "ndcg@15": 0.035870238087153394,
+      "spearman": 0.0723050187043125,
+      "mae_0_to_3": -0.08013066633455224
+    }
+  ],
+  "grid_combinations_per_ablation": 66
+}

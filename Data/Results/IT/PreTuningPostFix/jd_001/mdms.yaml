@@ -1,0 +1,37 @@
+domain: IT
+evaluation:
+  k_values: [5, 10, 15]
+relevance:
+  relevant_threshold: 2
+  ground_truth_scale: 0-3
+grid_search:
+  step: 0.1
+  optimization_metric: ndcg@10
+embedding:
+  model_name: sentence-transformers/all-MiniLM-L6-v2
+  normalize_embeddings: true
+  batch_size: 32
+matching:
+  skills:
+    required_weight: 1.0
+    preferred_weight: 0.5
+    taxonomy_related_score: 0.7
+    semantic_threshold: 0.75
+  experience:
+    years_weight: 0.3
+    evidence_weight: 0.7
+    semantic_threshold: 0.6
+  education:
+    degree_weight: 0.6
+    field_weight: 0.4
+mdms:
+  provisional_weights:
+    skill: 0.25
+    experience: 0.25
+    education: 0.25
+    semantic: 0.25
+baseline:
+  rule_based:
+    skill_weight: 0.5
+    experience_weight: 0.3
+    education_weight: 0.2

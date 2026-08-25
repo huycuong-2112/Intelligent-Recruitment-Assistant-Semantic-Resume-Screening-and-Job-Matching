@@ -1,0 +1,134 @@
+{
+  "domain": "IT",
+  "extraction_method": "groq_llm",
+  "filename": "54d1531e-9f81-406e-8f8c-3386054f8c85.jpg",
+  "id": "cv_020",
+  "parsed_data": {
+    "certifications": [],
+    "education_degree": "Bachelor",
+    "education_field": "Information Technology",
+    "education_history": [
+      {
+        "degree": "Bachelor",
+        "end_year": 2025,
+        "field_of_study": "Information Technology",
+        "gpa_or_honors": null,
+        "institution": "Ha Noi Metropolitan University",
+        "start_year": null
+      },
+      {
+        "degree": "Other",
+        "end_year": 2025,
+        "field_of_study": "Machine Learning",
+        "gpa_or_honors": null,
+        "institution": "O.P. Jindal Global University, Coursera",
+        "start_year": null
+      }
+    ],
+    "experience_years": 1.3,
+    "job_titles": [
+      "AI Intern"
+    ],
+    "projects": [
+      {
+        "description": "Fine-tuned Deep Seek-VL-7B with LoRA for automatic scoring of IELTS Writing Task 1, built custom data pipeline and applied multi‑GPU parallelism.",
+        "heuristic_score": null,
+        "impact_metrics": [
+          "MAE ~0.5 on IELTS scoring",
+          "15-16s inference per essay"
+        ],
+        "links": [],
+        "name": "Deepseek-vl-finetuning",
+        "role": "AI Intern",
+        "technologies": [
+          "PyTorch",
+          "LoRA",
+          "Multi-GPU",
+          "VLCollator",
+          "Deep Seek-VL-7B"
+        ]
+      },
+      {
+        "description": "Developed a Retrieval‑Augmented Generation chatbot to support teaching Digital Citizenship Skills, fine‑tuned LLaMA model, integrated FAISS for semantic search, and published the work as a graduation thesis in the university's academic journal.",
+        "heuristic_score": null,
+        "impact_metrics": [
+          "Published in university academic journal"
+        ],
+        "links": [],
+        "name": "AI chatbot for teaching",
+        "role": "Developer",
+        "technologies": [
+          "RAG",
+          "LLaMA",
+          "FAISS",
+          "NLP embedding models",
+          "Google Colab"
+        ]
+      },
+      {
+        "description": "Built a real‑time hand gesture recognition system for mouse control using MediaPipe for landmark detection and OpenCV for image preprocessing, with contour extraction and gesture classification.",
+        "heuristic_score": null,
+        "impact_metrics": [
+          "95% detection accuracy"
+        ],
+        "links": [],
+        "name": "Hand Gesture Recognition Model",
+        "role": "Developer",
+        "technologies": [
+          "MediaPipe",
+          "OpenCV",
+          "Python"
+        ]
+      }
+    ],
+    "skills": [
+      "Python",
+      "C++",
+      "Classification",
+      "Regression",
+      "CNN",
+      "RNN",
+      "GNN",
+      "Transformer",
+      "Transfer Learning",
+      "PyTorch",
+      "TensorFlow",
+      "Scikit-learn",
+      "Hugging Face",
+      "Pandas",
+      "NumPy",
+      "FAISS",
+      "Tokenization",
+      "Embedding Alignment",
+      "Git",
+      "Linux",
+      "Docker",
+      "Google Colab",
+      "VS Code",
+      "Linear Algebra",
+      "Calculus",
+      "Probability & Statistics",
+      "Optimization",
+      "Problem-solving",
+      "Reading technical documents in English",
+      "Team collaboration"
+    ],
+    "summary": "INTERN AI ENGINEER",
+    "work_experience": [
+      {
+        "company": "Eyecode Tech",
+        "end_date": "Present",
+        "responsibilities_and_impact": [
+          "Fine-tuned Deep Seek-VL-7B with LoRA for automatic scoring of IELTS Writing Task 1.",
+          "Froze vision encoder & aligner, applied LoRA to q_proj, k_proj, v_proj, o_proj of the language model.",
+          "Applied multi-GPU parallelism: visual modules on one GPU, language model split across GPUs.",
+          "Built custom data pipeline: tokenization, embedding alignment with masks, and dynamic padding via VLCollator.",
+          "Achieved MAE ~0.5 on IELTS scoring, 15-16s inference per essay, with accurate feedback across all scoring criteria."
+        ],
+        "role": "AI Intern",
+        "start_date": "05/2025"
+      }
+    ]
+  },
+  "source_status": "ACCEPTED_BY_DOCLING"
+}

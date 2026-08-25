@@ -1,0 +1,140 @@
+{
+  "id": "cv_034",
+  "domain": "IT",
+  "profile": {
+    "summary": "An eager student at HUST with major interest in Large Language Models (LLMs), and multi-agent systems, RAG. Ready to take part in either production or researching workflows.",
+    "job_titles": [
+      "Data Analytics Intern",
+      "Research Member"
+    ]
+  },
+  "skills": {
+    "all": [
+      "Python",
+      "C++",
+      "SQL",
+      "Pandas",
+      "NumPy",
+      "PostgreSQL",
+      "Py Torch",
+      "Hugging Face Transformers",
+      "Lang Graph",
+      "Lang Chain",
+      "Agentic RAG",
+      "Multi-Agent Systems",
+      "Fine-tuning (Lo RA)",
+      "Transformers",
+      "Docker",
+      "Fast API",
+      "Grok Build",
+      "VS Code",
+      "Hybrid Retrieval"
+    ],
+    "explicit": [
+      "Python",
+      "C++",
+      "SQL",
+      "Pandas",
+      "NumPy",
+      "PostgreSQL",
+      "Py Torch",
+      "Hugging Face Transformers",
+      "Lang Graph",
+      "Lang Chain",
+      "Agentic RAG",
+      "Multi-Agent Systems",
+      "Fine-tuning (Lo RA)",
+      "Transformers",
+      "Docker",
+      "Fast API",
+      "Grok Build",
+      "VS Code"
+    ],
+    "project_derived": [
+      "Lang Graph",
+      "Fast API",
+      "Hybrid Retrieval",
+      "Docker",
+      "Py Torch",
+      "Hugging Face Transformers"
+    ]
+  },
+  "experience": {
+    "professional_years": 0.0,
+    "work_evidence": [
+      {
+        "company": "Hi Net Vietnam",
+        "end_date": null,
+        "responsibilities_and_impact": [
+          "Used Octoparse to crawl government documents.",
+          "Automated Contract Compliance & Accuracy Validation Workflow through SQL queries.",
+          "Developed dashboards and visualization tools to translate raw data into actionable insights using Python."
+        ],
+        "role": "Data Analytics Intern",
+        "start_date": null
+      },
+      {
+        "company": "Fintech Sentiment RAG Lab – HUST",
+        "end_date": "Present",
+        "responsibilities_and_impact": [
+          "Conducting research on Sentiment Analysis and Retrieval-Augmented Generation (RAG) applied to the Fintech domain."
+        ],
+        "role": "Research Member",
+        "start_date": "Jan 2026"
+      }
+    ],
+    "project_evidence": [
+      "Designed and implemented a production-style multi-agent RAG system using Lang Graph with Planner-Executor-Verifier architecture for complex question answering. Built hybrid retrieval pipeline combining dense embeddings, BM25, and cross-encoder re-ranking to improve retrieval quality and reduce hallucinations. Developed specialized agents (Planner, Retriever, Executor, Critic/Verifier) with conditional routing, self-correction loops, and tool calling (SQL + external APIs). Containerized the entire system with Docker and docker-compose; added Fast API endpoints, structured logging, and basic evaluation pipeline for continuous quality monitoring.",
+      "Collected and processed the Vi Lex Norm dataset alongside ~18.6K real Threads comments to train an NLP system translating Gen Z teencode slang to standard Vietnamese. Fine-tuned BARTpho in two phases—full fine-tuning then hard-example refinement—using loss-based noise filtering, mixed-precision (fp16), and Adam W. Designed an evaluation benchmark (Exact Match, BLEU, WER, CER, latency/throughput) on a curated golden test set; Phase-2 model achieved ~76% corpus BLEU and ~87% word accuracy."
+    ]
+  },
+  "education": {
+    "degree": "Bachelor",
+    "field": "Data Science and Artificial Intelligence",
+    "history": [
+      {
+        "degree": "Bachelor",
+        "end_year": null,
+        "field_of_study": "Data Science and Artificial Intelligence",
+        "gpa_or_honors": null,
+        "institution": "Hanoi University of Science and Technology (HUST)",
+        "start_year": null
+      }
+    ]
+  },
+  "projects": [
+    {
+      "description": "Designed and implemented a production-style multi-agent RAG system using Lang Graph with Planner-Executor-Verifier architecture for complex question answering. Built hybrid retrieval pipeline combining dense embeddings, BM25, and cross-encoder re-ranking to improve retrieval quality and reduce hallucinations. Developed specialized agents (Planner, Retriever, Executor, Critic/Verifier) with conditional routing, self-correction loops, and tool calling (SQL + external APIs). Containerized the entire system with Docker and docker-compose; added Fast API endpoints, structured logging, and basic evaluation pipeline for continuous quality monitoring.",
+      "heuristic_score": null,
+      "impact_metrics": [
+        "CPA: 3.1 (3.4)"
+      ],
+      "links": [],
+      "name": "Multi-Agent Agentic RAG System",
+      "role": null,
+      "technologies": [
+        "Lang Graph",
+        "Fast API",
+        "Hybrid Retrieval",
+        "Docker"
+      ]
+    },
+    {
+      "description": "Collected and processed the Vi Lex Norm dataset alongside ~18.6K real Threads comments to train an NLP system translating Gen Z teencode slang to standard Vietnamese. Fine-tuned BARTpho in two phases—full fine-tuning then hard-example refinement—using loss-based noise filtering, mixed-precision (fp16), and Adam W. Designed an evaluation benchmark (Exact Match, BLEU, WER, CER, latency/throughput) on a curated golden test set; Phase-2 model achieved ~76% corpus BLEU and ~87% word accuracy.",
+      "heuristic_score": null,
+      "impact_metrics": [
+        "~76% corpus BLEU",
+        "~87% word accuracy",
+        "~18.6K real Threads comments"
+      ],
+      "links": [],
+      "name": "Teen Code Translator",
+      "role": null,
+      "technologies": [
+        "Py Torch",
+        "Hugging Face Transformers"
+      ]
+    }
+  ],
+  "certifications": []
+}

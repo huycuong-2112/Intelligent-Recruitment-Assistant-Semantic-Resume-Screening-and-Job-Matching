@@ -1,0 +1,20 @@
+{
+  "method": "rule_based",
+  "jd_id": "jd_001",
+  "cv_id": "cv_029",
+  "score_0_1": 0.5,
+  "score_0_100": 50.0,
+  "components": {
+    "skill": 0.0,
+    "experience": 1.0,
+    "education": 1.0
+  },
+  "coverage": 1.0,
+  "status": "evaluated",
+  "weights": {
+    "skill": 0.5,
+    "experience": 0.3,
+    "education": 0.2,
+    "weight_policy": "HEURISTIC_NOT_OPTIMIZED"
+  }
+}

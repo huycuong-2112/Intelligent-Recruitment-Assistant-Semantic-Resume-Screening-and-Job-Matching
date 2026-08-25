@@ -1,0 +1,135 @@
+{
+  "id": "cv_001",
+  "domain": "IT",
+  "profile": {
+    "summary": "IT professional with experience in project coordination, web development, system administration, and digital marketing. Skilled in Agile Scrum, SEO, server hosting, WordPress, and cloud-based solutions.",
+    "job_titles": [
+      "Project Coordinator / Web Developer",
+      "System Administrator / IT Support"
+    ]
+  },
+  "skills": {
+    "all": [
+      "Agile Scrum",
+      "Sprint Planning",
+      "Risk Management",
+      "Business Analysis",
+      "Requirement Gathering",
+      "User Stories",
+      "Technical SEO",
+      "Server Hosting",
+      "Domain Management",
+      "WordPress",
+      "IT Support",
+      "System Administration",
+      "Helpdesk",
+      "SEO",
+      "SEM",
+      "Content Marketing",
+      "Facebook Ads",
+      "Google Ads",
+      "Project Coordination",
+      "Web Development",
+      "Digital Marketing"
+    ],
+    "explicit": [
+      "Agile Scrum",
+      "Sprint Planning",
+      "Risk Management",
+      "Business Analysis",
+      "Requirement Gathering",
+      "User Stories",
+      "Technical SEO",
+      "Server Hosting",
+      "Domain Management",
+      "WordPress",
+      "IT Support",
+      "System Administration",
+      "Helpdesk",
+      "SEO",
+      "SEM",
+      "Content Marketing",
+      "Facebook Ads",
+      "Google Ads",
+      "Project Coordination",
+      "Web Development",
+      "Digital Marketing"
+    ],
+    "project_derived": [
+      "WordPress",
+      "Server Hosting",
+      "Domain Management",
+      "Technical SEO"
+    ]
+  },
+  "experience": {
+    "professional_years": 2.8,
+    "work_evidence": [
+      {
+        "company": "Công Ty TNHH Poka Media",
+        "end_date": "08/2023",
+        "responsibilities_and_impact": [
+          "Coordinated project lifecycle between client and development teams, established timelines, managed issues, and ensured website stability, reducing downtime.",
+          "Implemented server hosting, domain management, and WordPress website construction according to technical requirements.",
+          "Provided digital marketing support including SEO, SEM, content creation, Facebook Ads, and Google Ads, improving technical SEO and user experience, and increasing conversion rate."
+        ],
+        "role": "Project Coordinator / Web Developer",
+        "start_date": "04/2022"
+      },
+      {
+        "company": "Công Ty CP Công Nghệ và Dịch Vụ UNI365",
+        "end_date": "03/2022",
+        "responsibilities_and_impact": [
+          "Managed company IT infrastructure, developed tools for data processing, and reduced data handling time for a dropshipping model.",
+          "Ensured data security and maintained network stability across the organization.",
+          "Provided IT Helpdesk support, troubleshooting software issues and improving response times."
+        ],
+        "role": "System Administrator / IT Support",
+        "start_date": "09/2020"
+      }
+    ],
+    "project_evidence": [
+      "Developed, deployed, and maintained several WordPress-based client websites, handling hosting, domain setup, and SEO optimization to ensure stable performance and improved search visibility."
+    ]
+  },
+  "education": {
+    "degree": "Bachelor",
+    "field": "Computer Science / Software Engineering",
+    "history": [
+      {
+        "degree": "Bachelor",
+        "end_year": 2026,
+        "field_of_study": "Computer Science / Software Engineering",
+        "gpa_or_honors": null,
+        "institution": "Đại học Điện Lực",
+        "start_year": 2023
+      }
+    ]
+  },
+  "projects": [
+    {
+      "description": "Developed, deployed, and maintained several WordPress-based client websites, handling hosting, domain setup, and SEO optimization to ensure stable performance and improved search visibility.",
+      "heuristic_score": null,
+      "impact_metrics": [
+        "Reduced website downtime",
+        "Improved technical SEO rankings",
+        "Enhanced user experience leading to higher conversion rates"
+      ],
+      "links": [],
+      "name": "Multiple client websites (Arena, StartupVN, Sinhtour, thietkewebwpvn, pokamedia.com, procaffe.vn, biahalong.com, techlandaudio.com.vn)",
+      "role": "Web Developer",
+      "technologies": [
+        "WordPress",
+        "Server Hosting",
+        "Domain Management",
+        "Technical SEO"
+      ]
+    }
+  ],
+  "certifications": [
+    "Google Project Management Professional",
+    "Google Professional Certificates",
+    "Google Digital Garage",
+    "IBM IT Project Manager Professional"
+  ]
+}

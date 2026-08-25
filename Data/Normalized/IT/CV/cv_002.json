@@ -1,0 +1,134 @@
+{
+  "id": "cv_002",
+  "domain": "IT",
+  "profile": {
+    "summary": "Development‑oriented IT student passionate about backend and full‑stack development. Enjoy building scalable systems, optimizing performance, and continuously learning modern technologies to become a full‑stack engineer.",
+    "job_titles": [
+      "Backend Developer Intern",
+      "Member/Facilitator",
+      "Member",
+      "Fullstack/Backend Developer Intern"
+    ]
+  },
+  "skills": {
+    "all": [
+      "Core Java (OOP)",
+      "Node.js (Fastify, NestJS)",
+      "RESTful API Design",
+      "MVC Architecture",
+      "HTML5",
+      "CSS3",
+      "JavaScript (ES6+)",
+      "PostgreSQL",
+      "MySQL",
+      "MongoDB",
+      "Postman",
+      "Git",
+      "Docker",
+      "Agile Methodologies",
+      "Node.js (Fastify)"
+    ],
+    "explicit": [
+      "Core Java (OOP)",
+      "Node.js (Fastify, NestJS)",
+      "RESTful API Design",
+      "MVC Architecture",
+      "HTML5",
+      "CSS3",
+      "JavaScript (ES6+)",
+      "PostgreSQL",
+      "MySQL",
+      "MongoDB",
+      "Postman",
+      "Git",
+      "Docker",
+      "Agile Methodologies"
+    ],
+    "project_derived": [
+      "Node.js (Fastify)",
+      "PostgreSQL"
+    ]
+  },
+  "experience": {
+    "professional_years": 2.3,
+    "work_evidence": [
+      {
+        "company": "Gender Insights Project",
+        "end_date": "04/2026",
+        "responsibilities_and_impact": [
+          "Developed backend services for high‑concurrency user requests using Node.js (Fastify).",
+          "Optimized database queries by implementing SQL stored procedures and advanced joins in PostgreSQL, reducing data retrieval latency by 40%.",
+          "Ensured data integrity through strict 3NF normalization across service layers.",
+          "Collaborated in an Agile team to design scalable database schemas and integrate third‑party services.",
+          "Worked with frontend developers to integrate backend APIs into responsive web applications."
+        ],
+        "role": "Backend Developer Intern",
+        "start_date": "10/2025"
+      },
+      {
+        "company": "Google Developer Cloud Groups (GDG Cloud HCM)",
+        "end_date": "Present",
+        "responsibilities_and_impact": [
+          "Coordinated technical workshops and supported attendees in deploying cloud‑based solutions during major GDG events."
+        ],
+        "role": "Member/Facilitator",
+        "start_date": "11/2025"
+      },
+      {
+        "company": "Community AI Literacy Program (TNCS Ho Chi Minh)",
+        "end_date": "2024",
+        "responsibilities_and_impact": [
+          "Educated 50+ local community members on AI applications and basic digital safety, earning recognition for social contribution."
+        ],
+        "role": "Member",
+        "start_date": "2024"
+      },
+      {
+        "company": "Independent",
+        "end_date": null,
+        "responsibilities_and_impact": [],
+        "role": "Fullstack/Backend Developer Intern",
+        "start_date": null
+      }
+    ],
+    "project_evidence": [
+      "Backend development for high‑concurrency user requests, database optimization with SQL stored procedures and advanced joins, data integrity enforcement via 3NF normalization, and agile collaboration to design scalable schemas and integrate third‑party services."
+    ]
+  },
+  "education": {
+    "degree": "Bachelor",
+    "field": "Information Technology",
+    "history": [
+      {
+        "degree": "Bachelor",
+        "end_year": 2028,
+        "field_of_study": "Information Technology",
+        "gpa_or_honors": null,
+        "institution": "Ho Chi Minh University of Natural Resources and Environment",
+        "start_year": 2024
+      }
+    ]
+  },
+  "projects": [
+    {
+      "description": "Backend development for high‑concurrency user requests, database optimization with SQL stored procedures and advanced joins, data integrity enforcement via 3NF normalization, and agile collaboration to design scalable schemas and integrate third‑party services.",
+      "heuristic_score": null,
+      "impact_metrics": [
+        "Data retrieval latency reduced by 40%"
+      ],
+      "links": [
+        "genderinsights.vercel.app"
+      ],
+      "name": "Gender Insights Project",
+      "role": "Backend Developer Intern",
+      "technologies": [
+        "Node.js (Fastify)",
+        "PostgreSQL"
+      ]
+    }
+  ],
+  "certifications": [
+    "Road to Devfest 2025 Certificate – GDG HCMC",
+    "AI Literacy Certification – Ho Chi Minh Communist Youth Union 2024"
+  ]
+}

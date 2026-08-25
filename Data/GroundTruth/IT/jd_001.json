@@ -1,0 +1,205 @@
+{
+  "jd_id": "jd_001",
+  "domain": "IT",
+  "annotation_metadata": {
+    "rubric_version": "v1",
+    "score_type": "ordinal_integer",
+    "score_min": 0,
+    "score_max": 3,
+    "final_label_field": "overall"
+  },
+  "candidates": [
+    {
+      "cv_id": "cv_018",
+      "split": "development",
+      "overall": 2,
+      "annotator_1": 2,
+      "annotator_2": 3,
+      "annotator_3": 2
+    },
+    {
+      "cv_id": "cv_020",
+      "split": "development",
+      "overall": 3,
+      "annotator_1": 3,
+      "annotator_2": 2,
+      "annotator_3": 3
+    },
+    {
+      "cv_id": "cv_024",
+      "split": "development",
+      "overall": 3,
+      "annotator_1": 3,
+      "annotator_2": 2,
+      "annotator_3": 3
+    },
+    {
+      "cv_id": "cv_029",
+      "split": "development",
+      "overall": 2,
+      "annotator_1": 2,
+      "annotator_2": 2,
+      "annotator_3": 2
+    },
+    {
+      "cv_id": "cv_032",
+      "split": "development",
+      "overall": 2,
+      "annotator_1": 1,
+      "annotator_2": 2,
+      "annotator_3": 2
+    },
+    {
+      "cv_id": "cv_034",
+      "split": "blind_test",
+      "overall": 2,
+      "annotator_1": 2,
+      "annotator_2": 1,
+      "annotator_3": 2
+    },
+    {
+      "cv_id": "cv_003",
+      "split": "development",
+      "overall": 1,
+      "annotator_1": 0,
+      "annotator_2": 1,
+      "annotator_3": 2
+    },
+    {
+      "cv_id": "cv_005",
+      "split": "development",
+      "overall": 0,
+      "annotator_1": 0,
+      "annotator_2": 0,
+      "annotator_3": 1
+    },
+    {
+      "cv_id": "cv_010",
+      "split": "development",
+      "overall": 1,
+      "annotator_1": 1,
+      "annotator_2": 1,
+      "annotator_3": 2
+    },
+    {
+      "cv_id": "cv_017",
+      "split": "blind_test",
+      "overall": 1,
+      "annotator_1": 0,
+      "annotator_2": 1,
+      "annotator_3": 1
+    },
+    {
+      "cv_id": "cv_002",
+      "split": "development",
+      "overall": 0,
+      "annotator_1": 0,
+      "annotator_2": 0,
+      "annotator_3": 1
+    },
+    {
+      "cv_id": "cv_004",
+      "split": "development",
+      "overall": 1,
+      "annotator_1": 1,
+      "annotator_2": 0,
+      "annotator_3": 1
+    },
+    {
+      "cv_id": "cv_013",
+      "split": "development",
+      "overall": 1,
+      "annotator_1": 1,
+      "annotator_2": 0,
+      "annotator_3": 1
+    },
+    {
+      "cv_id": "cv_014",
+      "split": "development",
+      "overall": 0,
+      "annotator_1": 0,
+      "annotator_2": 0,
+      "annotator_3": 1
+    },
+    {
+      "cv_id": "cv_021",
+      "split": "blind_test",
+      "overall": 0,
+      "annotator_1": 0,
+      "annotator_2": 0,
+      "annotator_3": 1
+    },
+    {
+      "cv_id": "cv_023",
+      "split": "development",
+      "overall": 0,
+      "annotator_1": 0,
+      "annotator_2": 0,
+      "annotator_3": 1
+    },
+    {
+      "cv_id": "cv_028",
+      "split": "blind_test",
+      "overall": 0,
+      "annotator_1": 0,
+      "annotator_2": 0,
+      "annotator_3": 1
+    },
+    {
+      "cv_id": "cv_033",
+      "split": "blind_test",
+      "overall": 0,
+      "annotator_1": 0,
+      "annotator_2": 0,
+      "annotator_3": 1
+    },
+    {
+      "cv_id": "cv_001",
+      "split": "development",
+      "overall": 0,
+      "annotator_1": 0,
+      "annotator_2": 0,
+      "annotator_3": 0
+    },
+    {
+      "cv_id": "cv_006",
+      "split": "development",
+      "overall": 0,
+      "annotator_1": 0,
+      "annotator_2": 0,
+      "annotator_3": 0
+    },
+    {
+      "cv_id": "cv_007",
+      "split": "development",
+      "overall": 0,
+      "annotator_1": 0,
+      "annotator_2": 0,
+      "annotator_3": 0
+    },
+    {
+      "cv_id": "cv_009",
+      "split": "blind_test",
+      "overall": 0,
+      "annotator_1": 1,
+      "annotator_2": 0,
+      "annotator_3": 0
+    },
+    {
+      "cv_id": "cv_012",
+      "split": "development",
+      "overall": 0,
+      "annotator_1": 0,
+      "annotator_2": 0,
+      "annotator_3": 1
+    },
+    {
+      "cv_id": "cv_025",
+      "split": "development",
+      "overall": 0,
+      "annotator_1": 0,
+      "annotator_2": 0,
+      "annotator_3": 0
+    }
+  ]
+}

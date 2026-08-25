@@ -1,0 +1,300 @@
+{
+  "jd_id": "jd_001",
+  "cv_id": "cv_032",
+  "score_0_1": 0.5327976577806465,
+  "status": "evaluated",
+  "skill": {
+    "score": 0.16469411150874794,
+    "coverage": 1.0,
+    "matched_required": [
+      "Python programming"
+    ],
+    "matched_preferred": [
+      "Containerization (Docker)"
+    ],
+    "missing_required": [
+      "Data structures and algorithms",
+      "Version control (Git)",
+      "Basic Machine Learning / Deep Learning concepts",
+      "English proficiency (technical reading and communication)"
+    ],
+    "missing_preferred": [
+      "Large Language Models (LLMs) and agentic frameworks (e.g., LangChain, Google ADK)",
+      "Cloud platforms (AWS, Azure, GCP)",
+      "Generative AI prototyping",
+      "Basic Natural Language Processing concepts",
+      "Proactive learning and research mindset"
+    ],
+    "requirements": [
+      {
+        "jd_skill": "Python programming",
+        "importance": "required",
+        "score": 0.9071955067139941,
+        "availability": "available",
+        "status": "matched",
+        "match_method": "semantic",
+        "matched_cv_skill": "Python",
+        "cv_skill_provenance": [
+          "explicit",
+          "project_derived"
+        ],
+        "similarity": 0.9071955067139941,
+        "weight": 1.0
+      },
+      {
+        "jd_skill": "Data structures and algorithms",
+        "importance": "required",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.40838766653777475,
+        "weight": 1.0
+      },
+      {
+        "jd_skill": "Version control (Git)",
+        "importance": "required",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.6936658549223076,
+        "weight": 1.0
+      },
+      {
+        "jd_skill": "Basic Machine Learning / Deep Learning concepts",
+        "importance": "required",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.2953809693482275,
+        "weight": 1.0
+      },
+      {
+        "jd_skill": "English proficiency (technical reading and communication)",
+        "importance": "required",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.3269448704614129,
+        "weight": 1.0
+      },
+      {
+        "jd_skill": "Large Language Models (LLMs) and agentic frameworks (e.g., LangChain, Google ADK)",
+        "importance": "preferred",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.38324065826085724,
+        "weight": 0.5
+      },
+      {
+        "jd_skill": "Containerization (Docker)",
+        "importance": "preferred",
+        "score": 0.8207147707119788,
+        "availability": "available",
+        "status": "matched",
+        "match_method": "semantic",
+        "matched_cv_skill": "Docker",
+        "cv_skill_provenance": [
+          "explicit",
+          "project_derived"
+        ],
+        "similarity": 0.8207147707119788,
+        "weight": 0.5
+      },
+      {
+        "jd_skill": "Cloud platforms (AWS, Azure, GCP)",
+        "importance": "preferred",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.4103765401502587,
+        "weight": 0.5
+      },
+      {
+        "jd_skill": "Generative AI prototyping",
+        "importance": "preferred",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.3417174077699677,
+        "weight": 0.5
+      },
+      {
+        "jd_skill": "Basic Natural Language Processing concepts",
+        "importance": "preferred",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.3082597429781803,
+        "weight": 0.5
+      },
+      {
+        "jd_skill": "Proactive learning and research mindset",
+        "importance": "preferred",
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "match_method": null,
+        "matched_cv_skill": null,
+        "cv_skill_provenance": [],
+        "similarity": 0.221065209639165,
+        "weight": 0.5
+      }
+    ]
+  },
+  "experience": {
+    "score": 0.49534656555989776,
+    "coverage": 1.0,
+    "years": {
+      "score": 1.0,
+      "availability": "available",
+      "status": "satisfied",
+      "weight": 0.3,
+      "details": {
+        "candidate_years": 0.0,
+        "minimum_years": 0.0
+      }
+    },
+    "evidence": {
+      "score": 0.27906652222842543,
+      "availability": "available",
+      "status": "evaluated",
+      "weight": 0.7,
+      "details": {
+        "responsibilities": [
+          {
+            "responsibility": "Deeply understand project objectives and study data hypotheses under guidance of senior team members",
+            "score": 0.20896415465777185,
+            "status": "low_match",
+            "matched_chunk_id": "cv_032_project_004",
+            "matched_text": "Impact: 100% guardrail accuracy; 35% reduction in routing latency; 40% reduction in API token costs; Result retrieval time 8‑12 s; 100% elimination of event‑loop deadlocks; 99.9% request completion reliability.",
+            "source_type": "project",
+            "source_name": "Dia Care Flow – Personalized Diabetes Multi-Agent RAG System",
+            "raw_similarity": 0.20896415465777185,
+            "threshold": 0.6
+          },
+          {
+            "responsibility": "Research and implement algorithms for data science and AI projects",
+            "score": 0.31383587741017516,
+            "status": "low_match",
+            "matched_chunk_id": "cv_032_project_001",
+            "matched_text": "Architected a multi‑agent pipeline using LangGraph across five specialized nodes (Triage, Supervisor, Factor, Harm, Suggestion).",
+            "source_type": "project",
+            "source_name": "Dia Care Flow – Personalized Diabetes Multi-Agent RAG System",
+            "raw_similarity": 0.31383587741017516,
+            "threshold": 0.6
+          },
+          {
+            "responsibility": "Assist in prototyping features using Generative AI capabilities (LLMs, AI agents, embeddings) and basic NLP concepts",
+            "score": 0.31772017067944225,
+            "status": "low_match",
+            "matched_chunk_id": "cv_032_project_001",
+            "matched_text": "Architected a multi‑agent pipeline using LangGraph across five specialized nodes (Triage, Supervisor, Factor, Harm, Suggestion).",
+            "source_type": "project",
+            "source_name": "Dia Care Flow – Personalized Diabetes Multi-Agent RAG System",
+            "raw_similarity": 0.31772017067944225,
+            "threshold": 0.6
+          },
+          {
+            "responsibility": "Support testing and benchmarking of AI models using established evaluation frameworks",
+            "score": 0.29451055723811986,
+            "status": "low_match",
+            "matched_chunk_id": "cv_032_project_004",
+            "matched_text": "Impact: 100% guardrail accuracy; 35% reduction in routing latency; 40% reduction in API token costs; Result retrieval time 8‑12 s; 100% elimination of event‑loop deadlocks; 99.9% request completion reliability.",
+            "source_type": "project",
+            "source_name": "Dia Care Flow – Personalized Diabetes Multi-Agent RAG System",
+            "raw_similarity": 0.29451055723811986,
+            "threshold": 0.6
+          },
+          {
+            "responsibility": "Stay updated on the latest research, trends, and technologies in data science and AI",
+            "score": 0.2603018511566181,
+            "status": "low_match",
+            "matched_chunk_id": "cv_032_project_001",
+            "matched_text": "Architected a multi‑agent pipeline using LangGraph across five specialized nodes (Triage, Supervisor, Factor, Harm, Suggestion).",
+            "source_type": "project",
+            "source_name": "Dia Care Flow – Personalized Diabetes Multi-Agent RAG System",
+            "raw_similarity": 0.2603018511566181,
+            "threshold": 0.6
+          }
+        ]
+      }
+    }
+  },
+  "education": {
+    "score": 1.0,
+    "coverage": 1.0,
+    "degree": {
+      "score": 1.0,
+      "availability": "available",
+      "status": "satisfied",
+      "weight": 0.6,
+      "details": {
+        "candidate": "Bachelor",
+        "required": "Bachelor"
+      }
+    },
+    "field": {
+      "score": 1.0,
+      "availability": "available",
+      "status": "matched",
+      "weight": 0.4,
+      "details": {
+        "candidate": "Data Science",
+        "preferred_fields": [
+          "Computer Science",
+          "Artificial Intelligence",
+          "Data Science"
+        ]
+      }
+    }
+  },
+  "semantic": {
+    "score": 0.4711499540539402,
+    "coverage": 1.0,
+    "status": "evaluated",
+    "availability": "available",
+    "raw_similarity": 0.4711499540539402
+  },
+  "mdms": {
+    "final_score": 0.5327976577806465,
+    "status": "evaluated",
+    "coverage": 1.0,
+    "effective_weights": {
+      "skill": 0.25,
+      "experience": 0.25,
+      "education": 0.25,
+      "semantic": 0.25
+    },
+    "weights": {
+      "skill": 0.25,
+      "experience": 0.25,
+      "education": 0.25,
+      "semantic": 0.25
+    }
+  }
+}

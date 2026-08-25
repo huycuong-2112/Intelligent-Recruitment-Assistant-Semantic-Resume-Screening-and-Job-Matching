@@ -1,0 +1,126 @@
+{
+  "domain": "IT",
+  "extraction_method": "groq_llm",
+  "filename": "041.jpg",
+  "id": "cv_011",
+  "parsed_data": {
+    "certifications": [],
+    "education_degree": "Bachelor",
+    "education_field": "Software Engineering & Information Systems",
+    "education_history": [
+      {
+        "degree": "Bachelor",
+        "end_year": 2023,
+        "field_of_study": "Software Engineering & Information Systems",
+        "gpa_or_honors": null,
+        "institution": "Ho Chi Minh City University of Education",
+        "start_year": 2019
+      }
+    ],
+    "experience_years": 5.4,
+    "job_titles": [
+      "Programming Instructor",
+      "Operations Manager",
+      "Customer Relationship Manager Team Leader",
+      "Web Developer Intern"
+    ],
+    "projects": [
+      {
+        "description": "Process Optimization: Cut simulated loan approval lead time by 90%+ via workflow re-design. Documentation: Authored SRS, User Stories; and AC for a rule-based credit scoring system. Architecture & UI/UX: Designed UML diagrams and created interactive prototypes via AI-driven development. Logic Validation: Utilized AI-assisted analysis to simulate edge cases and refine requirement consistency.",
+        "heuristic_score": null,
+        "impact_metrics": [
+          "Cut simulated loan approval lead time by 90%+"
+        ],
+        "links": [],
+        "name": "Smart Unsecured Loan Approval System (Simulation Project)",
+        "role": null,
+        "technologies": [
+          "AI-driven development",
+          "UML"
+        ]
+      }
+    ],
+    "skills": [
+      "Requirements Engineering",
+      "Elicitation",
+      "Gap Analysis",
+      "User Stories",
+      "BRD",
+      "SRS",
+      "Process Modeling",
+      "BPMN",
+      "UML",
+      "As-is/To-be",
+      "User Flow",
+      "SQL",
+      "Data Analysis",
+      "AI",
+      "UAT Coordination",
+      "Agile",
+      "Scrum",
+      "Sprint Planning",
+      "Jira",
+      "Notion",
+      "Figma",
+      "Lucidchart",
+      "Draw.io",
+      "ChatGPT",
+      "Gemini",
+      "Copilot",
+      "Software Engineering",
+      "Web Development",
+      "Testing",
+      "Stakeholder Management",
+      "Process Optimization",
+      "Data & Analytics"
+    ],
+    "summary": "Business Analyst Fresher with a Software Engineering background; experienced in requirement analysis, SRS, and User Stories. Strong in analytical thinking and process improvement.",
+    "work_experience": [
+      {
+        "company": "Mind X Tech School",
+        "end_date": "Present",
+        "responsibilities_and_impact": [
+          "Facilitated technical training by translating complex logic into clear, structured requirements for students.",
+          "Conducted gap analysis on student performance to tailor learning paths and improve outcomes.",
+          "Managed stakeholders (parents & students) to ensure alignment on progress and educational objectives."
+        ],
+        "role": "Programming Instructor",
+        "start_date": "Oct 2023"
+      },
+      {
+        "company": "Coffee Brand Startup",
+        "end_date": "Oct 2025",
+        "responsibilities_and_impact": [
+          "Data Analysis: Analyzed sales trends and customer behavior to drive data-informed business decisions.",
+          "Workflow Optimization: Resolved operational bottlenecks and streamlined service processes.",
+          "Business Operations: Managed end-to-end daily operations, supply chain; and quality control."
+        ],
+        "role": "Operations Manager",
+        "start_date": "Nov 2024"
+      },
+      {
+        "company": "AIA Vietnam",
+        "end_date": "Nov 2024",
+        "responsibilities_and_impact": [
+          "Requirement Analysis: Defined optimized financial solutions by analyzing precise client requirements.",
+          "CRM Administration: Maintained data integrity to enhance workflow efficiency.",
+          "Process Optimization: Delivered actionable insights to resolve recurring service bottlenecks."
+        ],
+        "role": "Customer Relationship Manager Team Leader",
+        "start_date": "Aug 2023"
+      },
+      {
+        "company": "FPT Software",
+        "end_date": "May 2023",
+        "responsibilities_and_impact": [
+          "Requirement Documentation: Assisted in drafting and maintaining BRD, SRS, and User Guides to ensure clear system specifications.",
+          "Quality Assurance & UAT: Supported User Acceptance Testing (UAT) by developing test scenarios and validating system outputs against requirements.",
+          "Stakeholder Collaboration: Facilitated communication between technical teams and Japanese stakeholders to clarify requirements and ensure project alignment."
+        ],
+        "role": "Web Developer Intern",
+        "start_date": "Feb 2023"
+      }
+    ]
+  },
+  "source_status": "RECOVERED_BY_OCR"
+}

@@ -1,0 +1,82 @@
+{
+  "domain": "IT",
+  "extraction_method": "groq_llm",
+  "filename": "779865395_2144539239808203_1211146213383122987_n.jpg",
+  "id": "cv_026",
+  "parsed_data": {
+    "certifications": [],
+    "education_degree": "Bachelor",
+    "education_field": "Computer Science and Mathematics",
+    "education_history": [
+      {
+        "degree": "Bachelor",
+        "end_year": 2026,
+        "field_of_study": "Computer Science and Mathematics",
+        "gpa_or_honors": null,
+        "institution": "Dickinson College",
+        "start_year": 2022
+      }
+    ],
+    "experience_years": 0.9,
+    "job_titles": [
+      "Pentester Intern",
+      "Software Developer Intern"
+    ],
+    "projects": [
+      {
+        "description": "Built an intentionally vulnerable bookstore web app (Node.js/Express/React, AI-scaffolded) using a tech stack deliberately designed to be exploited, as a personal range for practicing OWASP Top 10 (2021) security testing. Planted vulnerabilities include SQL injection, XSS, IDOR, JWT forgery, insecure password storage, file upload flaws, and SSRF. Identifying and exploiting each flaw with Burp Suite, OWASP ZAP, and sqlmap, then remediating with secure coding practices and documenting every fix as a reviewable pull request with a reproduction-and-remediation report.",
+        "heuristic_score": null,
+        "impact_metrics": [],
+        "links": [],
+        "name": "OWASP Bookstore – Web Application Security Lab",
+        "role": null,
+        "technologies": [
+          "Node.js",
+          "Express",
+          "React",
+          "AI-scaffolded",
+          "Burp Suite",
+          "OWASP ZAP",
+          "sqlmap"
+        ]
+      }
+    ],
+    "skills": [],
+    "summary": null,
+    "work_experience": [
+      {
+        "company": "NCS (National Cyber Security)",
+        "end_date": "August 2025",
+        "responsibilities_and_impact": [
+          "Uncovered 5 exploitable vulnerabilities across 5+ web and mobile applications via OWASP Top 10 penetration testing including a device integrity bypass that let jailbroken devices evade detection in a banking app, and an IDOR enabling account takeover via request parameter manipulation",
+          "Enabled remediation by developing proof-of-concept exploits and authoring vulnerability reports with severity ratings and actionable recommendations",
+          "Led a team of 3-5 to plan and execute simulated real-world attack scenarios, driving thorough test coverage"
+        ],
+        "role": "Pentester Intern",
+        "start_date": "May 2025"
+      },
+      {
+        "company": "ELCOM",
+        "end_date": "August 2024",
+        "responsibilities_and_impact": [
+          "Reduced false positives by 25% by manually validating automated security scans across 4 applications before disclosure",
+          "Accelerated secure deployment by collaborating with developers to remediate vulnerabilities and verify fixes pre-release",
+          "Delivered 3 client-facing web applications, including a hospital staff publication platform, via responsive front-end development"
+        ],
+        "role": "Software Developer Intern",
+        "start_date": "May 2024"
+      },
+      {
+        "company": "NGS Digital",
+        "end_date": "August 2023",
+        "responsibilities_and_impact": [
+          "Built and maintained a dynamic web dashboard for 10+ internal users to manage customer and sales data",
+          "Secured sensitive data by administering role-based access and authorization levels for authorized personnel"
+        ],
+        "role": "Software Developer Intern",
+        "start_date": "June 2023"
+      }
+    ]
+  },
+  "source_status": "ACCEPTED_BY_DOCLING"
+}
