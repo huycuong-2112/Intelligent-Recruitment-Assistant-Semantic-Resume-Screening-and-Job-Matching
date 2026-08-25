@@ -25,5 +25,5 @@ Thumbs.db
 .streamlit/
 
 # Toàn bộ dữ liệu Raw, Processed, JSON, NPY, CSV
-Data/
+
 
