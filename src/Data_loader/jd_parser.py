@@ -302,7 +302,7 @@ def main():
 
     print(f"📂 Tìm thấy {len(raw_jds)} vị trí tuyển dụng (JDs) để bóc tách...\n")
 
-    api_key = os.getenv("GROQ_API_KEY")
+    api_key = os.getenv("GROQ_API_KEY")# Nhap API KEY VAO ()
     groq_client = Groq(api_key=api_key) if (Groq and api_key and api_key.startswith("gsk_")) else None
 
     if groq_client:
