@@ -1,0 +1,145 @@
+{
+  "audit_status": "AUDIT_COMPLETED",
+  "dataset_health": {
+    "jd_id": "jd_001",
+    "split": "development",
+    "n_candidates": 18,
+    "n_relevant": 5,
+    "missing_ground_truth": 0,
+    "missing_system_scores": 0,
+    "duplicate_candidates": 0
+  },
+  "metrics_comparison": {
+    "rule_based_v1": {
+      "recall_5": {
+        "expected": 0.8,
+        "recomputed": 0.8,
+        "diff_reason": "EXACT MATCH (via evaluator.py stable sort)"
+      },
+      "recall_10": {
+        "expected": 1.0,
+        "recomputed": 1.0,
+        "diff_reason": "EXACT MATCH"
+      },
+      "recall_15": {
+        "expected": 1.0,
+        "recomputed": 1.0,
+        "diff_reason": "EXACT MATCH"
+      },
+      "ndcg_5": {
+        "expected": 0.78,
+        "recomputed": 0.7797,
+        "diff_reason": "EXACT MATCH (0.780)"
+      },
+      "ndcg_10": {
+        "expected": 0.904,
+        "recomputed": 0.9036,
+        "diff_reason": "EXACT MATCH (0.904)"
+      },
+      "ndcg_15": {
+        "expected": 0.904,
+        "recomputed": 0.9036,
+        "diff_reason": "EXACT MATCH (0.904)"
+      },
+      "spearman": {
+        "expected": 0.467,
+        "recomputed": 0.467,
+        "diff_reason": "EXACT MATCH (0.4670)"
+      },
+      "mae_0_3": {
+        "expected": 0.969,
+        "recomputed": 0.9689,
+        "diff_reason": "EXACT MATCH (0.9689)"
+      }
+    },
+    "mdms_equal_v1": {
+      "recall_5": {
+        "expected": 0.8,
+        "recomputed": 0.8,
+        "diff_reason": "EXACT MATCH"
+      },
+      "recall_10": {
+        "expected": 1.0,
+        "recomputed": 1.0,
+        "diff_reason": "EXACT MATCH"
+      },
+      "recall_15": {
+        "expected": 1.0,
+        "recomputed": 1.0,
+        "diff_reason": "EXACT MATCH"
+      },
+      "ndcg_5": {
+        "expected": 0.784,
+        "recomputed": 0.7844,
+        "diff_reason": "EXACT MATCH"
+      },
+      "ndcg_10": {
+        "expected": 0.826,
+        "recomputed": 0.8259,
+        "diff_reason": "EXACT MATCH"
+      },
+      "ndcg_15": {
+        "expected": 0.826,
+        "recomputed": 0.8259,
+        "diff_reason": "EXACT MATCH"
+      },
+      "spearman": {
+        "expected": 0.76,
+        "recomputed": 0.7598,
+        "diff_reason": "EXACT MATCH (0.7598)"
+      },
+      "mae_0_3": {
+        "expected": 0.82,
+        "recomputed": 0.8202,
+        "diff_reason": "EXACT MATCH (0.8202)"
+      }
+    },
+    "mdms_tuned_v1": {
+      "recall_5": {
+        "expected": 1.0,
+        "recomputed": 1.0,
+        "diff_reason": "EXACT MATCH"
+      },
+      "recall_10": {
+        "expected": 1.0,
+        "recomputed": 1.0,
+        "diff_reason": "EXACT MATCH"
+      },
+      "recall_15": {
+        "expected": 1.0,
+        "recomputed": 1.0,
+        "diff_reason": "EXACT MATCH"
+      },
+      "ndcg_5": {
+        "expected": 0.87,
+        "recomputed": 0.8699,
+        "diff_reason": "EXACT MATCH (0.8699)"
+      },
+      "ndcg_10": {
+        "expected": 0.879,
+        "recomputed": 0.8793,
+        "diff_reason": "EXACT MATCH (0.8793)"
+      },
+      "ndcg_15": {
+        "expected": 0.879,
+        "recomputed": 0.8793,
+        "diff_reason": "EXACT MATCH (0.8793)"
+      },
+      "spearman": {
+        "expected": 0.902,
+        "recomputed": 0.9021,
+        "diff_reason": "EXACT MATCH (0.9021)"
+      },
+      "mae_0_3": {
+        "expected": 0.715,
+        "recomputed": 0.7152,
+        "diff_reason": "EXACT MATCH (0.7152)"
+      }
+    }
+  },
+  "tie_analysis": {
+    "rule_based_ties": "13/18 candidates share identical score 0.42. Ranking stability is low under arbitrary tie-breaking.",
+    "mdms_equal_ties": "0 ties across all 18 candidates.",
+    "mdms_tuned_ties": "0 ties across all 18 candidates."
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "n_samples": 18,
+  "exact_3way_count": 5,
+  "exact_3way_pct": 0.2778,
+  "two_of_three_count": 17,
+  "two_of_three_pct": 0.9444,
+  "three_way_disagree_count": 1,
+  "three_way_disagree_pct": 0.0556,
+  "pairwise": {
+    "A1_A2": {
+      "exact_agreement": 0.6111,
+      "unweighted_kappa": 0.3571,
+      "linear_weighted_kappa": 0.6182,
+      "quadratic_weighted_kappa": 0.8097
+    },
+    "A1_A3": {
+      "exact_agreement": 0.5556,
+      "unweighted_kappa": 0.405,
+      "linear_weighted_kappa": 0.5714,
+      "quadratic_weighted_kappa": 0.7195
+    },
+    "A2_A3": {
+      "exact_agreement": 0.3333,
+      "unweighted_kappa": 0.1148,
+      "linear_weighted_kappa": 0.4286,
+      "quadratic_weighted_kappa": 0.6905
+    }
+  },
+  "mean_linear_kappa": 0.5394,
+  "mean_quadratic_kappa": 0.7399,
+  "mean_unweighted_kappa": 0.2923
+}
