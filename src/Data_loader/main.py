@@ -21,7 +21,7 @@ for path_entry in [str(current_dir), str(project_root)]:
 
 from document_parser import get_document_parser, SUPPORTED_EXTENSIONS
 
-DEFAULT_INPUT_DIR = project_root / "Data" / "Raw" / "Resumes"
+DEFAULT_RESUME_DIR = project_root / "Data" / "Raw" / "Resumes"
 DEFAULT_JD_DIR = project_root / "Data" / "Raw" / "JD"
 DEFAULT_OUTPUT_DIR = project_root / "Data" / "Processed"
 

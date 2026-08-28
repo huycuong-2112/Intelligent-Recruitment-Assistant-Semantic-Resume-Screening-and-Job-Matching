@@ -4,7 +4,7 @@ import json
 import os
 import re
 from pathlib import Path
-from typing import Any, Dict, List, Literal, Optional
+from typing import Any, Dict, List, Literal, Optional, Tuple
 from pydantic import BaseModel, Field, field_validator
 
 try:
@@ -35,8 +35,8 @@ while project_root != project_root.parent:
         break
     project_root = project_root.parent
 
-# Thư mục chứa JDs cào về (chấp nhận file .json, .txt hoặc markdown)
-INPUT_RAW_JDS = project_root / "Data" / "Raw" / "JDs"
+# Output của Stage 1, được tạo bởi main.py --type jds
+INPUT_CLEANED_JDS = project_root / "Data" / "Processed" / "cleaned_jds.json"
 OUTPUT_PARSED_JDS = project_root / "Data" / "Processed" / "parsed_jds.json"
 
 GROQ_MODELS = [
@@ -212,7 +212,7 @@ class OfflineJDExtractor:
 # ---------------------------------------------------------------------------
 # 4. ONLINE LLM JD STRUCTURING (GROQ)
 # ---------------------------------------------------------------------------
-def parse_jd_llm(text: str, client: Groq) -> StructuredJobDescription:
+def parse_jd_llm(text: str, client: Any) -> StructuredJobDescription:
     schema_json = StructuredJobDescription.model_json_schema()
     system_prompt = (
         "You are an expert HR Recruitment & Job Description Analysis Engine. "
@@ -258,46 +258,43 @@ def parse_jd_llm(text: str, client: Groq) -> StructuredJobDescription:
 # ---------------------------------------------------------------------------
 # 5. MAIN PROCESSING CONTROLLER
 # ---------------------------------------------------------------------------
-def collect_raw_jds(input_dir: Path) -> List[Tuple[str, str, str]]:
-    """Đọc toàn bộ file JDs cào về (hỗ trợ .json, .txt, .md)."""
+def collect_cleaned_jds(input_file: Path) -> List[Tuple[str, str, str]]:
+    """Đọc các JD đã được trích xuất text bởi Stage 1."""
     jds: List[Tuple[str, str, str]] = []
-    if not input_dir.exists():
-        input_dir.mkdir(parents=True, exist_ok=True)
+    if not input_file.exists():
         return jds
 
-    for idx, f in enumerate(sorted(input_dir.glob("*")), 1):
-        if f.is_file():
-            jd_id = f"jd_{idx:03d}"
-            try:
-                content = f.read_text(encoding="utf-8")
-                # Nếu là JSON cào từ web (TopCV, LinkedIn, v.v.)
-                if f.suffix.lower() == ".json":
-                    data = json.loads(content)
-                    if isinstance(data, list):
-                        for j_idx, item in enumerate(data, 1):
-                            text_content = item.get("content") or item.get("description") or json.dumps(item, ensure_ascii=False)
-                            jds.append((f"jd_{idx:03d}_{j_idx:02d}", item.get("title", f.stem), text_content))
-                        continue
-                    elif isinstance(data, dict):
-                        text_content = data.get("content") or data.get("description") or json.dumps(data, ensure_ascii=False)
-                        jds.append((jd_id, data.get("title", f.stem), text_content))
-                        continue
-                jds.append((jd_id, f.stem, content))
-            except Exception:
-                continue
+    try:
+        records = json.loads(input_file.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return jds
+
+    if not isinstance(records, list):
+        return jds
+
+    for idx, item in enumerate(records, 1):
+        if not isinstance(item, dict):
+            continue
+        text_content = item.get("content", "")
+        if isinstance(text_content, str) and text_content.strip():
+            jds.append((
+                str(item.get("id", f"jd_{idx:03d}")),
+                str(item.get("filename", f"jd_{idx:03d}")),
+                text_content,
+            ))
     return jds
 
 
 def main():
     print("=" * 80)
     print("JOB DESCRIPTION STRUCTURING (1-TO-1 SCHEMA EXTRACTION)")
-    print(f"Input Directory  : {INPUT_RAW_JDS}")
+    print(f"Input Cleaned    : {INPUT_CLEANED_JDS}")
     print(f"Output File      : {OUTPUT_PARSED_JDS}")
     print("=" * 80)
 
-    raw_jds = collect_raw_jds(INPUT_RAW_JDS)
+    raw_jds = collect_cleaned_jds(INPUT_CLEANED_JDS)
     if not raw_jds:
-        print(f"⚠️ Thư mục '{INPUT_RAW_JDS}' chưa có file JD nào. Đặt các file .txt/.json vào thư mục này rồi chạy lại.")
+        print(f"⚠️ File '{INPUT_CLEANED_JDS}' chưa có dữ liệu. Hãy chạy main.py --type jds trước.")
         return
 
     print(f"📂 Tìm thấy {len(raw_jds)} vị trí tuyển dụng (JDs) để bóc tách...\n")

@@ -4,7 +4,7 @@ import json
 import os
 import re
 from pathlib import Path
-from typing import Any, Dict, List, Literal, Optional
+from typing import Any, Dict, List, Literal, Optional, Tuple
 from pydantic import BaseModel, Field, ValidationError, field_validator
 
 # ---------------------------------------------------------------------------
@@ -39,7 +39,7 @@ while project_root != project_root.parent:
         break
     project_root = project_root.parent
 
-INPUT_CLEANED_TEXT = project_root / "Data" / "Processed" / "cleaned_text.json"
+INPUT_CLEANED_RESUMES = project_root / "Data" / "Processed" / "cleaned_resumes.json"
 OUTPUT_PARSED_JSON = project_root / "Data" / "Processed" / "parsed_resumes.json"
 
 GROQ_MODELS = [
@@ -543,7 +543,7 @@ class OfflineResumeParser:
 # ---------------------------------------------------------------------------
 # 5. ONLINE LLM STRUCTURING ENGINE (GROQ)
 # ---------------------------------------------------------------------------
-def parse_resume_llm(text: str, client: Groq) -> StructuredResume:
+def parse_resume_llm(text: str, client: Any) -> StructuredResume:
     schema_json = StructuredResume.model_json_schema()
     system_prompt = (
         "You are an expert AI resume parsing and candidate evaluation engine. "
@@ -606,15 +606,15 @@ def main():
     print("=" * 80)
     print("STAGE 2: ENTITY STRUCTURING & PROJECT ASSESSMENT")
     print(f"Project Root    : {project_root}")
-    print(f"Input Cleaned   : {INPUT_CLEANED_TEXT}")
+    print(f"Input Cleaned   : {INPUT_CLEANED_RESUMES}")
     print(f"Output Parsed   : {OUTPUT_PARSED_JSON}")
     print("=" * 80)
 
-    if not INPUT_CLEANED_TEXT.exists():
-        print(f"❌ Error: {INPUT_CLEANED_TEXT} not found. Please run main.py (Stage 1) first.")
+    if not INPUT_CLEANED_RESUMES.exists():
+        print(f"❌ Error: {INPUT_CLEANED_RESUMES} not found. Please run main.py (Stage 1) first.")
         return
 
-    with open(INPUT_CLEANED_TEXT, "r", encoding="utf-8") as f:
+    with open(INPUT_CLEANED_RESUMES, "r", encoding="utf-8") as f:
         docs = json.load(f)
 
     print(f"📂 Loaded {len(docs)} documents from Stage 1...\n")
