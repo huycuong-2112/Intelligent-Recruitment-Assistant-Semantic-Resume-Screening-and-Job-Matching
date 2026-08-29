@@ -371,10 +371,10 @@ _LESS_THAN_EXP_RE = re.compile(
 # This guards against company-age, project-duration, and education-duration
 # false positives.
 _EXP_CUE_RE = re.compile(
-    r'\b(?:experience|kinh\s+nghiệm|minimum|at\s+least|required|'
-    r'tối\s+thiểu|ít\s+nhất|yêu\s+cầu|cần\s+có|'
-    r'professional|hands-on|work\s+experience|prior\s+experience|'
-    r'relevant|related)\b',
+    r'\b(?:experience|kinh\s+nghiệm|work\s+experience|'
+    r'professional\s+experience|prior\s+experience|'
+    r'hands-on\s+experience|kinh\s+nghiệm\s+làm\s+việc|'
+    r'kinh\s+nghiệm\s+thực\s+tế)\b',
     re.IGNORECASE,
 )
 
