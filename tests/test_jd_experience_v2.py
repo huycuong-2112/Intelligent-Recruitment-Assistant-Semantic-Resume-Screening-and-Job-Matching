@@ -417,3 +417,55 @@ Requirements
 - At least 1 year of Python experience; candidates with <2 years overall may apply.
 """
     assert _exp(text) == 1.0
+
+
+# -----------------------------------------------------------------------
+# Fix 3: Strict Experience Cues
+# -----------------------------------------------------------------------
+def test_strict_cue_related_training():
+    text = """
+Requirements
+- 2-year related training
+"""
+    assert _exp(text) == 0.0
+
+
+def test_strict_cue_minimum_training_program():
+    text = """
+Requirements
+- Minimum 2-year training program
+"""
+    assert _exp(text) == 0.0
+
+
+def test_strict_cue_professional_certification():
+    text = """
+Requirements
+- 3-year professional certification
+"""
+    assert _exp(text) == 0.0
+
+
+def test_strict_cue_relevant_experience():
+    text = """
+Requirements
+- 2 years of relevant experience
+"""
+    assert _exp(text) == 2.0
+
+
+def test_strict_cue_bare_minimum_years():
+    text = """
+Requirements
+- Minimum 2 years
+"""
+    assert _exp(text) == 2.0
+
+
+def test_strict_cue_bare_plus_years():
+    text = """
+Experience
+- 2+ years
+"""
+    assert _exp(text) == 2.0
+
