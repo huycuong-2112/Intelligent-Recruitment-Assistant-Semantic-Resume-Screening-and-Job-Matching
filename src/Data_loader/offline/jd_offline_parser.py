@@ -333,11 +333,236 @@ def detect_sections(cleaned_text: str) -> Dict[str, List[str]]:
 
 
 # ---------------------------------------------------------------------------
+# EXPERIENCE V2 — section-aware candidate experience extraction
+# ---------------------------------------------------------------------------
+# NOTE: The existing schema collapses "no reliable evidence" and "explicitly
+# zero experience required" both into 0.0.  This is a known limitation of the
+# current StructuredJobDescription.min_experience_years design.
+# ---------------------------------------------------------------------------
+
+# --- Compiled regexes (deterministic, no MiniLM) ---
+
+# Unit detection: extracts lower-bound number + unit (years/months/năm/tháng)
+_EXP_UNIT_RE = re.compile(
+    r'(\d+(?:\.\d+)?)\s*\+?\s*'
+    r'(?:[-–—]\s*|\s*(?:to|đến)\s+)?'
+    r'(?:\d+(?:\.\d+)?\s*\+?\s*)?'
+    r'(năm|years?|yrs?|months?|mos?|tháng)',
+    re.IGNORECASE,
+)
+
+# Less-than experience qualifiers.
+# Matches forms like:  <1 year,  &lt;1 year,  less than 1 year,
+#   under 1 year,  dưới 1 năm,  ít hơn 1 năm,  chưa đến 1 năm
+# When matched, the line expresses that candidates with LESS THAN the
+# stated duration are accepted — i.e. the minimum required is effectively 0.
+_LESS_THAN_EXP_RE = re.compile(
+    r'(?:<|&lt;|&amp;lt;|less\s+than|under|dưới|ít\s+hơn|chưa\s+đến)'
+    r'\s*'
+    r'\d+(?:\.\d+)?\s*\+?\s*'
+    r'(?:[-–—]\s*|\s*(?:to|đến)\s+)?'
+    r'(?:\d+(?:\.\d+)?\s*\+?\s*)?'
+    r'(?:năm|years?|yrs?|months?|mos?|tháng)',
+    re.IGNORECASE,
+)
+
+# Candidate-experience cue words — the line must contain at least one of these
+# for the numeric match to be considered genuine candidate experience.
+# This guards against company-age, project-duration, and education-duration
+# false positives.
+_EXP_CUE_RE = re.compile(
+    r'\b(?:experience|kinh\s+nghiệm|minimum|at\s+least|required|'
+    r'tối\s+thiểu|ít\s+nhất|yêu\s+cầu|cần\s+có|'
+    r'professional|hands-on|work\s+experience|prior\s+experience|'
+    r'relevant|related)\b',
+    re.IGNORECASE,
+)
+
+# Explicit zero-experience / fresher cues
+_ZERO_EXP_RE = re.compile(
+    r'\b(?:no\s+(?:prior\s+)?experience\s+(?:is\s+)?required|'
+    r'experience\s+is\s+not\s+required|'
+    r'fresh\s+graduates?\s+(?:are\s+)?welcome|'
+    r'fresh\s+graduate|'
+    r'fresher(?:s)?(?:\s+(?:accepted|welcome))?|'
+    r'không\s+(?:yêu\s+cầu|cần)\s+kinh\s+nghiệm|'
+    r'chấp\s+nhận\s+fresher|'
+    r'sinh\s+viên\s+mới\s+tốt\s+nghiệp|'
+    r'mới\s+tốt\s+nghiệp\s+được\s+chấp\s+nhận)\b',
+    re.IGNORECASE,
+)
+
+# False-positive blockers: lines matching these patterns should NOT be
+# treated as candidate experience even if they contain a numeric duration.
+_EXP_FALSE_POSITIVE_RE = re.compile(
+    r'\b(?:company\s+has|organization\s+has|founded|'
+    r'project\s+duration|contract\s+(?:is\s+)?valid|'
+    r'year\s+program|year\s+bachelor|year\s+degree|'
+    r'year\s+project)\b',
+    re.IGNORECASE,
+)
+
+
+def _is_less_than_experience(line: str) -> bool:
+    """Check if a line contains a less-than experience qualifier.
+
+    Examples::
+
+        "<1 year of experience"            → True
+        "&lt;1 year of experience"          → True
+        "less than 1 year of experience"   → True
+        "under 1 year of experience"       → True
+        "dưới 1 năm kinh nghiệm"          → True
+        "ít hơn 1 năm kinh nghiệm"        → True
+        "chưa đến 1 năm kinh nghiệm"      → True
+    """
+    return bool(_LESS_THAN_EXP_RE.search(line))
+
+
+def _parse_experience_duration(line: str) -> Optional[float]:
+    """Parse a single line for a numeric experience duration.
+
+    Returns the candidate minimum years, or ``None`` if no valid match.
+
+    - **Less-than qualifiers** (``<N``, ``&lt;N``, ``less than N``,
+      ``under N``, ``dưới N``, ``ít hơn N``, ``chưa đến N``) return
+      ``0.0`` because they express that candidates with less than
+      the stated duration are accepted.
+    - Ranges use the **lower** bound (e.g. ``1-2 years`` → ``1.0``).
+    - Months are converted to years (e.g. ``6 months`` → ``0.5``).
+    - Results are rounded to one decimal place.
+    """
+    m = _EXP_UNIT_RE.search(line)
+    if not m:
+        return None
+
+    # Less-than qualifier → minimum required is effectively 0
+    if _is_less_than_experience(line):
+        return 0.0
+
+    number = float(m.group(1))
+    unit = m.group(2).lower()
+
+    is_months = unit in ("month", "months", "mo", "mos", "tháng")
+
+    if is_months:
+        return round(number / 12.0, 1)
+    return round(number, 1)
+
+
+def _is_zero_experience_cue(line: str) -> bool:
+    """Check if a line explicitly states no experience is required."""
+    return bool(_ZERO_EXP_RE.search(line))
+
+
+def _has_experience_cue(line: str) -> bool:
+    """Check if a line contains candidate-experience context words."""
+    return bool(_EXP_CUE_RE.search(line))
+
+
+def _is_false_positive(line: str) -> bool:
+    """Check if a line matches known false-positive patterns."""
+    return bool(_EXP_FALSE_POSITIVE_RE.search(line))
+
+
+def _is_bare_duration_line(line: str) -> bool:
+    """Check if a line is a short, bare duration statement.
+
+    Examples of bare duration lines::
+
+        "2+ years"
+        "Minimum 2 years"
+        "6 months"
+        "At least 1 year"
+        "Tối thiểu 2 năm"
+
+    These are acceptable inside experience/requirements sections even
+    without a full ``experience`` cue word.
+    """
+    stripped = line.strip().strip("•-* \t")
+    return len(stripped) < 40 and _EXP_UNIT_RE.search(stripped) is not None
+
+
+def extract_min_experience_v2(
+    sections: Dict[str, List[str]],
+    full_text: str,
+) -> float:
+    """Extract minimum required candidate experience using section context.
+
+    Algorithm
+    ---------
+    1. Collect valid mandatory numeric evidence from **experience** and
+       **requirements** sections (Tier 1 & 2).
+    2. If numeric mandatory candidates exist → return ``max(candidates)``.
+    3. Otherwise, check guarded numeric fallback in **overview** / **other**
+       (Tier 3). Accept only if the line has an explicit experience cue.
+    4. If no numeric evidence → evaluate explicit zero-experience / fresher
+       cues across Tier 1–3.
+    5. If still no evidence → return ``0.0`` (schema default; means
+       "unknown / no reliable evidence").
+
+    Parameters
+    ----------
+    sections : Dict[str, List[str]]
+        Output from ``detect_sections()``.
+    full_text : str
+        The original cleaned JD text (used only if all sections are empty).
+    """
+    mandatory_candidates: List[float] = []
+
+    # --- TIER 1: experience section ---
+    for line in sections.get("experience", []):
+        if _is_false_positive(line):
+            continue
+        dur = _parse_experience_duration(line)
+        if dur is not None:
+            # Inside a dedicated experience section, accept even bare
+            # duration lines without explicit cue words.
+            mandatory_candidates.append(dur)
+
+    # --- TIER 2: requirements section ---
+    for line in sections.get("requirements", []):
+        if _is_false_positive(line):
+            continue
+        dur = _parse_experience_duration(line)
+        if dur is not None:
+            if _has_experience_cue(line) or _is_bare_duration_line(line):
+                mandatory_candidates.append(dur)
+
+    # Step 2: if we found mandatory numeric evidence, return max
+    if mandatory_candidates:
+        return max(mandatory_candidates)
+
+    # --- TIER 3: guarded fallback in overview / other ---
+    for section_key in ("overview", "other"):
+        for line in sections.get(section_key, []):
+            if _is_false_positive(line):
+                continue
+            dur = _parse_experience_duration(line)
+            if dur is not None and _has_experience_cue(line):
+                mandatory_candidates.append(dur)
+
+    if mandatory_candidates:
+        return max(mandatory_candidates)
+
+    # Step 4: explicit zero-experience cues
+    tier_keys = ("experience", "requirements", "overview", "other")
+    for key in tier_keys:
+        for line in sections.get(key, []):
+            if _is_zero_experience_cue(line):
+                return 0.0
+
+    # Step 5: no reliable evidence → 0.0 (schema default)
+    return 0.0
+
+
+# ---------------------------------------------------------------------------
 # OFFLINE HEURISTIC JD EXTRACTOR (REGEX + MiniLM)
 # ---------------------------------------------------------------------------
 class OfflineJDExtractor:
     @staticmethod
     def extract_min_experience(text: str) -> float:
+        """Legacy V1 experience extraction (kept for backward compatibility)."""
         match = re.search(
             r'(\d+(?:\.\d+)?)\+?\s*(?:năm|years?)\s*(?:kinh nghiệm|of experience|experience required)',
             text,
@@ -397,8 +622,11 @@ class OfflineJDExtractor:
         title = lines[0] if lines and len(lines[0]) < 60 else fallback_title
         title = re.sub(r'^[#*_\-\s]+', '', title)
 
+        # R1.1 section map — computed once, reused for extraction
+        sections = detect_sections(text)
+
         req_skills, responsibilities, certs = cls.extract_skills_and_responsibilities(text)
-        exp_years = cls.extract_min_experience(text)
+        exp_years = extract_min_experience_v2(sections=sections, full_text=text)
         degree = cls.extract_degree(text)
 
         return StructuredJobDescription(
@@ -414,3 +642,4 @@ class OfflineJDExtractor:
             key_deliverables=[],
             required_certifications=certs
         )
+
