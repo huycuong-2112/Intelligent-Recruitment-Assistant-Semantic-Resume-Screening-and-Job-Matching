@@ -28,45 +28,53 @@ class OfflineJDExtractor:
 
     @staticmethod
     def extract_degree(text: str) -> Optional[DegreeType]:
-        text_lower = text.lower()
+        focused = "\n".join(line for line in text.splitlines() if re.search(r"education|degree|qualification|bằng cấp|học vấn", line, re.I))
+        text_lower = (focused or text).lower()
         if re.search(r'\b(tiến sĩ|ph\.d|doctorate)\b', text_lower):
             return "Ph.D"
         if re.search(r'\b(thạc sĩ|master)\b', text_lower):
             return "Master"
-        if re.search(r'\b(kỹ sư|engineer)\b', text_lower):
-            return "Engineer"
         if re.search(r'\b(cử nhân|bachelor|đại học|university degree)\b', text_lower):
             return "Bachelor"
+        if re.search(r'\b(kỹ sư|engineer)\b', text_lower):
+            return "Engineer"
         if re.search(r'\b(cao đẳng|associate)\b', text_lower):
             return "Associate"
         return "Any"
 
     @classmethod
-    def extract_skills_and_responsibilities(cls, text: str) -> Tuple[List[str], List[str], List[str]]:
+    def extract_skills_and_responsibilities(cls, text: str) -> Tuple[List[str], List[str], List[str], List[str]]:
         req_skills: List[str] = []
+        preferred_skills: List[str] = []
         resp: List[str] = []
         certs: List[str] = []
-
+        section = "overview"
+        headings = {"required": re.compile(r"^(requirements?|required(?:\s+qualifications?)?|must[- ]have)\s*:??$", re.I), "preferred": re.compile(r"^(preferred|nice[- ]to[- ]have|plus|desired)(?:\s+qualifications?)?\s*:??$", re.I), "responsibilities": re.compile(r"^(responsibilities|what you will do|duties)\s*:??$", re.I)}
         for line in text.splitlines():
             line_clean = line.strip().strip("•-* ")
             if not line_clean:
                 continue
+            matched = next((name for name, pattern in headings.items() if pattern.match(line_clean)), None)
+            if matched:
+                section = matched
+                continue
 
             # Bóc tách chứng chỉ
-            if re.search(r'\b(TOEIC|IELTS|CFA|AWS|Azure|GCP|PMP|JLPT|HSK)\b', line_clean, re.IGNORECASE):
+            if re.search(r'\b(TOEIC|IELTS|CFA|PMP|JLPT|HSK)\b', line_clean, re.I) or re.search(r'certif', line_clean, re.I):
                 certs.append(line_clean)
-
-            # Phân loại bullet trách nhiệm
-            if len(line_clean) > 30 and re.search(r'\b(phát triển|thiết kế|xây dựng|quản lý|triển khai|chịu trách nhiệm|develop|design|manage|maintain|implement)\b', line_clean, re.IGNORECASE):
+                continue
+            if section == "responsibilities" or (len(line_clean) > 30 and re.search(r'\b(phát triển|thiết kế|xây dựng|quản lý|triển khai|chịu trách nhiệm|develop|design|manage|maintain|implement|research|assist|support|prepare|stay updated)\b', line_clean, re.I)):
                 resp.append(line_clean)
-            elif 2 < len(line_clean) <= 30 and not line_clean.startswith("#"):
+            elif section in {"required", "preferred"}:
+                (preferred_skills if section == "preferred" else req_skills).append(line_clean)
+            elif 2 < len(line_clean) <= 45 and not line_clean.startswith("#"):
                 tokens = re.split(r'[,/|]+', line_clean)
                 for t in tokens:
                     t_str = t.strip()
                     if 1 < len(t_str) <= 25 and t_str not in req_skills:
                         req_skills.append(t_str)
 
-        return req_skills[:20], resp[:10], certs[:5]
+        return req_skills[:20], preferred_skills[:20], resp[:10], certs[:5]
 
     @classmethod
     def parse(cls, text: str, fallback_title: str) -> StructuredJobDescription:
@@ -74,9 +82,21 @@ class OfflineJDExtractor:
         title = lines[0] if lines and len(lines[0]) < 60 else fallback_title
         title = re.sub(r'^[#*_\-\s]+', '', title)
 
-        req_skills, responsibilities, certs = cls.extract_skills_and_responsibilities(text)
+        req_skills, preferred_skills, responsibilities, certs = cls.extract_skills_and_responsibilities(text)
         exp_years = cls.extract_min_experience(text)
         degree = cls.extract_degree(text)
+        preferred_fields = []
+        # Only infer preferred fields from an explicitly preferred section;
+        # mentions in responsibilities/overview are not requirements.
+        in_preferred = False
+        for line in lines:
+            if re.match(r"^(preferred|nice[- ]to[- ]have|desired)", line, re.I):
+                in_preferred = True
+                continue
+            if in_preferred and re.match(r"^(requirements?|responsibilities|what you will do|duties)\b", line, re.I):
+                in_preferred = False
+            if in_preferred:
+                preferred_fields.extend(x for x in ("Computer Science", "Artificial Intelligence", "Data Science") if re.search(x, line, re.I))
 
         return StructuredJobDescription(
             job_title=title,
@@ -84,9 +104,9 @@ class OfflineJDExtractor:
             job_overview=text[:350].strip(),
             min_experience_years=exp_years,
             required_degree=degree,
-            preferred_fields=[],
+            preferred_fields=preferred_fields,
             required_skills=req_skills,
-            preferred_skills=[],
+            preferred_skills=preferred_skills,
             responsibilities=responsibilities,
             key_deliverables=[],
             required_certifications=certs

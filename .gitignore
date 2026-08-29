@@ -24,6 +24,9 @@ Thumbs.db
 # Streamlit
 .streamlit/
 
+# Local runtime artifacts and logs
+Data/Runtime/
+Data/Results/IT/XAI/jd_001/
+*.log
+
 # Toàn bộ dữ liệu Raw, Processed, JSON, NPY, CSV
-
-

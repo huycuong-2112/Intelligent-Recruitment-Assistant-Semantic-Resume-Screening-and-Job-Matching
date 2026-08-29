@@ -3,12 +3,12 @@ import streamlit as st
 def render_radar_chart(scores: dict, title: str = "Độ phù hợp theo 4 khía cạnh"):
     """
     Vẽ radar chart thể hiện độ phù hợp CV-JD theo 4 khía cạnh:
-    - Edu Score (Học vấn)
-    - Skill Score (Kỹ năng)
-    - Domain Score (Lĩnh vực/Ngành)
-    - Exp Score (Kinh nghiệm)
+    - Skill
+    - Experience
+    - Education
+    - Semantic
 
-    scores: dict dạng {"Edu Score": 0.8, "Skill Score": 0.9, "Domain Score": 0.7, "Exp Score": 0.6}
+    scores: dict dạng {"Skill": 0.8, "Experience": 0.6, "Education": 0.9, "Semantic": 0.7}
     Giá trị nằm trong khoảng 0-1.
     """
     categories = list(scores.keys())

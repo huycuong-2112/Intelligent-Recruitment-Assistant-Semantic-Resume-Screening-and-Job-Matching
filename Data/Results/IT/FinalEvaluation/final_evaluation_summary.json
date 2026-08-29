@@ -1,0 +1,55 @@
+{
+  "primary_split": "blind_all",
+  "systems": [
+    "rule_based_baseline",
+    "mdms_equal_v1",
+    "mdms_tuned_v1"
+  ],
+  "metrics": [
+    {
+      "N": 17,
+      "relevant_count": 3,
+      "recall_at_5": 1.0,
+      "ndcg_at_5": 0.9674679834891694,
+      "recall_at_10": 1.0,
+      "ndcg_at_10": 0.9394334025682808,
+      "recall_at_15": 1.0,
+      "ndcg_at_15": 0.9394334025682808,
+      "spearman": 0.597677075982392,
+      "mae": 0.7733841132255983,
+      "system": "mdms_equal_v1",
+      "split": "blind_all",
+      "evaluation_type": "BLIND"
+    },
+    {
+      "N": 17,
+      "relevant_count": 3,
+      "recall_at_5": 1.0,
+      "ndcg_at_5": 0.9630988000371627,
+      "recall_at_10": 1.0,
+      "ndcg_at_10": 0.953175871178458,
+      "recall_at_15": 1.0,
+      "ndcg_at_15": 0.9451688740787516,
+      "spearman": 0.617888378068753,
+      "mae": 0.667557995149162,
+      "system": "mdms_tuned_v1",
+      "split": "blind_all",
+      "evaluation_type": "BLIND"
+    },
+    {
+      "N": 17,
+      "relevant_count": 3,
+      "recall_at_5": 0.6666666666666666,
+      "ndcg_at_5": 0.8772153153380493,
+      "recall_at_10": 0.6666666666666666,
+      "ndcg_at_10": 0.8459555111191484,
+      "recall_at_15": 0.6666666666666666,
+      "ndcg_at_15": 0.8335148830411879,
+      "spearman": 0.4123930494211612,
+      "mae": 0.956470588235294,
+      "system": "rule_based_baseline",
+      "split": "blind_all",
+      "evaluation_type": "BLIND"
+    }
+  ]
+}

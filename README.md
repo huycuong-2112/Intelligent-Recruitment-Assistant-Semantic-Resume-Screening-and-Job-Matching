@@ -28,7 +28,7 @@ An end-to-end recruitment-assistance system for parsing CVs and Job Descriptions
 - Evidence-grounded **XAI** layer
 - Candidate report / explanation generation with deterministic guardrails
 - Development evaluation pipeline with ranking and error metrics
-- Experimental Skill Matcher V2 research kept isolated from production V1
+- Research experiments are not part of the released production matcher
 
 ---
 
@@ -250,7 +250,7 @@ Groq may be used for wording when configured; deterministic offline explanation 
 - Sentence Transformers
 - `all-MiniLM-L6-v2`
 - Cosine similarity
-- Cross-Encoder experiments for Skill Matcher V2 research
+- Stable production matching uses Skill Matcher V1
 
 ### Document Processing
 
@@ -293,7 +293,6 @@ Groq may be used for wording when configured; deterministic offline explanation 
 │   ├── Evaluation/             # Evaluation metrics / ground truth utilities
 │   ├── Baselines/              # Baseline systems
 │   ├── Optimization/           # Weight search / analysis
-│   └── Experiments/            # Experimental research such as Skill V2
 │
 ├── Data/
 │   ├── Runtime/                # Runtime web artifacts
@@ -364,12 +363,12 @@ Optional development dependencies:
 pip install -r requirement_dev.txt
 ```
 
-### 6.4 Document-parser extras
+### 6.4 Document-parser dependencies
 
-The current parser code uses Docling directly and supports several optional OCR engines. If these packages are not yet included in your local `requirements.txt`, install the parser extras required by your environment:
+The current parser code uses Docling directly. Production parser dependencies are declared in `requirements.txt`; OCR engines may require additional system packages depending on the document type and operating system:
 
 ```bash
-pip install docling groq opencv-python easyocr pytesseract rapidocr-onnxruntime pdf2image
+pip install -r requirements.txt
 ```
 
 For PDF OCR through `pdf2image`, Windows users may also need **Poppler** installed and available on `PATH`.
@@ -405,7 +404,7 @@ The local application uses **two processes**.
 ### Terminal 1 — FastAPI backend
 
 ```bash
-python -m uvicorn app.api.main:app --host 127.0.0.1 --port 8000 --reload
+python -m uvicorn app.api.main:app --host 127.0.0.1 --port 8000
 ```
 
 Verify:
@@ -458,13 +457,19 @@ The canonical runtime API is versioned under:
 /api/v1
 ```
 
-Key operations include:
+Key operations include synchronous parsing, backend-owned asynchronous extraction jobs, confirmation, matching, and explanation:
 
 ```text
-Resume parse / confirm
-Job-description parse / confirm
-Matching run
-Explanation generation
+POST /api/v1/resume/parse
+POST /api/v1/resume/parse/async
+GET  /api/v1/resume/jobs/{job_id}
+POST /api/v1/resume/confirm
+POST /api/v1/job/parse
+POST /api/v1/job/parse/async
+GET  /api/v1/job/jobs/{job_id}
+POST /api/v1/job/confirm
+POST /api/v1/matching/run
+POST /api/v1/explanations/generate
 ```
 
 When the backend is running, use FastAPI Swagger documentation for the exact current contract:
@@ -499,7 +504,7 @@ requirement_dev.txt
 
 ## 12. Evaluation
 
-The project uses human-annotated ground truth for development evaluation.
+The final frozen evaluation uses human-annotated ground truth with one JD and 35 CVs: development 18, blind_v1 6, blind_v2 11, blind_all 17, and full_35 35 (descriptive only). The primary held-out result is `blind_all` (N=17); relevant candidates are defined as `overall >= 2`.
 
 Current evaluation metrics include:
 
@@ -517,13 +522,26 @@ The current project research separates:
 - development experiments
 - blind evaluation
 
-Blind data should remain untouched until model/scoring decisions are frozen.
+Production weights were frozen before blind evaluation, and no scoring-affecting retuning was performed after blind labels were opened.
+
+| Metric | Rule-Based | MDMS Equal | MDMS Tuned |
+|---|---:|---:|---:|
+| Recall@5 | 0.6667 | 1.0000 | 1.0000 |
+| Recall@10 | 0.6667 | 1.0000 | 1.0000 |
+| Recall@15 | 0.6667 | 1.0000 | 1.0000 |
+| nDCG@5 | 0.8772 | 0.9675 | 0.9631 |
+| nDCG@10 | 0.8460 | 1.0000 | 1.0000 |
+| nDCG@15 | 0.8335 | 0.9394 | 0.9532 |
+| Spearman | 0.4124 | 0.5977 | 0.6179 |
+| MAE | 0.9565 | 0.7734 | 0.6676 |
+
+Equal and tuned MDMS use the same frozen component scores; only aggregation weights differ. Tuned MDMS is the released configuration. See `docs/evaluation/final_blind_comparison.md`.
 
 ---
 
-## 13. Skill Matcher V2 Research
+## 13. Research note
 
-Production Skill Matcher V1 remains frozen while Skill Matcher V2 is evaluated experimentally.
+Alternative evidence-retrieval and Cross-Encoder approaches were investigated during development but were not promoted to the stable release. The released system uses Skill Matcher V1.
 
 Current research investigates:
 
@@ -531,7 +549,7 @@ Current research investigates:
 - requirement-level evidence retrieval
 - composite requirement decomposition
 - MiniLM retrieval
-- Cross-Encoder evidence judging
+- Alternative retrieval and Cross-Encoder methods were research-only and are not included in production
 - hard positive / hard negative benchmark construction
 
 Experimental modules and artifacts must not silently modify production matching behavior.
@@ -544,8 +562,8 @@ Experimental modules and artifacts must not silently modify production matching 
 - Docker/container packaging is not yet part of the locked runtime
 - No cloud deployment is provided yet
 - Current MDMS weights were selected on development data
-- Blind evaluation is not yet claimed as final production evidence
-- Skill Matcher V2 remains experimental
+- Final blind evaluation is project-level evidence, not production-scale validation
+- Skill Matcher V2 research remains outside this release
 - Some OCR paths depend on external/system packages
 - Semantic/evidence redundancy remains an active research question
 - Education related-field taxonomy remains an active research question
@@ -595,7 +613,7 @@ Normalization/embeddings  : Active
 MDMS matching             : Active
 Candidate ranking         : Active
 XAI / candidate report    : Active
-Skill Matcher V2          : Experimental
+Skill Matcher V2 research : Not included in production release
 Docker / cloud deployment : Not implemented
 ```
 
