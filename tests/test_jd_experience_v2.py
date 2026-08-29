@@ -371,3 +371,49 @@ Requirements
 - Candidates with <2 years of industry experience may apply.
 """
     assert _exp(text) == 1.0
+
+
+# -----------------------------------------------------------------------
+# Fix 1: Bare duration tightening
+# -----------------------------------------------------------------------
+def test_bare_duration_contract():
+    text = """
+Requirements
+- 3-year contract
+"""
+    assert _exp(text) == 0.0
+
+
+def test_bare_duration_diploma():
+    text = """
+Requirements
+- 2-year diploma
+"""
+    assert _exp(text) == 0.0
+
+
+def test_bare_duration_project():
+    text = """
+Requirements
+- 6-month project
+"""
+    assert _exp(text) == 0.0
+
+
+def test_bare_duration_training():
+    text = """
+Requirements
+- 2-year training program
+"""
+    assert _exp(text) == 0.0
+
+
+# -----------------------------------------------------------------------
+# Fix 2: Same-line less-than conflict
+# -----------------------------------------------------------------------
+def test_less_than_same_line_conflict():
+    text = """
+Requirements
+- At least 1 year of Python experience; candidates with <2 years overall may apply.
+"""
+    assert _exp(text) == 1.0

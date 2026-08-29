@@ -403,51 +403,68 @@ _EXP_FALSE_POSITIVE_RE = re.compile(
 )
 
 
-def _is_less_than_experience(line: str) -> bool:
-    """Check if a line contains a less-than experience qualifier.
+# Strict regex for bare duration lines.
+# A bare duration line is essentially *only* a duration expression,
+# e.g., "2+ years", "Minimum 2 years", "6 months", "1-2 years".
+# It should NOT match "3-year contract" or "4-year degree".
+_BARE_DURATION_RE = re.compile(
+    r'^(?:[•\-*+]\s+)?'
+    r'(?:minimum\s+(?:of\s+)?|at\s+least\s+|over\s+|more\s+than\s+|from\s+|'
+    r'tối\s+thiểu\s+|ít\s+nhất\s+|từ\s+|trên\s+|hơn\s+)?'
+    r'\d+(?:\.\d+)?\s*\+?\s*'
+    r'(?:[-–—]\s*|\s*(?:to|đến)\s+)?'
+    r'(?:\d+(?:\.\d+)?\s*\+?\s*)?'
+    r'(?:năm|years?|yrs?|months?|mos?|tháng)'
+    r'(?:\s*\+)?'
+    r'[.\s]*$',
+    re.IGNORECASE,
+)
 
-    Examples::
 
-        "<1 year of experience"            → True
-        "&lt;1 year of experience"          → True
-        "less than 1 year of experience"   → True
-        "under 1 year of experience"       → True
-        "dưới 1 năm kinh nghiệm"          → True
-        "ít hơn 1 năm kinh nghiệm"        → True
-        "chưa đến 1 năm kinh nghiệm"      → True
+def _is_less_than_experience(line: str, match_text: str) -> bool:
+    """Check if the matched duration is prefixed by a less-than qualifier.
+
+    Instead of searching the entire line, we check if the less-than
+    qualifier specifically qualifies our matched unit text.
     """
-    return bool(_LESS_THAN_EXP_RE.search(line))
+    # Find all less-than expressions in the line
+    for lt_match in _LESS_THAN_EXP_RE.finditer(line):
+        if match_text in lt_match.group(0):
+            return True
+    return False
 
 
-def _parse_experience_duration(line: str) -> Optional[float]:
-    """Parse a single line for a numeric experience duration.
+def _parse_experience_durations(line: str) -> List[float]:
+    """Parse a single line for all numeric experience durations.
 
-    Returns the candidate minimum years, or ``None`` if no valid match.
+    Returns a list of candidate minimum years.
 
-    - **Less-than qualifiers** (``<N``, ``&lt;N``, ``less than N``,
-      ``under N``, ``dưới N``, ``ít hơn N``, ``chưa đến N``) return
-      ``0.0`` because they express that candidates with less than
-      the stated duration are accepted.
+    - **Less-than qualifiers** (``<N``, ``&lt;N``, ``less than N``) are
+      omitted because they express that candidates with less than
+      the stated duration are accepted (i.e. not a mandatory minimum).
     - Ranges use the **lower** bound (e.g. ``1-2 years`` → ``1.0``).
     - Months are converted to years (e.g. ``6 months`` → ``0.5``).
     - Results are rounded to one decimal place.
     """
-    m = _EXP_UNIT_RE.search(line)
-    if not m:
-        return None
+    durations = []
+    for m in _EXP_UNIT_RE.finditer(line):
+        match_text = m.group(0)
+        
+        # Less-than qualifier → omit this duration as it's not a minimum
+        if _is_less_than_experience(line, match_text):
+            continue
 
-    # Less-than qualifier → minimum required is effectively 0
-    if _is_less_than_experience(line):
-        return 0.0
+        number = float(m.group(1))
+        unit = m.group(2).lower()
 
-    number = float(m.group(1))
-    unit = m.group(2).lower()
+        is_months = unit in ("month", "months", "mo", "mos", "tháng")
 
-    is_months = unit in ("month", "months", "mo", "mos", "tháng")
-
-    if is_months:
-        return round(number / 12.0, 1)
-    return round(number, 1)
+        if is_months:
+            durations.append(round(number / 12.0, 1))
+        else:
+            durations.append(round(number, 1))
+            
+    return durations
 
 
 def _is_zero_experience_cue(line: str) -> bool:
@@ -479,8 +496,7 @@ def _is_bare_duration_line(line: str) -> bool:
     These are acceptable inside experience/requirements sections even
     without a full ``experience`` cue word.
     """
-    stripped = line.strip().strip("•-* \t")
-    return len(stripped) < 40 and _EXP_UNIT_RE.search(stripped) is not None
+    return bool(_BARE_DURATION_RE.match(line.strip()))
 
 
 def extract_min_experience_v2(
@@ -514,20 +530,20 @@ def extract_min_experience_v2(
     for line in sections.get("experience", []):
         if _is_false_positive(line):
             continue
-        dur = _parse_experience_duration(line)
-        if dur is not None:
+        durs = _parse_experience_durations(line)
+        if durs:
             # Inside a dedicated experience section, accept even bare
             # duration lines without explicit cue words.
-            mandatory_candidates.append(dur)
+            mandatory_candidates.extend(durs)
 
     # --- TIER 2: requirements section ---
     for line in sections.get("requirements", []):
         if _is_false_positive(line):
             continue
-        dur = _parse_experience_duration(line)
-        if dur is not None:
+        durs = _parse_experience_durations(line)
+        if durs:
             if _has_experience_cue(line) or _is_bare_duration_line(line):
-                mandatory_candidates.append(dur)
+                mandatory_candidates.extend(durs)
 
     # Step 2: if we found mandatory numeric evidence, return max
     if mandatory_candidates:
@@ -538,9 +554,9 @@ def extract_min_experience_v2(
         for line in sections.get(section_key, []):
             if _is_false_positive(line):
                 continue
-            dur = _parse_experience_duration(line)
-            if dur is not None and _has_experience_cue(line):
-                mandatory_candidates.append(dur)
+            durs = _parse_experience_durations(line)
+            if durs and _has_experience_cue(line):
+                mandatory_candidates.extend(durs)
 
     if mandatory_candidates:
         return max(mandatory_candidates)
