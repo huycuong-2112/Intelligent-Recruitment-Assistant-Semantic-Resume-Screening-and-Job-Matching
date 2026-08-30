@@ -65,7 +65,8 @@ flowchart TD
     I --> J[Candidate Ranking]
     J --> K[Deterministic XAI]
     K --> L[Candidate Explanation]
-    L --> M[Streamlit UI]
+    L --> L1[LLM_explanation_candidate.py]
+    L1 --> M[Candidate Report]
 ```
 
 ### Runtime ownership
@@ -83,6 +84,9 @@ Persisted runtime artifacts
 ```
 
 The frontend does not own scoring truth. Matching, evidence, XAI, and explanations are produced by backend/runtime services.
+
+The Candidate Report uses deterministic MDMS/XAI facts as its trust boundary;
+`LLM_explanation_candidate.py` supplies Groq (or offline) narrative wording only.
 
 ---
 
@@ -106,6 +110,10 @@ ACCEPTED_BY_DOCLING
 RECOVERED_BY_OCR
 LOW_QUALITY
 ```
+
+`source_status` describes document/text acquisition, while
+`extraction_method` describes structured parsing. `RECOVERED_BY_OCR` with
+`groq_llm` is a valid combination.
 
 ### Stage 2 — Structured CV/JD extraction
 
@@ -228,6 +236,10 @@ The explanation layer cannot change:
 - missing-skill facts
 
 Groq may be used for wording when configured; deterministic offline explanation remains available.
+
+No vector database is required in this release. Embeddings are computed locally
+with MiniLM and compared directly; Pinecone, Milvus, Weaviate, Qdrant, Chroma,
+and pgvector are not dependencies.
 
 ---
 
@@ -377,6 +389,20 @@ For `pytesseract`, the Tesseract executable and relevant language packs must be 
 
 > If your branch already pins these packages in `requirements.txt`, do not install them twice manually.
 
+### 6.5 Docker (validated route)
+
+Docker Desktop with Compose is optional:
+
+```bash
+docker compose build
+docker compose up -d
+docker compose ps
+```
+
+Open `http://localhost:8501` for the frontend and `http://localhost:8000` for
+the backend. Compose supplies the local `.env` to the backend only; it is not
+copied into images. Stop with `docker compose down`.
+
 ---
 
 ## 7. Environment Configuration
@@ -442,7 +468,7 @@ http://localhost:8501
 9. Confirm JD
 10. Run Matching
 11. Review candidate ranking
-12. Generate / inspect candidate explanation
+12. Generate / inspect the Candidate Report
 ```
 
 The system keeps CV and JD runtime identities separate and only matching-ready confirmed documents are consumed downstream.
@@ -522,7 +548,9 @@ The current project research separates:
 - development experiments
 - blind evaluation
 
-Production weights were frozen before blind evaluation, and no scoring-affecting retuning was performed after blind labels were opened.
+Production weights are `mdms_tuned_v1`: Skill 0.40, Experience 0.20,
+Education 0.10, Semantic 0.30. Skill V2 is research-only and is not part of
+production runtime behavior.
 
 | Metric | Rule-Based | MDMS Equal | MDMS Tuned |
 |---|---:|---:|---:|
@@ -559,7 +587,7 @@ Experimental modules and artifacts must not silently modify production matching 
 ## 14. Current Limitations
 
 - Current MVP is local-only
-- Docker/container packaging is not yet part of the locked runtime
+- Docker/container packaging is validated for the local release route
 - No cloud deployment is provided yet
 - Current MDMS weights were selected on development data
 - Final blind evaluation is project-level evidence, not production-scale validation
@@ -567,6 +595,7 @@ Experimental modules and artifacts must not silently modify production matching 
 - Some OCR paths depend on external/system packages
 - Semantic/evidence redundancy remains an active research question
 - Education related-field taxonomy remains an active research question
+- Groq provider availability and latency may vary; offline fallback remains available
 
 ---
 
