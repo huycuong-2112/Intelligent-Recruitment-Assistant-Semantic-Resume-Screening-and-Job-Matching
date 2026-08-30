@@ -12,6 +12,7 @@ RUN --mount=type=cache,target=/root/.cache/pip \
     sed -e '/^torch==/d' -e '/^torchvision==/d' requirements.txt > /tmp/requirements.no-torch.txt && \
     python -m pip install --default-timeout=120 --retries=10 -r /tmp/requirements.no-torch.txt
 COPY app ./app
+COPY LLM_explanation_candidate.py ./LLM_explanation_candidate.py
 COPY src ./src
 COPY configs ./configs
 COPY Data/GroundTruth ./Data/GroundTruth

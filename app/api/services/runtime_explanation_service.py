@@ -5,6 +5,7 @@ from typing import Any, Callable
 from app.api.schemas.explanation_schema import ExplanationResponse, ExplanationNarrative
 from app.api.services.runtime_xai_service import build_runtime_xai, RuntimeXAIError
 from src.Explainability.pre_explanation_builder import build_pre_explanation
+from app.api.services.teammate_explanation_adapter import generate_teammate_narrative
 
 DISCLAIMER = "Không có bằng chứng trong CV không đồng nghĩa ứng viên chắc chắn không có năng lực; điểm số phản ánh bằng chứng trích xuất được so với yêu cầu JD."
 
@@ -58,21 +59,14 @@ def generate_runtime_explanation(match_run_id: str, cv_id: str, mode: str = "aut
     if mode not in {"auto","offline","groq"}: raise RuntimeXAIError("invalid explanation mode")
     xai=build_runtime_xai(match_run_id,cv_id); pre=build_pre_explanation(xai)
     method="offline_deterministic"; model=None; fallback=False
-    if mode in {"auto","groq"}:
-        factory=groq_client_factory
-        if factory is None and mode != "offline" and os.getenv("GROQ_API_KEY"):
-            try:
-                from groq import Groq
-                factory=lambda: Groq(api_key=os.getenv("GROQ_API_KEY"))
-            except ImportError: factory=None
-        if mode=="groq" and factory is None: raise RuntimeXAIError("Groq is unavailable in explicit groq mode")
-        if factory is not None:
-            try: narrative,model=_groq(xai,pre,factory); method="groq_llm"
-            except Exception:
-                if mode=="groq": raise RuntimeXAIError("Groq narrative failed validation")
-                narrative=_offline(pre); fallback=True
-        else: narrative=_offline(pre)
-    else: narrative=_offline(pre)
+    try:
+        narrative, method, model, fallback = generate_teammate_narrative(
+            xai, pre, mode=mode, groq_client_factory=groq_client_factory
+        )
+    except Exception as exc:
+        if mode == "groq":
+            raise RuntimeXAIError("Groq narrative failed validation") from exc
+        narrative, method, model, fallback = _offline(pre), "offline_deterministic", None, True
     decision=xai["decision"]; dimensions={k:v.get("score") for k,v in xai["dimensions"].items()}
     output={"schema_version":"explanation_v1","source_xai_schema_version":"xai_v1","match_run_id":match_run_id,"cv_id":xai["cv_id"],"jd_id":xai["jd_id"],"target_role":xai.get("job_title"),"scoring_model_version":decision.get("model_version"),"decision":{"final_score":decision.get("final_score"),"status":decision.get("status"),"coverage":decision.get("coverage"),"weights":decision.get("weights"),"effective_weights":decision.get("effective_weights"),"dimensions":dimensions},"generation":{"method":method,"model":model,"fallback_used":fallback},"explanation":narrative}
     validated=ExplanationResponse.model_validate(output).model_dump(mode="json")
