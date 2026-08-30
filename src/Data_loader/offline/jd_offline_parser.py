@@ -573,6 +573,260 @@ def extract_min_experience_v2(
 
 
 # ---------------------------------------------------------------------------
+# EDUCATION & FIELDS V2
+# ---------------------------------------------------------------------------
+_DEGREE_RE = re.compile(
+    r'\b(?:'
+    r'ph\.?d|doctorate|tiến\s+sĩ|'  # Ph.D
+    r'master(?:\'s)?|thạc\s+sĩ|graduate\s+degree|'  # Master
+    r'engineer(?:ing)?\s+degree|degree\s+of\s+engineer|bằng\s+kỹ\s+sư|tốt\s+nghiệp\s+kỹ\s+sư|'  # Engineer
+    r'bachelor(?:\'s)?|đại\s+học|cử\s+nhân|university\s+degree|college\s+degree|undergraduate\s+degree|'  # Bachelor
+    r'associate|cao\s+đẳng|'  # Associate
+    r'high\s+school|thpt|trung\s+học\s+phổ\s+thông'  # High School
+    r')\b',
+    re.IGNORECASE
+)
+
+_DEGREE_MAP = {
+    'ph.d': 'Ph.D', 'phd': 'Ph.D', 'doctorate': 'Ph.D', 'tiến sĩ': 'Ph.D',
+    'master': 'Master', "master's": 'Master', 'thạc sĩ': 'Master', 'graduate degree': 'Master',
+    'engineer degree': 'Engineer', 'engineering degree': 'Engineer', 'degree of engineer': 'Engineer', 'bằng kỹ sư': 'Engineer', 'tốt nghiệp kỹ sư': 'Engineer',
+    'bachelor': 'Bachelor', "bachelor's": 'Bachelor', 'đại học': 'Bachelor', 'cử nhân': 'Bachelor', 'university degree': 'Bachelor', 'college degree': 'Bachelor', 'undergraduate degree': 'Bachelor',
+    'associate': 'Associate', 'cao đẳng': 'Associate',
+    'high school': 'High School', 'thpt': 'High School', 'trung học phổ thông': 'High School'
+}
+
+_DEGREE_HIERARCHY = {
+    'High School': 1,
+    'Associate': 2,
+    'Bachelor': 3,
+    'Engineer': 3,
+    'Master': 4,
+    'Ph.D': 5,
+    'Any': 0,
+    'Other': 0
+}
+
+_FIELD_ALIASES = {
+    'khoa học máy tính': 'Computer Science',
+    'công nghệ thông tin': 'Information Technology',
+    'kỹ thuật phần mềm': 'Software Engineering',
+    'computer engineering': 'Computer Engineering',
+    'trí tuệ nhân tạo': 'Artificial Intelligence',
+    'khoa học dữ liệu': 'Data Science',
+    'information systems': 'Information Systems',
+    'cybersecurity': 'Cybersecurity',
+    'an toàn thông tin': 'Information Security',
+    'electrical engineering': 'Electrical Engineering',
+    'electronics engineering': 'Electronics Engineering',
+    'telecommunications': 'Telecommunications',
+    'toán': 'Mathematics',
+    'thống kê': 'Statistics',
+    'cs': 'Computer Science',
+    'ai': 'Artificial Intelligence',
+    'ml': 'Machine Learning'
+}
+
+_PREFERRED_CUE_RE = re.compile(
+    r'\b(?:preferred|desirable|nice\s*to\s*have|good\s*to\s*have|advantage|plus|bonus|ưu\s+tiên|lợi\s+thế|điểm\s+cộng)\b',
+    re.IGNORECASE
+)
+
+_GENERIC_FIELD_RE = re.compile(
+    r'\b(?:related\s+(?:field|discipline|major|fields)|relevant\s+(?:field|discipline|fields)|technical\s+(?:field|discipline)|similar\s+(?:field|discipline)|equivalent\s+(?:field|discipline))\b',
+    re.IGNORECASE
+)
+
+_FIELD_PREFIX_RE = re.compile(
+    r'\b(?:degree\s+in|bachelor\'s\s+in|master\'s\s+in|phd\s+in|major\s+in|background\s+in|academic\s+background\s+in|field\s+of\s+study|specialization\s+in|chuyên\s+ngành|ngành|tốt\s+nghiệp\s+ngành|được\s+đào\s+tạo\s+ngành)\s+(.+)',
+    re.IGNORECASE
+)
+
+def _normalize_degree(match_str: str) -> DegreeType:
+    s = match_str.lower().strip()
+    for k, v in _DEGREE_MAP.items():
+        if k in s:
+            return v  # type: ignore
+    return "Any"  # type: ignore
+
+def _extract_degree_candidates(line: str, is_education_section: bool) -> List[Tuple[DegreeType, bool]]:
+    candidates = []
+    is_preferred = bool(_PREFERRED_CUE_RE.search(line))
+    for m in _DEGREE_RE.finditer(line):
+        deg = _normalize_degree(m.group(0))
+        candidates.append((deg, not is_preferred))
+    return candidates
+
+def _resolve_required_degree(candidates: List[Tuple[DegreeType, bool]]) -> DegreeType:
+    mandatory_candidates = [deg for deg, is_mandatory in candidates if is_mandatory]
+    if not mandatory_candidates:
+        return "Any"  # type: ignore
+    min_deg = mandatory_candidates[0]
+    min_rank = _DEGREE_HIERARCHY.get(min_deg, 0)
+    for deg in mandatory_candidates[1:]:
+        rank = _DEGREE_HIERARCHY.get(deg, 0)
+        if rank < min_rank:
+            min_deg = deg
+            min_rank = rank
+    return min_deg
+
+def _extract_field_candidates(line: str) -> List[str]:
+    fields = []
+    m = _FIELD_PREFIX_RE.search(line)
+    if m:
+        text = m.group(1)
+        tokens = re.split(r'[,/|]|(?:\bor\b)|(?:\band\b)|(?:\bhoặc\b)|(?:\bhay\b)', text)
+        for t in tokens:
+            t = t.strip().strip('.')
+            if not t:
+                continue
+            if _GENERIC_FIELD_RE.search(t):
+                continue
+            lower_t = t.lower()
+            if lower_t in _FIELD_ALIASES:
+                fields.append(_FIELD_ALIASES[lower_t])
+            elif 2 < len(t) < 40:
+                fields.append(t)
+    return fields
+
+def extract_education_v2(sections: Dict[str, List[str]], full_text: str) -> Tuple[DegreeType, List[str]]:
+    degree_candidates: List[Tuple[DegreeType, bool]] = []
+    preferred_fields: List[str] = []
+
+    # Tier 1 & 2
+    for section_key in ("education", "requirements"):
+        for line in sections.get(section_key, []):
+            degree_candidates.extend(_extract_degree_candidates(line, is_education_section=(section_key == "education")))
+            preferred_fields.extend(_extract_field_candidates(line))
+
+    # Tier 3 fallback
+    if not any(is_mandatory for _, is_mandatory in degree_candidates):
+        for section_key in ("overview", "other"):
+            for line in sections.get(section_key, []):
+                if re.search(r'\b(?:education|degree|bằng|tốt nghiệp|chuyên ngành)\b', line, re.IGNORECASE):
+                    degree_candidates.extend(_extract_degree_candidates(line, is_education_section=False))
+                    preferred_fields.extend(_extract_field_candidates(line))
+
+    # Preferred section
+    for line in sections.get("preferred", []):
+        for deg, _ in _extract_degree_candidates(line, is_education_section=False):
+            degree_candidates.append((deg, False))
+        preferred_fields.extend(_extract_field_candidates(line))
+
+    dedup_fields = []
+    for f in preferred_fields:
+        if f not in dedup_fields:
+            dedup_fields.append(f)
+
+    return _resolve_required_degree(degree_candidates), dedup_fields
+
+
+# ---------------------------------------------------------------------------
+# SKILLS V2
+# ---------------------------------------------------------------------------
+_IT_SKILLS = [
+    'Python', 'Java', 'C', 'C++', 'C#', 'JavaScript', 'TypeScript', 'SQL', 'Git', 'Linux', 'Docker',
+    'Kubernetes', 'AWS', 'Azure', 'GCP', 'TensorFlow', 'PyTorch', 'scikit-learn', 'Pandas', 'NumPy',
+    'Machine Learning', 'Deep Learning', 'NLP', 'Computer Vision', 'REST API', 'FastAPI', 'Flask',
+    'Django', 'Spark', 'Hadoop', 'Kafka', 'PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'React', 'Node.js'
+]
+
+def extract_skills_v2(sections: Dict[str, List[str]]) -> Tuple[List[str], List[str]]:
+    req_skills = []
+    pref_skills = []
+    
+    def extract_from_line(line: str) -> List[str]:
+        found = []
+        for s in _IT_SKILLS:
+            pattern = r'\b' + re.escape(s)
+            if s[-1].isalnum():
+                pattern += r'\b'
+            if re.search(pattern, line, re.IGNORECASE):
+                found.append(s)
+        return found
+
+    for line in sections.get("skills", []) + sections.get("requirements", []):
+        skills = extract_from_line(line)
+        if _PREFERRED_CUE_RE.search(line):
+            pref_skills.extend(skills)
+        else:
+            req_skills.extend(skills)
+
+    for line in sections.get("preferred", []):
+        pref_skills.extend(extract_from_line(line))
+
+    def dedup(lst: List[str]) -> List[str]:
+        res = []
+        for x in lst:
+            if x not in res:
+                res.append(x)
+        return res[:25]
+
+    return dedup(req_skills), dedup(pref_skills)
+
+
+# ---------------------------------------------------------------------------
+# RESPONSIBILITIES & DELIVERABLES V2
+# ---------------------------------------------------------------------------
+_RESP_VERB_RE = re.compile(
+    r'\b(?:develop|build|design|implement|maintain|manage|deploy|analyze|research|create|support|collaborate|'
+    r'phát\s+triển|xây\s+dựng|thiết\s+kế|triển\s+khai|quản\s+lý|nghiên\s+cứu|phân\s+tích|vận\s+hành|hỗ\s+trợ|phối\s+hợp)\b',
+    re.IGNORECASE
+)
+
+_DELIVERABLE_CUE_RE = re.compile(
+    r'\b(?:models?|systems?|services?|apis?|pipelines?|platforms?|applications?|dashboards?|solutions?|products?|features?|modules?|reports?|'
+    r'hệ\s+thống|mô\s+hình|ứng\s+dụng|nền\s+tảng|giải\s+pháp|sản\s+phẩm|tính\s+năng)\b',
+    re.IGNORECASE
+)
+
+def extract_responsibilities_and_deliverables_v2(sections: Dict[str, List[str]]) -> Tuple[List[str], List[str]]:
+    responsibilities = []
+    source_lines = sections.get("responsibilities", [])
+    
+    if source_lines:
+        for line in source_lines:
+            line_clean = line.strip().strip("•-* ")
+            if len(line_clean) > 10 and not line_clean.startswith("#"):
+                if line_clean not in responsibilities:
+                    responsibilities.append(line_clean)
+    else:
+        for k in ("overview", "other"):
+            for line in sections.get(k, []):
+                line_clean = line.strip().strip("•-* ")
+                if len(line_clean) > 10 and not line_clean.startswith("#") and _RESP_VERB_RE.search(line_clean):
+                    if line_clean not in responsibilities:
+                        responsibilities.append(line_clean)
+                        
+    responsibilities = responsibilities[:10]
+    
+    deliverables = []
+    for r in responsibilities:
+        if _DELIVERABLE_CUE_RE.search(r):
+            deliverables.append(r)
+    deliverables = deliverables[:5]
+    
+    return responsibilities, deliverables
+
+
+# ---------------------------------------------------------------------------
+# CERTIFICATIONS V2
+# ---------------------------------------------------------------------------
+_CERT_EXACT_RE = re.compile(r'\b(?:TOEIC|IELTS|PMP|CFA|JLPT|HSK)(?:\s+[\w\d.]+)?\b', re.IGNORECASE)
+_CERT_CLOUD_RE = re.compile(r'\b(?:AWS|Azure|GCP|Google\s+Cloud)\b.*?\b(?:certified|certification|certificate|chứng\s+chỉ|chứng\s+nhận)\b', re.IGNORECASE)
+
+def extract_certifications_v2(sections: Dict[str, List[str]]) -> List[str]:
+    certs = []
+    for k in ("certifications", "requirements", "preferred"):
+        for line in sections.get(k, []):
+            line_clean = line.strip().strip("•-* ")
+            if _CERT_EXACT_RE.search(line_clean) or _CERT_CLOUD_RE.search(line_clean):
+                if line_clean not in certs:
+                    certs.append(line_clean)
+    return certs[:5]
+
+
+# ---------------------------------------------------------------------------
 # OFFLINE HEURISTIC JD EXTRACTOR (REGEX + MiniLM)
 # ---------------------------------------------------------------------------
 class OfflineJDExtractor:
@@ -590,72 +844,69 @@ class OfflineJDExtractor:
             return 0.0
         return 0.0
 
-    @staticmethod
-    def extract_degree(text: str) -> Optional[DegreeType]:
-        text_lower = text.lower()
-        if re.search(r'\b(tiến sĩ|ph\.d|doctorate)\b', text_lower):
-            return "Ph.D"
-        if re.search(r'\b(thạc sĩ|master)\b', text_lower):
-            return "Master"
-        if re.search(r'\b(kỹ sư|engineer)\b', text_lower):
-            return "Engineer"
-        if re.search(r'\b(cử nhân|bachelor|đại học|university degree)\b', text_lower):
-            return "Bachelor"
-        if re.search(r'\b(cao đẳng|associate)\b', text_lower):
-            return "Associate"
-        return "Any"
-
-    @classmethod
-    def extract_skills_and_responsibilities(cls, text: str) -> Tuple[List[str], List[str], List[str]]:
-        req_skills: List[str] = []
-        resp: List[str] = []
-        certs: List[str] = []
-
-        for line in text.splitlines():
-            line_clean = line.strip().strip("•-* ")
-            if not line_clean:
-                continue
-
-            # Bóc tách chứng chỉ
-            if re.search(r'\b(TOEIC|IELTS|CFA|AWS|Azure|GCP|PMP|JLPT|HSK)\b', line_clean, re.IGNORECASE):
-                certs.append(line_clean)
-
-            # Phân loại bullet trách nhiệm
-            if len(line_clean) > 30 and re.search(r'\b(phát triển|thiết kế|xây dựng|quản lý|triển khai|chịu trách nhiệm|develop|design|manage|maintain|implement)\b', line_clean, re.IGNORECASE):
-                resp.append(line_clean)
-            elif 2 < len(line_clean) <= 30 and not line_clean.startswith("#"):
-                tokens = re.split(r'[,/|]+', line_clean)
-                for t in tokens:
-                    t_str = t.strip()
-                    if 1 < len(t_str) <= 25 and t_str not in req_skills:
-                        req_skills.append(t_str)
-
-        return req_skills[:20], resp[:10], certs[:5]
-
     @classmethod
     def parse(cls, text: str, fallback_title: str) -> StructuredJobDescription:
         lines = [l.strip() for l in text.splitlines() if l.strip()]
-        title = lines[0] if lines and len(lines[0]) < 60 else fallback_title
-        title = re.sub(r'^[#*_\-\s]+', '', title)
+        
+        # 1. Title Extraction
+        title = fallback_title
+        for l in lines[:10]:
+            # Do not treat bullet points as the job title
+            if l.lstrip().startswith(("-", "•", "*")):
+                continue
+                
+            clean_l = l.strip("•-*_# ")
+            if not clean_l:
+                continue
+                
+            if len(clean_l) < 60 and not clean_l.isupper():
+                category = classify_heading(normalize_heading(clean_l))
+                if category is not None and category != "other":
+                    continue
+                title = clean_l
+                break
 
-        # R1.1 section map — computed once, reused for extraction
+
+        # 2. Company Name
+        company_name = None
+        for l in lines[:20]:
+            m = re.search(r'^(?:Company(?: Name)?|Công ty|Doanh nghiệp):\s*(.+)$', l, re.IGNORECASE)
+            if m:
+                company_name = m.group(1).strip()
+                break
+
+        # 3. Detect Sections
         sections = detect_sections(text)
 
-        req_skills, responsibilities, certs = cls.extract_skills_and_responsibilities(text)
+        # 4. Overview
+        overview_lines = sections.get("overview", [])
+        if overview_lines:
+            overview = " ".join([l.strip().strip("•-* ") for l in overview_lines if len(l) > 10])
+        else:
+            overview = " ".join([l.strip().strip("•-* ") for l in lines[:15] if len(l) > 20 and not l.startswith("#")])
+        overview = overview[:350].strip()
+
+        # 5. Extract Details using V2 Extractor Logic
         exp_years = extract_min_experience_v2(sections=sections, full_text=text)
-        degree = cls.extract_degree(text)
+        req_degree, pref_fields = extract_education_v2(sections=sections, full_text=text)
+        req_skills, pref_skills = extract_skills_v2(sections=sections)
+        responsibilities, deliverables = extract_responsibilities_and_deliverables_v2(sections=sections)
+        certs = extract_certifications_v2(sections=sections)
+
+        if not title:
+            title = fallback_title
 
         return StructuredJobDescription(
             job_title=title,
-            company_name=None,
-            job_overview=text[:350].strip(),
+            company_name=company_name,
+            job_overview=overview,
             min_experience_years=exp_years,
-            required_degree=degree,
-            preferred_fields=[],
+            required_degree=req_degree,
+            preferred_fields=pref_fields,
             required_skills=req_skills,
-            preferred_skills=[],
+            preferred_skills=pref_skills,
             responsibilities=responsibilities,
-            key_deliverables=[],
+            key_deliverables=deliverables,
             required_certifications=certs
         )
 
