@@ -1,0 +1,21 @@
+FROM python:3.13-slim
+
+ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 HF_HOME=/opt/huggingface
+WORKDIR /app
+RUN apt-get update && apt-get install -y --no-install-recommends libglib2.0-0 libgl1 && rm -rf /var/lib/apt/lists/*
+COPY requirements.txt ./
+RUN --mount=type=cache,target=/root/.cache/pip \
+    python -m pip install --upgrade pip && \
+    python -m pip install --default-timeout=120 --retries=10 \
+      --index-url https://download.pytorch.org/whl/cpu \
+      torch==2.13.0+cpu torchvision==0.28.0+cpu && \
+    sed -e '/^torch==/d' -e '/^torchvision==/d' requirements.txt > /tmp/requirements.no-torch.txt && \
+    python -m pip install --default-timeout=120 --retries=10 -r /tmp/requirements.no-torch.txt
+COPY app ./app
+COPY src ./src
+COPY configs ./configs
+COPY Data/GroundTruth ./Data/GroundTruth
+COPY Data/Results/IT/FinalEvaluation ./Data/Results/IT/FinalEvaluation
+RUN mkdir -p /app/Data/Runtime
+EXPOSE 8000
+CMD ["python", "-m", "uvicorn", "app.api.main:app", "--host", "0.0.0.0", "--port", "8000"]

@@ -1,0 +1,6 @@
+# Direct runtime dependencies imported by the Streamlit UI.
+pandas==3.0.5
+plotly==6.9.0
+pymupdf==1.28.2
+requests==2.34.2
+streamlit==1.61.1
