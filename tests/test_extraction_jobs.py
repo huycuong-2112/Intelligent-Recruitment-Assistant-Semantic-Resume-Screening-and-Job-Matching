@@ -1,5 +1,5 @@
 from app.frontend.utils import extraction_jobs
-from app.frontend.utils.extraction_jobs import collect, start_jobs, submit_next
+from app.frontend.utils.extraction_jobs import collect, consume_completed_jobs, start_jobs, submit_next
 
 class File:
     def __init__(self, name): self.name, self.size = name, 1
@@ -65,3 +65,14 @@ def test_mixed_file_states_remain_independent():
     collect(jobs, (lambda f: {"job_id": "unused", "status": "queued"}, status))
     assert first["status"] in {"running", "long_running"}
     assert second["status"] == "completed" and second["result"]["filename"] == "ok.pdf"
+
+def test_completed_result_is_persisted_as_refinable_before_queue_cleanup():
+    jobs = {"a": {"filename": "a.jpg", "order": 0, "status": "completed", "result": {"filename": "a.jpg", "run_id": "r", "document_id": "cv_1", "parsed": {}, "ui_features": []}}}
+    candidates, changed = consume_completed_jobs(jobs, [])
+    assert changed and candidates[0]["refinable"] is True and candidates[0]["document_id"] == "cv_1"
+
+def test_completed_handoff_survives_rerun_and_failed_has_no_refine():
+    jobs = {"a": {"filename": "a.jpg", "order": 0, "status": "completed", "result": {"filename": "a.jpg", "run_id": "r", "document_id": "cv_1"}}, "b": {"filename": "b.pdf", "order": 1, "status": "failed", "error": "bad"}}
+    first, _ = consume_completed_jobs(jobs, [])
+    second, changed = consume_completed_jobs({}, first)
+    assert first == second and changed is False and first[0]["refinable"] is True and all(c.get("refinable") for c in first)

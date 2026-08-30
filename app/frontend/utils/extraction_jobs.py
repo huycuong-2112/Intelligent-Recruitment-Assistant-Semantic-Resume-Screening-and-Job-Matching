@@ -49,4 +49,30 @@ def collect(jobs, callbacks):
         changed = submit_next(jobs, callbacks[0]) or changed
     return changed
 
+def consume_completed_jobs(jobs, candidates=None):
+    """Persist completed backend results before deactivating polling state."""
+    by_filename = {c.get("filename"): c for c in (candidates or []) if isinstance(c, dict)}
+    changed = False
+    for job in (jobs or {}).values():
+        if not isinstance(job, dict) or job.get("status") != "completed" or not isinstance(job.get("result"), dict):
+            continue
+        result = job["result"]
+        filename = result.get("filename", job.get("filename"))
+        if filename in by_filename:
+            by_filename[filename].update({"refinable": True, "result": result})
+            continue
+        by_filename[filename] = {
+            "filename": filename,
+            "run_id": result.get("run_id"),
+            "document_id": result.get("document_id"),
+            "extraction": result.get("extraction", {}),
+            "parsed": result.get("parsed"),
+            "raw_features": result.get("ui_features", []),
+            "refinable": True,
+            "result": result,
+        }
+        changed = True
+    ordered = sorted(by_filename.values(), key=lambda c: next((j.get("order", 0) for j in (jobs or {}).values() if j.get("filename") == c.get("filename")), 0))
+    return ordered, changed
+
 def public_job(job): return {k:v for k,v in job.items() if k != "file"}

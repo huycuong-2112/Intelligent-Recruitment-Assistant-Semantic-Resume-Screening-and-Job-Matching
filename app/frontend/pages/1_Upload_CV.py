@@ -9,7 +9,7 @@ from app.frontend.utils.state_utils import feature_selection_fingerprint, confir
 from app.frontend.components.navbar import render_navbar
 from app.frontend.utils.manual_feature_contract import TYPE_OPTIONS, labels_for, subtype_selector_visible
 from app.frontend.utils.document_preview import show_document_preview
-from app.frontend.utils.extraction_jobs import collect as collect_extraction_jobs, public_job, start_jobs
+from app.frontend.utils.extraction_jobs import collect as collect_extraction_jobs, consume_completed_jobs, public_job, start_jobs
 
 CATEGORIES = ["Education", "Skills", "Experience", "Projects"]
 
@@ -354,13 +354,9 @@ if st.session_state.get("cv_extraction_jobs"):
             st.session_state["cv_extraction_jobs"] = {}
             return
         changed = collect_extraction_jobs(jobs, (submit_resume_extraction, lambda job_id: get_extraction_status("resume", job_id)))
-        candidates = {c.get("filename"): c for c in (st.session_state.get("cv_candidates") or [])}
         valid_jobs = [job for job in jobs.values() if isinstance(job, dict)]
-        for job in valid_jobs:
-            if job.get("status") == "completed" and job.get("result") is not None and job["filename"] not in candidates:
-                response = job["result"]
-                candidates[job["filename"]] = {"filename": response.get("filename", job["filename"]), "run_id": response["run_id"], "document_id": response["document_id"], "extraction": response.get("extraction", {}), "parsed": response["parsed"], "raw_features": response.get("ui_features", [])}
-        st.session_state["cv_candidates"] = [candidates[k] for k in sorted(candidates, key=lambda n: next((j["order"] for j in valid_jobs if j.get("filename") == n), 0))]
+        candidates, handed_off = consume_completed_jobs(jobs, st.session_state.get("cv_candidates"))
+        st.session_state["cv_candidates"] = candidates
         for job in sorted(valid_jobs, key=lambda x: x.get("order", 0)):
             if job["status"] == "pending": st.caption(f"{job['filename']}: Pending")
             elif job["status"] in {"queued", "running", "processing"}: st.caption(f"{job['filename']}: Đang trích xuất...")
@@ -372,5 +368,7 @@ if st.session_state.get("cv_extraction_jobs"):
             # Keep the queue as a valid inactive mapping.  A fragment can
             # execute once more after this state transition.
             st.session_state["cv_extraction_jobs"] = {}
+            if handed_off:
+                st.rerun(scope="app")
         elif changed: st.rerun(scope="app")
     _poll_cv_jobs()
