@@ -17,6 +17,13 @@ def test_progressive_poller_reruns_full_app_after_ready_candidate():
     assert "ThreadPoolExecutor" not in PAGE  # queue ownership remains in extraction_jobs
 
 
+def test_long_running_poll_is_neutral_and_failed_is_terminal_error():
+    assert 'job["status"] == "long_running"' in PAGE
+    assert "Đang xử lý lâu hơn dự kiến" in PAGE
+    assert 'job["status"] == "failed"' in PAGE
+    assert "job.get('error'," in PAGE
+
+
 def test_each_cv_card_renders_backend_provenance_independently():
     assert 'source_status = extraction.get("status")' in PAGE
     assert 'extraction_method = (cand.get("parsed") or {}).get("extraction_method")' in PAGE

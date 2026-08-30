@@ -69,7 +69,7 @@ def _tombstone_cv_jobs(filenames):
     if not isinstance(jobs, dict):
         return
     for job in jobs.values():
-        if isinstance(job, dict) and job.get("filename") in filenames and job.get("status") in {"pending", "parsing"}:
+        if isinstance(job, dict) and job.get("filename") in filenames and job.get("status") in {"pending", "queued", "running", "processing", "long_running"}:
             job["status"] = "removed"
 
 # =========================
@@ -363,9 +363,11 @@ if st.session_state.get("cv_extraction_jobs"):
         st.session_state["cv_candidates"] = [candidates[k] for k in sorted(candidates, key=lambda n: next((j["order"] for j in valid_jobs if j.get("filename") == n), 0))]
         for job in sorted(valid_jobs, key=lambda x: x.get("order", 0)):
             if job["status"] == "pending": st.caption(f"{job['filename']}: Pending")
-            elif job["status"] in {"queued", "running"}: st.caption(f"{job['filename']}: Đang trích xuất...")
+            elif job["status"] in {"queued", "running", "processing"}: st.caption(f"{job['filename']}: Đang trích xuất...")
+            elif job["status"] == "long_running": st.info(f"{job['filename']}: Đang xử lý lâu hơn dự kiến... (job vẫn được theo dõi)")
             elif job["status"] == "completed": st.caption(f"{job['filename']}: Sẵn sàng")
-            else: st.error(f"{job['filename']}: Lỗi")
+            elif job["status"] == "failed": st.error(f"{job['filename']}: Lỗi — {job.get('error', 'Trích xuất thất bại')}")
+            else: st.caption(f"{job['filename']}: Đang chờ trạng thái...")
         if valid_jobs and all(j.get("status") in {"completed", "failed", "removed"} for j in valid_jobs):
             # Keep the queue as a valid inactive mapping.  A fragment can
             # execute once more after this state transition.

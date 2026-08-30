@@ -7,6 +7,10 @@ API_BASE_URL = os.getenv("API_BASE_URL", "http://localhost:8000/api/v1").rstrip(
 class ResumeParseAPIError(RuntimeError):
     """User-safe error raised when the resume parsing API cannot be used."""
 
+    def __init__(self, message: str, *, fatal: bool = True):
+        super().__init__(message)
+        self.fatal = fatal
+
 
 def upload_resume(file, offline: bool | None = None) -> dict:
     filename = getattr(file, "name", None) or ""
@@ -65,8 +69,9 @@ def _submit_extraction(path, file, offline):
 
 def get_extraction_status(kind: str, job_id: str) -> dict:
     try: response=requests.get(f"{API_BASE_URL}/{kind}/jobs/{job_id}",timeout=10)
-    except requests.RequestException as exc: raise ResumeParseAPIError("Backend unavailable. Start the FastAPI server and try again.") from exc
-    if response.status_code >= 400: raise ResumeParseAPIError("Extraction job not found")
+    except requests.RequestException as exc: raise ResumeParseAPIError("Backend unavailable. Start the FastAPI server and try again.", fatal=False) from exc
+    if response.status_code == 404: raise ResumeParseAPIError("Extraction job not found", fatal=True)
+    if response.status_code >= 400: raise ResumeParseAPIError("Extraction status temporarily unavailable", fatal=False)
     return response.json()
 
 def _confirm(path: str, run_id: str, document_id: str, confirmed_features: list[dict]) -> dict:
