@@ -76,3 +76,34 @@ def test_completed_handoff_survives_rerun_and_failed_has_no_refine():
     first, _ = consume_completed_jobs(jobs, [])
     second, changed = consume_completed_jobs({}, first)
     assert first == second and changed is False and first[0]["refinable"] is True and all(c.get("refinable") for c in first)
+
+def test_two_completed_jobs_produce_two_refinable_candidates():
+    jobs={"a":{"filename":"cv_018.pdf","order":0,"status":"completed","result":{"filename":"cv_018.pdf","document_id":"cv_a"}},
+          "b":{"filename":"003.jpg","order":1,"status":"completed","result":{"filename":"003.jpg","document_id":"cv_b"}}}
+    candidates, changed=consume_completed_jobs(jobs, [])
+    assert changed and [c["document_id"] for c in candidates] == ["cv_a","cv_b"]
+    assert all(c["refinable"] for c in candidates)
+
+def test_completed_first_preserves_pending_second():
+    jobs={"a":{"filename":"a.pdf","order":0,"status":"completed","result":{"filename":"a.pdf","document_id":"cv_a"}},
+          "b":{"filename":"b.jpg","order":1,"status":"pending"}}
+    candidates, _=consume_completed_jobs(jobs, [])
+    assert [c["document_id"] for c in candidates] == ["cv_a"] and candidates[0]["refinable"]
+    assert jobs["b"]["status"] == "pending"
+
+def test_second_later_completion_adds_without_overwriting_first():
+    first={"filename":"a.pdf","document_id":"cv_a","refinable":True}
+    jobs={"b":{"filename":"b.jpg","order":1,"status":"completed","result":{"filename":"b.jpg","document_id":"cv_b"}}}
+    candidates, changed=consume_completed_jobs(jobs, [first])
+    assert changed and {c["document_id"] for c in candidates} == {"cv_a","cv_b"}
+
+def test_same_filename_updates_candidate_without_duplicate():
+    existing={"filename":"a.pdf","document_id":"cv_a","refinable":False}
+    jobs={"a":{"filename":"a.pdf","status":"completed","result":{"filename":"a.pdf","document_id":"cv_a"}}}
+    candidates, _=consume_completed_jobs(jobs,[existing])
+    assert len(candidates)==1 and candidates[0]["refinable"] is True
+
+def test_mixed_failed_and_successful_keeps_successful_refinable():
+    jobs={"bad":{"filename":"bad.pdf","status":"failed"},"ok":{"filename":"ok.jpg","order":1,"status":"completed","result":{"filename":"ok.jpg","document_id":"cv_ok"}}}
+    candidates, _=consume_completed_jobs(jobs,[])
+    assert len(candidates)==1 and candidates[0]["document_id"]=="cv_ok" and candidates[0]["refinable"]
