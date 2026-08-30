@@ -53,3 +53,15 @@ def test_transient_poll_error_does_not_fail_but_fatal_error_does():
     def fatal(_): raise FatalError("missing")
     collect(jobs, (lambda f: {"job_id": "ext-a", "status": "queued"}, fatal))
     assert job["status"] == "failed"
+
+def test_mixed_file_states_remain_independent():
+    jobs, _ = start_jobs([File("slow.jpg"), File("ok.pdf")], lambda f: {"job_id": "ext-" + f.name, "status": "running"})
+    first = next(iter(jobs.values()))
+    first.update(job_id="ext-slow.jpg", status="running", submitted_at=0)
+    second = list(jobs.values())[1]
+    second.update(job_id="ext-ok.pdf", status="running", submitted_at=0)
+    def status(job_id):
+        return {"status": "running"} if job_id == "ext-slow.jpg" else {"status": "completed", "result": {"filename": "ok.pdf"}}
+    collect(jobs, (lambda f: {"job_id": "unused", "status": "queued"}, status))
+    assert first["status"] in {"running", "long_running"}
+    assert second["status"] == "completed" and second["result"]["filename"] == "ok.pdf"
