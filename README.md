@@ -606,9 +606,10 @@ Docker / cloud deployment : Not implemented
 Add team members here:
 
 ```text
-- <Name> — <Role / responsibility>
-- <Name> — <Role / responsibility>
-- <Name> — <Role / responsibility>
+- Đỗ Huy Cường — <Role / responsibility>
+- Trương Minh Quân — <Role / responsibility>
+- Đinh Kiệt — <Role / responsibility>
+- Tô Đức Lâm - <Role / responsibility>
 ```
 
 ---
