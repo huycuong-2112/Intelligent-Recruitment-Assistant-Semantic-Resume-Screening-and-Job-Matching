@@ -6,6 +6,7 @@ import re
 import sys
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
+from privacy import scrub_resume_pii
 
 try:
     from dotenv import load_dotenv
@@ -76,20 +77,25 @@ CANONICAL_FIELDS = [
 # ---------------------------------------------------------------------------
 # 4. ONLINE LLM JD STRUCTURING (GROQ)
 # ---------------------------------------------------------------------------
-def parse_jd_llm(text: str, client: Any) -> StructuredJobDescription:
+def parse_jd_llm(text: str, client: Any, company_hint: str | None = None) -> StructuredJobDescription:
     schema_json = StructuredJobDescription.model_json_schema()
+    
+    # 1. MASK COMPANY AND RECRUITER CONTACTS LOCALLY
+    sanitized_text, _ = scrub_jd_pii(text, default_company=company_hint)
+    
     system_prompt = (
         "You are an expert HR Recruitment & Job Description Analysis Engine. "
         "Extract structured requirements from the Job Description text into a valid JSON object strictly matching this schema:\n"
         f"{json.dumps(schema_json, ensure_ascii=False, indent=2)}\n\n"
         "Guidelines:\n"
-        "1. Identify the exact job title and hiring company.\n"
+        "1. Identify the exact job title and hiring company. If the company is listed as [CONFIDENTIAL_COMPANY], output that exactly.\n"
         "2. Differentiate between 'required_skills' (mandatory) and 'preferred_skills' (plus points).\n"
         "3. Extract minimum experience years as a clean float (e.g., '1-2 years' -> 1.0, 'fresher' -> 0.0).\n"
         "4. Capture key deliverables and responsibilities without losing technical specifics."
     )
 
-    compact_text = re.sub(r"[ \t]+", " ", text)
+    # 2. COMPACT THE SANITIZED TEXT
+    compact_text = re.sub(r"[ \t]+", " ", sanitized_text)
     compact_text = re.sub(r"\n{3,}", "\n\n", compact_text).strip()
     user_prompt = f"Job Description Content:\n{compact_text[:10000]}"
 
@@ -163,7 +169,7 @@ def main():
 
     print(f"📂 Tìm thấy {len(raw_jds)} vị trí tuyển dụng (JDs) để bóc tách...\n")
 
-    api_key = os.getenv("GROQ_API_KEY")# Nhap API KEY VAO ()
+
     groq_client = Groq(api_key=api_key) if (Groq and api_key and api_key.startswith("gsk_")) else None
 
     if groq_client:

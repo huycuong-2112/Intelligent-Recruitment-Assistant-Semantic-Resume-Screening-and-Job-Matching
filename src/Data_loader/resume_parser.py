@@ -6,6 +6,7 @@ import re
 import sys
 from pathlib import Path
 from typing import Any, Dict, List, Optional
+from privacy import scrub_resume_pii
 
 # ---------------------------------------------------------------------------
 # 1. OPTIONAL DEPENDENCIES FOR LLM
@@ -61,6 +62,10 @@ GROQ_MODELS = [
 # ---------------------------------------------------------------------------
 def parse_resume_llm(text: str, client: Any) -> StructuredResume:
     schema_json = StructuredResume.model_json_schema()
+    
+    # 1. SCRUB SENSITIVE PII LOCALLY BEFORE BUILDING PROMPT
+    sanitized_text, _ = scrub_resume_pii(text)
+    
     system_prompt = (
         "You are an expert AI resume parsing and candidate evaluation engine. "
         "Extract all structured entities from the CV text into a valid JSON object strictly matching this schema:\n"
@@ -68,13 +73,14 @@ def parse_resume_llm(text: str, client: Any) -> StructuredResume:
         "Strict Extraction Rules:\n"
         "1. WORK EXPERIENCE: Capture ALL roles without omission. If month/year is not explicitly stated next to a role, scan the surrounding text for dates or estimate duration.\n"
         "2. SKILLS HARVESTING: If there is no dedicated 'Skills' section, harvest all programming languages, tools, frameworks, and methodologies mentioned in summary, projects, and work experience.\n"
-        "3. ENTITY CLEANING: Sanitize institution and company names to remove accidental glued job titles, OCR noise, or watermarks (e.g., 'Trường Cao đẳng Công Thương' instead of 'Trường Cao đẳng Công Thức tập sinh').\n"
+        "3. ENTITY CLEANING: Sanitize institution and company names to remove accidental glued job titles, OCR noise, or watermarks.\n"
         "4. PROJECTS & METRICS: Extract all quantifiable metrics (%, FPS, latency, scale, revenue, generations) into 'impact_metrics'.\n"
-        "5. Current reference year is 2026."
+        "5. PRIVACY PRESERVATION: The input text has been anonymized. Leave [REDACTED_*] or [CANDIDATE_NAME] tokens as they are. Do not attempt to guess the missing information.\n"
+        "6. Current reference year is 2026."
     )
 
-    # Nén khoảng trắng & giới hạn 12,000 ký tự (đủ cho CV 3-4 trang, an toàn token)
-    compact_text = re.sub(r"[ \t]+", " ", text)
+    # 2. COMPACT THE SANITIZED TEXT
+    compact_text = re.sub(r"[ \t]+", " ", sanitized_text)
     compact_text = re.sub(r"\n{3,}", "\n\n", compact_text).strip()
     user_prompt = f"CV Content:\n{compact_text[:12000]}"
 
@@ -94,7 +100,7 @@ def parse_resume_llm(text: str, client: Any) -> StructuredResume:
             if raw_content:
                 return StructuredResume.model_validate_json(raw_content)
         except RateLimitError as rle:
-            raise rle  # Bắn lỗi 429 ra ngoài để kích hoạt chuyển sang Offline Parser
+            raise rle
         except Exception as e:
             last_error = e
             continue
@@ -135,7 +141,7 @@ def main():
 
     print(f"📂 Loaded {len(docs)} documents from Stage 1...\n")
 
-    api_key = os.getenv("GROQ_API_KEY")
+   
     # api_key = os.getenv("GROQ_API_KEY")
     groq_client = Groq(api_key=api_key) if (Groq and api_key and api_key.startswith("gsk_")) else None
 
