@@ -1,7 +1,7 @@
 from __future__ import annotations
 from typing import Any
-from .ground_truth import GroundTruthRecord
-from .metrics import mean_absolute_error, ndcg_at_k, recall_at_k, spearman_rank_correlation
+from ground_truth import GroundTruthRecord
+from metrics import mean_absolute_error, ndcg_at_k, recall_at_k, spearman_rank_correlation
 
 def evaluate(ground_truth: GroundTruthRecord, system_results: list[dict[str, Any]], method: str, config: dict[str, Any] | None = None) -> dict[str, Any]:
     gt_ids = [candidate.cv_id for candidate in ground_truth.candidates]; result_ids = [item.get("cv_id") for item in system_results]
