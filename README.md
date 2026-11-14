@@ -606,10 +606,10 @@ Docker / cloud deployment : Not implemented
 Add team members here:
 
 ```text
-- Đỗ Huy Cường — <Role / responsibility>
-- Trương Minh Quân — <Role / responsibility>
-- Đinh Kiệt — <Role / responsibility>
-- Tô Đức Lâm - <Role / responsibility>
+- Đỗ Huy Cường — <Model Lead (Matching & Scoring)>
+- Trương Minh Quân — < Data Engineer (Data Processing)>
+- Đinh Kiệt — <AI Engineer (Evaluation & Explainability)>
+- Tô Đức Lâm - <Full-stack Engineer (UI, Backend & Deployment)>
 ```
 
 ---
