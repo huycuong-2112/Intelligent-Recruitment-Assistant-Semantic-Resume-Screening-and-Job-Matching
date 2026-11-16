@@ -653,9 +653,10 @@ Docker / cloud deployment : Not implemented
 Add team members here:
 
 ```text
-- <Name> — <Role / responsibility>
-- <Name> — <Role / responsibility>
-- <Name> — <Role / responsibility>
+1. Do Huy Cuong — Model Lead (Matching Scoring)
+2. Truong Minh Quan — Data Engineer (Data Processing )
+3. Dinh Kiet — AI Engineer (XAI Explainability)
+4. To Duc Lam — Full-stack Engineer (UI, Backend & Deployment)
 ```
 
 ---
