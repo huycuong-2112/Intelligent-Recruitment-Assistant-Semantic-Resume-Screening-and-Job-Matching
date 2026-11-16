@@ -6,7 +6,6 @@ import re
 import sys
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
-from privacy import scrub_resume_pii
 
 try:
     from dotenv import load_dotenv
@@ -77,25 +76,20 @@ CANONICAL_FIELDS = [
 # ---------------------------------------------------------------------------
 # 4. ONLINE LLM JD STRUCTURING (GROQ)
 # ---------------------------------------------------------------------------
-def parse_jd_llm(text: str, client: Any, company_hint: str | None = None) -> StructuredJobDescription:
+def parse_jd_llm(text: str, client: Any) -> StructuredJobDescription:
     schema_json = StructuredJobDescription.model_json_schema()
-    
-    # 1. MASK COMPANY AND RECRUITER CONTACTS LOCALLY
-    sanitized_text, _ = scrub_jd_pii(text, default_company=company_hint)
-    
     system_prompt = (
         "You are an expert HR Recruitment & Job Description Analysis Engine. "
         "Extract structured requirements from the Job Description text into a valid JSON object strictly matching this schema:\n"
         f"{json.dumps(schema_json, ensure_ascii=False, indent=2)}\n\n"
         "Guidelines:\n"
-        "1. Identify the exact job title and hiring company. If the company is listed as [CONFIDENTIAL_COMPANY], output that exactly.\n"
+        "1. Identify the exact job title and hiring company.\n"
         "2. Differentiate between 'required_skills' (mandatory) and 'preferred_skills' (plus points).\n"
         "3. Extract minimum experience years as a clean float (e.g., '1-2 years' -> 1.0, 'fresher' -> 0.0).\n"
         "4. Capture key deliverables and responsibilities without losing technical specifics."
     )
 
-    # 2. COMPACT THE SANITIZED TEXT
-    compact_text = re.sub(r"[ \t]+", " ", sanitized_text)
+    compact_text = re.sub(r"[ \t]+", " ", text)
     compact_text = re.sub(r"\n{3,}", "\n\n", compact_text).strip()
     user_prompt = f"Job Description Content:\n{compact_text[:10000]}"
 
@@ -154,6 +148,29 @@ def collect_cleaned_jds(input_file: Path) -> List[Tuple[str, str, str]]:
             ))
     return jds
 
+def parse_cleaned_jds(input_path: Path = INPUT_CLEANED_JDS, output_path: Path = OUTPUT_PARSED_JDS, offline: bool = False) -> list[Dict[str, Any]]:
+    """Parse Stage-1 cleaned JDs with Groq-first and the separated offline fallback."""
+    records = json.loads(Path(input_path).read_text(encoding="utf-8"))
+    key = None if offline else os.getenv("GROQ_API_KEY")
+    client = Groq(api_key=key) if Groq and key and key.startswith("gsk_") else None
+    results = []
+    for idx, doc in enumerate(records, 1):
+        text = str(doc.get("content", ""))
+        if not text.strip():
+            continue
+        method = "offline_hybrid"; structured = None
+        if client:
+            try:
+                structured = parse_jd_llm(text, client); method = "groq_llm"
+            except Exception:
+                structured = None
+        if structured is None:
+            structured = OfflineJDExtractor.parse(text, str(doc.get("filename", f"jd_{idx:03d}")))
+        results.append({"id": doc.get("id", f"jd_{idx:03d}"), "filename": doc.get("filename", ""), "extraction_method": method, "source_status": doc.get("status"), "raw_text_length": len(text), "parsed_data": structured.model_dump()})
+    Path(output_path).parent.mkdir(parents=True, exist_ok=True)
+    Path(output_path).write_text(json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8")
+    return results
+
 
 def main():
     print("=" * 80)
@@ -169,7 +186,7 @@ def main():
 
     print(f"📂 Tìm thấy {len(raw_jds)} vị trí tuyển dụng (JDs) để bóc tách...\n")
 
-
+    api_key = os.getenv("GROQ_API_KEY")# Nhap API KEY VAO ()
     groq_client = Groq(api_key=api_key) if (Groq and api_key and api_key.startswith("gsk_")) else None
 
     if groq_client:

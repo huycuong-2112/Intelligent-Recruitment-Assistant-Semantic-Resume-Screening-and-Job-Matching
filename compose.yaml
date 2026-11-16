@@ -1,0 +1,32 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    # A local .env may provide GROQ_API_KEY, but must not be required for
+    # offline-safe startup or copied into the image.
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      OFFLINE_DEFAULT: "false"
+      RUNTIME_DATA_DIR: /app/Data/Runtime/resumes
+    ports: ["8000:8000"]
+    volumes: [runtime-data:/app/Data/Runtime]
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/', timeout=3)"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    environment:
+      API_BASE_URL: http://backend:8000/api/v1
+    ports: ["8501:8501"]
+    depends_on:
+      backend:
+        condition: service_healthy
+volumes:
+  runtime-data:

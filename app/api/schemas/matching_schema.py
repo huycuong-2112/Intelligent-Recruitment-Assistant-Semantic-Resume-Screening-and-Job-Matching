@@ -1,11 +1,18 @@
 from pydantic import BaseModel, Field
 from typing import List
 
-class MatchRequest(BaseModel):
-    resume_text: str = Field(..., description="Nội dung CV đã trích xuất")
-    job_description: str = Field(..., description="Nội dung mô tả công việc")
+class RuntimeDocumentRef(BaseModel):
+    run_id: str
+    document_id: str
 
-class MatchResponse(BaseModel):
-    similarity_score: float = Field(..., ge=0, le=1, description="Điểm tương đồng 0-1")
-    matched_skills: List[str] = []
-    explanation: str = ""
+class RuntimeMatchRequest(BaseModel):
+    domain: str
+    job: RuntimeDocumentRef
+    candidates: List[RuntimeDocumentRef] = Field(..., min_length=1)
+
+class RuntimeMatchResponse(BaseModel):
+    match_run_id: str
+    domain: str
+    job: RuntimeDocumentRef
+    results: list[dict]
+    manifest: dict

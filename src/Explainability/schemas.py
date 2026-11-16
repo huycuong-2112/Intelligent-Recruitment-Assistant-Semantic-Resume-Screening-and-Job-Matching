@@ -38,6 +38,8 @@ class Decision(BaseModel):
     final_score: float | None = Field(default=None, ge=0, le=1)
     status: str
     weights: dict[str, float]
+    effective_weights: dict[str, float] | None = None
+    model_version: str | None = None
     coverage: float | None = Field(default=None, ge=0, le=1)
 
     @field_validator("weights")

@@ -1,0 +1,429 @@
+{
+  "schema_version": "xai_v1",
+  "jd_id": "jd_001",
+  "cv_id": "cv_001",
+  "job_title": "AI Engineer Intern",
+  "decision": {
+    "final_score": 0.2690701919978331,
+    "status": "evaluated",
+    "weights": {
+      "skill": 0.4,
+      "experience": 0.2,
+      "education": 0.1,
+      "semantic": 0.3
+    },
+    "coverage": 1.0,
+    "model_version": "mdms_tuned_v1",
+    "effective_weights": {
+      "skill": 0.4,
+      "experience": 0.2,
+      "education": 0.1,
+      "semantic": 0.3
+    }
+  },
+  "dimensions": {
+    "skill": {
+      "score": 0.0,
+      "status": "AVAILABLE",
+      "weight": 0.4,
+      "weighted_contribution": 0.0,
+      "coverage": 1.0,
+      "requirements": [
+        {
+          "jd_skill": "Python programming",
+          "importance": "required",
+          "score": 0.0,
+          "availability": "available",
+          "status": "no_evidence",
+          "match_method": null,
+          "matched_cv_skill": null,
+          "cv_skill_provenance": [],
+          "similarity": 0.30774656908862974,
+          "weight": 1.0
+        },
+        {
+          "jd_skill": "Data structures and algorithms",
+          "importance": "required",
+          "score": 0.0,
+          "availability": "available",
+          "status": "no_evidence",
+          "match_method": null,
+          "matched_cv_skill": null,
+          "cv_skill_provenance": [],
+          "similarity": 0.2921891471895994,
+          "weight": 1.0
+        },
+        {
+          "jd_skill": "Version control (Git)",
+          "importance": "required",
+          "score": 0.0,
+          "availability": "available",
+          "status": "no_evidence",
+          "match_method": null,
+          "matched_cv_skill": null,
+          "cv_skill_provenance": [],
+          "similarity": 0.22643954110317574,
+          "weight": 1.0
+        },
+        {
+          "jd_skill": "Basic Machine Learning / Deep Learning concepts",
+          "importance": "required",
+          "score": 0.0,
+          "availability": "available",
+          "status": "no_evidence",
+          "match_method": null,
+          "matched_cv_skill": null,
+          "cv_skill_provenance": [],
+          "similarity": 0.25177163227954164,
+          "weight": 1.0
+        },
+        {
+          "jd_skill": "English proficiency (technical reading and communication)",
+          "importance": "required",
+          "score": 0.0,
+          "availability": "available",
+          "status": "no_evidence",
+          "match_method": null,
+          "matched_cv_skill": null,
+          "cv_skill_provenance": [],
+          "similarity": 0.3442433656814962,
+          "weight": 1.0
+        },
+        {
+          "jd_skill": "Large Language Models (LLMs) and agentic frameworks (e.g., LangChain, Google ADK)",
+          "importance": "preferred",
+          "score": 0.0,
+          "availability": "available",
+          "status": "no_evidence",
+          "match_method": null,
+          "matched_cv_skill": null,
+          "cv_skill_provenance": [],
+          "similarity": 0.2527963286358251,
+          "weight": 0.5
+        },
+        {
+          "jd_skill": "Containerization (Docker)",
+          "importance": "preferred",
+          "score": 0.0,
+          "availability": "available",
+          "status": "no_evidence",
+          "match_method": null,
+          "matched_cv_skill": null,
+          "cv_skill_provenance": [],
+          "similarity": 0.248729742306502,
+          "weight": 0.5
+        },
+        {
+          "jd_skill": "Cloud platforms (AWS, Azure, GCP)",
+          "importance": "preferred",
+          "score": 0.0,
+          "availability": "available",
+          "status": "no_evidence",
+          "match_method": null,
+          "matched_cv_skill": null,
+          "cv_skill_provenance": [],
+          "similarity": 0.28880771853958376,
+          "weight": 0.5
+        },
+        {
+          "jd_skill": "Generative AI prototyping",
+          "importance": "preferred",
+          "score": 0.0,
+          "availability": "available",
+          "status": "no_evidence",
+          "match_method": null,
+          "matched_cv_skill": null,
+          "cv_skill_provenance": [],
+          "similarity": 0.27861735726059433,
+          "weight": 0.5
+        },
+        {
+          "jd_skill": "Basic Natural Language Processing concepts",
+          "importance": "preferred",
+          "score": 0.0,
+          "availability": "available",
+          "status": "no_evidence",
+          "match_method": null,
+          "matched_cv_skill": null,
+          "cv_skill_provenance": [],
+          "similarity": 0.29056530569677386,
+          "weight": 0.5
+        },
+        {
+          "jd_skill": "Proactive learning and research mindset",
+          "importance": "preferred",
+          "score": 0.0,
+          "availability": "available",
+          "status": "no_evidence",
+          "match_method": null,
+          "matched_cv_skill": null,
+          "cv_skill_provenance": [],
+          "similarity": 0.23115789354408087,
+          "weight": 0.5
+        }
+      ]
+    },
+    "experience": {
+      "score": 0.49747815116482985,
+      "status": "AVAILABLE",
+      "weight": 0.2,
+      "weighted_contribution": 0.09949563023296598,
+      "coverage": 1.0,
+      "years": {
+        "score": 1.0,
+        "availability": "available",
+        "status": "satisfied",
+        "weight": 0.3,
+        "details": {
+          "candidate_years": 2.8,
+          "minimum_years": 0.0
+        }
+      },
+      "evidence": {
+        "score": 0.28211164452118553,
+        "status": "AVAILABLE",
+        "responsibilities": [
+          {
+            "responsibility": "Deeply understand project objectives and study data hypotheses under guidance of senior team members",
+            "score": 0.3867523347840044,
+            "status": "low_match",
+            "matched_chunk_id": "cv_001_work_001",
+            "matched_text": "Synthetic evidence: coordinated delivery and maintained service reliability.",
+            "source_type": "work",
+            "source_name": "Synthetic Company A",
+            "raw_similarity": 0.3867523347840044,
+            "threshold": 0.6,
+            "evidence_ref": "ev_exp_cv_001_work_001"
+          },
+          {
+            "responsibility": "Research and implement algorithms for data science and AI projects",
+            "score": 0.2723783572596595,
+            "status": "low_match",
+            "matched_chunk_id": "cv_001_work_002",
+            "matched_text": "Synthetic evidence: implemented infrastructure and web delivery tasks.",
+            "source_type": "work",
+            "source_name": "Synthetic Company A",
+            "raw_similarity": 0.2723783572596595,
+            "threshold": 0.6,
+            "evidence_ref": "ev_exp_cv_001_work_002"
+          },
+          {
+            "responsibility": "Assist in prototyping features using Generative AI capabilities (LLMs, AI agents, embeddings) and basic NLP concepts",
+            "score": 0.16730919271121003,
+            "status": "low_match",
+            "matched_chunk_id": "cv_001_work_002",
+            "matched_text": "Synthetic evidence: implemented infrastructure and web delivery tasks.",
+            "source_type": "work",
+            "source_name": "Synthetic Company A",
+            "raw_similarity": 0.16730919271121003,
+            "threshold": 0.6,
+            "evidence_ref": "ev_exp_cv_001_work_002"
+          },
+          {
+            "responsibility": "Support testing and benchmarking of AI models using established evaluation frameworks",
+            "score": 0.27758337397216876,
+            "status": "low_match",
+            "matched_chunk_id": "cv_001_work_006",
+            "matched_text": "Synthetic evidence: provided technical support and resolved operational issues.",
+            "source_type": "work",
+            "source_name": "Synthetic Company B",
+            "raw_similarity": 0.27758337397216876,
+            "threshold": 0.6,
+            "evidence_ref": "ev_exp_cv_001_work_006"
+          },
+          {
+            "responsibility": "Stay updated on the latest research, trends, and technologies in data science and AI",
+            "score": 0.30653496387888496,
+            "status": "low_match",
+            "matched_chunk_id": "cv_001_work_005",
+            "matched_text": "Synthetic evidence: maintained secure and stable systems.",
+            "source_type": "work",
+            "source_name": "Synthetic Company B",
+            "raw_similarity": 0.30653496387888496,
+            "threshold": 0.6,
+            "evidence_ref": "ev_exp_cv_001_work_005"
+          }
+        ]
+      }
+    },
+    "education": {
+      "score": 0.6,
+      "status": "AVAILABLE",
+      "weight": 0.1,
+      "weighted_contribution": 0.06,
+      "coverage": 1.0,
+      "degree": {
+        "score": 1.0,
+        "availability": "available",
+        "status": "satisfied",
+        "weight": 0.6,
+        "details": {
+          "candidate": "Bachelor",
+          "required": "Bachelor"
+        }
+      },
+      "field": {
+        "score": 0.0,
+        "availability": "available",
+        "status": "no_evidence",
+        "weight": 0.4,
+        "details": {
+          "candidate": "Computer Science / Software Engineering",
+          "preferred_fields": [
+            "Computer Science",
+            "Artificial Intelligence",
+            "Data Science"
+          ]
+        }
+      }
+    },
+    "semantic": {
+      "score": 0.3652485392162237,
+      "status": "AVAILABLE",
+      "weight": 0.3,
+      "weighted_contribution": 0.1095745617648671,
+      "coverage": 1.0,
+      "profile_scope": "global profile-to-role alignment",
+      "raw_similarity": 0.3652485392162237
+    }
+  },
+  "strength_candidates": [
+    {
+      "type": "degree_requirement_satisfied",
+      "dimension": "education",
+      "requirement": "Bachelor",
+      "evidence_ref": "ev_education_cv_001"
+    }
+  ],
+  "gap_candidates": [
+    {
+      "type": "missing_required_skill",
+      "dimension": "skill",
+      "requirement": "Python programming",
+      "evidence_ref": null
+    },
+    {
+      "type": "missing_required_skill",
+      "dimension": "skill",
+      "requirement": "Data structures and algorithms",
+      "evidence_ref": null
+    },
+    {
+      "type": "missing_required_skill",
+      "dimension": "skill",
+      "requirement": "Version control (Git)",
+      "evidence_ref": null
+    },
+    {
+      "type": "missing_required_skill",
+      "dimension": "skill",
+      "requirement": "Basic Machine Learning / Deep Learning concepts",
+      "evidence_ref": null
+    },
+    {
+      "type": "missing_required_skill",
+      "dimension": "skill",
+      "requirement": "English proficiency (technical reading and communication)",
+      "evidence_ref": null
+    }
+  ],
+  "interview_focus": [
+    {
+      "topic": "Python programming",
+      "reason": "required_skill_no_evidence",
+      "evidence_ref": null
+    },
+    {
+      "topic": "Data structures and algorithms",
+      "reason": "required_skill_no_evidence",
+      "evidence_ref": null
+    },
+    {
+      "topic": "Version control (Git)",
+      "reason": "required_skill_no_evidence",
+      "evidence_ref": null
+    },
+    {
+      "topic": "Basic Machine Learning / Deep Learning concepts",
+      "reason": "required_skill_no_evidence",
+      "evidence_ref": null
+    },
+    {
+      "topic": "English proficiency (technical reading and communication)",
+      "reason": "required_skill_no_evidence",
+      "evidence_ref": null
+    },
+    {
+      "topic": "Deeply understand project objectives and study data hypotheses under guidance of senior team members",
+      "reason": "weak_responsibility_evidence",
+      "evidence_ref": "ev_exp_cv_001_work_001"
+    },
+    {
+      "topic": "Research and implement algorithms for data science and AI projects",
+      "reason": "weak_responsibility_evidence",
+      "evidence_ref": "ev_exp_cv_001_work_002"
+    },
+    {
+      "topic": "Assist in prototyping features using Generative AI capabilities (LLMs, AI agents, embeddings) and basic NLP concepts",
+      "reason": "weak_responsibility_evidence",
+      "evidence_ref": "ev_exp_cv_001_work_002"
+    },
+    {
+      "topic": "Support testing and benchmarking of AI models using established evaluation frameworks",
+      "reason": "weak_responsibility_evidence",
+      "evidence_ref": "ev_exp_cv_001_work_006"
+    },
+    {
+      "topic": "Stay updated on the latest research, trends, and technologies in data science and AI",
+      "reason": "weak_responsibility_evidence",
+      "evidence_ref": "ev_exp_cv_001_work_005"
+    }
+  ],
+  "evidence_registry": {
+    "ev_exp_cv_001_work_001": {
+      "evidence_id": "ev_exp_cv_001_work_001",
+      "source_type": "cv_work",
+      "source_id": "cv_001_work_001",
+      "source_text": "Synthetic evidence: coordinated delivery and maintained service reliability.",
+      "matcher": "experience",
+      "score": 0.3867523347840044,
+      "similarity": 0.3867523347840044
+    },
+    "ev_exp_cv_001_work_002": {
+      "evidence_id": "ev_exp_cv_001_work_002",
+      "source_type": "cv_work",
+      "source_id": "cv_001_work_002",
+      "source_text": "Synthetic evidence: implemented infrastructure and web delivery tasks.",
+      "matcher": "experience",
+      "score": 0.2723783572596595,
+      "similarity": 0.2723783572596595
+    },
+    "ev_exp_cv_001_work_006": {
+      "evidence_id": "ev_exp_cv_001_work_006",
+      "source_type": "cv_work",
+      "source_id": "cv_001_work_006",
+      "source_text": "Synthetic evidence: provided technical support and resolved operational issues.",
+      "matcher": "experience",
+      "score": 0.27758337397216876,
+      "similarity": 0.27758337397216876
+    },
+    "ev_exp_cv_001_work_005": {
+      "evidence_id": "ev_exp_cv_001_work_005",
+      "source_type": "cv_work",
+      "source_id": "cv_001_work_005",
+      "source_text": "Synthetic evidence: maintained secure and stable systems.",
+      "matcher": "experience",
+      "score": 0.30653496387888496,
+      "similarity": 0.30653496387888496
+    },
+    "ev_education_cv_001": {
+      "evidence_id": "ev_education_cv_001",
+      "source_type": "cv_education",
+      "source_id": "cv_001",
+      "source_text": "Synthetic education evidence: bachelor degree in a computing field.",
+      "matcher": "education",
+      "score": null,
+      "similarity": null
+    }
+  }
+}
