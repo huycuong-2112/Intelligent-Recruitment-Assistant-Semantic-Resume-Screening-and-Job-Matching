@@ -25,6 +25,9 @@ except ImportError:
     Groq = None
     RateLimitError = Exception
 
+# Compatibility default: credentials are supplied only through the environment.
+HARDCODED_GROQ_API_KEY = ""
+
 # Không hardcode key - Ưu tiên đọc từ biến môi trường
 # HARDCODED_GROQ_API_KEY = ""
 

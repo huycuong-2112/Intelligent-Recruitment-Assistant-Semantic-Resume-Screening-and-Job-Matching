@@ -30,6 +30,17 @@ mdms:
     experience: 0.25
     education: 0.25
     semantic: 0.25
+  runtime_weights:
+    skill: 0.4
+    experience: 0.2
+    education: 0.1
+    semantic: 0.3
+  runtime_weights_metadata:
+    version: mdms_runtime_v1
+    source: development_grid_search
+    source_jd: jd_001
+    selected_on: development
+    blind_evaluated: false
 baseline:
   rule_based:
     skill_weight: 0.5

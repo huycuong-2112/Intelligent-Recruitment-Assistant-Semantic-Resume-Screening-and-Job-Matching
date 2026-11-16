@@ -1,0 +1,9 @@
+{
+  "n": 35,
+  "exact_three_way_agreement_rate": 0.17142857142857143,
+  "annotator_columns": [
+    "1_fit_label_0_to_3",
+    "2_fit_label_0_to_3",
+    "3_fit_label_0_to_3"
+  ]
+}

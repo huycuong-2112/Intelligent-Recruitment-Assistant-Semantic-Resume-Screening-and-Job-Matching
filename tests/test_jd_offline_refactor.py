@@ -52,13 +52,9 @@ class TestOfflineJDExtractorLegacy:
         result = OfflineJDExtractor.parse(SAMPLE_JD_TEXT, "fallback_title")
         assert result.required_degree == EXPECTED_DEGREE
 
-    def test_certifications_include_cloud_line(self):
-        """The current parser incorrectly includes cloud-awareness lines as
-        certifications because they contain AWS/Azure/GCP keywords.
-        This is known legacy behavior."""
+    def test_cloud_awareness_is_not_misclassified_as_certification(self):
         result = OfflineJDExtractor.parse(SAMPLE_JD_TEXT, "fallback_title")
-        assert len(result.required_certifications) >= 1
-        assert any("AWS" in c or "Azure" in c or "GCP" in c for c in result.required_certifications)
+        assert not any("AWS" in c or "Azure" in c or "GCP" in c for c in result.required_certifications)
 
     def test_responsibilities_extraction(self):
         result = OfflineJDExtractor.parse(SAMPLE_JD_TEXT, "fallback_title")
@@ -69,7 +65,7 @@ class TestOfflineJDExtractorLegacy:
         result = OfflineJDExtractor.parse(SAMPLE_JD_TEXT, "fallback_title")
         assert result.preferred_skills == []
 
-    def test_empty_preferred_fields(self):
+    def test_preferred_fields_only_from_preferred_section(self):
         result = OfflineJDExtractor.parse(SAMPLE_JD_TEXT, "fallback_title")
         assert result.preferred_fields == []
 
